@@ -1,6 +1,6 @@
 #include "Person.h"
 
-Person::Person(string nome, int nif, string base){
+Person::Person(string base, string nome, int nif){
     this->base = base;
     this->nome = nome;
     this->nif = nif;

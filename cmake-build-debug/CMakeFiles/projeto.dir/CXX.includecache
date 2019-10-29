@@ -6,56 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Base.cpp
-Base.h
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Base.h
-
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Base.h
-iostream
--
-string
--
-vector
--
-Location.h
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Location.h
-Person.h
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Person.h
-Restaurant.h
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Restaurant.h
-
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Deliver.cpp
-Deliver.h
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Deliver.h
-
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Deliver.h
-string
--
-Time.h
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Time.h
-
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Location.h
-iostream
--
-string
--
-
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Order.cpp
-Order.h
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Order.h
-
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Order.h
-iostream
--
-Restaurant.h
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Restaurant.h
-Time.h
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Time.h
-Product.h
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Product.h
-Deliver.h
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Deliver.h
-
 C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Person.cpp
 Person.h
 C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Person.h
@@ -67,32 +17,6 @@ Time.h
 C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Time.h
 Vehicle.h
 C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Vehicle.h
-
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Product.cpp
-Product.h
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Product.h
-
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Product.h
-string
--
-iostream
--
-Product.h
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Product.h
-
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Restaurant.cpp
-Restaurant.h
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Restaurant.h
-
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Restaurant.h
-iostream
--
-string
--
-vector
--
-Product.h
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Product.h
 
 C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Time.h
 iostream
