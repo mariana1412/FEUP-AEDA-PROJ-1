@@ -17,6 +17,7 @@ private:
    Time deliver_time;
    float price;
 public:
+    Deliver(){};
     Deliver(bool success, string reason_insucess, Time deliver_time, float price);
     bool getSuccess() const;
     string getReason_insucess() const;

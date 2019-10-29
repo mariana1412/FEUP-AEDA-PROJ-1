@@ -1,7 +1,3 @@
-//
-// Created by ritap on 13/10/2019.
-//
-
 #ifndef UGH_EATS_VEHICLE_H
 #define UGH_EATS_VEHICLE_H
 
@@ -22,9 +18,6 @@ public:
     string getType() const;
     Time getDate() const;
 };
-
-
-
 
 
 #endif //UGH_EATS_VEHICLE_H

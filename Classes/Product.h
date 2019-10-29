@@ -1,7 +1,3 @@
-//
-// Created by ritap on 13/10/2019.
-//
-
 #ifndef UGH_EATS_PRODUCT_H
 #define UGH_EATS_PRODUCT_H
 
@@ -17,6 +13,7 @@ private:
     string type_of_food;
     float price;
 public:
+    Product(){};
     Product(string name, string type_of_food, float price);
     string getName() const;
     string getType_of_food() const;

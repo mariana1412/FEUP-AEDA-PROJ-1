@@ -11,8 +11,11 @@ class Person{
 private:
     string nome;
     int nif;
+    string base;
 public:
-    Person(string nome, int nif);
+    Person(){};
+    Person(string base, string nome, int nif);
+    string getBase() const;
     string getNome() const;
     int getNif() const;
 
@@ -23,7 +26,8 @@ private:
     string address;
     bool black;
 public:
-    Client(string nome, int nif, string address, bool black);
+    Client(){};
+    Client(string base, string nome, int nif, string address, bool black);
     bool getBlack() const;
     string getAddress() const;
 };
@@ -33,7 +37,8 @@ private:
     Time birthdate;
     float income;
 public:
-    Employee(string nome, int nif, Time birthdate, float income);
+    Employee(){};
+    Employee(string base, string nome, int nif, Time birthdate, float income);
     Time getBirthdate() const;
     float getIncome() const;
 };
@@ -43,7 +48,8 @@ class Admin: public Employee{
 private:
     string task;
 public:
-    Admin(string nome, int nif, Time birthdate, float income, string task);
+    Admin(){};
+    Admin(string base, string nome, int nif, Time birthdate, float income, string task);
     string  getTask() const;
 };
 
@@ -52,7 +58,8 @@ private:
     Vehicle vehicle;
     int background;
 public:
-    Deliverer(string nome, int nif, Time birthdate, float income, Vehicle vehicle, int background);
+    Deliverer() {};
+    Deliverer(string base, string nome, int nif, Time birthdate, float income, Vehicle vehicle, int background);
     Vehicle getVehicle() const;
     int getBackground() const;
 

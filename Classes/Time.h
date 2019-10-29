@@ -1,7 +1,3 @@
-//
-// Created by ritap on 13/10/2019.
-//
-
 #ifndef UGH_EATS_TIME_H
 #define UGH_EATS_TIME_H
 

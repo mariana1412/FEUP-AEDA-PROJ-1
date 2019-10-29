@@ -1,6 +1,5 @@
 #include "Restaurant.h"
 
-
 Restaurant::Restaurant(string address, vector<string> types_of_food, vector<Product> products, float revenue){
  this-> address=address;
  this-> types_of_food=types_of_food;

@@ -16,6 +16,7 @@ private:
     float revenue;
 
 public:
+    Restaurant(){};
     Restaurant(string address, vector<string> types_of_food, vector<Product> products, float revenue);
     string getAddress() const;
     vector<string> getTypes_of_food() const;

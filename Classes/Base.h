@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Location.h"
 #include "Person.h"
 #include "Restaurant.h"
 
@@ -15,16 +16,16 @@ class Base {
 private:
     Location location;
     string manager;
-    vector<Clients> clients;
-    vector<Clients> blacklist;
-    vector<Restaurants> restaurants;
+    vector<Client> clients;
+    vector<Client> blacklist;
+    vector<Restaurant> restaurants;
 
 public:
     Base(Location location, string manager, vector <Client> clients, vector<Client>blacklist, vector<Restaurant> restaurants);
     Location getLocation() const;
     string getManager() const;
-    vector<Clients> getClients() const;
-    vector<Clients> getBlackList() const;
+    vector<Client> getClients() const;
+    vector<Client> getBlackList() const;
     vector<Restaurant> getRestaurants()const;
 };
 

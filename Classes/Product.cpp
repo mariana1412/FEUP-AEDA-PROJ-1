@@ -1,9 +1,4 @@
-//
-// Created by ritap on 14/10/2019.
-//
-
 #include "Product.h"
-
 
 Product::Product(string name, string type_of_food, float price){
     this-> name=name;

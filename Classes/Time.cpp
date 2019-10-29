@@ -1,7 +1,3 @@
-//
-// Created by ritap on 14/10/2019.
-//
-
 #include "Time.h"
 Time::Time(){
     this-> hour=0;
