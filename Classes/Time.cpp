@@ -30,3 +30,22 @@ int Time::getYear() const{
     return year;
 }
 
+void Time::setHour(int hour){
+    this->hour=hour;
+}
+
+void Time::setMinutes(int minutes){
+    this->minutes = minutes;
+}
+
+void Time::setDay(int day){
+    this->day = day;
+}
+
+void Time::setMonth(int month){
+    this->month = month;
+}
+
+void Time::setYear(int year) {
+    this->year = year;
+}

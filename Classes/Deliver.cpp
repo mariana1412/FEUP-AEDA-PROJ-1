@@ -23,3 +23,19 @@ Time Deliver::getDeliver_time() const{
 float Deliver::getPrice() const{
     return price;
 }
+
+void Deliver::setSuccess(bool success){
+    this->success = success;
+}
+
+void Deliver::setReason_insucess(string reason_insucess){
+    this->reason_insucess = reason_insucess;
+}
+
+void Deliver::setDeliver_time(Time deliver_time){
+    this->deliver_time = deliver_time;
+}
+
+void Deliver::setPrice(float price){
+    this->price = price;
+}

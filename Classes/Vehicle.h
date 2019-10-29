@@ -17,6 +17,10 @@ public:
     string getBrand() const;
     string getType() const;
     Time getDate() const;
+    void setBrand(string brand);
+    void setType(string type);
+    void setDate(Time date);
+
 };
 
 

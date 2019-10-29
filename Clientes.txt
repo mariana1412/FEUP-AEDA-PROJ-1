@@ -1,0 +1,53 @@
+Porto
+Mariana Almeida Truta
+280541987
+Rua da Alegria 65, 4400-989, Porto
+false
+::::::::
+Porto
+Diogo Henrique Almeida
+298684789
+Rua dos Bragas 32, 4200-587, Maia
+true
+::::::::
+Porto
+Ana Rita Matos
+287564236
+Avenida dos Aliados 21, 4150-969, Matosinhos
+false
+::::::::
+Lisboa
+Inês Pinto Silva
+251230654
+Travessa da Caldeira 85, 1000-989, Lisboa
+false
+::::::::
+Lisboa
+André Daniel Gomes
+210874562
+Rua 25 de Abril 96, 1200-587, Lisboa
+false
+::::::::
+Lisboa
+Ana Rita Matos
+193320586
+Avenida da Felicidade 56, 1150-969, Lisboa
+false
+::::::::
+Faro
+Lara Machado Medicis
+265541987
+Avenida da Praia 6, 8400-989, Faro
+false
+::::::::
+Faro
+Diogo Henrique Almeida
+287600789
+Rua de Estudante 78, 8200-587, Faro
+false
+::::::::
+Faro
+Ana Luisa Matos
+287561236
+Rua de Carreira Cova 21, 4150-969, Faro
+false

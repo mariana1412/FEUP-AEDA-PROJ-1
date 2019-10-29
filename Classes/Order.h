@@ -27,6 +27,9 @@ public:
     Time getTime() const;
     vector<Product> getProducts()const;
     Deliver getDeliver() const;
-
+    void setRestaurant(Restaurant restaurant);
+    void setTime(Time time);
+    void setProducts(vector<Product> products);
+    void setDeliver(Deliver deliver);
 };
 #endif //UGH_EATS_ORDER_H

@@ -21,6 +21,9 @@ public:
     string getAddress() const;
     string getCounty() const;
     string getGps() const;
+    void setAddress(string address);
+    void setCounty(string county);
+    void setGps(string gps);
 };
 
 

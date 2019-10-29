@@ -1,0 +1,11 @@
+Porto
+Avenida de Dom Mendo 831, Maia, 4474-009,[41.227493, -8.617076]
+João Miguel Barros
+::::::::
+Lisboa
+Praça Duque de Saldanha 21, Lisboa, 1050-094,[38.728435, -9.158724]
+Inês Santos Pereira
+::::::::
+Faro
+Rua do Repouso 10,Faro, 8000-3020,[37.004822,7.560077]
+Manuela Alves Gomes

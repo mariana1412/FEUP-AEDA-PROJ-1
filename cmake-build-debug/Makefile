@@ -365,32 +365,32 @@ Classes/Vehicle.cpp.s:
 	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Classes/Vehicle.cpp.s
 .PHONY : Classes/Vehicle.cpp.s
 
-Input_Verifications/options_menu.obj: Input_Verifications/options_menu.cpp.obj
+Functions/options_menu.obj: Functions/options_menu.cpp.obj
 
-.PHONY : Input_Verifications/options_menu.obj
+.PHONY : Functions/options_menu.obj
 
 # target to build an object file
-Input_Verifications/options_menu.cpp.obj:
-	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Input_Verifications/options_menu.cpp.obj
-.PHONY : Input_Verifications/options_menu.cpp.obj
+Functions/options_menu.cpp.obj:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/options_menu.cpp.obj
+.PHONY : Functions/options_menu.cpp.obj
 
-Input_Verifications/options_menu.i: Input_Verifications/options_menu.cpp.i
+Functions/options_menu.i: Functions/options_menu.cpp.i
 
-.PHONY : Input_Verifications/options_menu.i
+.PHONY : Functions/options_menu.i
 
 # target to preprocess a source file
-Input_Verifications/options_menu.cpp.i:
-	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Input_Verifications/options_menu.cpp.i
-.PHONY : Input_Verifications/options_menu.cpp.i
+Functions/options_menu.cpp.i:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/options_menu.cpp.i
+.PHONY : Functions/options_menu.cpp.i
 
-Input_Verifications/options_menu.s: Input_Verifications/options_menu.cpp.s
+Functions/options_menu.s: Functions/options_menu.cpp.s
 
-.PHONY : Input_Verifications/options_menu.s
+.PHONY : Functions/options_menu.s
 
 # target to generate assembly for a file
-Input_Verifications/options_menu.cpp.s:
-	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Input_Verifications/options_menu.cpp.s
-.PHONY : Input_Verifications/options_menu.cpp.s
+Functions/options_menu.cpp.s:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/options_menu.cpp.s
+.PHONY : Functions/options_menu.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -455,9 +455,9 @@ help:
 	@echo ... Classes/Vehicle.obj
 	@echo ... Classes/Vehicle.i
 	@echo ... Classes/Vehicle.s
-	@echo ... Input_Verifications/options_menu.obj
-	@echo ... Input_Verifications/options_menu.i
-	@echo ... Input_Verifications/options_menu.s
+	@echo ... Functions/options_menu.obj
+	@echo ... Functions/options_menu.i
+	@echo ... Functions/options_menu.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

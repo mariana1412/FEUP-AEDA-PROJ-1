@@ -23,6 +23,11 @@ public:
     string getReason_insucess() const;
     Time getDeliver_time() const;
     float getPrice() const;
+    void setSuccess(bool success);
+    void setReason_insucess(string reason_insucess);
+    void setDeliver_time(Time deliver_time);
+    void setPrice(float price);
+
 };
 
 

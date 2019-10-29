@@ -20,6 +20,11 @@ public:
     int getDay() const;
     int getMonth() const;
     int getYear() const;
+    void setHour(int hour);
+    void setMinutes(int minutes);
+    void setDay(int day);
+    void setMonth(int month);
+    void setYear(int year);
 
 };
 #endif //UGH_EATS_TIME_H

@@ -27,6 +27,12 @@ public:
     vector<Client> getClients() const;
     vector<Client> getBlackList() const;
     vector<Restaurant> getRestaurants()const;
+    void setLocation(Location location);
+    void setManager(string manager);
+    void setClients(vector<Client>);
+    void setBlacklist(vector<Client> blacklist);
+    void setRestaurants(vector<Restaurant> restaurants);
+
 };
 
 

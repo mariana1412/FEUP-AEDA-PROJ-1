@@ -7,14 +7,29 @@ Vehicle::Vehicle(string brand, string type, Time date){
     this->type = type;
     this->date = date;
 }
+
 string Vehicle::getBrand() const{
     return brand;
 }
+
 string Vehicle::getType() const{
     return type;
 }
+
 Time Vehicle::getDate() const{
     return date;
+}
+
+void Vehicle::setBrand(string brand){
+    this-> brand = brand;
+}
+
+void Vehicle::setType(string type){
+    this->type = type;
+}
+
+void Vehicle::setDate(Time date){
+    this->date = date;
 }
 
 
