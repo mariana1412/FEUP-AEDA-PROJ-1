@@ -9,15 +9,18 @@ using namespace std;
 
 class Person{
 private:
-    string nome;
+    string name;
     int nif;
     string base;
 public:
     Person(){};
-    Person(string base, string nome, int nif);
+    Person(string base, string name, int nif);
     string getBase() const;
-    string getNome() const;
+    string getName() const;
     int getNif() const;
+    void setName(string name);
+    void setNif(int nif);
+    void setBase(string base);
 
 };
 
@@ -27,9 +30,11 @@ private:
     bool black;
 public:
     Client(){};
-    Client(string base, string nome, int nif, string address, bool black);
+    Client(string base, string name, int nif, string address, bool black);
     bool getBlack() const;
     string getAddress() const;
+    void setAddress(string address);
+    void setBlack(bool black);
 };
 
 class Employee: public Person{
@@ -38,9 +43,11 @@ private:
     float income;
 public:
     Employee(){};
-    Employee(string base, string nome, int nif, Time birthdate, float income);
+    Employee(string base, string name, int nif, Time birthdate, float income);
     Time getBirthdate() const;
     float getIncome() const;
+    void setBirthdate(Time birthdate);
+    void setIncome(float income);
 };
 
 
@@ -49,8 +56,9 @@ private:
     string task;
 public:
     Admin(){};
-    Admin(string base, string nome, int nif, Time birthdate, float income, string task);
-    string  getTask() const;
+    Admin(string base, string name, int nif, Time birthdate, float income, string task);
+    string getTask() const;
+    void setTask(string task);
 };
 
 class Deliverer: public Employee{
@@ -59,9 +67,11 @@ private:
     int background;
 public:
     Deliverer() {};
-    Deliverer(string base, string nome, int nif, Time birthdate, float income, Vehicle vehicle, int background);
+    Deliverer(string base, string name, int nif, Time birthdate, float income, Vehicle vehicle, int background);
     Vehicle getVehicle() const;
     int getBackground() const;
+    void setVehicle(Vehicle vehicle);
+    void setBackground(int background);
 
 };
 

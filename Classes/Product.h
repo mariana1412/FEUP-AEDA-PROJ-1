@@ -18,6 +18,9 @@ public:
     string getName() const;
     string getType_of_food() const;
     float getPrice() const;
+    void setName(string name);
+    void setType_of_food(string type_of_food);
+    void setprice(float price);
 };
 
 

@@ -22,6 +22,10 @@ public:
     vector<string> getTypes_of_food() const;
     vector<Product> getProducts() const;
     float getRevenue() const;
+    void setAddress(string address);
+    void setTypes_of_food(vector<string> types_of_food);
+    void setProducts(vector<Product> products);
+    void setRevenue(float revenue);
 };
 
 

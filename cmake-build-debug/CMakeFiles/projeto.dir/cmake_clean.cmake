@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/projeto.dir/Classes/Restaurant.cpp.obj"
   "CMakeFiles/projeto.dir/Classes/Time.cpp.obj"
   "CMakeFiles/projeto.dir/Classes/Vehicle.cpp.obj"
+  "CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj"
   "CMakeFiles/projeto.dir/Functions/options_menu.cpp.obj"
   "CMakeFiles/projeto.dir/main.cpp.obj"
   "libprojeto.dll.a"
