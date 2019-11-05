@@ -30,9 +30,10 @@ void Person::setBase(string base){
     this->base = base;
 }
 
-Client::Client(string base, string name, int nif, string address, bool black):Person(base, name, nif){
+Client::Client(string base, string name, int nif, string address, bool black, string county):Person(base, name, nif){
     this->address = address;
     this->black = black;
+    this->county = county;
 }
 
 bool Client::getBlack() const{
@@ -43,12 +44,20 @@ string Client::getAddress() const{
     return address;
 }
 
+string Client::getCounty() const{
+    return county;
+}
+
 void Client::setAddress(string address){
     this->address = address;
 }
 
 void Client::setBlack(bool black){
     this->black = black;
+}
+
+void Client::setCounty(string county) {
+    this->county = county;
 }
 
 Employee::Employee(string base, string name, int nif, Time birthdate, float income) : Person(base, name, nif){

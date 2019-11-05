@@ -134,16 +134,16 @@
 		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Vehicle.h">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/Clients_functions.cpp">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/Verification_Inputs.cpp">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/Clients_functions.h">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/Verification_Inputs.h">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/options_menu.cpp">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/utils.cpp">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/options_menu.h">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/utils.h">
 			<Option target="projeto"/>
 		</Unit>
 		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/main.cpp">

@@ -365,59 +365,59 @@ Classes/Vehicle.cpp.s:
 	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Classes/Vehicle.cpp.s
 .PHONY : Classes/Vehicle.cpp.s
 
-Functions/Clients_functions.obj: Functions/Clients_functions.cpp.obj
+Functions/Verification_Inputs.obj: Functions/Verification_Inputs.cpp.obj
 
-.PHONY : Functions/Clients_functions.obj
-
-# target to build an object file
-Functions/Clients_functions.cpp.obj:
-	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj
-.PHONY : Functions/Clients_functions.cpp.obj
-
-Functions/Clients_functions.i: Functions/Clients_functions.cpp.i
-
-.PHONY : Functions/Clients_functions.i
-
-# target to preprocess a source file
-Functions/Clients_functions.cpp.i:
-	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.i
-.PHONY : Functions/Clients_functions.cpp.i
-
-Functions/Clients_functions.s: Functions/Clients_functions.cpp.s
-
-.PHONY : Functions/Clients_functions.s
-
-# target to generate assembly for a file
-Functions/Clients_functions.cpp.s:
-	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.s
-.PHONY : Functions/Clients_functions.cpp.s
-
-Functions/options_menu.obj: Functions/options_menu.cpp.obj
-
-.PHONY : Functions/options_menu.obj
+.PHONY : Functions/Verification_Inputs.obj
 
 # target to build an object file
-Functions/options_menu.cpp.obj:
-	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/options_menu.cpp.obj
-.PHONY : Functions/options_menu.cpp.obj
+Functions/Verification_Inputs.cpp.obj:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj
+.PHONY : Functions/Verification_Inputs.cpp.obj
 
-Functions/options_menu.i: Functions/options_menu.cpp.i
+Functions/Verification_Inputs.i: Functions/Verification_Inputs.cpp.i
 
-.PHONY : Functions/options_menu.i
+.PHONY : Functions/Verification_Inputs.i
 
 # target to preprocess a source file
-Functions/options_menu.cpp.i:
-	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/options_menu.cpp.i
-.PHONY : Functions/options_menu.cpp.i
+Functions/Verification_Inputs.cpp.i:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.i
+.PHONY : Functions/Verification_Inputs.cpp.i
 
-Functions/options_menu.s: Functions/options_menu.cpp.s
+Functions/Verification_Inputs.s: Functions/Verification_Inputs.cpp.s
 
-.PHONY : Functions/options_menu.s
+.PHONY : Functions/Verification_Inputs.s
 
 # target to generate assembly for a file
-Functions/options_menu.cpp.s:
-	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/options_menu.cpp.s
-.PHONY : Functions/options_menu.cpp.s
+Functions/Verification_Inputs.cpp.s:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.s
+.PHONY : Functions/Verification_Inputs.cpp.s
+
+Functions/utils.obj: Functions/utils.cpp.obj
+
+.PHONY : Functions/utils.obj
+
+# target to build an object file
+Functions/utils.cpp.obj:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/utils.cpp.obj
+.PHONY : Functions/utils.cpp.obj
+
+Functions/utils.i: Functions/utils.cpp.i
+
+.PHONY : Functions/utils.i
+
+# target to preprocess a source file
+Functions/utils.cpp.i:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/utils.cpp.i
+.PHONY : Functions/utils.cpp.i
+
+Functions/utils.s: Functions/utils.cpp.s
+
+.PHONY : Functions/utils.s
+
+# target to generate assembly for a file
+Functions/utils.cpp.s:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/utils.cpp.s
+.PHONY : Functions/utils.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -482,12 +482,12 @@ help:
 	@echo ... Classes/Vehicle.obj
 	@echo ... Classes/Vehicle.i
 	@echo ... Classes/Vehicle.s
-	@echo ... Functions/Clients_functions.obj
-	@echo ... Functions/Clients_functions.i
-	@echo ... Functions/Clients_functions.s
-	@echo ... Functions/options_menu.obj
-	@echo ... Functions/options_menu.i
-	@echo ... Functions/options_menu.s
+	@echo ... Functions/Verification_Inputs.obj
+	@echo ... Functions/Verification_Inputs.i
+	@echo ... Functions/Verification_Inputs.s
+	@echo ... Functions/utils.obj
+	@echo ... Functions/utils.i
+	@echo ... Functions/utils.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

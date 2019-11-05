@@ -28,13 +28,16 @@ class Client:public Person{
 private:
     string address;
     bool black;
+    string county;
 public:
     Client(){};
-    Client(string base, string name, int nif, string address, bool black);
+    Client(string base, string name, int nif, string address, bool black, string county);
     bool getBlack() const;
     string getAddress() const;
+    string getCounty() const;
     void setAddress(string address);
     void setBlack(bool black);
+    void setCounty(string county);
 };
 
 class Employee: public Person{
