@@ -109,3 +109,41 @@ int int_sequential_search(const vector<Client> &v, int x) {//retorna o indice do
             return i; // encontrou
     return -1; // não encontrou
 }
+
+bool confirm_client(string action){
+
+    if (action == "create"){
+        string cancel;
+        cout << endl << endl << "Are you sure you want to create a client with this information? " << endl << "Insert 'yes' to continue. " << endl << "Insert 'no' to cancel. " << endl << "Answer: ";
+        cin >> cancel;
+
+        while (cin.fail()) {
+            if (cin.eof()) {
+                cin.clear();
+                cout << "Invalid operation, please insert a valid one: ";
+                cin >> cancel;
+            }
+        }
+
+        formatting_string(cancel);
+
+        while (cin.fail() || (cancel != "Yes" && cancel != "No")) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Invalid operation, please insert a valid one: ";
+            cin >> cancel;
+            while (cin.fail()) {
+                if (cin.eof()) {
+                    cin.clear();
+                    cout << "Invalid operation, please insert a valid one: ";
+                    cin >> cancel;
+                }
+            }
+
+            formatting_string(cancel);
+
+        }
+    }
+
+
+}

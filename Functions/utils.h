@@ -16,6 +16,7 @@ void remove_all_whitespaces(string &aux);
 string remove_extra_whitespaces(string aux);
 int int_sequential_search(const vector<Client> &v, int x);
 int string_sequential_search(const vector<Client> &v, string x);
+bool confirm_client(string action);
 
 
 #endif //PROJETO_UTILS_H

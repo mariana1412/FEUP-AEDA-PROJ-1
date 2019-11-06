@@ -1,8 +1,9 @@
 #ifndef PROJETO_CLIENTS_FUNCTIONS_H
 #define PROJETO_CLIENTS_FUNCTIONS_H
 
+#include <iostream>
 #include <string>
-#include<vector>
+#include <vector>
 #include "../Classes/Person.h"
 #include "../Classes/Base.h"
 #include "utils.h"
