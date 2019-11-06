@@ -5,6 +5,7 @@
 #include<vector>
 #include "../Classes/Person.h"
 #include "../Classes/Base.h"
+#include "utils.h"
 
 using namespace std;
 
@@ -31,7 +32,7 @@ private:
     string msg;
 public:
     OutOfArea() { msg = "It is not possible to create this client, it does not belong to the base area "; }
-    string getMsg() ocnst { return msg;  }
+    string getMsg() const { return msg;  }
 };
 
 

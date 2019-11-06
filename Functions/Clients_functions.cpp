@@ -5,7 +5,7 @@ int create_client(Base &Porto, Base &Lisboa , Base &Faro) {
     string aux;
     vector<Client> v;
     Client new_client;
-    Base base;
+    Base base();
 
 
     cout << "-------------- CREATE CLIENT --------------" << endl;
@@ -41,7 +41,7 @@ int create_client(Base &Porto, Base &Lisboa , Base &Faro) {
     cout << "NIF: ";
     getline(cin, aux);
     //verificar NIF
-    new_client.setNif(stoi(aux));
+    new_client.setNIF(stoi(aux));
 
     cout << "Address: ";//nao ha verificaçao porque pode ter tanto letras como numeros
     getline(cin, aux);
@@ -51,6 +51,8 @@ int create_client(Base &Porto, Base &Lisboa , Base &Faro) {
     getline(cin, aux);
     //verificar que é so letras
     new_client.setCounty(aux);
+
+
 
 
     if (confirmed_client()) {
@@ -99,10 +101,10 @@ int create_client(Base &Porto, Base &Lisboa , Base &Faro) {
 
 int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
 
-    vector<string> v;
+    vector<Client> v;
     string base;
-    int number;
-    int i, auxiliar;
+    int i;
+    string auxiliar,number;
 
     cout << "-------------- MODIFY CLIENT --------------" << endl;
 
@@ -112,29 +114,29 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
 
     switch (base) {
         case "porto":
-            v = Clients_porto;
+            v = Porto.getClients();
             break;
         case "lisboa":
-            v = Clients_lisboa;
+            v = Lisboa.getClients();
             break;
         case "faro":
-            v = Clients_faro;
+            v = Faro.getClients();
             break;
     }
 
 
     cout << "What do you know about this client?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do cliente
     cout << "1: Name\n" << "2: NIF\n";
-    cin << getline(cin, number);//verificar se o input é diferente das opçoes possiveis
+    getline(cin, number);//verificar se o input é diferente das opçoes possiveis
 
     switch (number) {
         case 1:
             cout << "Name: ";
-            cin >> getline(cin, auxiliar);//verificar a string
+            getline(cin, auxiliar);//verificar a string
             i=string_sequential_search(&v, auxiliar);
         case 2:
             cout << "NIF: ";
-            cin >> getline(cin, auxiliar);//verificar o nif
+            getline(cin, auxiliar);//verificar o nif
             i = int_sequential_search(&v, stoi(auxiliar));
     }
 
@@ -145,23 +147,23 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
         string new_info, new_info2,new_info3;
         cout << "What do you wish to change?\n";
         cout << "1: Base\n" << "2: Address\n" << "3: Both";
-        cin >> getline(cin, auxiliar);//verificar se o input é diferente das opçoes possiveis
+        getline(cin, auxiliar);//verificar se o input é diferente das opçoes possiveis
 
         switch (auxiliar) {
             case 1:
                 cout << "Base: ";
-                cin >> getline(cin, new_info);
+                getline(cin, new_info);
                 //verificar base
                 base = new_info;
                 switch (base) {
                     case "porto":
-                        v = Clients_porto;
+                        v = Porto.getClients();
                         break;
                     case "lisboa":
-                        v = Clients_lisboa;
+                        v = Lisboa.getClients();
                         break;
                     case "faro":
-                        v = Clients_faro;
+                        v = Faro.getClients();
                         break;
                 }
                 if (confirmed_client()) {
@@ -183,12 +185,12 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
 
             case 2:
                 cout << "Address: ";
-                cin >> getline(cin, new_info);
+                getline(cin, new_info);
                 cout << "County: ";//verificar string
-                cin >> getline(cin, new_info2);
+                getline(cin, new_info2);
                 if (confirmed_client()) {
                     try {
-                        out_of_area(v, new_client.getCounty());//caso o cliente nao resida no concelho da base ou nos concelhos fronteira tambem é rejeitado
+                        out_of_area(v, new_info2);//caso o cliente nao resida no concelho da base ou nos concelhos fronteira tambem é rejeitado
                     }
                     catch (OutOfArea &b) {
                         cout << b.getMsg() << endl;
@@ -217,28 +219,28 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
                 break;
             case 3:
                 cout << "Base: ";
-                cin >> getline(cin, new_info);
+                getline(cin, new_info);
                 //verificar a base
                 base = new_info;
                 switch (base) {
                     case "porto":
-                        v = Clients_porto;
+                        v = Porto.getClients();
                         break;
                     case "lisboa":
-                        v = Clients_lisboa;
+                        v = Lisboa.getClients();
                         break;
                     case "faro":
-                        v = Clients_faro;
+                        v = Faro.getClients();
                         break;
                 }
                 cout << "Address: ";
-                cin >> getline(cin, new_info2);
+                getline(cin, new_info2);
                 cout << "County: ";
-                cin >> getline(cin, new_info3);
+                getline(cin, new_info3);
                 //verificar se é tudo letras
                 if (confirmed_client()) {
                     try {
-                        out_of_area(v, new_client.getCounty());//caso o cliente nao resida no concelho da base ou nos concelhos fronteira tambem é rejeitado
+                        out_of_area(v, new_info3);//caso o cliente nao resida no concelho da base ou nos concelhos fronteira tambem é rejeitado
                     }
                     catch (OutOfArea &b) {
                         cout << b.getMsg() << endl;
@@ -276,7 +278,7 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
 
 
 int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
-    vector<strings> v;
+    vector<Client> v;
     string base;
     cout << "-------------- REMOVE CLIENT --------------" << endl;
 
@@ -285,30 +287,30 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
     //verificar base
     switch (base) {
         case "porto":
-            v = Clients_porto;
+            v = Porto.getClients();
             break;
         case "lisboa":
-            v = Clients_lisboa;
+            v = Lisboa.getClients();
             break;
         case "faro":
-            v = Clients_faro;
+            v = Faro.getClients();
             break;
     }
 
     int number;
     cout << "What do you know about this client?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do cliente
     cout << "1: Name\n" << "2: NIF\n";
-    cin << getline(cin, number);//verificar se o input é diferente das opçoes possiveis
+    getline(cin, number);//verificar se o input é diferente das opçoes possiveis
 
     int i, auxiliar;
     switch (number) {
         case 1:
             cout << "Name: ";
-            cin >> getline(cin, auxiliar);//verificar a string
+            getline(cin, auxiliar);//verificar a string
             i = string_sequential_search(&v, auxiliar);
         case 2:
             cout << "NIF: ";
-            cin >> getline(cin, auxiliar);//verificar o nif
+            getline(cin, auxiliar);//verificar o nif
             i = int_sequential_search(&v, stoi(auxiliar));
     }
 
@@ -318,13 +320,13 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
     else {
         if (confirmed_client()){
             if (base == "porto") {
-                Clients_porto.erase(Clients_porto.begin() + i);
+                Porto.getClients().erase(Porto.getClients().begin() + i);
             }
             else if (base == "lisboa") {
-                Clients_lisboa.erase(Clients_lisboa.begin() + i);
+                Lisboa.getClients().erase(Lisboa.getClients().begin() + i);
             }
             else if (base == "faro") {
-                Clients_faro.erase(Clients_faro.begin() + i);
+                Faro.getClients().erase(Faro.getClients().begin() + i);
 
             }
             cout << "Client successfully was removed!" << endl << endl;

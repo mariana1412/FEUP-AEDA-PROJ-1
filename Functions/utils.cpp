@@ -95,3 +95,17 @@ string remove_extra_whitespaces(string aux) {
 
     return auxiliar;
 }
+
+
+int string_sequential_search(const vector<Client> &v, string x) {//retorna o indice do vetor onde se encontra x
+    for (unsigned int i = 0; i < v.size(); i++)
+        if (v[i].getName() == x)
+            return i; // encontrou
+    return -1; // não encontrou
+}
+int int_sequential_search(const vector<Client> &v, int x) {//retorna o indice do vetor onde se encontra x
+    for (unsigned int i = 0; i < v.size(); i++)
+        if (v[i].getNif() == x)
+            return i; // encontrou
+    return -1; // não encontrou
+}

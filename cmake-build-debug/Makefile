@@ -149,33 +149,6 @@ Classes/Base.cpp.s:
 	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Classes/Base.cpp.s
 .PHONY : Classes/Base.cpp.s
 
-Classes/Deliver.obj: Classes/Deliver.cpp.obj
-
-.PHONY : Classes/Deliver.obj
-
-# target to build an object file
-Classes/Deliver.cpp.obj:
-	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Classes/Deliver.cpp.obj
-.PHONY : Classes/Deliver.cpp.obj
-
-Classes/Deliver.i: Classes/Deliver.cpp.i
-
-.PHONY : Classes/Deliver.i
-
-# target to preprocess a source file
-Classes/Deliver.cpp.i:
-	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Classes/Deliver.cpp.i
-.PHONY : Classes/Deliver.cpp.i
-
-Classes/Deliver.s: Classes/Deliver.cpp.s
-
-.PHONY : Classes/Deliver.s
-
-# target to generate assembly for a file
-Classes/Deliver.cpp.s:
-	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Classes/Deliver.cpp.s
-.PHONY : Classes/Deliver.cpp.s
-
 Classes/Location.obj: Classes/Location.cpp.obj
 
 .PHONY : Classes/Location.obj
@@ -512,9 +485,6 @@ help:
 	@echo ... Classes/Base.obj
 	@echo ... Classes/Base.i
 	@echo ... Classes/Base.s
-	@echo ... Classes/Deliver.obj
-	@echo ... Classes/Deliver.i
-	@echo ... Classes/Deliver.s
 	@echo ... Classes/Location.obj
 	@echo ... Classes/Location.i
 	@echo ... Classes/Location.s
