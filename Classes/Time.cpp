@@ -49,3 +49,61 @@ void Time::setMonth(int month){
 void Time::setYear(int year) {
     this->year = year;
 }
+
+bool Time::isValid() {// verifica se a data é valida,ou seja, nao tem um n maior de mês do que o possivel e o mesmo com os dias
+    if (month > 12 || day > numberOfDays(month, year) || hour > 23 || minutes > 59) {
+        return false;
+    }
+    return true;
+}
+bool Time::isEqualTo(const Time& date) { // verifica se duas datas sao iguais
+
+    return (date.day == day && date.month == month && date.year == year && date.hour == hour && date.minutes == minutes);
+}
+bool Time::isNotEqualTo(const Time& date) {// verifica se duas datas nao sao iguais
+    return (isEqualTo(date));
+}
+
+bool Time::isAfter(const Time& date) {// verifica se a data é depois da outra
+    return (date.year < year || (date.year == year && date.month < month) || (date.year == year && date.month == month && date.day < day));
+}
+bool Time::isBefore(const Time& date) {// verifica se a data é antes da outra
+    return (!isAfter(date) && !isEqualTo(date));
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------
+
+bool leap_year(int year) { // verifica se é um ano bissexto ou nao
+    if (year % 4 == 0 && year % 100 != 0 && year % 400 == 0) {//forma de determinar se um ano é bissexto ou nao
+        return true;
+    }
+    return false;
+}
+
+int numberOfDays(int month, int year) {// retorna o n de dias que o respetivo mês tem
+    switch (month) {
+        case 2:
+        {
+            if (leap_year(year)) {//fevereiro
+                return 29;
+            }
+            else {
+                return 28;
+            }
+        }
+        case 4:
+            return 30;
+
+        case 6:
+            return 30;
+
+        case 9:
+            return 30;
+
+        case 11:
+            return 30;
+
+        default:
+            return 31;
+    }
+}

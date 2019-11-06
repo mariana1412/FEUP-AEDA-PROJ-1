@@ -25,6 +25,14 @@ public:
     void setDay(int day);
     void setMonth(int month);
     void setYear(int year);
+    bool isValid();
+    bool isEqualTo(const Time& date);
+    bool isNotEqualTo(const Time& date);
+    bool isAfter(const Time& date);
+    bool isBefore(const Time& date);
 
 };
+
+bool leap_year(int year);
+int numberOfDays(int month, int year);
 #endif //UGH_EATS_TIME_H
