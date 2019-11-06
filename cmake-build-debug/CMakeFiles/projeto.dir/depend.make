@@ -43,6 +43,17 @@ CMakeFiles/projeto.dir/Classes/Vehicle.cpp.obj: ../Classes/Time.h
 CMakeFiles/projeto.dir/Classes/Vehicle.cpp.obj: ../Classes/Vehicle.cpp
 CMakeFiles/projeto.dir/Classes/Vehicle.cpp.obj: ../Classes/Vehicle.h
 
+CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Classes/Base.h
+CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Classes/Deliver.h
+CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Classes/Location.h
+CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Classes/Person.h
+CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Classes/Product.h
+CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Classes/Restaurant.h
+CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Classes/Time.h
+CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Functions/ReadingFiles.cpp
+CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Functions/ReadingFiles.h
+
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/Verification_Inputs.cpp
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/Verification_Inputs.h
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/utils.h

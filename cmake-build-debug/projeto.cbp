@@ -134,6 +134,18 @@
 		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Vehicle.h">
 			<Option target="projeto"/>
 		</Unit>
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/Clients_functions.cpp">
+			<Option target="projeto"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/Clients_functions.h">
+			<Option target="projeto"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/ReadingFiles.cpp">
+			<Option target="projeto"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/ReadingFiles.h">
+			<Option target="projeto"/>
+		</Unit>
 		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/Verification_Inputs.cpp">
 			<Option target="projeto"/>
 		</Unit>

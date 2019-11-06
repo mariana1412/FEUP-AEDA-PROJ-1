@@ -212,6 +212,32 @@ CMakeFiles/projeto.dir/Functions/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Functions/utils.cpp.s"
 	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\projeto\Functions\utils.cpp" -o CMakeFiles\projeto.dir\Functions\utils.cpp.s
 
+CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: CMakeFiles/projeto.dir/flags.make
+CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Functions/ReadingFiles.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\projeto\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\ReadingFiles.cpp.obj -c "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\projeto\Functions\ReadingFiles.cpp"
+
+CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\projeto\Functions\ReadingFiles.cpp" > CMakeFiles\projeto.dir\Functions\ReadingFiles.cpp.i
+
+CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\projeto\Functions\ReadingFiles.cpp" -o CMakeFiles\projeto.dir\Functions\ReadingFiles.cpp.s
+
+CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: CMakeFiles/projeto.dir/flags.make
+CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Functions/Clients_functions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\projeto\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\Clients_functions.cpp.obj -c "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\projeto\Functions\Clients_functions.cpp"
+
+CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.i"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\projeto\Functions\Clients_functions.cpp" > CMakeFiles\projeto.dir\Functions\Clients_functions.cpp.i
+
+CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.s"
+	C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\projeto\Functions\Clients_functions.cpp" -o CMakeFiles\projeto.dir\Functions\Clients_functions.cpp.s
+
 # Object files for target projeto
 projeto_OBJECTS = \
 "CMakeFiles/projeto.dir/main.cpp.obj" \
@@ -225,7 +251,9 @@ projeto_OBJECTS = \
 "CMakeFiles/projeto.dir/Classes/Time.cpp.obj" \
 "CMakeFiles/projeto.dir/Classes/Vehicle.cpp.obj" \
 "CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj" \
-"CMakeFiles/projeto.dir/Functions/utils.cpp.obj"
+"CMakeFiles/projeto.dir/Functions/utils.cpp.obj" \
+"CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj" \
+"CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj"
 
 # External object files for target projeto
 projeto_EXTERNAL_OBJECTS =
@@ -242,11 +270,13 @@ projeto.exe: CMakeFiles/projeto.dir/Classes/Time.cpp.obj
 projeto.exe: CMakeFiles/projeto.dir/Classes/Vehicle.cpp.obj
 projeto.exe: CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj
 projeto.exe: CMakeFiles/projeto.dir/Functions/utils.cpp.obj
+projeto.exe: CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj
+projeto.exe: CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj
 projeto.exe: CMakeFiles/projeto.dir/build.make
 projeto.exe: CMakeFiles/projeto.dir/linklibs.rsp
 projeto.exe: CMakeFiles/projeto.dir/objects1.rsp
 projeto.exe: CMakeFiles/projeto.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\projeto\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable projeto.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\projeto\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable projeto.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\projeto.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

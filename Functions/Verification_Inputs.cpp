@@ -27,14 +27,21 @@ bool verification_int(string aux) {
     return false;
 }
 
-bool verification_nif(string aux) {
+void verification_nif(string &aux) {
 
-    int counter = 0;
+    bool isValid = false;
 
-    aux.erase(remove(aux.begin(), aux.end(), ' '), aux.end());
-    if (!verification_int(aux)) return false;
+    while(!isValid){
+        trim(aux);
+        if (!verification_int(aux)) isValid = false;
+        isValid = (aux.size() == 9);
+        if(!isValid){
+            cout << "Invalid nif. Please insert a valid one: ";
+            getline(cin, aux);
+        }
+    }
 
-    return (aux.size() == 9);
+
 }
 
 bool verification_all_letters(string aux) { //verifica se há carateres invalidos numa string, ou seja , so sao aceites letras ou espaços

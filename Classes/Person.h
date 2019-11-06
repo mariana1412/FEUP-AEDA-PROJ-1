@@ -1,9 +1,11 @@
 #ifndef UGH_EATS_PERSON_H
 #define UGH_EATS_PERSON_H
 
-#include<iostream>
-#include"Time.h"
+#include <iostream>
+#include <vector>
+#include "Time.h"
 #include "Vehicle.h"
+#include "Deliver.h"
 
 using namespace std;
 
@@ -67,14 +69,14 @@ public:
 class Deliverer: public Employee{
 private:
     Vehicle vehicle;
-    int background;
+    vector<Deliver> background;
 public:
     Deliverer() {};
-    Deliverer(string base, string name, int nif, Time birthdate, float income, Vehicle vehicle, int background);
+    Deliverer(string base, string name, int nif, Time birthdate, float income, Vehicle vehicle, vector<Deliver> background);
     Vehicle getVehicle() const;
-    int getBackground() const;
+    vector<Deliver> getBackground() const;
     void setVehicle(Vehicle vehicle);
-    void setBackground(int background);
+    void setBackground(vector<Deliver> background);
 
 };
 

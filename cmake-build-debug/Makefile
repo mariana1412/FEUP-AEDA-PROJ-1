@@ -365,6 +365,60 @@ Classes/Vehicle.cpp.s:
 	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Classes/Vehicle.cpp.s
 .PHONY : Classes/Vehicle.cpp.s
 
+Functions/Clients_functions.obj: Functions/Clients_functions.cpp.obj
+
+.PHONY : Functions/Clients_functions.obj
+
+# target to build an object file
+Functions/Clients_functions.cpp.obj:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj
+.PHONY : Functions/Clients_functions.cpp.obj
+
+Functions/Clients_functions.i: Functions/Clients_functions.cpp.i
+
+.PHONY : Functions/Clients_functions.i
+
+# target to preprocess a source file
+Functions/Clients_functions.cpp.i:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.i
+.PHONY : Functions/Clients_functions.cpp.i
+
+Functions/Clients_functions.s: Functions/Clients_functions.cpp.s
+
+.PHONY : Functions/Clients_functions.s
+
+# target to generate assembly for a file
+Functions/Clients_functions.cpp.s:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.s
+.PHONY : Functions/Clients_functions.cpp.s
+
+Functions/ReadingFiles.obj: Functions/ReadingFiles.cpp.obj
+
+.PHONY : Functions/ReadingFiles.obj
+
+# target to build an object file
+Functions/ReadingFiles.cpp.obj:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj
+.PHONY : Functions/ReadingFiles.cpp.obj
+
+Functions/ReadingFiles.i: Functions/ReadingFiles.cpp.i
+
+.PHONY : Functions/ReadingFiles.i
+
+# target to preprocess a source file
+Functions/ReadingFiles.cpp.i:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.i
+.PHONY : Functions/ReadingFiles.cpp.i
+
+Functions/ReadingFiles.s: Functions/ReadingFiles.cpp.s
+
+.PHONY : Functions/ReadingFiles.s
+
+# target to generate assembly for a file
+Functions/ReadingFiles.cpp.s:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.s
+.PHONY : Functions/ReadingFiles.cpp.s
+
 Functions/Verification_Inputs.obj: Functions/Verification_Inputs.cpp.obj
 
 .PHONY : Functions/Verification_Inputs.obj
@@ -482,6 +536,12 @@ help:
 	@echo ... Classes/Vehicle.obj
 	@echo ... Classes/Vehicle.i
 	@echo ... Classes/Vehicle.s
+	@echo ... Functions/Clients_functions.obj
+	@echo ... Functions/Clients_functions.i
+	@echo ... Functions/Clients_functions.s
+	@echo ... Functions/ReadingFiles.obj
+	@echo ... Functions/ReadingFiles.i
+	@echo ... Functions/ReadingFiles.s
 	@echo ... Functions/Verification_Inputs.obj
 	@echo ... Functions/Verification_Inputs.i
 	@echo ... Functions/Verification_Inputs.s

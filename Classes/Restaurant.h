@@ -10,6 +10,7 @@ using namespace std;
 
 class Restaurant{
 private:
+    string name;
     string address;
     vector<string> types_of_food;
     vector<Product> products;
@@ -17,11 +18,13 @@ private:
 
 public:
     Restaurant(){};
-    Restaurant(string address, vector<string> types_of_food, vector<Product> products, float revenue);
+    Restaurant(string name, string address, vector<string> types_of_food, vector<Product> products, float revenue);
+    string getName() const;
     string getAddress() const;
     vector<string> getTypes_of_food() const;
     vector<Product> getProducts() const;
     float getRevenue() const;
+    void setName(string name);
     void setAddress(string address);
     void setTypes_of_food(vector<string> types_of_food);
     void setProducts(vector<Product> products);
