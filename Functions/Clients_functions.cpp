@@ -100,7 +100,7 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
 
     cout << "Client's Base: ";
     getline(cin, base);
-    //verificar base
+    /*verificar base*/
 
     if (base == "porto") {
         v = Porto.getClients();
