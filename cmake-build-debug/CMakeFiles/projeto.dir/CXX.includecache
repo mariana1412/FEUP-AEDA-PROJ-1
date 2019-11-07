@@ -82,31 +82,7 @@ iostream
 Time.h
 C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Time.h
 
-C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Functions/ReadingFiles.cpp
-ReadingFiles.h
-C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Functions/ReadingFiles.h
-
-C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Functions/ReadingFiles.h
-fstream
--
-iostream
--
-string
--
-vector
--
-../Classes/Person.h
-C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Person.h
-../Classes/Restaurant.h
-C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Restaurant.h
-../Classes/Base.h
-C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Base.h
-../Classes/Order.h
-C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Order.h
-../Classes/Location.h
-C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Location.h
-../Classes/Time.h
-C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Time.h
+C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Functions/StringConverters.cpp
 StringConverters.h
 C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Functions/StringConverters.h
 

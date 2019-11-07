@@ -25,6 +25,5 @@ int main() {
     extract_Deliveries(baseP, baseL, baseF);
     extract_Employees(baseP, baseL, baseF);
     extract_Bases(baseP, baseL, baseF);
-
     return 0;
 }

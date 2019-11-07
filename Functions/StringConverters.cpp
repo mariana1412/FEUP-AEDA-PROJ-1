@@ -94,7 +94,7 @@ Time stringToDate(string str){
     }
     result.setDay(data_clean.at(0));
     result.setMonth(data_clean.at(1));
-    result.setYear(data_clean.at(0));
+    result.setYear(data_clean.at(2));
     return result;
 }
 
@@ -138,8 +138,9 @@ vector<Delivery> stringToDeliveryVectorSearch(string str, const Base& b){
         trim(i);
         data_clean.push_back(stoi(i));
     }
+    vector<Delivery> deliveries = b.getDeliveries();
     for (vector<int>::const_iterator it = data_clean.begin(); it != data_clean.end(); it++){
-        for (vector<Delivery>::const_iterator it1 = b.getDeliveries().begin(); it1 != b.getDeliveries().end(); it1++){
+        for (vector<Delivery>::const_iterator it1 = deliveries.begin(); it1 != deliveries.end(); it1++){
             if ((*it) == (it1->getId()))
                 result.push_back((*it1));
         }
@@ -148,7 +149,8 @@ vector<Delivery> stringToDeliveryVectorSearch(string str, const Base& b){
 }
 
 Restaurant stringToRestaurantSearch(string str, const Base& b){
-    for (vector<Restaurant>::const_iterator it = b.getRestaurants().begin(); it != b.getRestaurants().end(); it++){
+    vector<Restaurant> restaurants = b.getRestaurants();
+    for (vector<Restaurant>::iterator it = restaurants.begin(); it != restaurants.end(); it++){
         if (str == it->getName())
             return (*it);
     }
@@ -195,9 +197,11 @@ vector<Product> stringToProductVectorSearch(string str, const Base& b){
         trim(i);
         data_clean.push_back(i);
     }
+    vector<Restaurant> restaurants = b.getRestaurants();
     for (vector<string>::const_iterator it = data_clean.begin(); it != data_clean.end(); it++){
-        for (vector<Restaurant>::const_iterator it1 = b.getRestaurants().begin(); it1 != b.getRestaurants().end(); it1++){
-            for (vector<Product>::const_iterator it2 = (*it1).getProducts().begin();it2 != (*it1).getProducts().end(); it2++){
+        for (vector<Restaurant>::const_iterator it1 = restaurants.begin(); it1 != restaurants.end(); it1++){
+            vector<Product> products = it1->getProducts();
+            for (vector<Product>::const_iterator it2 = products.begin();it2 != products.end(); it2++){
                 if ((*it) == (it2->getName()))
                     result.push_back((*it2));
             }

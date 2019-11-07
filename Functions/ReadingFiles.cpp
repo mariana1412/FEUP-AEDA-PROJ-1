@@ -5,10 +5,9 @@ void extract_Clients(Base& baseP, Base& baseL, Base& baseF){
     ifstream clientfile;
     clientfile.open("C:\\Users\\Diogo Almeida\\Desktop\\Projeto AEDA\\Clientes.txt");
     if (clientfile.is_open()) {
-        bool black = false;
         while (!clientfile.eof()) {
+            bool black = false;
             getline(clientfile, line);
-
             if (line == "Porto"){
                 getline(clientfile, name);
                 getline(clientfile, nif);
@@ -306,7 +305,8 @@ void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
             getline(basefile, line);
             baseP.setManager(line);
             getline(basefile, line);
-            baseP.setBlacklist(stringToClientVectorSearch(line, baseP));
+            if (stoi(line) != 0)
+                baseP.setBlacklist(stringToClientVectorSearch(line, baseP));
 
             getline(basefile, line);    //separator
             getline(basefile, line);    //Lisboa
@@ -316,7 +316,8 @@ void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
             getline(basefile, line);
             baseL.setManager(line);
             getline(basefile, line);
-            baseL.setBlacklist(stringToClientVectorSearch(line, baseL));
+            if (stoi(line) != 0)
+                baseL.setBlacklist(stringToClientVectorSearch(line, baseL));
 
             getline(basefile, line);    //separator
             getline(basefile, line);    //Faro
@@ -326,7 +327,8 @@ void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
             getline(basefile, line);
             baseF.setManager(line);
             getline(basefile, line);
-            baseF.setBlacklist(stringToClientVectorSearch(line, baseF));
+            if (stoi(line) != 0)
+                baseF.setBlacklist(stringToClientVectorSearch(line, baseF));
         }
     }
     else
