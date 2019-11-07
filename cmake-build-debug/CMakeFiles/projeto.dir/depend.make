@@ -10,9 +10,17 @@ CMakeFiles/projeto.dir/Classes/Base.cpp.obj: ../Classes/Product.h
 CMakeFiles/projeto.dir/Classes/Base.cpp.obj: ../Classes/Restaurant.h
 CMakeFiles/projeto.dir/Classes/Base.cpp.obj: ../Classes/Time.h
 CMakeFiles/projeto.dir/Classes/Base.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Classes/Base.cpp.obj: ../Functions/utils.h
 
 CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Classes/Location.cpp
 CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Classes/Location.h
+CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Classes/Order.h
+CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Classes/Person.h
+CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Classes/Product.h
+CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Classes/Restaurant.h
+CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Classes/Time.h
+CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Functions/utils.h
 
 CMakeFiles/projeto.dir/Classes/Order.cpp.obj: ../Classes/Order.cpp
 CMakeFiles/projeto.dir/Classes/Order.cpp.obj: ../Classes/Order.h
@@ -101,5 +109,17 @@ CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Classes/Vehicle.h
 CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Functions/utils.cpp
 CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Functions/utils.h
 
+CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Base.h
+CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Location.h
+CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Order.h
+CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Person.h
+CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Product.h
+CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Restaurant.h
+CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Time.h
+CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/ReadingFiles.h
+CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/StringConverters.h
+CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/Verification_Inputs.h
+CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/utils.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../main.cpp
 

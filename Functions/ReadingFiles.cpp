@@ -2,9 +2,8 @@
 
 void extract_Clients(Base& baseP, Base& baseL, Base& baseF){
     string line, name, nif;
-    //Location location;
     ifstream clientfile;
-    clientfile.open("Cliente.txt");
+    clientfile.open("C:\\Users\\Diogo Almeida\\Desktop\\Projeto AEDA\\Clientes.txt");
     if (clientfile.is_open()) {
         bool black = false;
         while (!clientfile.eof()) {
@@ -19,8 +18,7 @@ void extract_Clients(Base& baseP, Base& baseL, Base& baseF){
                 if (line == "true")
                     black = true;
                 getline(clientfile, line); //separator
-                auto* c= new Client("Porto", name, stoi(nif), location.getAddress(), black, location.getCounty());
-                baseP.addClient(*c);
+                baseP.addClient(Client("Porto", name, stoi(nif), location.getAddress(), black, location.getCounty()));
                 continue;
             }
 
@@ -33,8 +31,7 @@ void extract_Clients(Base& baseP, Base& baseL, Base& baseF){
                 if (line == "true")
                     black = true;
                 getline(clientfile, line); //separator
-                auto* c= new Client("Lisboa", name, stoi(nif), location.getAddress(), black, location.getCounty());
-                baseL.addClient(*c);
+                baseL.addClient(Client("Lisboa", name, stoi(nif), location.getAddress(), black, location.getCounty()));
                 continue;
             }
 
@@ -47,8 +44,7 @@ void extract_Clients(Base& baseP, Base& baseL, Base& baseF){
                 if (line == "true")
                     black = true;
                 getline(clientfile, line); //separator
-                auto* c= new Client("Faro", name, stoi(nif), location.getAddress(), black, location.getCounty());
-                baseF.addClient(*c);
+                baseF.addClient(Client("Faro", name, stoi(nif), location.getAddress(), black, location.getCounty()));
                 continue;
             }
         }
@@ -64,7 +60,7 @@ void extract_Restaurants(Base& baseP, Base& baseL, Base& baseF){
     vector<string> types_of_food;
     vector<Product> products;
     ifstream restaurantfile;
-    restaurantfile.open("Restaurants.txt");
+    restaurantfile.open("C:\\Users\\Diogo Almeida\\Desktop\\Projeto AEDA\\Restaurants.txt");
     if (restaurantfile.is_open()) {
         while (!restaurantfile.eof()) {
             getline(restaurantfile, line);
@@ -77,8 +73,7 @@ void extract_Restaurants(Base& baseP, Base& baseL, Base& baseF){
                 products = stringToProductVector(line);
                 getline(restaurantfile, revenue);
                 getline(restaurantfile, line); //separator
-                auto* r = new Restaurant(name, location, types_of_food, products, stof(revenue));
-                baseP.addRestaurant(*r);
+                baseP.addRestaurant(Restaurant(name, location, types_of_food, products, stof(revenue)));
                 continue;
             }
 
@@ -91,8 +86,7 @@ void extract_Restaurants(Base& baseP, Base& baseL, Base& baseF){
                 products = stringToProductVector(line);
                 getline(restaurantfile, revenue);
                 getline(restaurantfile, line); //separator
-                auto* r = new Restaurant(name, location, types_of_food, products, stof(revenue));
-                baseL.addRestaurant(*r);
+                baseL.addRestaurant(Restaurant(name, location, types_of_food, products, stof(revenue)));
                 continue;
             }
 
@@ -105,8 +99,7 @@ void extract_Restaurants(Base& baseP, Base& baseL, Base& baseF){
                 products = stringToProductVector(line);
                 getline(restaurantfile, revenue);
                 getline(restaurantfile, line); //separator
-                auto* r = new Restaurant(name, location, types_of_food, products, stof(revenue));
-                baseF.addRestaurant(*r);
+                baseF.addRestaurant(Restaurant(name, location, types_of_food, products, stof(revenue)));
                 continue;
             }
         }
@@ -124,7 +117,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
     Time hour;
     vector<Product> products;
     ifstream deliveryfile;
-    deliveryfile.open("Encomendas.txt");
+    deliveryfile.open("C:\\Users\\Diogo Almeida\\Desktop\\Projeto AEDA\\Encomendas.txt");
     if (deliveryfile.is_open()) {
         while (!deliveryfile.eof()) {
             getline(deliveryfile, line);
@@ -146,8 +139,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                 hour = stringToHour(line);
                 getline(deliveryfile, tax);
                 getline(deliveryfile, line); //separator
-                Delivery* d = new Delivery(restaurant, date, products, stoi(id), made, reason, hour, stof(tax));
-                baseP.addDelivery(*d);
+                baseP.addDelivery(Delivery(restaurant, date, products, stoi(id), made, reason, hour, stof(tax)));
                 continue;
             }
 
@@ -169,8 +161,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                 hour = stringToHour(line);
                 getline(deliveryfile, tax);
                 getline(deliveryfile, line); //separator
-                Delivery* d = new Delivery(restaurant, date, products, stoi(id), made, reason, hour, stof(tax));
-                baseL.addDelivery(*d);
+                baseL.addDelivery(Delivery(restaurant, date, products, stoi(id), made, reason, hour, stof(tax)));
                 continue;
             }
 
@@ -192,8 +183,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                 hour = stringToHour(line);
                 getline(deliveryfile, tax);
                 getline(deliveryfile, line); //separator
-                Delivery* d = new Delivery(restaurant, date, products, stoi(id), made, reason, hour, stof(tax));
-                baseF.addDelivery(*d);
+                baseF.addDelivery(Delivery(restaurant, date, products, stoi(id), made, reason, hour, stof(tax)));
                 continue;
             }
         }
@@ -210,7 +200,7 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
     Vehicle vehicle;
     vector<Delivery> deliveries;
     ifstream employeefile;
-    employeefile.open("Employees.txt");
+    employeefile.open("C:\\Users\\Diogo Almeida\\Desktop\\Projeto AEDA\\Funcionarios.txt");
     if (employeefile.is_open()) {
         while (!employeefile.eof()) {
             getline(employeefile, line);
@@ -224,8 +214,7 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, income);
                     getline(employeefile, task);
                     getline(employeefile, line);    //separator
-                    auto *a = new Admin("Porto", name, stoi(nif), birthdate, stof(income), task);
-                    baseP.addAdmin(*a);
+                    baseP.addAdmin(Admin("Porto", name, stoi(nif), birthdate, stof(income), task));
                 }
                 if (line == "Deliverer") {
                     getline(employeefile, name);
@@ -238,8 +227,7 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, line);
                     deliveries = stringToDeliveryVectorSearch(line, baseP);
                     getline(employeefile, line);    //separator
-                    auto *d = new Deliverer("Porto", name, stoi(nif), birthdate, stof(income), vehicle, deliveries);
-                    baseP.addDeliverer(*d);
+                    baseP.addDeliverer(Deliverer("Porto", name, stoi(nif), birthdate, stof(income), vehicle, deliveries));
                 }
                 continue;
             }
@@ -254,8 +242,7 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, income);
                     getline(employeefile, task);
                     getline(employeefile, line);    //separator
-                    auto *a = new Admin("Lisboa", name, stoi(nif), birthdate, stof(income), task);
-                    baseL.addAdmin(*a);
+                    baseL.addAdmin(Admin("Lisboa", name, stoi(nif), birthdate, stof(income), task));
                 }
                 if (line == "Deliverer") {
                     getline(employeefile, name);
@@ -268,8 +255,7 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, line);
                     deliveries = stringToDeliveryVectorSearch(line, baseL);
                     getline(employeefile, line);    //separator
-                    auto *d = new Deliverer("Lisboa", name, stoi(nif), birthdate, stof(income), vehicle, deliveries);
-                    baseL.addDeliverer(*d);
+                    baseL.addDeliverer(Deliverer("Lisboa", name, stoi(nif), birthdate, stof(income), vehicle, deliveries));
                 }
                 continue;
             }
@@ -284,8 +270,7 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, income);
                     getline(employeefile, task);
                     getline(employeefile, line);    //separator
-                    auto *a = new Admin("Faro", name, stoi(nif), birthdate, stof(income), task);
-                    baseF.addAdmin(*a);
+                    baseF.addAdmin(Admin("Faro", name, stoi(nif), birthdate, stof(income), task));
                 }
                 if (line == "Deliverer") {
                     getline(employeefile, name);
@@ -298,8 +283,7 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, line);
                     deliveries = stringToDeliveryVectorSearch(line, baseF);
                     getline(employeefile, line);    //separator
-                    auto *d = new Deliverer("Faro", name, stoi(nif), birthdate, stof(income), vehicle, deliveries);
-                    baseF.addDeliverer(*d);
+                    baseF.addDeliverer(Deliverer("Faro", name, stoi(nif), birthdate, stof(income), vehicle, deliveries));
                 }
                 continue;
             } else
@@ -312,7 +296,7 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
 void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
     string line;
     ifstream basefile;
-    basefile.open("Base.txt");
+    basefile.open("C:\\Users\\Diogo Almeida\\Desktop\\Projeto AEDA\\Base.txt");
     if (basefile.is_open()) {
         while (!basefile.eof()) {
             getline(basefile, line);    //Porto

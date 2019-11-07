@@ -15,11 +15,11 @@
 #include "../Classes/Time.h"
 #include "StringConverters.h"
 
-void extract_Bases(Base& baseP, Base& baseL, Base& baseF);
 void extract_Clients(Base& baseP, Base& baseL, Base& baseF);
 void extract_Restaurants(Base& baseP, Base& baseL, Base& baseF);
-void extract_Employees(Base& baseP, Base& baseL, Base& baseF);
 void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF);
+void extract_Employees(Base& baseP, Base& baseL, Base& baseF);
+void extract_Bases(Base& baseP, Base& baseL, Base& baseF);
 
 
 #endif //PROJETO_READINGFILES_H
