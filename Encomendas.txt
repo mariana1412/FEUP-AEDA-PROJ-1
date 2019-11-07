@@ -1,9 +1,19 @@
-Avenida de Matosinhos 23, 4400-989, Matosinhos
-25/10/2019
-15:38
+Porto
+1
+Japanese
+25/10/2019, 15:38
 temaki
+Success
+Nothing to show
+15:50
+5
 ::::::::
-Rua da Praia 45, 4400-787, Lisboa
-01/11/2019
-17:28
+Lisboa
+2
+Italian
+6/11/2019, 17:06
 pizza
+Insuccess
+Didn't show up
+17:16
+3

@@ -392,6 +392,33 @@ Functions/ReadingFiles.cpp.s:
 	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.s
 .PHONY : Functions/ReadingFiles.cpp.s
 
+Functions/StringConverters.obj: Functions/StringConverters.cpp.obj
+
+.PHONY : Functions/StringConverters.obj
+
+# target to build an object file
+Functions/StringConverters.cpp.obj:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/StringConverters.cpp.obj
+.PHONY : Functions/StringConverters.cpp.obj
+
+Functions/StringConverters.i: Functions/StringConverters.cpp.i
+
+.PHONY : Functions/StringConverters.i
+
+# target to preprocess a source file
+Functions/StringConverters.cpp.i:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/StringConverters.cpp.i
+.PHONY : Functions/StringConverters.cpp.i
+
+Functions/StringConverters.s: Functions/StringConverters.cpp.s
+
+.PHONY : Functions/StringConverters.s
+
+# target to generate assembly for a file
+Functions/StringConverters.cpp.s:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/StringConverters.cpp.s
+.PHONY : Functions/StringConverters.cpp.s
+
 Functions/Verification_Inputs.obj: Functions/Verification_Inputs.cpp.obj
 
 .PHONY : Functions/Verification_Inputs.obj
@@ -512,6 +539,9 @@ help:
 	@echo ... Functions/ReadingFiles.obj
 	@echo ... Functions/ReadingFiles.i
 	@echo ... Functions/ReadingFiles.s
+	@echo ... Functions/StringConverters.obj
+	@echo ... Functions/StringConverters.i
+	@echo ... Functions/StringConverters.s
 	@echo ... Functions/Verification_Inputs.obj
 	@echo ... Functions/Verification_Inputs.i
 	@echo ... Functions/Verification_Inputs.s

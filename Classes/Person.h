@@ -6,6 +6,7 @@
 #include "Time.h"
 #include "Vehicle.h"
 #include "Order.h"
+class Delivery;
 
 using namespace std;
 
@@ -69,14 +70,14 @@ public:
 class Deliverer: public Employee{
 private:
     Vehicle vehicle;
-    vector<Deliver> background;
+    vector<Delivery> background;
 public:
     Deliverer() {};
-    Deliverer(string base, string name, int nif, Time birthdate, float income, Vehicle vehicle, vector<Deliver> background);
+    Deliverer(string base, string name, int nif, Time birthdate, float income, Vehicle vehicle, vector<Delivery> background);
     Vehicle getVehicle() const;
-    vector<Deliver> getBackground() const;
+    vector<Delivery> getBackground() const;
     void setVehicle(Vehicle vehicle);
-    void setBackground(vector<Deliver> background);
+    void setBackground(vector<Delivery> background);
 
 };
 

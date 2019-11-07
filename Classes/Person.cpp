@@ -93,7 +93,7 @@ void Admin::setTask(string task){
     this->task = task;
 }
 
-Deliverer::Deliverer(string base, string name, int nif, Time birthdate, float income, Vehicle vehicle, vector<Deliver> background) : Employee(base, name, nif, birthdate, income){
+Deliverer::Deliverer(string base, string name, int nif, Time birthdate, float income, Vehicle vehicle, vector<Delivery> background) : Employee(base, name, nif, birthdate, income){
     this->vehicle = vehicle;
     this->background = background;
 }
@@ -102,7 +102,7 @@ Vehicle Deliverer::getVehicle() const {
     return vehicle;
 }
 
-vector<Deliver> Deliverer::getBackground() const {
+vector<Delivery> Deliverer::getBackground() const {
     return background;
 }
 
@@ -110,6 +110,6 @@ void Deliverer::setVehicle(Vehicle vehicle){
     this->vehicle = vehicle;
 }
 
-void Deliverer::setBackground(vector<Deliver> background){
+void Deliverer::setBackground(vector<Delivery> background){
     this->background = background;
 }

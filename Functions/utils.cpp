@@ -1,54 +1,33 @@
 #include "utils.h"
 
-string cleaning_invalid_characters(string line) { // retirar acentos e cedilhas, susbtituindo pelos caracteres validos correspondentes
-    string aux, l;
+bool isNumber(string n){
 
-    for (int i = 0; i < line.size(); i++) {
-        l = to_string(line[i]);
-        if (l == "à" || l == "á" || l == "ã" || l == "â") {
-            aux += 'a';
-        }
-        else if (l == "À" || l == "Á" || l == "Â" || l == "Ã") {
-            aux += 'A';
-        }
-        else if (l == "é" || l == "ê") {
-            aux += 'e';
-        }
-        else if (l == "É" || l == "Ê") {
-            aux += 'E';
-        }
-        else if (l == "í") {
-            aux += 'i';
-        }
-        else if (l == "Í") {
-            aux += 'I';
-        }
-        else if (l == "ó" || l == "õ" || l == "ô") {
-            aux += 'o';
-        }
-        else if (l == "Ó" || l == "Õ" || l == "Ô") {
-            aux += 'O';
-        }
-        else if (l == "ú") {
-            aux += 'u';
-        }
-        else if (l == "Ú") {
-            aux += 'U';
-        }
-        else if (l == "ç") {
-            aux += 'c';
-        }
-        else if (l == "Ç") {
-            aux += 'C';
-        }
-        else if (line[i]=='\x1a') {
-            aux = '0';
-        }
-        else {
-            aux += line[i];
-        }
+    for(int i = 0; i<n.size(); i++){
+        if(!isAlgarism(n[i])) return false;
     }
-    return aux;
+
+    return true;
+}
+
+bool isAlgarism(char n){
+    string numbers = "0123456789";
+    n = toupper(n);
+
+    if (numbers.find(n) != string::npos) {
+        return true;
+    }
+    return false;
+}
+
+bool isLetter(char a) {
+    string alphabet = "abcdefghijklmnopqrstuvwxyzãáàâçéêíõóôúüÃÁÀÂÇÉÊÍÕÓÔÚÜ";
+    a = tolower(a);
+
+    if (alphabet.find(a) != string::npos) {
+        return true;
+    }
+
+    return false;
 }
 
 void trim(string &str){
@@ -58,7 +37,6 @@ void trim(string &str){
 
 void formatting_string(string &str) { //formatar a string para que todas as letras sejam minusculas menos a primeira letra de cada palavra
 
-    str = cleaning_invalid_characters(str);
     str = remove_extra_whitespaces(str);
 
     transform(str.begin(), str.end(), str.begin(), ::tolower);//toda a string é colocada em minusculas
@@ -66,7 +44,7 @@ void formatting_string(string &str) { //formatar a string para que todas as letr
     str = " " + str;
 
     for (int i = 0; i < str.size(); i++) {
-        if (str[i] == ' ' && isalpha(str[i + 1])) {
+        if (str[i] == ' ' && isLetter(str[i + 1])) {
             str[i + 1] = toupper(str[i + 1]);// coloca a primeira letra de cada palavra a maiuscula
         }
     }
@@ -110,13 +88,42 @@ int int_sequential_search(const vector<Client> &v, int x) {//retorna o indice do
     return -1; // não encontrou
 }
 
-bool confirm_client(string action){
+bool confirm_modifications(string action, string person){
 
-    if (action == "create"){
-        string cancel;
-        cout << endl << endl << "Are you sure you want to create a client with this information? " << endl << "Insert 'yes' to continue. " << endl << "Insert 'no' to cancel. " << endl << "Answer: ";
+    string cancel;
+
+    if (action == "create") {
+        cout << endl << endl << "Are you sure you want to create a " << person << " with this information? " << endl
+             << "Insert 'yes' to continue. " << endl << "Insert 'no' to cancel. " << endl << "Answer: ";
         cin >> cancel;
+    }
 
+    else if (action == "modify") {
+        cout << endl << endl << "Are you sure you want to modify this " << person << " with this information? " << endl
+             << "Insert 'yes' to continue. " << endl << "Insert 'no' to cancel. " << endl << "Answer: ";
+        cin >> cancel;
+    }
+    else if (action == "remove") {
+        cout << endl << endl << "Are you sure you want to remove this " << person << "?" << endl
+             << "Insert 'yes' to continue. " << endl << "Insert 'no' to cancel. " << endl << "Answer: ";
+        cin >> cancel;
+    }
+
+    while (cin.fail()) {
+        if (cin.eof()) {
+            cin.clear();
+            cout << "Invalid operation, please insert a valid one: ";
+            cin >> cancel;
+        }
+    }
+
+    formatting_string(cancel);
+
+    while (cin.fail() || (cancel != "Yes" && cancel != "No")) {
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "Invalid operation, please insert a valid one: ";
+        cin >> cancel;
         while (cin.fail()) {
             if (cin.eof()) {
                 cin.clear();
@@ -127,23 +134,11 @@ bool confirm_client(string action){
 
         formatting_string(cancel);
 
-        while (cin.fail() || (cancel != "Yes" && cancel != "No")) {
-            cin.clear();
-            cin.ignore(1000, '\n');
-            cout << "Invalid operation, please insert a valid one: ";
-            cin >> cancel;
-            while (cin.fail()) {
-                if (cin.eof()) {
-                    cin.clear();
-                    cout << "Invalid operation, please insert a valid one: ";
-                    cin >> cancel;
-                }
-            }
-
-            formatting_string(cancel);
-
-        }
     }
 
 
+    if(cancel == "Yes") return true;
+
+    return false;
 }
+

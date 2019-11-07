@@ -1,12 +1,16 @@
 #ifndef PROJETO_CLIENTS_FUNCTIONS_H
 #define PROJETO_CLIENTS_FUNCTIONS_H
 
+#pragma once
+
 #include <iostream>
 #include <string>
 #include <vector>
 #include "../Classes/Person.h"
 #include "../Classes/Base.h"
 #include "utils.h"
+#include "Verification_Inputs.h"
+
 
 using namespace std;
 
@@ -15,9 +19,9 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro);
 int remove_client(Base &Porto, Base &Lisboa, Base &Faro);
 
 
-static const  vector<string> nearby_Porto = { "Matosinhos", "Vila Nova de Gaia", "Maia", "Gondomar", "Porto" };
-static const vector<string> nearby_Lisboa = { "Oeiras", "Loures", "Amadora", "Odivelas","Lisboa" };
-static const vector<string> nearby_Faro = { "Loulé","Olhão", "São Brás de Alportel","Faro" };
+extern const  vector<string> nearby_Porto;
+extern const vector<string> nearby_Lisboa;
+extern const vector<string> nearby_Faro;
 
 class BlackList {
 private:

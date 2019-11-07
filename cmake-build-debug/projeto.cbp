@@ -140,6 +140,12 @@
 		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/ReadingFiles.h">
 			<Option target="projeto"/>
 		</Unit>
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/StringConverters.cpp">
+			<Option target="projeto"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/StringConverters.h">
+			<Option target="projeto"/>
+		</Unit>
 		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/Verification_Inputs.cpp">
 			<Option target="projeto"/>
 		</Unit>

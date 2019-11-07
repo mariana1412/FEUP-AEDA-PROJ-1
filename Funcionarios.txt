@@ -1,3 +1,4 @@
+Porto
 Admin
 Jose Augusto Almeida
 196523321
@@ -5,9 +6,11 @@ Jose Augusto Almeida
 3250
 Contabilista
 ::::::::
+Lisboa
 Deliverer
 Antonio Truta
+123456789
 11/09/1970
 2600
-[Range Rover Evoque, Jeep,19/12/2015]
-150, 940
+Range Rover Evoque, Jeep, 19/12/2015
+2

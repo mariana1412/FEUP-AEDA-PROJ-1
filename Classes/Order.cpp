@@ -5,7 +5,9 @@ Order::Order(Restaurant restaurant, Time time , vector<Product>products){
     this->time = time;
     this->restaurant = restaurant;
     this->products = products;
-
+    for (vector<Product>::const_iterator it = products.begin(); it != products.end(); it++){
+        this->price += it->getPrice();
+    }
 }
 
 Restaurant Order::getRestaurant() const{
@@ -34,40 +36,48 @@ void Order::setProducts(vector<Product> products){
 }
 
 
-Deliver::Deliver(Restaurant restaurant, Time time , vector<Product>products, bool success, string reason_insucess, Time deliver_time, float price) : Order(restaurant, time, products){
+Delivery::Delivery(Restaurant restaurant, Time time , vector<Product> products, int id, bool success, string reason_insuccess, Time deliver_time, float tax): Order(restaurant, time , products){
+    this->id = id;
     this->success = success;
-    this->reason_insucess = reason_insucess;
+    this->reason_insuccess = reason_insuccess;
     this->deliver_time = deliver_time;
-    this->price = price;
+    this->tax = tax;
+    this->final_price = this->price + this->tax;
 }
 
-bool Deliver::getSuccess() const{
+int Delivery::getId() const {
+    return id;
+}
+
+bool Delivery::getSuccess() const{
     return success;
 }
 
-string Deliver::getReason_insucess() const {
-    return reason_insucess;
+string Delivery::getReason_insuccess() const {
+    return reason_insuccess;
 }
-Time Deliver::getDeliver_time() const{
+Time Delivery::getDeliver_time() const{
     return deliver_time;
 }
 
-float Deliver::getPrice() const{
+float Delivery::getPrice() const{
     return price;
 }
 
-void Deliver::setSuccess(bool success){
+void Delivery::setSuccess(bool success){
     this->success = success;
 }
 
-void Deliver::setReason_insucess(string reason_insucess){
-    this->reason_insucess = reason_insucess;
+void Delivery::setReason_insuccess(string reason_insuccess){
+    this->reason_insuccess = reason_insuccess;
 }
 
-void Deliver::setDeliver_time(Time deliver_time){
+void Delivery::setDeliver_time(Time deliver_time){
     this->deliver_time = deliver_time;
 }
 
-void Deliver::setPrice(float price){
+void Delivery::setPrice(float price){
     this->price = price;
 }
+
+

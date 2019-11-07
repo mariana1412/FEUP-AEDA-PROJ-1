@@ -1,9 +1,9 @@
 #include "Verification_Inputs.h"
 
-void menu_int_options(int &option, int nmax){
+void menu_int_options(int &option, int omin, int nmax){
     cout << endl << "Choose an option from the menu (integer number): ";
     cin >> option;
-    while (cin.fail() || option > nmax || option < 0) {
+    while (cin.fail() || option > nmax || option < omin) {
         if (cin.eof()) { //caso de ter sido introduzido o 'crtl-z'
             cin.clear();
             cout << "Invalid operation, please insert a valid one: ";
@@ -18,66 +18,117 @@ void menu_int_options(int &option, int nmax){
     }
 }
 
-bool verification_int(string aux) {
+void verification_int(string &aux) {
     string numbers = "0123456789";
 
-    aux.erase(remove(aux.begin(), aux.end(), ' '), aux.end());
-    if (aux.find_last_not_of(numbers) == string::npos) return true;
+    bool isValid = false;
 
-    return false;
+    while (!isValid || aux == "") {
+        if (aux != "") {
+            trim(aux);
+            isValid = (aux.find_last_not_of(numbers) == string::npos);
+        }
+        if (!isValid) {
+            cout << "Invalid character. Please insert a valid input: ";
+            getline(cin, aux);
+            if (cin.fail() && cin.eof()) {
+                cin.clear();
+                continue;
+            }
+        }
+    }
 }
 
 void verification_nif(string &aux) {
 
     bool isValid = false;
 
-    while(!isValid){
-        trim(aux);
-        if (!verification_int(aux)) isValid = false;
-        isValid = (aux.size() == 9);
-        if(!isValid){
+    while (!isValid || aux == "") {
+        if (aux != "") {
+            trim(aux);
+            verification_int(aux);
+            isValid = (aux.size() == 9);
+        }
+
+        if (!isValid) {
             cout << "Invalid nif. Please insert a valid one: ";
             getline(cin, aux);
+            if (cin.fail() && cin.eof()) {
+                cin.clear();
+                continue;
+            }
         }
     }
 
-
 }
 
-bool verification_all_letters(string aux) { //verifica se há carateres invalidos numa string, ou seja , so sao aceites letras ou espaços
-    string alphabet = "abcdefghijklmnopqrstuvwxyz";
+void verification_all_letters(string &aux) { //verifica se há carateres invalidos numa string, ou seja , so sao aceites letras ou espaços
+    string alphabet = "abcdefghijklmnopqrstuvwxyzãáàâçéêíõóôúüÃÁÀÂÇÉÊÍÕÓÔÚÜ";
+    bool isValid = false;
 
-    aux.erase(remove(aux.begin(), aux.end(), ' '), aux.end());
-    if (aux.find_last_not_of(alphabet) == string::npos) return true;
+    while (!isValid || aux == "") {
+        if (aux != "") {
+            trim(aux);
+            isValid = (aux.find_last_not_of(alphabet) == string::npos);
+        }
 
-    return false;
+        if (!isValid) {
+            cout << "Invalid character. Please insert a valid input: ";
+            getline(cin, aux);
+            if (cin.fail() && cin.eof()) {
+                cin.clear();
+                continue;
+            }
+        }
+    }
 }
 
-bool verification_date(string aux) {
+void verification_date(string &aux) {
 
-    remove_extra_whitespaces(aux);
+    bool isValid = false;
 
-    if(aux.size() != 10) return false;
-    if(count(aux.begin(), aux.end(), '/') != 2) return false;
+    while (!isValid || aux == "") {
+        if (aux != "") {
+            remove_all_whitespaces(aux);
+            int del1 = aux.find_first_of('/'), del2 = aux.find_last_of('/');
+            if(aux.size() != 10 || count(aux.begin(), aux.end(), '/') != 2 || del1 != 2 && del2 != 5 || !(isNumber(aux.substr(0, 2)) && isNumber(aux.substr(3, 2)) && isNumber(aux.substr(6, 4)))) {
+                isValid = false;
+            }
+            else {
+                isValid = true;
+            }
 
-    int del1 = aux.find_first_of('/'), del2 = aux.find_last_of('/');
 
-    if(del1 != 2 && del2 != 5) return false;
-    if(!(verification_int(aux.substr(0, 2)) && verification_int(aux.substr(3, 2)) && verification_int(aux.substr(6, 4)))) return false;
-
-    return true;
+        }
+        if (!isValid) {
+            cout << "Invalid date (format: dd/mm/yyyy). Please insert a valid one: ";
+            getline(cin, aux);
+            if (cin.fail() && cin.eof()) {
+                cin.clear();
+                continue;
+            }
+        }
+    }
 }
 
 void verification_base(string &aux){
 
-    formatting_string(aux);
+    bool isValid = false;
 
-    while(aux != "Porto" && aux != "Lisboa" && aux != "Faro"){
-        cout << "Invalid base (Porto, Lisboa, Faro). Please insert a valid one: ";
-        getline(cin, aux);
-        formatting_string(aux);
+    while (!isValid || aux == "") {
+        if (aux != "") {
+            formatting_string(aux);
+            isValid = (aux != "Porto" && aux != "Lisboa" && aux != "Faro");
+        }
+        if (!isValid) {
+            cout << "Invalid base (Porto, Lisboa, Faro). Please insert a valid one: ";
+            getline(cin, aux);
+            if (cin.fail() && cin.eof()) {
+                cin.clear();
+                continue;
+            }
+        }
     }
-
 }
 
 
