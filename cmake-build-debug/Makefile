@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Diogo Almeida\Desktop\Projeto AEDA"
+CMAKE_SOURCE_DIR = "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\projeto"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Diogo Almeida\Desktop\Projeto AEDA\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\projeto\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Diogo Almeida\Desktop\Projeto AEDA\cmake-build-debug\CMakeFiles" "C:\Users\Diogo Almeida\Desktop\Projeto AEDA\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\projeto\cmake-build-debug\CMakeFiles" "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\projeto\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Diogo Almeida\Desktop\Projeto AEDA\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\projeto\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -392,33 +392,6 @@ Functions/ReadingFiles.cpp.s:
 	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.s
 .PHONY : Functions/ReadingFiles.cpp.s
 
-Functions/StringConverters.obj: Functions/StringConverters.cpp.obj
-
-.PHONY : Functions/StringConverters.obj
-
-# target to build an object file
-Functions/StringConverters.cpp.obj:
-	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/StringConverters.cpp.obj
-.PHONY : Functions/StringConverters.cpp.obj
-
-Functions/StringConverters.i: Functions/StringConverters.cpp.i
-
-.PHONY : Functions/StringConverters.i
-
-# target to preprocess a source file
-Functions/StringConverters.cpp.i:
-	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/StringConverters.cpp.i
-.PHONY : Functions/StringConverters.cpp.i
-
-Functions/StringConverters.s: Functions/StringConverters.cpp.s
-
-.PHONY : Functions/StringConverters.s
-
-# target to generate assembly for a file
-Functions/StringConverters.cpp.s:
-	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/StringConverters.cpp.s
-.PHONY : Functions/StringConverters.cpp.s
-
 Functions/Verification_Inputs.obj: Functions/Verification_Inputs.cpp.obj
 
 .PHONY : Functions/Verification_Inputs.obj
@@ -539,9 +512,6 @@ help:
 	@echo ... Functions/ReadingFiles.obj
 	@echo ... Functions/ReadingFiles.i
 	@echo ... Functions/ReadingFiles.s
-	@echo ... Functions/StringConverters.obj
-	@echo ... Functions/StringConverters.i
-	@echo ... Functions/StringConverters.s
 	@echo ... Functions/Verification_Inputs.obj
 	@echo ... Functions/Verification_Inputs.i
 	@echo ... Functions/Verification_Inputs.s

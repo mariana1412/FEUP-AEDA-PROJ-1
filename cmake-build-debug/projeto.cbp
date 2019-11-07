@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug"/>
+				<Option working_dir="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug"/>
+				<Option working_dir="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="projeto">
-				<Option output="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/projeto.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug"/>
+				<Option output="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/projeto.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -42,15 +42,15 @@
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 projeto"/>
-					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 projeto"/>
+					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="projeto/fast">
-				<Option output="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/projeto.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug"/>
+				<Option output="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/projeto.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -63,105 +63,99 @@
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 projeto/fast"/>
-					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 projeto/fast"/>
+					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug"/>
+				<Option working_dir="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Diogo Almeida/Desktop/Projeto AEDA/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Base.cpp">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Base.cpp">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Base.h">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Base.h">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Location.cpp">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Location.cpp">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Location.h">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Location.h">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Order.cpp">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Order.cpp">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Order.h">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Order.h">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Person.cpp">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Person.cpp">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Person.h">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Person.h">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Product.cpp">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Product.cpp">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Product.h">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Product.h">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Restaurant.cpp">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Restaurant.cpp">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Restaurant.h">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Restaurant.h">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Time.cpp">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Time.cpp">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Time.h">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Time.h">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Vehicle.cpp">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Vehicle.cpp">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Classes/Vehicle.h">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Vehicle.h">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Functions/Clients_functions.cpp">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/Clients_functions.cpp">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Functions/Clients_functions.h">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/Clients_functions.h">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Functions/ReadingFiles.cpp">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/ReadingFiles.cpp">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Functions/ReadingFiles.h">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/ReadingFiles.h">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Functions/StringConverters.cpp">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/Verification_Inputs.cpp">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Functions/StringConverters.h">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/Verification_Inputs.h">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Functions/Verification_Inputs.cpp">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/utils.cpp">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Functions/Verification_Inputs.h">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/utils.h">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Functions/utils.cpp">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/main.cpp">
 			<Option target="projeto"/>
 		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/Functions/utils.h">
-			<Option target="projeto"/>
-		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/main.cpp">
-			<Option target="projeto"/>
-		</Unit>
-		<Unit filename="C:/Users/Diogo Almeida/Desktop/Projeto AEDA/CMakeLists.txt">
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

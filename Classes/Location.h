@@ -14,7 +14,7 @@ private:
     string county;
     string gps;
 public:
-    Location();
+    Location(){};
     Location(string str);
     Location(string address, string county, string gps);
     string getAddress() const;

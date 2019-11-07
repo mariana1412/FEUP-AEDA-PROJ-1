@@ -2,6 +2,9 @@
 #define UGH_EATS_TIME_H
 
 #include<iostream>
+#include <vector>
+#include <string>
+#include "../Functions/utils.h"
 
 using namespace std;
 
@@ -21,10 +24,13 @@ public:
     int getMonth() const;
     int getYear() const;
     void setHour(int hour);
+    void setHour(string str);
     void setMinutes(int minutes);
     void setDay(int day);
     void setMonth(int month);
     void setYear(int year);
+    void setDate(string str);
+    void setTime(string str);
     bool isValid();
     bool isEqualTo(const Time& date);
     bool isNotEqualTo(const Time& date);

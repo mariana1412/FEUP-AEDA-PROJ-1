@@ -13,7 +13,9 @@
 #include "../Classes/Order.h"
 #include "../Classes/Location.h"
 #include "../Classes/Time.h"
-#include "StringConverters.h"
+
+
+class Restaurant;
 
 void extract_Clients(Base& baseP, Base& baseL, Base& baseF);
 void extract_Restaurants(Base& baseP, Base& baseL, Base& baseF);

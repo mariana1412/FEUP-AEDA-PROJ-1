@@ -14,7 +14,7 @@
 #include "Functions/ReadingFiles.h"
 #include "Functions/utils.h"
 #include "Functions/Verification_Inputs.h"
-#include "Functions/StringConverters.h"
+
 
 using namespace std;
 

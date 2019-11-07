@@ -3,7 +3,7 @@
 void extract_Clients(Base& baseP, Base& baseL, Base& baseF){
     string line, name, nif;
     ifstream clientfile;
-    clientfile.open("C:\\Users\\Diogo Almeida\\Desktop\\Projeto AEDA\\Clientes.txt");
+    clientfile.open("../Clients.txt");
     if (clientfile.is_open()) {
         while (!clientfile.eof()) {
             bool black = false;
@@ -49,27 +49,23 @@ void extract_Clients(Base& baseP, Base& baseL, Base& baseF){
         }
     }
     else
-        cerr << "File could not be opened" << endl;
+        cerr << "Clients.txt could not be opened!" << endl;
     clientfile.close();
 
 }
 
 void extract_Restaurants(Base& baseP, Base& baseL, Base& baseF){
-    string line, name, location, revenue;
-    vector<string> types_of_food;
-    vector<Product> products;
+    string line, name, location, revenue, types_of_food, products;
     ifstream restaurantfile;
-    restaurantfile.open("C:\\Users\\Diogo Almeida\\Desktop\\Projeto AEDA\\Restaurants.txt");
+    restaurantfile.open("../Restaurants.txt");
     if (restaurantfile.is_open()) {
         while (!restaurantfile.eof()) {
             getline(restaurantfile, line);
             if (line == "Porto") {
                 getline(restaurantfile, name);
                 getline(restaurantfile, location);
-                getline(restaurantfile, line);
-                types_of_food = stringToStringVector(line);
-                getline(restaurantfile, line);
-                products = stringToProductVector(line);
+                getline(restaurantfile, types_of_food);
+                getline(restaurantfile, products);
                 getline(restaurantfile, revenue);
                 getline(restaurantfile, line); //separator
                 baseP.addRestaurant(Restaurant(name, location, types_of_food, products, stof(revenue)));
@@ -79,10 +75,8 @@ void extract_Restaurants(Base& baseP, Base& baseL, Base& baseF){
             if (line == "Lisboa") {
                 getline(restaurantfile, name);
                 getline(restaurantfile, location);
-                getline(restaurantfile, line);
-                types_of_food = stringToStringVector(line);
-                getline(restaurantfile, line);
-                products = stringToProductVector(line);
+                getline(restaurantfile, types_of_food);
+                getline(restaurantfile, products);
                 getline(restaurantfile, revenue);
                 getline(restaurantfile, line); //separator
                 baseL.addRestaurant(Restaurant(name, location, types_of_food, products, stof(revenue)));
@@ -92,10 +86,8 @@ void extract_Restaurants(Base& baseP, Base& baseL, Base& baseF){
             if (line == "Faro") {
                 getline(restaurantfile, name);
                 getline(restaurantfile, location);
-                getline(restaurantfile, line);
-                types_of_food = stringToStringVector(line);
-                getline(restaurantfile, line);
-                products = stringToProductVector(line);
+                getline(restaurantfile, types_of_food);
+                getline(restaurantfile, products);
                 getline(restaurantfile, revenue);
                 getline(restaurantfile, line); //separator
                 baseF.addRestaurant(Restaurant(name, location, types_of_food, products, stof(revenue)));
@@ -104,7 +96,7 @@ void extract_Restaurants(Base& baseP, Base& baseL, Base& baseF){
         }
     }
     else
-        cerr << "File could not be opened" << endl;
+        cerr << "Restaurants.txt could not be opened!" << endl;
     restaurantfile.close();
 }
 
@@ -116,7 +108,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
     Time hour;
     vector<Product> products;
     ifstream deliveryfile;
-    deliveryfile.open("C:\\Users\\Diogo Almeida\\Desktop\\Projeto AEDA\\Encomendas.txt");
+    deliveryfile.open("../Orders.txt");
     if (deliveryfile.is_open()) {
         while (!deliveryfile.eof()) {
             getline(deliveryfile, line);
@@ -125,7 +117,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                 getline(deliveryfile, line);
                 restaurant = stringToRestaurantSearch(line, baseP);
                 getline(deliveryfile, line);
-                date = stringToTime(line);
+                date.setTime(line);
                 getline(deliveryfile, line);
                 products = stringToProductVectorSearch(line, baseP);
                 getline(deliveryfile, success);
@@ -135,7 +127,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                     made = false;
                 getline(deliveryfile, reason);
                 getline(deliveryfile, line);
-                hour = stringToHour(line);
+                hour.setHour(line);
                 getline(deliveryfile, tax);
                 getline(deliveryfile, line); //separator
                 baseP.addDelivery(Delivery(restaurant, date, products, stoi(id), made, reason, hour, stof(tax)));
@@ -147,7 +139,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                 getline(deliveryfile, line);
                 restaurant = stringToRestaurantSearch(line, baseL);
                 getline(deliveryfile, line);
-                date = stringToTime(line);
+                date.setTime(line);
                 getline(deliveryfile, line);
                 products = stringToProductVectorSearch(line, baseL);
                 getline(deliveryfile, success);
@@ -157,7 +149,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                     made = false;
                 getline(deliveryfile, reason);
                 getline(deliveryfile, line);
-                hour = stringToHour(line);
+                hour.setHour(line);
                 getline(deliveryfile, tax);
                 getline(deliveryfile, line); //separator
                 baseL.addDelivery(Delivery(restaurant, date, products, stoi(id), made, reason, hour, stof(tax)));
@@ -169,7 +161,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                 getline(deliveryfile, line);
                 restaurant = stringToRestaurantSearch(line, baseF);
                 getline(deliveryfile, line);
-                date = stringToTime(line);
+                date.setTime(line);
                 getline(deliveryfile, line);
                 products = stringToProductVectorSearch(line, baseF);
                 getline(deliveryfile, success);
@@ -179,7 +171,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                     made = false;
                 getline(deliveryfile, reason);
                 getline(deliveryfile, line);
-                hour = stringToHour(line);
+                hour.setHour(line);
                 getline(deliveryfile, tax);
                 getline(deliveryfile, line); //separator
                 baseF.addDelivery(Delivery(restaurant, date, products, stoi(id), made, reason, hour, stof(tax)));
@@ -188,7 +180,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
         }
     }
     else
-        cerr << "File could not be opened" << endl;
+        cerr << "Orders.txt could not be opened!" << endl;
     deliveryfile.close();
 }
 
@@ -196,10 +188,9 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
 void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
     string line, name, nif, income, task;
     Time birthdate;
-    Vehicle vehicle;
     vector<Delivery> deliveries;
     ifstream employeefile;
-    employeefile.open("C:\\Users\\Diogo Almeida\\Desktop\\Projeto AEDA\\Funcionarios.txt");
+    employeefile.open("../Employees.txt");
     if (employeefile.is_open()) {
         while (!employeefile.eof()) {
             getline(employeefile, line);
@@ -209,7 +200,7 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, name);
                     getline(employeefile, nif);
                     getline(employeefile, line);
-                    birthdate = stringToDate(line);
+                    birthdate.setDate(line);
                     getline(employeefile, income);
                     getline(employeefile, task);
                     getline(employeefile, line);    //separator
@@ -219,10 +210,10 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, name);
                     getline(employeefile, nif);
                     getline(employeefile, line);
-                    birthdate = stringToDate(line);
+                    birthdate.setDate(line);
                     getline(employeefile, income);
                     getline(employeefile, line);
-                    vehicle = stringToVehicle(line);
+                    Vehicle vehicle(line);
                     getline(employeefile, line);
                     deliveries = stringToDeliveryVectorSearch(line, baseP);
                     getline(employeefile, line);    //separator
@@ -237,7 +228,7 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, name);
                     getline(employeefile, nif);
                     getline(employeefile, line);
-                    birthdate = stringToDate(line);
+                    birthdate.setDate(line);
                     getline(employeefile, income);
                     getline(employeefile, task);
                     getline(employeefile, line);    //separator
@@ -247,10 +238,10 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, name);
                     getline(employeefile, nif);
                     getline(employeefile, line);
-                    birthdate = stringToDate(line);
+                    birthdate.setDate(line);
                     getline(employeefile, income);
                     getline(employeefile, line);
-                    vehicle = stringToVehicle(line);
+                    Vehicle vehicle(line);
                     getline(employeefile, line);
                     deliveries = stringToDeliveryVectorSearch(line, baseL);
                     getline(employeefile, line);    //separator
@@ -265,7 +256,7 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, name);
                     getline(employeefile, nif);
                     getline(employeefile, line);
-                    birthdate = stringToDate(line);
+                    birthdate.setDate(line);
                     getline(employeefile, income);
                     getline(employeefile, task);
                     getline(employeefile, line);    //separator
@@ -275,10 +266,10 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, name);
                     getline(employeefile, nif);
                     getline(employeefile, line);
-                    birthdate = stringToDate(line);
+                    birthdate.setDate(line);
                     getline(employeefile, income);
                     getline(employeefile, line);
-                    vehicle = stringToVehicle(line);
+                    Vehicle vehicle(line);
                     getline(employeefile, line);
                     deliveries = stringToDeliveryVectorSearch(line, baseF);
                     getline(employeefile, line);    //separator
@@ -286,7 +277,7 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                 }
                 continue;
             } else
-                cerr << "File could not be opened" << endl;
+                cerr << "Employees.txt could not be opened!" << endl;
             employeefile.close();
         }
     }
@@ -295,7 +286,7 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
 void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
     string line;
     ifstream basefile;
-    basefile.open("C:\\Users\\Diogo Almeida\\Desktop\\Projeto AEDA\\Base.txt");
+    basefile.open("../Base.txt");
     if (basefile.is_open()) {
         while (!basefile.eof()) {
             getline(basefile, line);    //Porto
@@ -332,7 +323,7 @@ void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
         }
     }
     else
-        cerr << "File could not be opened" << endl;
+        cerr << "Base.txt could not be opened!" << endl;
     basefile.close();
 
 }

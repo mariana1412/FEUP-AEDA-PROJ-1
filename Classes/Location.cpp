@@ -1,8 +1,6 @@
 #include "Location.h"
 
 
-Location::Location() {}
-
 Location::Location(string str){
     string delimiter = ",";
     vector<string> data;

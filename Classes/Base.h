@@ -7,7 +7,10 @@
 #include "Location.h"
 #include "Person.h"
 #include "Restaurant.h"
-
+class Location;
+class Restaurant;
+class Client;
+class Deliverer;
 
 using namespace std;
 

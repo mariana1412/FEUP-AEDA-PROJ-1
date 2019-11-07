@@ -8,6 +8,11 @@
 #include <vector>
 #include <algorithm>
 #include "../Classes/Person.h"
+#include "../Classes/Base.h"
+#include "../Classes/Product.h"
+#include "../Classes/Order.h"
+class Product;
+
 
 using namespace std;
 
@@ -21,6 +26,10 @@ string remove_extra_whitespaces(string aux);
 int int_sequential_search(const vector<Client> &v, int x);
 int string_sequential_search(const vector<Client> &v, string x);
 bool confirm_modifications(string action, string person);
-
+vector<Client> stringToClientVectorSearch(string str, const Base &b);
+Restaurant stringToRestaurantSearch(string str, const Base &b);
+vector<Delivery> stringToDeliveryVectorSearch(string str, const Base& b);
+vector<Product> stringToProductVectorSearch(string str, const Base& b);
+vector<string> stringToStringVector(string str);
 
 #endif //PROJETO_UTILS_H

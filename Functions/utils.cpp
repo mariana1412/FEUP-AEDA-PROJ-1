@@ -142,3 +142,115 @@ bool confirm_modifications(string action, string person){
     return false;
 }
 
+
+//Returns a client if str is the client's NIF
+vector<Client> stringToClientVectorSearch(string str, const Base& b) {   //Blacklist
+    string delimiter = ",";
+    vector<string> data;
+    vector<int> data_clean;
+    vector<Client> result;
+    size_t pos = 0;
+    string token;
+    while ((pos = str.find(delimiter)) != std::string::npos) {
+        token = str.substr(0, pos);
+        data.push_back(token);
+        str.erase(0, pos + delimiter.length());
+    }
+    data.push_back(str);
+    for (auto & i : data) {
+        trim(i);
+        data_clean.push_back(stoi(i));
+    }
+    for (vector<int>::const_iterator it = data_clean.begin(); it != data_clean.end(); it++){
+        for (vector<Client>::const_iterator it1 = b.getClients().begin(); it1 != b.getClients().end(); it1++){
+            if ((*it) == it1->getNif())
+                result.push_back((*it1));
+        }
+    }
+    return result;
+}
+
+Restaurant stringToRestaurantSearch(string str, const Base& b){
+    vector<Restaurant> restaurants = b.getRestaurants();
+    for (vector<Restaurant>::iterator it = restaurants.begin(); it != restaurants.end(); it++){
+        if (str == it->getName())
+            return (*it);
+    }
+}
+
+vector<Delivery> stringToDeliveryVectorSearch(string str, const Base& b){
+    string delimiter = ",";
+    vector<string> data;
+    vector<int> data_clean;
+    vector<Delivery> result;
+    size_t pos = 0;
+    string token;
+    while ((pos = str.find(delimiter)) != std::string::npos) {
+        token = str.substr(0, pos);
+        data.push_back(token);
+        str.erase(0, pos + delimiter.length());
+    }
+    data.push_back(str);
+    for (auto & i : data) {
+        trim(i);
+        data_clean.push_back(stoi(i));
+    }
+    vector<Delivery> deliveries = b.getDeliveries();
+    for (vector<int>::const_iterator it = data_clean.begin(); it != data_clean.end(); it++){
+        for (vector<Delivery>::const_iterator it1 = deliveries.begin(); it1 != deliveries.end(); it1++){
+            if ((*it) == (it1->getId()))
+                result.push_back((*it1));
+        }
+    }
+    return result;
+}
+
+vector<Product> stringToProductVectorSearch(string str, const Base& b){
+    string delimiter = ",";
+    vector<string> data;
+    vector<string> data_clean;
+    vector<Product> result;
+    size_t pos = 0;
+    string token;
+    while ((pos = str.find(delimiter)) != std::string::npos) {
+        token = str.substr(0, pos);
+        data.push_back(token);
+        str.erase(0, pos + delimiter.length());
+    }
+    data.push_back(str);
+    for (auto & i : data) {
+        trim(i);
+        data_clean.push_back(i);
+    }
+    vector<Restaurant> restaurants = b.getRestaurants();
+    for (vector<string>::const_iterator it = data_clean.begin(); it != data_clean.end(); it++){
+        for (vector<Restaurant>::const_iterator it1 = restaurants.begin(); it1 != restaurants.end(); it1++){
+            vector<Product> products = it1->getProducts();
+            for (vector<Product>::const_iterator it2 = products.begin();it2 != products.end(); it2++){
+                if ((*it) == (it2->getName()))
+                    result.push_back((*it2));
+            }
+        }
+    }
+    return result;
+}
+
+vector<string> stringToStringVector(string str){
+    string delimiter = ",";
+    vector<string> data;
+    vector<string> result;
+    size_t pos = 0;
+    string token;
+    while ((pos = str.find(delimiter)) != std::string::npos) {
+        token = str.substr(0, pos);
+        data.push_back(token);
+        str.erase(0, pos + delimiter.length());
+    }
+    data.push_back(str);
+    for (auto & i : data) {
+        trim(i);
+        result.push_back(i);
+    }
+
+    return result;
+}
