@@ -2,7 +2,7 @@
 
 void extract_Clients(Base& baseP, Base& baseL, Base& baseF){
     string line, name, nif;
-    Location location;
+    //Location location;
     ifstream clientfile;
     clientfile.open("Cliente.txt");
     if (clientfile.is_open()) {
@@ -14,7 +14,7 @@ void extract_Clients(Base& baseP, Base& baseL, Base& baseF){
                 getline(clientfile, name);
                 getline(clientfile, nif);
                 getline(clientfile, line);
-                location = stringToLocation(line);
+                Location location(line);
                 getline(clientfile, line);
                 if (line == "true")
                     black = true;
@@ -28,7 +28,7 @@ void extract_Clients(Base& baseP, Base& baseL, Base& baseF){
                 getline(clientfile, name);
                 getline(clientfile, nif);
                 getline(clientfile, line);
-                location = stringToLocation(line);
+                Location location(line);
                 getline(clientfile, line);
                 if (line == "true")
                     black = true;
@@ -42,7 +42,7 @@ void extract_Clients(Base& baseP, Base& baseL, Base& baseF){
                 getline(clientfile, name);
                 getline(clientfile, nif);
                 getline(clientfile, line);
-                location = stringToLocation(line);
+                Location location(line);
                 getline(clientfile, line);
                 if (line == "true")
                     black = true;
@@ -56,7 +56,6 @@ void extract_Clients(Base& baseP, Base& baseL, Base& baseF){
     else
         cerr << "File could not be opened" << endl;
     clientfile.close();
-
 
 }
 
@@ -318,7 +317,8 @@ void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
         while (!basefile.eof()) {
             getline(basefile, line);    //Porto
             getline(basefile, line);
-            baseP.setLocation(stringToLocation(line));
+            Location location(line);
+            baseP.setLocation(location);
             getline(basefile, line);
             baseP.setManager(line);
             getline(basefile, line);
@@ -327,7 +327,8 @@ void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
             getline(basefile, line);    //separator
             getline(basefile, line);    //Lisboa
             getline(basefile, line);
-            baseL.setLocation(stringToLocation(line));
+            Location location1(line);
+            baseL.setLocation(location1);
             getline(basefile, line);
             baseL.setManager(line);
             getline(basefile, line);
@@ -336,7 +337,8 @@ void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
             getline(basefile, line);    //separator
             getline(basefile, line);    //Faro
             getline(basefile, line);
-            baseF.setLocation(stringToLocation(line));
+            Location location2(line);
+            baseF.setLocation(location2);
             getline(basefile, line);
             baseF.setManager(line);
             getline(basefile, line);

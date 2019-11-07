@@ -1,12 +1,10 @@
-//
-// Created by ritap on 13/10/2019.
-//
-
 #ifndef UGH_EATS_LOCATION_H
 #define UGH_EATS_LOCATION_H
 
 #include <iostream>
-#include<string>
+#include <string>
+#include <vector>
+#include "../Functions/utils.h"
 
 using namespace std;
 
@@ -17,6 +15,7 @@ private:
     string gps;
 public:
     Location();
+    Location(string str);
     Location(string address, string county, string gps);
     string getAddress() const;
     string getCounty() const;

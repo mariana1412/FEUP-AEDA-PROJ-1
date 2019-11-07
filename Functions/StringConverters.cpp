@@ -1,35 +1,5 @@
 #include "StringConverters.h"
 
-Location stringToLocation(string str){ //Morada da base, morada do cliente
-    string delimiter = ",";
-    vector<string> data;
-    vector<string> data_clean;
-    Location result;
-    size_t pos = 0;
-    string token;
-    while ((pos = str.find(delimiter)) != std::string::npos)
-    {
-        token = str.substr(0, pos);
-        data.push_back(token);
-        str.erase(0, pos + delimiter.length());
-    }
-    data.push_back(str);
-    for (auto & i : data)
-    {
-        trim(i);
-        data_clean.push_back(i);
-    }
-    if (data_clean.size() == 3){
-        result.setAddress(data_clean.at(0));
-        result.setCounty(data_clean.at(1));
-        result.setGps(data_clean.at(2));
-    }
-    else{
-        result.setAddress(data_clean.at(0));
-        result.setAddress(data_clean.at(1));
-    }
-    return result;
-}
 
 //Returns a client if str is the client's NIF
 vector<Client> stringToClientVectorSearch(string str, const Base& b) {   //Blacklist

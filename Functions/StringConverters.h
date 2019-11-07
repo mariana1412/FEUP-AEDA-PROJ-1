@@ -11,7 +11,6 @@
 #include "utils.h"
 
 
-Location stringToLocation(string str);
 vector<Client> stringToClientVectorSearch(string str, const Base& b);
 vector<string> stringToStringVector(string str);
 vector<Product> stringToProductVector(string str);
