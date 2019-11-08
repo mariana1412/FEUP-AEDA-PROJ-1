@@ -365,6 +365,33 @@ Functions/Clients_functions.cpp.s:
 	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.s
 .PHONY : Functions/Clients_functions.cpp.s
 
+Functions/Menus.obj: Functions/Menus.cpp.obj
+
+.PHONY : Functions/Menus.obj
+
+# target to build an object file
+Functions/Menus.cpp.obj:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Menus.cpp.obj
+.PHONY : Functions/Menus.cpp.obj
+
+Functions/Menus.i: Functions/Menus.cpp.i
+
+.PHONY : Functions/Menus.i
+
+# target to preprocess a source file
+Functions/Menus.cpp.i:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Menus.cpp.i
+.PHONY : Functions/Menus.cpp.i
+
+Functions/Menus.s: Functions/Menus.cpp.s
+
+.PHONY : Functions/Menus.s
+
+# target to generate assembly for a file
+Functions/Menus.cpp.s:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Menus.cpp.s
+.PHONY : Functions/Menus.cpp.s
+
 Functions/ReadingFiles.obj: Functions/ReadingFiles.cpp.obj
 
 .PHONY : Functions/ReadingFiles.obj
@@ -509,6 +536,9 @@ help:
 	@echo ... Functions/Clients_functions.obj
 	@echo ... Functions/Clients_functions.i
 	@echo ... Functions/Clients_functions.s
+	@echo ... Functions/Menus.obj
+	@echo ... Functions/Menus.i
+	@echo ... Functions/Menus.s
 	@echo ... Functions/ReadingFiles.obj
 	@echo ... Functions/ReadingFiles.i
 	@echo ... Functions/ReadingFiles.s

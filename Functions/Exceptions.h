@@ -9,7 +9,7 @@ class BlackList {
 private:
     string msg;
 public:
-    BlackList() { msg = "Client belongs to the Black List"; }
+    BlackList() { msg = "Client belongs to the Black List!"; }
     string getMsg() const { return msg; }
 };
 
@@ -18,7 +18,7 @@ class OutOfArea {
 private:
     string msg;
 public:
-    OutOfArea() { msg = "It is not possible to create this client, it does not belong to the base area "; }
+    OutOfArea() { msg = "It is not possible to create this client, it does not belong to the base area! "; }
     string getMsg() const { return msg;  }
 };
 

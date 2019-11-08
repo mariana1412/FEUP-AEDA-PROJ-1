@@ -71,11 +71,11 @@ int create_client(Base &Porto, Base &Lisboa, Base &Faro) {
         }
         else if (new_client.getBase() == "Lisboa") {
             Lisboa.getClients().push_back(new_client);
-            cout << "Client successfully was created!" << endl << endl;
+            cout << "Client was successfully created!" << endl << endl;
         }
         else if(new_client.getBase() == "Faro"){
             Faro.getClients().push_back(new_client);
-            cout << "Client successfully was created!" << endl << endl;
+            cout << "Client was successfully created!" << endl << endl;
         }
     }
     else {
@@ -193,7 +193,7 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
                 else if (base == "Faro"){
                     Faro.getClients()[i].setBase(new_info);
                 }
-                cout << "Client successfully was modified!" << endl << endl;
+                cout << "Client was successfully modified!" << endl << endl;
             }
             else {//caso de nao se confirmar a mudança
                 return 1; //end of the function call
@@ -216,17 +216,17 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
                 if (base == "Porto") {
                     Porto.getClients()[i].setAddress(new_info);
                     Porto.getClients()[i].setCounty(new_info2);
-                    cout << "Client successfully was modified!" << endl << endl;
+                    cout << "Client was successfully modified!" << endl << endl;
                 }
                 else if (base == "Lisboa") {
                     Lisboa.getClients()[i].setAddress(new_info);
                     Lisboa.getClients()[i].setCounty(new_info2);
-                    cout << "Client successfully was modified!" << endl << endl;
+                    cout << "Client was successfully modified!" << endl << endl;
                 }
                 else if (base == "Faro") {
                     Faro.getClients()[i].setAddress(new_info);
                     Faro.getClients()[i].setCounty(new_info2);
-                    cout << "Client successfully was modified!" << endl << endl;
+                    cout << "Client was successfully modified!" << endl << endl;
                 }
 
             }
@@ -266,19 +266,19 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
                     Porto.getClients()[i].setBase(new_info);
                     Porto.getClients()[i].setAddress(new_info2);
                     Porto.getClients()[i].setCounty(new_info3);
-                    cout << "Client successfully was modified!" << endl << endl;
+                    cout << "Client was successfully modified!" << endl << endl;
                 }
                 else if (base == "Lisboa") {
                     Lisboa.getClients()[i].setBase(new_info);
                     Lisboa.getClients()[i].setAddress(new_info2);
                     Lisboa.getClients()[i].setCounty(new_info3);
-                    cout << "Client successfully was modified!" << endl << endl;
+                    cout << "Client was successfully modified!" << endl << endl;
                 }
                 else if (base == "Faro") {
                     Faro.getClients()[i].setBase(new_info);
                     Faro.getClients()[i].setAddress(new_info2);
                     Faro.getClients()[i].setCounty(new_info3);
-                    cout << "Client successfully was modified!" << endl << endl;
+                    cout << "Client was successfully modified!" << endl << endl;
                 }
             }
             else {//caso de nao se confirmar a mudança
@@ -374,13 +374,29 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
                 Faro.getClients().erase(Faro.getClients().begin() + i);
 
             }
-            cout << "Client successfully was removed!" << endl << endl;
+            cout << "Client was successfully removed!" << endl << endl;
         }
         else {//caso de nao se confirmar a remoçao
             return 1;
         }
     }
     return 0;
+}
+
+bool black_list(Base base, int nif) {
+    vector<Client> black_list = base.getBlackList();
+    if (int_sequential_search(black_list, nif) == -1) {
+        throw (BlackList());
+    }
+
+    return true;
+}
+
+bool out_of_area(vector<Client> v,string county) {
+    if (string_sequential_search(v, county) == -1) {
+        throw(OutOfArea());
+    }
+    return true;
 }
 
 
