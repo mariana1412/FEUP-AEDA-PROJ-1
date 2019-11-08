@@ -9,11 +9,17 @@ int create_client(Base &Porto, Base &Lisboa, Base &Faro) {
     vector<Client> v;
     Client new_client;
     Base base;
+    bool is_Valid;
 
     cout << "-------------- CREATE CLIENT --------------" << endl;
 
     cout << "Base: ";
     getline(cin, aux);
+    while(cin.fail() && cin.eof()){
+        cin.clear();
+        cout << "Invalid character. Please insert a valid input: ";
+        getline(cin, aux);
+    }
     verification_base(aux);
     new_client.setBase(aux);
 
@@ -32,22 +38,63 @@ int create_client(Base &Porto, Base &Lisboa, Base &Faro) {
 
     cout << "Name:";
     getline(cin, aux);
+    while(cin.fail() && cin.eof()){
+        cin.clear();
+        cout << "Invalid character. Please insert a valid input: ";
+        getline(cin, aux);
+    }
     verification_all_letters(aux);
     new_client.setName(aux);
 
     cout << "NIF: ";
     getline(cin, aux);
+    while(cin.fail() && cin.eof()){
+        cin.clear();
+        cout << "Invalid character. Please insert a valid input: ";
+        getline(cin, aux);
+    }
     verification_nif(aux);
-    new_client.setNif(stoi(aux));
+    do{
+        try{
+            client_already_exists(aux,base);
+            is_Valid=true;
+        }
+        catch(ClientAlreadyExists &msg){
+            cout <<endl<< "ATENTION: Client with NIF "<< msg.getNIF()<<" already exists."<<endl;
+            is_Valid=false;
+            cout << "Try again!"<<endl;
+            cout << "NIF: ";
+            getline(cin, aux);
+            while(cin.fail() && cin.eof()){
+                cin.clear();
+                cout << "Invalid character. Please insert a valid input: ";
+                getline(cin, aux);
+            }
+            verification_nif(aux);
+        }
+
+    }while(!is_Valid);
+
 
     cout << "Address: ";//nao ha verificaçao porque pode ter tanto letras como numeros
     getline(cin, aux);
+    while(cin.fail() && cin.eof()){
+        cin.clear();
+        cout << "Invalid character. Please insert a valid input: ";
+        getline(cin, aux);
+    }
     new_client.setAddress(aux);
 
     cout << "County: ";
     getline(cin, aux);
+    while(cin.fail() && cin.eof()){
+        cin.clear();
+        cout << "Invalid character. Please insert a valid input: ";
+        getline(cin, aux);
+    }
     verification_all_letters(aux);
 
+    cout<<new_client;//para confirmar  a informaçao
     if (confirm_modifications("create", "client")) {
 
         try {
@@ -92,7 +139,7 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
 
     vector<Client> v;
     string base;
-    int i;
+    int i=0;
     string auxiliar;
     int number, option;
 
@@ -100,6 +147,11 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
 
     cout << "Client's Base: ";
     getline(cin, base);
+    while(cin.fail() && cin.eof()){
+        cin.clear();
+        cout << "Invalid character. Please insert a valid input: ";
+        getline(cin, base);
+    }
     verification_base(base);
 
     if (base == "Porto") {
@@ -115,8 +167,6 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
 
     cout << "What do you know about this client?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do cliente
     cout << "1: Name\n"<< "2: NIF\n" <<"0: Return to the main menu\n" ;
-    cin >> number;
-
     menu_int_options(number,0,2);
 
     switch (number) {
@@ -125,12 +175,22 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
         case 1:
             cout << "Name: ";
             getline(cin, auxiliar);
+            while(cin.fail() && cin.eof()){
+                cin.clear();
+                cout << "Invalid character. Please insert a valid input: ";
+                getline(cin, auxiliar);
+            }
             verification_all_letters(auxiliar);
             i = string_sequential_search(v, auxiliar);
             break;
         case 2:
             cout << "NIF: ";
             getline(cin, auxiliar);
+            while(cin.fail() && cin.eof()){
+                cin.clear();
+                cout << "Invalid character. Please insert a valid input: ";
+                getline(cin, auxiliar);
+            }
             verification_nif(auxiliar);
             i = int_sequential_search(v, stoi(auxiliar));
             break;
@@ -141,7 +201,6 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
         while(i == -1){
             cout << "What do you know about this client?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do cliente
             cout << "1: Name\n" << "2: NIF\n"<<"0: Return to the main menu\n";
-            cin >> number;
             menu_int_options(number,1,2);
             switch(number){
                 case 0:
@@ -149,12 +208,22 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
                 case 1:
                     cout << "Name: ";
                     getline(cin, auxiliar);
+                    while(cin.fail() && cin.eof()){
+                        cin.clear();
+                        cout << "Invalid character. Please insert a valid input: ";
+                        getline(cin, auxiliar);
+                    }
                     verification_all_letters(auxiliar);
                     i = string_sequential_search(v, auxiliar);
                     break;
                 case 2:
                     cout << "NIF: ";
                     getline(cin, auxiliar);
+                    while(cin.fail() && cin.eof()){
+                        cin.clear();
+                        cout << "Invalid character. Please insert a valid input: ";
+                        getline(cin, auxiliar);
+                    }
                     verification_nif(auxiliar);
                     i = int_sequential_search(v, stoi(auxiliar));
                     break;
@@ -165,13 +234,18 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
     }
     else {
         string new_info, new_info2, new_info3;
+        cout << v[i];        //mostrar o cliente para saber o que quer mudar
         cout << "What do you wish to change?\n";
         cout << "1: Base\n" << "2: Address\n" << "3: Both";
-        cin >> option;
         menu_int_options(option,1,3);
         if (option == 1) {
             cout << "Base: ";
             getline(cin, new_info);
+            while(cin.fail() && cin.eof()){
+                cin.clear();
+                cout << "Invalid character. Please insert a valid input: ";
+                getline(cin, new_info);
+            }
             verification_base(new_info);
             base = new_info;
             if (base == "Porto") {
@@ -202,8 +276,18 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
         else if (option == 2) {
             cout << "Address: ";
             getline(cin, new_info);
+            while(cin.fail() && cin.eof()){
+                cin.clear();
+                cout << "Invalid character. Please insert a valid input: ";
+                getline(cin, new_info);
+            }
             cout << "County: ";
             getline(cin, new_info2);
+            while(cin.fail() && cin.eof()){
+                cin.clear();
+                cout << "Invalid character. Please insert a valid input: ";
+                getline(cin, new_info2);
+            }
             verification_all_letters(new_info2);
             if (confirm_modifications("modify", "client")) {
                 try {
@@ -237,6 +321,11 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
         else if(option == 3){
             cout << "Base: ";
             getline(cin, new_info);
+            while(cin.fail() && cin.eof()){
+                cin.clear();
+                cout << "Invalid character. Please insert a valid input: ";
+                getline(cin, new_info);
+            }
             verification_base(new_info);
             base = new_info;
             if (base == "Porto") {
@@ -251,8 +340,18 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
 
             cout << "Address: ";
             getline(cin, new_info2);
+            while(cin.fail() && cin.eof()){
+                cin.clear();
+                cout << "Invalid character. Please insert a valid input: ";
+                getline(cin, new_info2);
+            }
             cout << "County: ";
             getline(cin, new_info3);
+            while(cin.fail() && cin.eof()){
+                cin.clear();
+                cout << "Invalid character. Please insert a valid input: ";
+                getline(cin, new_info3);
+            }
             verification_all_letters(new_info3);
             if (confirm_modifications("modify", "client")) {
                 try {
@@ -295,12 +394,17 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
 int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
     vector<Client> v;
     string base, auxiliar;
-    int i, number;
+    int i=0, number;
 
     cout << "-------------- REMOVE CLIENT --------------" << endl;
 
     cout << "Client's Base: ";
     getline(cin, base);
+    while(cin.fail() && cin.eof()){
+        cin.clear();
+        cout << "Invalid character. Please insert a valid input: ";
+        getline(cin, base);
+    }
     verification_base(base);
 
     if (base == "Porto") {
@@ -317,19 +421,28 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
 
     cout << "What do you know about this client?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do cliente
     cout << "1: Name\n" << "2: NIF\n"<<"0: Return to the main menu\n";
-    cin >> number;
     menu_int_options(number,1,2);
 
 
     if(number == 1){
         cout << "Name: ";
         getline(cin, auxiliar);
+        while(cin.fail() && cin.eof()){
+            cin.clear();
+            cout << "Invalid character. Please insert a valid input: ";
+            getline(cin, auxiliar);
+        }
         verification_all_letters(auxiliar);
         i = string_sequential_search(v, auxiliar);
     }
     else if(number == 2){
         cout << "NIF: ";
         getline(cin, auxiliar);
+        while(cin.fail() && cin.eof()){
+            cin.clear();
+            cout << "Invalid character. Please insert a valid input: ";
+            getline(cin, auxiliar);
+        }
         verification_nif(auxiliar);
         i = int_sequential_search(v, stoi(auxiliar));
     }
@@ -342,7 +455,6 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
         while (i == -1) {
             cout << "What do you know about this client?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do cliente
             cout << "1: Name\n" << "2: NIF\n"<<"0: Return to the main menu\n";
-            cin >> number;
             menu_int_options(number,1,2);
             switch (number) {
                 case 0:
@@ -350,12 +462,22 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
                 case 1:
                     cout << "Name: ";
                     getline(cin, auxiliar);
+                    while(cin.fail() && cin.eof()){
+                        cin.clear();
+                        cout << "Invalid character. Please insert a valid input: ";
+                        getline(cin, auxiliar);
+                    }
                     verification_all_letters(auxiliar);
                     i = string_sequential_search(v, auxiliar);
                     break;
                 case 2:
                     cout << "NIF: ";
                     getline(cin, auxiliar);
+                    while(cin.fail() && cin.eof()){
+                        cin.clear();
+                        cout << "Invalid character. Please insert a valid input: ";
+                        getline(cin, auxiliar);
+                    }
                     verification_nif(auxiliar);
                     i = int_sequential_search(v, stoi(auxiliar));
                     break;
@@ -363,6 +485,8 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
         }
     }
     else {
+        //mostrar o cliente
+        cout<< v[i];
         if (confirm_modifications("remove", "client")) {
             if (base == "Porto") {
                 Porto.getClients().erase(Porto.getClients().begin() + i);
@@ -400,3 +524,16 @@ bool out_of_area(vector<Client> v,string county) {
 }
 
 
+bool client_already_exists(string nif, Base &b){
+    vector<Client> clients= b.getClients();
+    vector<Client>::const_iterator it = clients.begin();
+
+    while(it != clients.end()){
+        if (stoi(nif) == (*it).getNif()){
+            throw ClientAlreadyExists(nif);
+        }
+        advance(it, 1);
+    }
+    return true;
+
+}

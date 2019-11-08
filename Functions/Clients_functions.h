@@ -27,5 +27,6 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro);
 
 bool black_list(Base base, int nif);
 bool out_of_area(vector<Client> v,string county);
+bool client_already_exists(string nif, Base &b);
 
 #endif //PROJETO_CLIENTS_FUNCTIONS_H

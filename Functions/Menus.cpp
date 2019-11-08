@@ -12,8 +12,6 @@ int MainMenu(){
     cout << "6. Profits Calculation (only administrators) " << endl;
     cout << "0. Exit" << endl;
 
-    cout << endl << "Choose an option from the menu(integer number): ";
-    cin >> option;
     menu_int_options(option,0,6);
 
     cin.ignore(1000,'\n');
@@ -29,8 +27,6 @@ int ClientsManagement(){
     cout << "4. Return to the main menu " << endl;
     cout << "0. Exit" << endl;
 
-    cout << endl << "Choose an option from the menu(integer number): ";
-    cin >> option;
     menu_int_options(option,0,4);
 
     cin.ignore(1000,'\n');
@@ -45,8 +41,7 @@ int EmployeesManagement(){
     cout << "4. Return to the main menu " << endl;
     cout << "0. Exit" << endl;
 
-    cout << endl << "Choose an option from the menu(integer number): ";
-    cin >> option;
+
     menu_int_options(option,0,4);
 
     cin.ignore(1000,'\n');
@@ -62,8 +57,6 @@ int SearchBy() {
     cout << "5. Return to the main menu " << endl;
     cout << "0. Exit" << endl;
 
-    cout << endl << "Choose an option from the menu(integer number): ";
-    cin >> option;
     menu_int_options(option, 0, 5);
 
     cin.ignore(1000, '\n');
@@ -81,8 +74,6 @@ int RestaurantsManagement(){
     cout << "4. Return to the main menu " << endl;
     cout << "0. Exit" << endl;
 
-    cout << endl << "Choose an option from the menu(integer number): ";
-    cin >> option;
     menu_int_options(option,0,4);
 
     cin.ignore(1000,'\n');
@@ -107,8 +98,6 @@ int ProfitsCalculation(){
     cout << "5. Return to the main menu " << endl;
     cout << "0. Exit" << endl;
 
-    cout << endl << "Choose an option from the menu(integer number): ";
-    cin >> option;
     menu_int_options(option,0,5);
 
     cin.ignore(1000,'\n');

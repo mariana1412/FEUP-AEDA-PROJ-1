@@ -22,6 +22,7 @@ void Person::setName(string name){
     this->name = name;
 }
 
+
 void Person::setNif(int nif){
     this->nif = nif;
 }
@@ -47,7 +48,6 @@ string Client::getAddress() const{
 string Client::getCounty() const{
     return county;
 }
-
 void Client::setAddress(string address){
     this->address = address;
 }
@@ -58,6 +58,15 @@ void Client::setBlack(bool black){
 
 void Client::setCounty(string county) {
     this->county = county;
+}
+
+ostream &operator<<(ostream &os,const Client cl){
+    os<< "Name: "<< cl.getName()<<endl
+    <<"NIF: "<<cl.getNif()<<endl
+    <<"Base: "<<cl.getBase()<<endl
+    << "Address: "<<cl.getAddress()<<endl
+    <<"County: "<<cl.getCounty()<<endl;
+    return os;
 }
 
 Employee::Employee(string base, string name, int nif, Time birthdate, float income) : Person(base, name, nif){

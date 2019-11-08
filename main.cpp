@@ -27,8 +27,8 @@ int main() {
     extract_Bases(Porto, Lisboa, Faro);
     cout << "What are you?\n";
     cout << "1. Administrator\n";
-    cout << "2. Client\n ";
-    cin >> op;
+    cout << "2. Client\n";
+
     menu_int_options(op, 1, 2);
 
     if (op == 1) {
@@ -97,8 +97,9 @@ int main() {
             int choice;
             do {
                 if (is_client) {
-                    cout << "You do not have access to this functionality.\n";
+                    cout << endl<<"ATENTION: You do not have access to this functionality.\n"<<endl;
                     choice = 0;
+                    break;
                 }
                 else {
                     choice = EmployeesManagement();
@@ -125,8 +126,9 @@ int main() {
             int choice;
             do {
                 if (is_client) {
-                    cout << "You do not have access to this functionality.\n";
+                    cout << endl<<"ATENTION: You do not have access to this functionality.\n"<<endl;
                     choice = 0;
+                    break;
                 }
                 else {
                     choice = RestaurantsManagement();
@@ -150,8 +152,9 @@ int main() {
             int choice;
             do {
                 if (is_client) {
-                    cout << "You do not have access to this functionality.\n";
+                    cout << endl<<"ATENTION: You do not have access to this functionality.\n"<<endl;
                     choice = 0;
+                    break;
                 }
                 else {
                     choice = ProfitsCalculation();
@@ -165,7 +168,8 @@ int main() {
                         //ProfitByClient(Porto, Lisboa, Faro);
                     }
                     else if (choice == 4) {
-                        //ProfitByTimeInterval(Porto, Lisboa, Faro);
+                        //ProfitByTimeInterval2
+                        // (Porto, Lisboa, Faro);
                     }
                     else if (choice == 0) {
                         menu = 0;

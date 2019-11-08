@@ -3,9 +3,12 @@
 
 #include <iostream>
 #include <vector>
+#include<fstream>
 #include "Time.h"
 #include "Vehicle.h"
 #include "Order.h"
+#include "Base.h"
+
 class Time;
 class Delivery;
 class Vehicle;
@@ -43,6 +46,7 @@ public:
     void setAddress(string address);
     void setBlack(bool black);
     void setCounty(string county);
+    friend ostream & operator<<(ostream &os,const Client cl);
 };
 
 class Employee: public Person{

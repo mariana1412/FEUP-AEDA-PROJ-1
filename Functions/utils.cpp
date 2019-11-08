@@ -161,8 +161,9 @@ vector<Client> stringToClientVectorSearch(string str, const Base &b) {   //Black
         trim(i);
         data_clean.push_back(stoi(i));
     }
+    vector<Client> clients = b.getClients();
     for (vector<int>::const_iterator it = data_clean.begin(); it != data_clean.end(); it++){
-        for (vector<Client>::const_iterator it1 = b.getClients().begin(); it1 != b.getClients().end(); it1++){
+        for (vector<Client>::const_iterator it1 = clients.begin(); it1 != clients.end(); it1++){
             if ((*it) == it1->getNif())
                 result.push_back((*it1));
         }

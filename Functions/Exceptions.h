@@ -30,6 +30,14 @@ public:
     string getName() const {return name;}
 };
 
+class ClientAlreadyExists{
+private:
+    string nif;
+public:
+    ClientAlreadyExists(string name){this->nif=nif;}
+    string getNIF() const{return nif;}
+};
+
 
 
 #endif //PROJETO_EXCEPTIONS_H
