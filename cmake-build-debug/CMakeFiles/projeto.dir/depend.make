@@ -10,6 +10,7 @@ CMakeFiles/projeto.dir/Classes/Base.cpp.obj: ../Classes/Product.h
 CMakeFiles/projeto.dir/Classes/Base.cpp.obj: ../Classes/Restaurant.h
 CMakeFiles/projeto.dir/Classes/Base.cpp.obj: ../Classes/Time.h
 CMakeFiles/projeto.dir/Classes/Base.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Classes/Base.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Classes/Base.cpp.obj: ../Functions/utils.h
 
 CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Classes/Base.h
@@ -21,6 +22,7 @@ CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Classes/Product.h
 CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Classes/Restaurant.h
 CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Classes/Time.h
 CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Functions/utils.h
 
 CMakeFiles/projeto.dir/Classes/Order.cpp.obj: ../Classes/Base.h
@@ -32,6 +34,7 @@ CMakeFiles/projeto.dir/Classes/Order.cpp.obj: ../Classes/Product.h
 CMakeFiles/projeto.dir/Classes/Order.cpp.obj: ../Classes/Restaurant.h
 CMakeFiles/projeto.dir/Classes/Order.cpp.obj: ../Classes/Time.h
 CMakeFiles/projeto.dir/Classes/Order.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Classes/Order.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Classes/Order.cpp.obj: ../Functions/utils.h
 
 CMakeFiles/projeto.dir/Classes/Person.cpp.obj: ../Classes/Base.h
@@ -43,6 +46,7 @@ CMakeFiles/projeto.dir/Classes/Person.cpp.obj: ../Classes/Product.h
 CMakeFiles/projeto.dir/Classes/Person.cpp.obj: ../Classes/Restaurant.h
 CMakeFiles/projeto.dir/Classes/Person.cpp.obj: ../Classes/Time.h
 CMakeFiles/projeto.dir/Classes/Person.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Classes/Person.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Classes/Person.cpp.obj: ../Functions/utils.h
 
 CMakeFiles/projeto.dir/Classes/Product.cpp.obj: ../Classes/Base.h
@@ -54,6 +58,7 @@ CMakeFiles/projeto.dir/Classes/Product.cpp.obj: ../Classes/Product.h
 CMakeFiles/projeto.dir/Classes/Product.cpp.obj: ../Classes/Restaurant.h
 CMakeFiles/projeto.dir/Classes/Product.cpp.obj: ../Classes/Time.h
 CMakeFiles/projeto.dir/Classes/Product.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Classes/Product.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Classes/Product.cpp.obj: ../Functions/utils.h
 
 CMakeFiles/projeto.dir/Classes/Restaurant.cpp.obj: ../Classes/Base.h
@@ -65,6 +70,7 @@ CMakeFiles/projeto.dir/Classes/Restaurant.cpp.obj: ../Classes/Restaurant.cpp
 CMakeFiles/projeto.dir/Classes/Restaurant.cpp.obj: ../Classes/Restaurant.h
 CMakeFiles/projeto.dir/Classes/Restaurant.cpp.obj: ../Classes/Time.h
 CMakeFiles/projeto.dir/Classes/Restaurant.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Classes/Restaurant.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Classes/Restaurant.cpp.obj: ../Functions/utils.h
 
 CMakeFiles/projeto.dir/Classes/Time.cpp.obj: ../Classes/Base.h
@@ -76,6 +82,7 @@ CMakeFiles/projeto.dir/Classes/Time.cpp.obj: ../Classes/Restaurant.h
 CMakeFiles/projeto.dir/Classes/Time.cpp.obj: ../Classes/Time.cpp
 CMakeFiles/projeto.dir/Classes/Time.cpp.obj: ../Classes/Time.h
 CMakeFiles/projeto.dir/Classes/Time.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Classes/Time.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Classes/Time.cpp.obj: ../Functions/utils.h
 
 CMakeFiles/projeto.dir/Classes/Vehicle.cpp.obj: ../Classes/Base.h
@@ -87,6 +94,7 @@ CMakeFiles/projeto.dir/Classes/Vehicle.cpp.obj: ../Classes/Restaurant.h
 CMakeFiles/projeto.dir/Classes/Vehicle.cpp.obj: ../Classes/Time.h
 CMakeFiles/projeto.dir/Classes/Vehicle.cpp.obj: ../Classes/Vehicle.cpp
 CMakeFiles/projeto.dir/Classes/Vehicle.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Classes/Vehicle.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Classes/Vehicle.cpp.obj: ../Functions/utils.h
 
 CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Classes/Base.h
@@ -99,6 +107,7 @@ CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Classes/Time.h
 CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Classes/Vehicle.h
 CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Functions/Clients_functions.cpp
 CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Functions/Clients_functions.h
+CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Functions/Verification_Inputs.h
 CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Functions/utils.h
 
@@ -110,6 +119,7 @@ CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Classes/Product.h
 CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Classes/Restaurant.h
 CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Classes/Time.h
 CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Functions/ReadingFiles.cpp
 CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Functions/ReadingFiles.h
 CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Functions/utils.h
@@ -122,6 +132,7 @@ CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Classes/Product
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Classes/Restaurant.h
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Classes/Time.h
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/Verification_Inputs.cpp
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/Verification_Inputs.h
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/utils.h
@@ -134,6 +145,7 @@ CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Classes/Product.h
 CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Classes/Restaurant.h
 CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Classes/Time.h
 CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Functions/utils.cpp
 CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Functions/utils.h
 
@@ -145,6 +157,7 @@ CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Product.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Restaurant.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Time.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/ReadingFiles.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/Verification_Inputs.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/utils.h

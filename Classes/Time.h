@@ -24,13 +24,13 @@ public:
     int getMonth() const;
     int getYear() const;
     void setHour(int hour);
-    void setHour(string str);
+    void setHour(string str); //format: hh:mm
     void setMinutes(int minutes);
     void setDay(int day);
     void setMonth(int month);
     void setYear(int year);
-    void setDate(string str);
-    void setTime(string str);
+    void setDate(string str); //format: dd/mm/yyyy
+    void setTime(string str); //format: dd/mm/yyyy, hh:mm
     bool isValid();
     bool isEqualTo(const Time& date);
     bool isNotEqualTo(const Time& date);
