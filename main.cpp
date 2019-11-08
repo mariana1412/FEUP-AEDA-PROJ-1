@@ -47,13 +47,13 @@ int main() {
             do {
                 choice = ClientsManagement();
                 if (choice == 1) {
-                    create_client(Porto, Lisboa, Faro);
+                    menu=create_client(Porto, Lisboa, Faro)-1;
                 }
                 else if (choice == 2) {
-                    modify_client(Porto, Lisboa, Faro);
+                    menu=modify_client(Porto, Lisboa, Faro)-1;
                 }
                 else if (choice == 3) {
-                    remove_client(Porto, Lisboa, Faro);
+                    menu= remove_client(Porto, Lisboa, Faro)-1;
                 }
                 else if (choice == 0) {
                     menu = 0;
