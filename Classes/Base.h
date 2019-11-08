@@ -7,21 +7,22 @@
 #include "Location.h"
 #include "Person.h"
 #include "Restaurant.h"
+#include "Order.h"
 class Location;
-class Restaurant;
 class Client;
-class Deliverer;
+class Employee;
+class Restaurant;
+class Delivery;
 
 using namespace std;
 
 
 class Base {
 private:
-    Location location;
+    Location* location;
     string manager;
     vector<Client> clients;
-    vector<Deliverer> deliverers;
-    vector<Admin> admins;
+    vector<Employee*> employees;
     vector<Client> blacklist;
     vector<Restaurant> restaurants;
     vector<Delivery> deliveries;
@@ -34,8 +35,7 @@ public:
     vector<Client> getClients() const;
     vector<Client> getBlackList() const;
     vector<Restaurant> getRestaurants()const;
-    vector<Admin> getAdmins() const;
-    vector<Deliverer> getDeliverers() const;
+    vector<Employee*> getEmployees()const;
     vector<Delivery> getDeliveries() const;
     void setLocation(Location location);
     void setManager(string manager);
@@ -44,8 +44,7 @@ public:
     void setRestaurants(vector<Restaurant> restaurants);
     void addClient(Client client);
     void addRestaurant(Restaurant restaurant);
-    void addAdmin(Admin admin);
-    void addDeliverer(Deliverer deliverer);
+    void addEmployee(Employee* employee);
     void addDelivery(Delivery delivery);
 
 };

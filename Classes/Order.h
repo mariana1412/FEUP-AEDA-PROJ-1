@@ -1,7 +1,3 @@
-//
-// Created by ritap on 13/10/2019.
-//
-
 #ifndef UGH_EATS_ORDER_H
 #define UGH_EATS_ORDER_H
 
@@ -10,15 +6,17 @@
 #include "Time.h"
 #include "Product.h"
 #include "Person.h"
-
+class Restaurant;
+class Time;
+class Product;
 
 using namespace std;
 
 
 class Order{
 private:
-    Restaurant restaurant;
-    Time time;
+    Restaurant* restaurant;
+    Time* time;
     vector<Product> products;
 
 protected:
@@ -40,7 +38,7 @@ private:
     int id;
     bool success;
     string reason_insuccess;
-    Time deliver_time;
+    Time* deliver_time;
     float tax;
     float final_price;
 public:

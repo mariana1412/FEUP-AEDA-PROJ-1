@@ -6,6 +6,7 @@
 #include <vector>
 #include "Product.h"
 #include "../Functions/utils.h"
+class Product;
 
 using namespace std;
 

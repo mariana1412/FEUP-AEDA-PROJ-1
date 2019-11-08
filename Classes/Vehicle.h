@@ -1,11 +1,12 @@
 #ifndef UGH_EATS_VEHICLE_H
 #define UGH_EATS_VEHICLE_H
 
-#include<iostream>
+#include <iostream>
 #include <vector>
 #include <string>
-#include"Time.h"
+#include "Time.h"
 #include "../Functions/utils.h"
+class Time;
 
 using namespace std;
 
@@ -13,7 +14,7 @@ class Vehicle{
 private:
     string brand;
     string type;
-    Time date;
+    Time* date;
 public:
     Vehicle();
     Vehicle(string brand, string type, Time date);

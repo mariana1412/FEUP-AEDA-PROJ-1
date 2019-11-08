@@ -23,6 +23,8 @@ Person.h
 C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Person.h
 Restaurant.h
 C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Restaurant.h
+Order.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Order.h
 
 C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Location.cpp
 Location.h
@@ -81,8 +83,6 @@ vector
 -
 iostream
 -
-Product.h
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Product.h
 ../Functions/utils.h
 C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/utils.h
 
@@ -143,6 +143,8 @@ string
 -
 vector
 -
+Exceptions.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/Exceptions.h
 ../Classes/Person.h
 C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Person.h
 ../Classes/Base.h
@@ -151,6 +153,10 @@ utils.h
 C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/utils.h
 Verification_Inputs.h
 C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/Verification_Inputs.h
+
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/Exceptions.h
+string
+-
 
 C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/ReadingFiles.cpp
 ReadingFiles.h
@@ -205,14 +211,18 @@ vector
 -
 algorithm
 -
+../Classes/Location.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Location.h
 ../Classes/Person.h
 C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Person.h
-../Classes/Base.h
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Base.h
-../Classes/Product.h
-C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Product.h
+../Classes/Restaurant.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Restaurant.h
 ../Classes/Order.h
 C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Order.h
+../Classes/Base.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Classes/Base.h
+Exceptions.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/Functions/Exceptions.h
 
 C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/projeto/main.cpp
 iostream

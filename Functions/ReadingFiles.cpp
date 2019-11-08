@@ -204,7 +204,8 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, income);
                     getline(employeefile, task);
                     getline(employeefile, line);    //separator
-                    baseP.addAdmin(Admin("Porto", name, stoi(nif), birthdate, stof(income), task));
+                    Employee *e1 = new Admin("Porto", name, stoi(nif), birthdate, stof(income), task);
+                    baseP.addEmployee(e1);
                 }
                 if (line == "Deliverer") {
                     getline(employeefile, name);
@@ -217,7 +218,8 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, line);
                     deliveries = stringToDeliveryVectorSearch(line, baseP);
                     getline(employeefile, line);    //separator
-                    baseP.addDeliverer(Deliverer("Porto", name, stoi(nif), birthdate, stof(income), vehicle, deliveries));
+                    Employee *e1 = new Deliverer("Porto", name, stoi(nif), birthdate, stof(income), vehicle, deliveries);
+                    baseP.addEmployee(e1);
                 }
                 continue;
             }
@@ -232,7 +234,8 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, income);
                     getline(employeefile, task);
                     getline(employeefile, line);    //separator
-                    baseL.addAdmin(Admin("Lisboa", name, stoi(nif), birthdate, stof(income), task));
+                    Employee *e1 = new Admin("Lisboa", name, stoi(nif), birthdate, stof(income), task);
+                    baseL.addEmployee(e1);
                 }
                 if (line == "Deliverer") {
                     getline(employeefile, name);
@@ -245,7 +248,8 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, line);
                     deliveries = stringToDeliveryVectorSearch(line, baseL);
                     getline(employeefile, line);    //separator
-                    baseL.addDeliverer(Deliverer("Lisboa", name, stoi(nif), birthdate, stof(income), vehicle, deliveries));
+                    Employee *e1 = new Deliverer("Lisboa", name, stoi(nif), birthdate, stof(income), vehicle, deliveries);
+                    baseL.addEmployee(e1);
                 }
                 continue;
             }
@@ -260,7 +264,8 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, income);
                     getline(employeefile, task);
                     getline(employeefile, line);    //separator
-                    baseF.addAdmin(Admin("Faro", name, stoi(nif), birthdate, stof(income), task));
+                    Employee *e1 = new Admin("Faro", name, stoi(nif), birthdate, stof(income), task);
+                    baseF.addEmployee(e1);
                 }
                 if (line == "Deliverer") {
                     getline(employeefile, name);
@@ -273,7 +278,8 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, line);
                     deliveries = stringToDeliveryVectorSearch(line, baseF);
                     getline(employeefile, line);    //separator
-                    baseF.addDeliverer(Deliverer("Faro", name, stoi(nif), birthdate, stof(income), vehicle, deliveries));
+                    Employee *e1 = new Deliverer("Faro", name, stoi(nif), birthdate, stof(income), vehicle, deliveries);
+                    baseF.addEmployee(e1);
                 }
                 continue;
             } else
@@ -291,8 +297,7 @@ void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
         while (!basefile.eof()) {
             getline(basefile, line);    //Porto
             getline(basefile, line);
-            Location location(line);
-            baseP.setLocation(location);
+            baseP.setLocation(Location(line));
             getline(basefile, line);
             baseP.setManager(line);
             getline(basefile, line);
@@ -302,19 +307,16 @@ void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
             getline(basefile, line);    //separator
             getline(basefile, line);    //Lisboa
             getline(basefile, line);
-            Location location1(line);
-            baseL.setLocation(location1);
+            baseL.setLocation(Location(line));
             getline(basefile, line);
             baseL.setManager(line);
             getline(basefile, line);
             if (stoi(line) != 0)
                 baseL.setBlacklist(stringToClientVectorSearch(line, baseL));
-
             getline(basefile, line);    //separator
             getline(basefile, line);    //Faro
             getline(basefile, line);
-            Location location2(line);
-            baseF.setLocation(location2);
+            baseF.setLocation(Location(line));
             getline(basefile, line);
             baseF.setManager(line);
             getline(basefile, line);

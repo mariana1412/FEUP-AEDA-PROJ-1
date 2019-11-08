@@ -14,8 +14,12 @@
 #include "../Classes/Location.h"
 #include "../Classes/Time.h"
 
-
+class Time;
+class Location;
+class Employee;
 class Restaurant;
+class Delivery;
+class Base;
 
 void extract_Clients(Base& baseP, Base& baseL, Base& baseF);
 void extract_Restaurants(Base& baseP, Base& baseL, Base& baseF);

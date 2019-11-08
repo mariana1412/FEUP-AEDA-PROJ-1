@@ -1,10 +1,9 @@
 #ifndef UGH_EATS_PRODUCT_H
 #define UGH_EATS_PRODUCT_H
 
-#include<string>
+#include <string>
 #include <vector>
-#include<iostream>
-#include"Product.h"
+#include <iostream>
 #include "../Functions/utils.h"
 
 using namespace std;

@@ -5,7 +5,7 @@ Vehicle::Vehicle(){}
 Vehicle::Vehicle(string brand, string type, Time date){
     this->brand = brand;
     this->type = type;
-    this->date = date;
+    this->date = &date;
 }
 
 Vehicle::Vehicle(string vehicle){
@@ -39,7 +39,7 @@ string Vehicle::getType() const{
 }
 
 Time Vehicle::getDate() const{
-    return date;
+    return *date;
 }
 
 void Vehicle::setBrand(string brand){
@@ -51,7 +51,7 @@ void Vehicle::setType(string type){
 }
 
 void Vehicle::setDate(Time date){
-    this->date = date;
+    this->date = &date;
 }
 
 void Vehicle::setDate(string date){
@@ -74,7 +74,7 @@ void Vehicle::setDate(string date){
     result.setDay(data_clean.at(0));
     result.setMonth(data_clean.at(1));
     result.setYear(data_clean.at(2));
-    this->date = result;
+    this->date = &result;
 
 }
 

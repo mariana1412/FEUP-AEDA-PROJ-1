@@ -6,7 +6,9 @@
 #include "Time.h"
 #include "Vehicle.h"
 #include "Order.h"
+class Time;
 class Delivery;
+class Vehicle;
 
 using namespace std;
 
@@ -45,7 +47,7 @@ public:
 
 class Employee: public Person{
 private:
-    Time birthdate;
+    Time* birthdate;
     float income;
 public:
     Employee(){};
@@ -69,7 +71,7 @@ public:
 
 class Deliverer: public Employee{
 private:
-    Vehicle vehicle;
+    Vehicle* vehicle;
     vector<Delivery> background;
 public:
     Deliverer() {};

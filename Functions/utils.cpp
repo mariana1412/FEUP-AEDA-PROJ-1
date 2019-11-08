@@ -144,7 +144,7 @@ bool confirm_modifications(string action, string person){
 
 
 //Returns a client if str is the client's NIF
-vector<Client> stringToClientVectorSearch(string str, const Base& b) {   //Blacklist
+vector<Client> stringToClientVectorSearch(string str, const Base &b) {   //Blacklist
     string delimiter = ",";
     vector<string> data;
     vector<int> data_clean;
@@ -170,15 +170,16 @@ vector<Client> stringToClientVectorSearch(string str, const Base& b) {   //Black
     return result;
 }
 
-Restaurant stringToRestaurantSearch(string str, const Base& b){
+Restaurant stringToRestaurantSearch(string str, const Base &b){
     vector<Restaurant> restaurants = b.getRestaurants();
     for (vector<Restaurant>::iterator it = restaurants.begin(); it != restaurants.end(); it++){
         if (str == it->getName())
             return (*it);
     }
+    throw RestaurantNotFound(str);
 }
 
-vector<Delivery> stringToDeliveryVectorSearch(string str, const Base& b){
+vector<Delivery> stringToDeliveryVectorSearch(string str, const Base &b){
     string delimiter = ",";
     vector<string> data;
     vector<int> data_clean;
@@ -205,7 +206,7 @@ vector<Delivery> stringToDeliveryVectorSearch(string str, const Base& b){
     return result;
 }
 
-vector<Product> stringToProductVectorSearch(string str, const Base& b){
+vector<Product> stringToProductVectorSearch(string str, const Base &b){
     string delimiter = ",";
     vector<string> data;
     vector<string> data_clean;

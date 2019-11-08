@@ -61,12 +61,12 @@ void Client::setCounty(string county) {
 }
 
 Employee::Employee(string base, string name, int nif, Time birthdate, float income) : Person(base, name, nif){
-    this->birthdate = birthdate;
+    this->birthdate = &birthdate;
     this->income = income;
 }
 
 Time Employee::getBirthdate() const{
-    return birthdate;
+    return *birthdate;
 }
 
 float Employee::getIncome() const{
@@ -74,7 +74,7 @@ float Employee::getIncome() const{
 }
 
 void Employee::setBirthdate(Time birthdate){
-    this->birthdate = birthdate;
+    this->birthdate = &birthdate;
 }
 
 void Employee::setIncome(float income){
@@ -94,12 +94,12 @@ void Admin::setTask(string task){
 }
 
 Deliverer::Deliverer(string base, string name, int nif, Time birthdate, float income, Vehicle vehicle, vector<Delivery> background) : Employee(base, name, nif, birthdate, income){
-    this->vehicle = vehicle;
+    this->vehicle = &vehicle;
     this->background = background;
 }
 
 Vehicle Deliverer::getVehicle() const {
-    return vehicle;
+    return *vehicle;
 }
 
 vector<Delivery> Deliverer::getBackground() const {
@@ -107,7 +107,7 @@ vector<Delivery> Deliverer::getBackground() const {
 }
 
 void Deliverer::setVehicle(Vehicle vehicle){
-    this->vehicle = vehicle;
+    this->vehicle = &vehicle;
 }
 
 void Deliverer::setBackground(vector<Delivery> background){
