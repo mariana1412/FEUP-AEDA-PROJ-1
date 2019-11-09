@@ -123,4 +123,24 @@ void Deliverer::setBackground(vector<Delivery> background){
     this->background = background;
 }
 
-
+ostream & operator<<(ostream &os, const Admin a) {
+    os << "Name: " << a.getName() << endl
+       << "NIF: " << a.getNif() << endl
+       << "Base: " << a.getBase() << endl
+       << "Birthdate: " << a.getBirthdate() << endl
+       << "Income: " << a.getIncome() << endl
+       << "Task: " << a.getTask() << endl;
+    return os;
+}
+ostream & operator<<(ostream &os, const Deliverer d){
+    os<< "Name: "<< d.getName()<<endl
+      <<"NIF: "<<d.getNif()<<endl
+      <<"Base: "<<d.getBase()<<endl
+      <<"Birthdate: "<< d.getBirthdate()<<endl
+      <<"Income: "<< d.getIncome()<<endl
+      <<"Vehicle :"<<endl
+      <<"\t Brand: "<<d.getVehicle().getBrand()<<endl
+      <<"\t Type: "<<d.getVehicle().getType()<<endl
+      <<"\t Date: "<<d.getVehicle().getDate()<<endl;
+    return os;
+}

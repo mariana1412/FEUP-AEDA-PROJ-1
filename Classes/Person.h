@@ -66,6 +66,7 @@ public:
     Admin(string base, string name, int nif, Time birthdate, float income, string task);
     string getTask() const;
     void setTask(string task);
+    friend ostream & operator<<(ostream &os,const Admin a);
 };
 
 class Deliverer: public Employee{
@@ -79,6 +80,7 @@ public:
     vector<Delivery> getBackground() const;
     void setVehicle(Vehicle vehicle);
     void setBackground(vector<Delivery> background);
+    friend ostream & operator<<(ostream &os,const Deliverer d);
 
 };
 

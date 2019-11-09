@@ -4,6 +4,7 @@
 #pragma once
 
 #include<iostream>
+#include<iomanip>
 
 using namespace std;
 
@@ -32,6 +33,7 @@ public:
     bool isNotEqualTo(const Time& date);
     bool isAfter(const Time& date);
     bool isBefore(const Time& date);
+    friend ostream &operator <<(ostream &os,const Time t);
 
 };
 

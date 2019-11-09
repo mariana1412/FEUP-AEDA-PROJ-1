@@ -109,14 +109,33 @@ int main() {
                 else {
                     choice = EmployeesManagement();
                     if (choice == 1) {
-                        create_employee(Porto, Lisboa, Faro);
+                        if((create_employee(Porto, Lisboa, Faro)==0 )||(create_employee(Porto, Lisboa, Faro)==1)){
+                            break;
+                        }
+                        else {
+                            menu = 4;
+                            break;
+                        }
                     }
                     else if (choice == 2) {
-                        modify_employee(Porto, Lisboa, Faro);
+                        if ((modify_employee(Porto, Lisboa, Faro) == 0) ||
+                            (modify_employee(Porto, Lisboa, Faro) == 1)) {
+                            break;
+                        } else {
+                            menu = 4;
+                            break;
+                        }
                     }
                     else if (choice == 3) {
-                        remove_employee(Porto, Lisboa, Faro);
+                            if((remove_employee(Porto, Lisboa, Faro)==0 )||(remove_employee(Porto, Lisboa, Faro)==1)){
+                                break;
+                            }
+                            else {
+                                menu = 4;
+                                break;
+                            }
                     }
+
                     else if (choice == 0) {
                         menu = 0;
                         break;
