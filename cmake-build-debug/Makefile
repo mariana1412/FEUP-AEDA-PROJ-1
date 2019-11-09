@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Diogo Almeida\Desktop\UghEats"
+CMAKE_SOURCE_DIR = "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\UghEats"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\UghEats\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\UghEats\cmake-build-debug\CMakeFiles" "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\UghEats\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\UghEats\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -446,6 +446,33 @@ Functions/Restaurants_functions.cpp.s:
 	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.s
 .PHONY : Functions/Restaurants_functions.cpp.s
 
+Functions/StringConverters.obj: Functions/StringConverters.cpp.obj
+
+.PHONY : Functions/StringConverters.obj
+
+# target to build an object file
+Functions/StringConverters.cpp.obj:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/StringConverters.cpp.obj
+.PHONY : Functions/StringConverters.cpp.obj
+
+Functions/StringConverters.i: Functions/StringConverters.cpp.i
+
+.PHONY : Functions/StringConverters.i
+
+# target to preprocess a source file
+Functions/StringConverters.cpp.i:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/StringConverters.cpp.i
+.PHONY : Functions/StringConverters.cpp.i
+
+Functions/StringConverters.s: Functions/StringConverters.cpp.s
+
+.PHONY : Functions/StringConverters.s
+
+# target to generate assembly for a file
+Functions/StringConverters.cpp.s:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/StringConverters.cpp.s
+.PHONY : Functions/StringConverters.cpp.s
+
 Functions/Verification_Inputs.obj: Functions/Verification_Inputs.cpp.obj
 
 .PHONY : Functions/Verification_Inputs.obj
@@ -473,32 +500,32 @@ Functions/Verification_Inputs.cpp.s:
 	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.s
 .PHONY : Functions/Verification_Inputs.cpp.s
 
-Functions/WritingToFiles.obj: Functions/WritingToFiles.cpp.obj
+Functions/WriteToFile.obj: Functions/WriteToFile.cpp.obj
 
-.PHONY : Functions/WritingToFiles.obj
+.PHONY : Functions/WriteToFile.obj
 
 # target to build an object file
-Functions/WritingToFiles.cpp.obj:
-	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.obj
-.PHONY : Functions/WritingToFiles.cpp.obj
+Functions/WriteToFile.cpp.obj:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.obj
+.PHONY : Functions/WriteToFile.cpp.obj
 
-Functions/WritingToFiles.i: Functions/WritingToFiles.cpp.i
+Functions/WriteToFile.i: Functions/WriteToFile.cpp.i
 
-.PHONY : Functions/WritingToFiles.i
+.PHONY : Functions/WriteToFile.i
 
 # target to preprocess a source file
-Functions/WritingToFiles.cpp.i:
-	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.i
-.PHONY : Functions/WritingToFiles.cpp.i
+Functions/WriteToFile.cpp.i:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.i
+.PHONY : Functions/WriteToFile.cpp.i
 
-Functions/WritingToFiles.s: Functions/WritingToFiles.cpp.s
+Functions/WriteToFile.s: Functions/WriteToFile.cpp.s
 
-.PHONY : Functions/WritingToFiles.s
+.PHONY : Functions/WriteToFile.s
 
 # target to generate assembly for a file
-Functions/WritingToFiles.cpp.s:
-	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.s
-.PHONY : Functions/WritingToFiles.cpp.s
+Functions/WriteToFile.cpp.s:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.s
+.PHONY : Functions/WriteToFile.cpp.s
 
 Functions/utils.obj: Functions/utils.cpp.obj
 
@@ -599,12 +626,15 @@ help:
 	@echo ... Functions/Restaurants_functions.obj
 	@echo ... Functions/Restaurants_functions.i
 	@echo ... Functions/Restaurants_functions.s
+	@echo ... Functions/StringConverters.obj
+	@echo ... Functions/StringConverters.i
+	@echo ... Functions/StringConverters.s
 	@echo ... Functions/Verification_Inputs.obj
 	@echo ... Functions/Verification_Inputs.i
 	@echo ... Functions/Verification_Inputs.s
-	@echo ... Functions/WritingToFiles.obj
-	@echo ... Functions/WritingToFiles.i
-	@echo ... Functions/WritingToFiles.s
+	@echo ... Functions/WriteToFile.obj
+	@echo ... Functions/WriteToFile.i
+	@echo ... Functions/WriteToFile.s
 	@echo ... Functions/utils.obj
 	@echo ... Functions/utils.i
 	@echo ... Functions/utils.s

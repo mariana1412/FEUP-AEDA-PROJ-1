@@ -85,9 +85,6 @@ int Order(){
 }
 
 
-
-
-
 int ProfitsCalculation(){
     int option;
     cout << "---------------- Profit Calculation by ----------------" << endl<<endl;

@@ -2,8 +2,8 @@
 
 
 Order::Order(Restaurant restaurant, Time time , vector<Product>products){
-    this->time = &time;
-    this->restaurant = &restaurant;
+    this->time = time;
+    this->restaurant = restaurant;
     this->products = products;
     for (vector<Product>::const_iterator it = products.begin(); it != products.end(); it++){
         this->price += it->getPrice();
@@ -11,11 +11,11 @@ Order::Order(Restaurant restaurant, Time time , vector<Product>products){
 }
 
 Restaurant Order::getRestaurant() const{
-    return *restaurant;
+    return restaurant;
 }
 
 Time Order::getTime() const{
-    return *time;
+    return time;
 }
 
 vector<Product> Order::getProducts()const{
@@ -24,11 +24,11 @@ vector<Product> Order::getProducts()const{
 
 
 void Order::setRestaurant(Restaurant restaurant){
-    this->restaurant = &restaurant;
+    this->restaurant = restaurant;
 }
 
 void Order::setTime(Time time){
-    this->time = &time;
+    this->time = time;
 }
 
 void Order::setProducts(vector<Product> products){
@@ -40,7 +40,7 @@ Delivery::Delivery(Restaurant restaurant, Time time , vector<Product> products, 
     this->id = id;
     this->success = success;
     this->reason_insuccess = reason_insuccess;
-    this->deliver_time = &deliver_time;
+    this->deliver_time = deliver_time;
     this->tax = tax;
     this->final_price = this->price + this->tax;
 }
@@ -57,21 +57,12 @@ string Delivery::getReason_insuccess() const {
     return reason_insuccess;
 }
 Time Delivery::getDeliver_time() const{
-    return *deliver_time;
+    return deliver_time;
 }
 
 float Delivery::getPrice() const{
     return price;
 }
-
-float Delivery::getTax() const {
-    return tax;
-}
-
-float Delivery::getFinalPrice() const {
-    return final_price;
-}
-
 
 void Delivery::setSuccess(bool success){
     this->success = success;
@@ -82,11 +73,18 @@ void Delivery::setReason_insuccess(string reason_insuccess){
 }
 
 void Delivery::setDeliver_time(Time deliver_time){
-    this->deliver_time = &deliver_time;
+    this->deliver_time = deliver_time;
 }
 
 void Delivery::setPrice(float price){
     this->price = price;
+}
+float Delivery::getFinalPrice() const {
+    return final_price;
+}
+
+float Delivery::getTax() const {
+    return tax;
 }
 
 

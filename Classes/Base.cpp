@@ -1,13 +1,13 @@
 #include "Base.h"
 
 Base::Base(Location location, string manager, vector<Client>blacklist){
-        this->location = &location;
+        this->location = location;
         this->manager=manager;
         this->blacklist=blacklist;
 }
 
 Location Base::getLocation() const{
-    return *location;
+    return location;
 }
 
 string Base::getManager() const{
@@ -26,16 +26,8 @@ vector<Restaurant> Base::getRestaurants()const{
     return restaurants;
 }
 
-vector<Delivery> Base::getDeliveries() const {
-    return deliveries;
-}
-
-vector<Employee*> Base::getEmployees() const {
-    return employees;
-}
-
 void Base::setLocation(Location location){
-    this->location = &location;
+    this->location = location;
 }
 
 void Base::setManager(string manager){
@@ -62,12 +54,21 @@ void Base::addRestaurant(Restaurant restaurant) {
     restaurants.push_back(restaurant);
 }
 
-void Base::addEmployee(Employee* employee){
-    employees.push_back(employee);
+
+vector<Delivery> Base::getDeliveries() const {
+    return deliveries;
 }
 
 void Base::addDelivery(Delivery delivery) {
     deliveries.push_back(delivery);
+}
+
+vector<Employee *> Base::getEmployees() const {
+    return employees;
+}
+
+void Base::addEmployee(Employee *employee) {
+    employees.push_back(employee);
 }
 
 bool Base::removeRestaurant(string name){

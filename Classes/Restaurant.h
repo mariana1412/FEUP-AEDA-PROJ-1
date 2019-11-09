@@ -1,10 +1,16 @@
 #ifndef UGH_EATS_RESTAURANTS_H
 #define UGH_EATS_RESTAURANTS_H
 
+#pragma once
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Base.h"
+#include "Location.h"
+#include "Order.h"
+#include "Person.h"
 #include "Product.h"
+#include "Time.h"
 #include "../Functions/utils.h"
 class Product;
 class Base;
@@ -27,7 +33,6 @@ private:
 public:
     Restaurant(){};
     Restaurant(string name, string address, string county, vector<string> types_of_food, vector<Product> products, float revenue);
-    Restaurant(string name, string address, string county, string types_of_food, string products, float revenue);
     string getName() const;
     string getAddress() const;
     string getCounty() const;
@@ -40,9 +45,7 @@ public:
     void setCounty(string county, string base);
     void setAddress(string address);
     void setTypes_of_food(vector<string> types_of_food);
-    void setTypes_of_food(string types_of_food);
     void setProducts(vector<Product> products);
-    void setProducts(string products);
     void setRevenue(float revenue);
     void addProduct(Product product);
     void addType_of_food(string type_of_food);

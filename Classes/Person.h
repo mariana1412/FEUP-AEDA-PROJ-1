@@ -1,9 +1,11 @@
 #ifndef UGH_EATS_PERSON_H
 #define UGH_EATS_PERSON_H
 
+#pragma once
 #include <iostream>
 #include <vector>
-#include<fstream>
+#include <fstream>
+#include "Product.h"
 #include "Time.h"
 #include "Vehicle.h"
 #include "Order.h"
@@ -46,12 +48,12 @@ public:
     void setAddress(string address);
     void setBlack(bool black);
     void setCounty(string county);
-    friend ostream & operator<<(ostream &os,const Client cl);
+    friend ostream & operator<<(ostream &os, const Client cl);
 };
 
 class Employee: public Person{
 private:
-    Time* birthdate;
+    Time birthdate;
     float income;
 public:
     Employee(){};
@@ -76,7 +78,7 @@ public:
 
 class Deliverer: public Employee{
 private:
-    Vehicle* vehicle;
+    Vehicle vehicle;
     vector<Delivery> background;
 public:
     Deliverer() {};

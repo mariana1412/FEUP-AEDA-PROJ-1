@@ -1,5 +1,7 @@
 #ifndef PROJETO_MENUS_H
 #define PROJETO_MENUS_H
+
+#pragma once
 #include <iostream>
 #include <iomanip>
 #include <string>

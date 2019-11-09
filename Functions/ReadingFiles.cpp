@@ -12,7 +12,7 @@ void extract_Clients(Base& baseP, Base& baseL, Base& baseF){
                 getline(clientfile, name);
                 getline(clientfile, nif);
                 getline(clientfile, line);
-                Location location(line);
+                Location location = stringToLocation(line);
                 getline(clientfile, line);
                 if (line == "true")
                     black = true;
@@ -25,7 +25,7 @@ void extract_Clients(Base& baseP, Base& baseL, Base& baseF){
                 getline(clientfile, name);
                 getline(clientfile, nif);
                 getline(clientfile, line);
-                Location location(line);
+                Location location = stringToLocation(line);
                 getline(clientfile, line);
                 if (line == "true")
                     black = true;
@@ -38,7 +38,7 @@ void extract_Clients(Base& baseP, Base& baseL, Base& baseF){
                 getline(clientfile, name);
                 getline(clientfile, nif);
                 getline(clientfile, line);
-                Location location(line);
+                Location location = stringToLocation(line);
                 getline(clientfile, line);
                 if (line == "true")
                     black = true;
@@ -55,7 +55,9 @@ void extract_Clients(Base& baseP, Base& baseL, Base& baseF){
 }
 
 void extract_Restaurants(Base& baseP, Base& baseL, Base& baseF){
-    string line, name, revenue, types_of_food, products;
+    string line, name, revenue;
+    vector<string> types_of_food;
+    vector<Product> products;
     ifstream restaurantfile;
     restaurantfile.open("../Restaurants.txt");
     if (restaurantfile.is_open()) {
@@ -64,9 +66,11 @@ void extract_Restaurants(Base& baseP, Base& baseL, Base& baseF){
             if (line == "Porto") {
                 getline(restaurantfile, name);
                 getline(restaurantfile, line);
-                Location location(line);
-                getline(restaurantfile, types_of_food);
-                getline(restaurantfile, products);
+                Location location = stringToLocation(line);
+                getline(restaurantfile, line);
+                types_of_food = stringToStringVector(line);
+                getline(restaurantfile, line);
+                products = stringToProductVector(line);
                 getline(restaurantfile, revenue);
                 getline(restaurantfile, line); //separator
                 baseP.addRestaurant(Restaurant(name, location.getAddress(), location.getCounty(), types_of_food, products, stof(revenue)));
@@ -76,30 +80,34 @@ void extract_Restaurants(Base& baseP, Base& baseL, Base& baseF){
             if (line == "Lisboa") {
                 getline(restaurantfile, name);
                 getline(restaurantfile, line);
-                Location location(line);
-                getline(restaurantfile, types_of_food);
-                getline(restaurantfile, products);
+                Location location = stringToLocation(line);
+                getline(restaurantfile, line);
+                types_of_food = stringToStringVector(line);
+                getline(restaurantfile, line);
+                products = stringToProductVector(line);
                 getline(restaurantfile, revenue);
                 getline(restaurantfile, line); //separator
-                baseL.addRestaurant(Restaurant(name, location.getAddress(),location.getCounty(), types_of_food, products, stof(revenue)));
+                baseL.addRestaurant(Restaurant(name, location.getAddress(), location.getCounty(), types_of_food, products, stof(revenue)));
                 continue;
             }
 
             if (line == "Faro") {
                 getline(restaurantfile, name);
                 getline(restaurantfile, line);
-                Location location(line);
-                getline(restaurantfile, types_of_food);
-                getline(restaurantfile, products);
+                Location location = stringToLocation(line);
+                getline(restaurantfile, line);
+                types_of_food = stringToStringVector(line);
+                getline(restaurantfile, line);
+                products = stringToProductVector(line);
                 getline(restaurantfile, revenue);
                 getline(restaurantfile, line); //separator
-                baseF.addRestaurant(Restaurant(name, location.getAddress(), location.getCounty(), types_of_food, products, stof(revenue)));
+                baseF.addRestaurant(Restaurant(name, location.getAddress(),location.getCounty(), types_of_food, products, stof(revenue)));
                 continue;
             }
         }
     }
     else
-        cerr << "Restaurants.txt could not be opened!" << endl;
+        cerr << "Restaurants.txt could not be opened! " << endl;
     restaurantfile.close();
 }
 
@@ -118,11 +126,11 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
             if (line == "Porto") {
                 getline(deliveryfile, id);
                 getline(deliveryfile, line);
-                restaurant = stringToRestaurantSearch(line, baseP);
+                restaurant = baseP.searchRestaurant(line);
                 getline(deliveryfile, line);
-                date.setTime(line);
+                date = stringToTime(line);
                 getline(deliveryfile, line);
-                products = stringToProductVectorSearch(line, baseP);
+                products = stringToProductVectorSearch(line, restaurant);
                 getline(deliveryfile, success);
                 if (success == "Success")
                     made = true;
@@ -130,7 +138,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                     made = false;
                 getline(deliveryfile, reason);
                 getline(deliveryfile, line);
-                hour.setHour(line);
+                hour = stringToHour(line);
                 getline(deliveryfile, tax);
                 getline(deliveryfile, line); //separator
                 baseP.addDelivery(Delivery(restaurant, date, products, stoi(id), made, reason, hour, stof(tax)));
@@ -140,11 +148,11 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
             if (line == "Lisboa") {
                 getline(deliveryfile, id);
                 getline(deliveryfile, line);
-                restaurant = stringToRestaurantSearch(line, baseL);
+                restaurant = baseL.searchRestaurant(line);
                 getline(deliveryfile, line);
-                date.setTime(line);
+                date = stringToTime(line);
                 getline(deliveryfile, line);
-                products = stringToProductVectorSearch(line, baseL);
+                products = stringToProductVectorSearch(line, restaurant);
                 getline(deliveryfile, success);
                 if (success == "Success")
                     made = true;
@@ -152,7 +160,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                     made = false;
                 getline(deliveryfile, reason);
                 getline(deliveryfile, line);
-                hour.setHour(line);
+                hour = stringToHour(line);
                 getline(deliveryfile, tax);
                 getline(deliveryfile, line); //separator
                 baseL.addDelivery(Delivery(restaurant, date, products, stoi(id), made, reason, hour, stof(tax)));
@@ -162,11 +170,11 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
             if (line == "Faro") {
                 getline(deliveryfile, id);
                 getline(deliveryfile, line);
-                restaurant = stringToRestaurantSearch(line, baseF);
+                restaurant = baseF.searchRestaurant(line);
                 getline(deliveryfile, line);
-                date.setTime(line);
+                date = stringToTime(line);
                 getline(deliveryfile, line);
-                products = stringToProductVectorSearch(line, baseF);
+                products = stringToProductVectorSearch(line, restaurant);
                 getline(deliveryfile, success);
                 if (success == "Success")
                     made = true;
@@ -174,7 +182,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                     made = false;
                 getline(deliveryfile, reason);
                 getline(deliveryfile, line);
-                hour.setHour(line);
+                hour = stringToHour(line);
                 getline(deliveryfile, tax);
                 getline(deliveryfile, line); //separator
                 baseF.addDelivery(Delivery(restaurant, date, products, stoi(id), made, reason, hour, stof(tax)));
@@ -187,10 +195,10 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
     deliveryfile.close();
 }
 
-
 void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
     string line, name, nif, income, task;
     Time birthdate;
+    Vehicle vehicle;
     vector<Delivery> deliveries;
     ifstream employeefile;
     employeefile.open("../Employees.txt");
@@ -203,26 +211,29 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, name);
                     getline(employeefile, nif);
                     getline(employeefile, line);
-                    birthdate.setDate(line);
+                    birthdate = stringToDate(line);
                     getline(employeefile, income);
                     getline(employeefile, task);
                     getline(employeefile, line);    //separator
-                    Employee *e1 = new Admin("Porto", name, stoi(nif), birthdate, stof(income), task);
-                    baseP.addEmployee(e1);
+                    Employee* e = new Admin("Porto", name, stoi(nif), birthdate, stof(income), task);
+                    baseP.addEmployee(e);
                 }
                 if (line == "Deliverer") {
                     getline(employeefile, name);
                     getline(employeefile, nif);
                     getline(employeefile, line);
-                    birthdate.setDate(line);
+                    birthdate = stringToDate(line);
                     getline(employeefile, income);
                     getline(employeefile, line);
-                    Vehicle vehicle(line);
+                    vehicle = stringToVehicle(line);
                     getline(employeefile, line);
-                    deliveries = stringToDeliveryVectorSearch(line, baseP);
+                    if (line != "0")
+                        deliveries = stringToDeliveryVectorSearch(line, baseP);
+                    else
+                        deliveries = {};
                     getline(employeefile, line);    //separator
-                    Employee *e1 = new Deliverer("Porto", name, stoi(nif), birthdate, stof(income), vehicle, deliveries);
-                    baseP.addEmployee(e1);
+                    Employee* e = new Deliverer("Porto", name, stoi(nif), birthdate, stof(income), vehicle, deliveries);
+                    baseP.addEmployee(e);
                 }
                 continue;
             }
@@ -233,26 +244,29 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, name);
                     getline(employeefile, nif);
                     getline(employeefile, line);
-                    birthdate.setDate(line);
+                    birthdate = stringToDate(line);
                     getline(employeefile, income);
                     getline(employeefile, task);
                     getline(employeefile, line);    //separator
-                    Employee *e1 = new Admin("Lisboa", name, stoi(nif), birthdate, stof(income), task);
-                    baseL.addEmployee(e1);
+                    Employee* e = new Admin("Lisboa", name, stoi(nif), birthdate, stof(income), task);
+                    baseL.addEmployee(e);
                 }
                 if (line == "Deliverer") {
                     getline(employeefile, name);
                     getline(employeefile, nif);
                     getline(employeefile, line);
-                    birthdate.setDate(line);
+                    birthdate = stringToDate(line);
                     getline(employeefile, income);
                     getline(employeefile, line);
-                    Vehicle vehicle(line);
+                    vehicle = stringToVehicle(line);
                     getline(employeefile, line);
-                    deliveries = stringToDeliveryVectorSearch(line, baseL);
+                    if (line != "0")
+                        deliveries = stringToDeliveryVectorSearch(line, baseL);
+                    else
+                        deliveries = {};
                     getline(employeefile, line);    //separator
-                    Employee *e1 = new Deliverer("Lisboa", name, stoi(nif), birthdate, stof(income), vehicle, deliveries);
-                    baseL.addEmployee(e1);
+                    Employee* e = new Deliverer("Lisboa", name, stoi(nif), birthdate, stof(income), vehicle, deliveries);
+                    baseL.addEmployee(e);
                 }
                 continue;
             }
@@ -263,26 +277,29 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
                     getline(employeefile, name);
                     getline(employeefile, nif);
                     getline(employeefile, line);
-                    birthdate.setDate(line);
+                    birthdate = stringToDate(line);
                     getline(employeefile, income);
                     getline(employeefile, task);
                     getline(employeefile, line);    //separator
-                    Employee *e1 = new Admin("Faro", name, stoi(nif), birthdate, stof(income), task);
-                    baseF.addEmployee(e1);
+                    Employee* e = new Admin("Faro", name, stoi(nif), birthdate, stof(income), task);
+                    baseF.addEmployee(e);
                 }
                 if (line == "Deliverer") {
                     getline(employeefile, name);
                     getline(employeefile, nif);
                     getline(employeefile, line);
-                    birthdate.setDate(line);
+                    birthdate = stringToDate(line);
                     getline(employeefile, income);
                     getline(employeefile, line);
-                    Vehicle vehicle(line);
+                    vehicle = stringToVehicle(line);
                     getline(employeefile, line);
-                    deliveries = stringToDeliveryVectorSearch(line, baseF);
+                    if (line != "0")
+                        deliveries = stringToDeliveryVectorSearch(line, baseF);
+                    else
+                        deliveries = {};
                     getline(employeefile, line);    //separator
-                    Employee *e1 = new Deliverer("Faro", name, stoi(nif), birthdate, stof(income), vehicle, deliveries);
-                    baseF.addEmployee(e1);
+                    Employee* e = new Deliverer("Faro", name, stoi(nif), birthdate, stof(income), vehicle, deliveries);
+                    baseF.addEmployee(e);
                 }
                 continue;
             } else
@@ -300,25 +317,30 @@ void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
         while (!basefile.eof()) {
             getline(basefile, line);    //Porto
             getline(basefile, line);
-            baseP.setLocation(Location(line));
+            Location location = stringToLocation(line);
+            baseP.setLocation(location);
             getline(basefile, line);
             baseP.setManager(line);
             getline(basefile, line);
             if (stoi(line) != 0)
                 baseP.setBlacklist(stringToClientVectorSearch(line, baseP));
+
             getline(basefile, line);    //separator
             getline(basefile, line);    //Lisboa
             getline(basefile, line);
-            baseL.setLocation(Location(line));
+            Location location1 = stringToLocation(line);
+            baseL.setLocation(location1);
             getline(basefile, line);
             baseL.setManager(line);
             getline(basefile, line);
             if (stoi(line) != 0)
                 baseL.setBlacklist(stringToClientVectorSearch(line, baseL));
+
             getline(basefile, line);    //separator
             getline(basefile, line);    //Faro
             getline(basefile, line);
-            baseF.setLocation(Location(line));
+            Location location2 = stringToLocation(line);
+            baseF.setLocation(location2);
             getline(basefile, line);
             baseF.setManager(line);
             getline(basefile, line);
@@ -329,7 +351,6 @@ void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
     else
         cerr << "Base.txt could not be opened!" << endl;
     basefile.close();
-
 }
 
 
