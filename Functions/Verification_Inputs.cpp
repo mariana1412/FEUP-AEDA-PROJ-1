@@ -70,9 +70,9 @@ void verification_all_letters(string &aux) { //verifica se há carateres invalid
     while (!isValid || aux == "") {
         if (aux != "") {
             isValid = true;
-            remove_all_whitespaces(aux);
+            formatting_string(aux);
             for (int i = 0; i < aux.size(); i++) {
-                if (!isLetter(aux[i])) {
+                if (!isLetter(aux[i]) && (aux[i] != ' ')) {
                     isValid = false;
                     break;
                 }
@@ -88,6 +88,7 @@ void verification_all_letters(string &aux) { //verifica se há carateres invalid
             }
         }
     }
+
 }
 
 void verification_date(string &aux) {

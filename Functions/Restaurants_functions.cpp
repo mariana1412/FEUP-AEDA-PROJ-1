@@ -26,7 +26,7 @@ int create_restaurant(Base &Porto, Base &Lisboa, Base &Faro){
 
     restaurants = base.getRestaurants();
 
-    cout << endl << endl << "Name: ";
+    cout << endl << "Name: ";
     getline(cin, aux);
 
     while(cin.fail() && cin.eof()){
@@ -56,8 +56,9 @@ int create_restaurant(Base &Porto, Base &Lisboa, Base &Faro){
         }
     } while(!isValid);
 
+    int option;
 
-    cout << endl << endl << "County: ";
+    cout << endl << "County: ";
     getline(cin, aux);
 
     while(cin.fail() && cin.eof()){
@@ -68,25 +69,17 @@ int create_restaurant(Base &Porto, Base &Lisboa, Base &Faro){
 
     verification_all_letters(aux);
 
-    do{
-        try {
-            new_restaurant.setCounty(aux, b);
-            isValid = true;
-        }
-        catch (RestaurantOutOfArea &msg){
-            cout << endl << endl << "ATENTION: " << msg.getCounty() << " does not belong to the base area." << endl << endl;
-            isValid = false;
-            cout << "Try again. County: ";
-            getline(cin, aux);
+    try {
+        new_restaurant.setCounty(aux, b);
+    }
+    catch (RestaurantOutOfArea &msg){
+        cout << endl << endl << "ATENTION: " << msg.getCounty() << " does not belong to the base area." << endl << endl;
+        cout << "1. Return to Main Menu. " << endl;
+        cout << "2. Return to Restaurants Management. " << endl;
+        menu_int_options(option, 1, 2);
+        return option;
+    }
 
-            while(cin.fail() && cin.eof()){
-                cin.clear();
-                cout << "Invalid character. Please insert a valid input: ";
-                getline(cin, aux);
-            }
-            verification_all_letters(aux);
-        }
-    } while(!isValid);
 
 
     cout << endl << "Address: ";
@@ -101,10 +94,10 @@ int create_restaurant(Base &Porto, Base &Lisboa, Base &Faro){
     formatting_string(aux);
     new_restaurant.setAddress(aux);
 
-    int n, i = 1;
+    int n, i = 0;
 
-    cout << endl << endl << "How many products does the restaurant have? Please insert an integer number: ";
-    cin >> n;
+    cout << endl << "How many products does the restaurant have? Please insert an integer number: ";
+    getline(cin, aux);
 
     while(cin.fail() && cin.eof() && n == 0){
         cin.clear();
@@ -112,9 +105,12 @@ int create_restaurant(Base &Porto, Base &Lisboa, Base &Faro){
         cin >> n;
     }
 
+    verification_int(aux);
+    n = stoi(aux);
+
     Product product;
     while (n != i){
-        cout << i <<  ". Product name: ";
+        cout << i + 1 <<  ". Product name: ";
         getline(cin, aux);
 
         while (cin.fail() && cin.eof()){
@@ -171,7 +167,10 @@ int create_restaurant(Base &Porto, Base &Lisboa, Base &Faro){
         cout << "Operation was canceled!" << endl << endl;
     }
 
-    return 0;
+    cout << "1. Return to Main Menu. " << endl;
+    cout << "2. Return to Restaurants Management. " << endl;
+    menu_int_options(option, 1, 2);
+    return option;
 }
 
 int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {

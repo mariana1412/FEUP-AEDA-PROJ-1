@@ -74,11 +74,14 @@ void Restaurant::setCounty(string county, string base){
 
     while(it1 != it2){
         if (name == (*it1)){
-            throw RestaurantOutOfArea(county);
+            this->county = county;
+            break;
         }
         advance(it1, 1);
     }
-    this->county = county;
+
+    if(it1 != it2)
+        throw RestaurantOutOfArea(county);
 }
 
 void Restaurant::setAddress(string address){
@@ -120,7 +123,7 @@ void Restaurant::addType_of_food(string type_of_food){
         }
         advance(it, 1);
     }
-    if(it != types_of_food.end()) this->types_of_food.push_back(type_of_food);
+    if(it == types_of_food.end()) this->types_of_food.push_back(type_of_food);
 }
 
 bool Restaurant::operator==(const Restaurant& rest) const{
