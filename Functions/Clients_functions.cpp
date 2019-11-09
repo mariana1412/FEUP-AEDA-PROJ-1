@@ -186,7 +186,7 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
                 getline(cin, auxiliar);
             }
             verification_all_letters(auxiliar);
-            i = string_sequential_search(v, auxiliar);
+            i = string_sequential_search_c(v, auxiliar);
             break;
         case 2:
             cout << "NIF: ";
@@ -198,7 +198,7 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
                 getline(cin, auxiliar);
             }
             verification_nif(auxiliar);
-            i = int_sequential_search(v, stoi(auxiliar));
+            i = int_sequential_search_c(v, stoi(auxiliar));
             break;
     }
 
@@ -222,7 +222,7 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
                         getline(cin, auxiliar);
                     }
                     verification_all_letters(auxiliar);
-                    i = string_sequential_search(v, auxiliar);
+                    i = string_sequential_search_c(v, auxiliar);
                     break;
                 case 2:
                     cout << "NIF: ";
@@ -234,7 +234,7 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
                         getline(cin, auxiliar);
                     }
                     verification_nif(auxiliar);
-                    i = int_sequential_search(v, stoi(auxiliar));
+                    i = int_sequential_search_c(v, stoi(auxiliar));
                     break;
 
             }
@@ -456,7 +456,7 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
             getline(cin, auxiliar);
         }
         verification_all_letters(auxiliar);
-        i = string_sequential_search(v, auxiliar);
+        i = string_sequential_search_c(v, auxiliar);
     }
     else if(number == 2){
         cout << "NIF: ";
@@ -468,7 +468,7 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
             getline(cin, auxiliar);
         }
         verification_nif(auxiliar);
-        i = int_sequential_search(v, stoi(auxiliar));
+        i = int_sequential_search_c(v, stoi(auxiliar));
     }
     else if(number == 0){
         return number;
@@ -493,7 +493,7 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
                         getline(cin, auxiliar);
                     }
                     verification_all_letters(auxiliar);
-                    i = string_sequential_search(v, auxiliar);
+                    i = string_sequential_search_c(v, auxiliar);
                     break;
                 case 2:
                     cout << "NIF: ";
@@ -505,7 +505,7 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
                         getline(cin, auxiliar);
                     }
                     verification_nif(auxiliar);
-                    i = int_sequential_search(v, stoi(auxiliar));
+                    i = int_sequential_search_c(v, stoi(auxiliar));
                     break;
             }
         }
@@ -539,7 +539,7 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
 
 bool black_list(Base base, int nif) {
     vector<Client> black_list = base.getBlackList();
-    if (int_sequential_search(black_list, nif) == -1) {
+    if (int_sequential_search_c(black_list, nif) == -1) {
         throw (BlackList());
     }
 
@@ -547,7 +547,7 @@ bool black_list(Base base, int nif) {
 }
 
 bool out_of_area(vector<Client> v,string county) {
-    if (string_sequential_search(v, county) == -1) {
+    if (string_sequential_search_c(v, county) == -1) {
         throw(OutOfArea());
     }
     return true;
@@ -566,4 +566,18 @@ bool client_already_exists(string nif, Base &b){
     }
     return true;
 
+}
+
+int string_sequential_search_c(const vector<Client> &v, string x) {//retorna o indice do vetor onde se encontra x
+    for (unsigned int i = 0; i < v.size(); i++)
+        if (v[i].getName() == x)
+            return i; // encontrou
+    return -1; // não encontrou
+}
+
+int int_sequential_search_c(const vector<Client> &v, int x) {//retorna o indice do vetor onde se encontra x
+    for (unsigned int i = 0; i < v.size(); i++)
+        if (v[i].getNif() == x)
+            return i; // encontrou
+    return -1; // não encontrou
 }

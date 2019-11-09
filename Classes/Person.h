@@ -82,8 +82,6 @@ public:
 
 };
 
-int int_sequential_search(const vector<Client> &v, int x);
-int string_sequential_search(const vector<Client> &v, string x);
 
 
 

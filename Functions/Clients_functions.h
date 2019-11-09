@@ -9,7 +9,9 @@
 #include "../Classes/Base.h"
 #include "../Functions/Verification_Inputs.h"
 
+
 using namespace std;
+
 extern const  vector<string> nearby_Porto;
 extern const vector<string> nearby_Lisboa;
 extern const vector<string> nearby_Faro;
@@ -21,5 +23,9 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro);
 bool black_list(Base base, int nif);
 bool out_of_area(vector<Client> v,string county);
 bool client_already_exists(string nif, Base &b);
+
+
+int int_sequential_search_c(const vector<Client> &v, int x);
+int string_sequential_search_c(const vector<Client> &v, string x);
 
 #endif //PROJETO_CLIENTS_FUNCTIONS_H

@@ -47,5 +47,4 @@ public:
 
 };
 
-
 #endif //UGH_EATS_BASE_H

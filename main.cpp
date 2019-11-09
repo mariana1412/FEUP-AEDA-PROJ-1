@@ -5,7 +5,7 @@
 #include "Functions/Verification_Inputs.h"
 #include "Functions/Menus.h"
 #include "Functions/Clients_functions.h"
-//#include "Functions/Employees_functions.h"
+#include "Functions/Employees_functions.h"
 #include "Functions/Restaurants_functions.h"
 
 const vector<string> nearby_Porto = { "Matosinhos", "Vila Nova de Gaia", "Maia", "Gondomar", "Porto" };
@@ -109,13 +109,13 @@ int main() {
                 else {
                     choice = EmployeesManagement();
                     if (choice == 1) {
-                        //create_employee(Porto, Lisboa, Faro);
+                        create_employee(Porto, Lisboa, Faro);
                     }
                     else if (choice == 2) {
-                        //modify_employee(Porto, Lisboa, Faro);
+                        modify_employee(Porto, Lisboa, Faro);
                     }
                     else if (choice == 3) {
-                        //remove_employee(Porto, Lisboa, Faro);
+                        remove_employee(Porto, Lisboa, Faro);
                     }
                     else if (choice == 0) {
                         menu = 0;

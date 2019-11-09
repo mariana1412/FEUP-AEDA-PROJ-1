@@ -65,6 +65,21 @@ CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Functions/Excepti
 CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Functions/Verification_Inputs.h
 CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Functions/utils.h
 
+CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: ../Classes/Base.h
+CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: ../Classes/Location.h
+CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: ../Classes/Order.h
+CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: ../Classes/Person.h
+CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: ../Classes/Product.h
+CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: ../Classes/Restaurant.h
+CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: ../Classes/Time.h
+CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: ../Functions/Employees_functions.cpp
+CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: ../Functions/Employees_functions.h
+CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: ../Functions/Exceptions.h
+CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: ../Functions/StringConverters.h
+CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: ../Functions/Verification_Inputs.h
+CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: ../Functions/utils.h
+
 CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: ../Functions/Menus.cpp
 CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: ../Functions/Menus.h
