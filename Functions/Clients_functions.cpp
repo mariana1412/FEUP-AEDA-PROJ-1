@@ -160,7 +160,7 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
         cout << "Invalid character. Please insert a valid input: ";
         getline(cin, base);
     }
-    //verification_base(base);
+    verification_base(base);
 
     if (base == "Porto") {
         v = Porto.getClients();

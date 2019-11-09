@@ -365,6 +365,33 @@ Functions/Clients_functions.cpp.s:
 	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.s
 .PHONY : Functions/Clients_functions.cpp.s
 
+Functions/Employees_functions.obj: Functions/Employees_functions.cpp.obj
+
+.PHONY : Functions/Employees_functions.obj
+
+# target to build an object file
+Functions/Employees_functions.cpp.obj:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj
+.PHONY : Functions/Employees_functions.cpp.obj
+
+Functions/Employees_functions.i: Functions/Employees_functions.cpp.i
+
+.PHONY : Functions/Employees_functions.i
+
+# target to preprocess a source file
+Functions/Employees_functions.cpp.i:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.i
+.PHONY : Functions/Employees_functions.cpp.i
+
+Functions/Employees_functions.s: Functions/Employees_functions.cpp.s
+
+.PHONY : Functions/Employees_functions.s
+
+# target to generate assembly for a file
+Functions/Employees_functions.cpp.s:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.s
+.PHONY : Functions/Employees_functions.cpp.s
+
 Functions/Menus.obj: Functions/Menus.cpp.obj
 
 .PHONY : Functions/Menus.obj
@@ -536,6 +563,9 @@ help:
 	@echo ... Functions/Clients_functions.obj
 	@echo ... Functions/Clients_functions.i
 	@echo ... Functions/Clients_functions.s
+	@echo ... Functions/Employees_functions.obj
+	@echo ... Functions/Employees_functions.i
+	@echo ... Functions/Employees_functions.s
 	@echo ... Functions/Menus.obj
 	@echo ... Functions/Menus.i
 	@echo ... Functions/Menus.s
