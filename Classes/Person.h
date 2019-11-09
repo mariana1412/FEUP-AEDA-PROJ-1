@@ -5,15 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
-#include "Product.h"
-#include "Time.h"
-#include "Vehicle.h"
 #include "Order.h"
-#include "Base.h"
-
-class Time;
-class Delivery;
-class Vehicle;
 
 using namespace std;
 
@@ -74,7 +66,6 @@ public:
     Admin(string base, string name, int nif, Time birthdate, float income, string task);
     string getTask() const;
     void setTask(string task);
-    friend ostream & operator<<(ostream &os,const Admin a);
 };
 
 class Deliverer: public Employee{
@@ -88,8 +79,12 @@ public:
     vector<Delivery> getBackground() const;
     void setVehicle(Vehicle vehicle);
     void setBackground(vector<Delivery> background);
-    friend ostream & operator<<(ostream &os,const Deliverer d);
 
 };
+
+int int_sequential_search(const vector<Client> &v, int x);
+int string_sequential_search(const vector<Client> &v, string x);
+
+
 
 #endif //UGH_EATS_PERSON_H

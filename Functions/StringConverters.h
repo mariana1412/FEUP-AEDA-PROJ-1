@@ -5,10 +5,7 @@
 
 #include <string>
 #include <vector>
-#include "../Classes/Location.h"
-#include "../Classes/Person.h"
 #include "../Classes/Base.h"
-#include "utils.h"
 
 
 vector<string> stringToStringVector(string str);
@@ -18,5 +15,8 @@ Vehicle stringToVehicle(string str);
 Time stringToTime(string str);
 Time stringToHour(string str);
 Location stringToLocation(string str);
+vector<Client> stringToClientVectorSearch(string str, const Base& b);
+vector<Delivery> stringToDeliveryVectorSearch(string str, const Base& b);
+vector<Product> stringToProductVectorSearch(string str, const Restaurant& r);
 
 #endif //PROJETO_STRINGCONVERTERS_H

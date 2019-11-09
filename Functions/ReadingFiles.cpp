@@ -1,4 +1,5 @@
 #include "ReadingFiles.h"
+#include "../Functions/StringConverters.h"
 
 void extract_Clients(Base& baseP, Base& baseL, Base& baseF){
     string line, name, nif;

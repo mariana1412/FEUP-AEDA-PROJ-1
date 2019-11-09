@@ -66,10 +66,17 @@ void verification_all_letters(string &aux) { //verifica se há carateres invalid
     string alphabet = "abcdefghijklmnopqrstuvwxyzãáàâçéêíõóôúüÃÁÀÂÇÉÊÍÕÓÔÚÜ";
     bool isValid = false;
 
+
     while (!isValid || aux == "") {
         if (aux != "") {
-            trim(aux);
-            isValid = (aux.find_last_not_of(alphabet) == string::npos);
+            isValid = true;
+            remove_all_whitespaces(aux);
+            for (int i = 0; i < aux.size(); i++) {
+                if (!isLetter(aux[i])) {
+                    isValid = false;
+                    break;
+                }
+            }
         }
 
         if (!isValid) {

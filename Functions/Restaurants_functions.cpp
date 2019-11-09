@@ -38,7 +38,7 @@ int create_restaurant(Base &Porto, Base &Lisboa, Base &Faro){
 
     do{
         try {
-            new_restaurant.setName(aux, base);
+            new_restaurant.setName(aux, base.getRestaurants());
             isValid = true;
         }
         catch (RestaurantAlreadyExists &msg){
@@ -784,7 +784,7 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
         cout << "Operation was canceled!" << endl << endl;
     }
 
-
+    return 0;
 
 }
 

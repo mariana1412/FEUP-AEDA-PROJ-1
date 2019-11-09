@@ -6,13 +6,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "../Classes/Person.h"
 #include "../Classes/Base.h"
-#include "utils.h"
-#include "Verification_Inputs.h"
-class Base;
-class Client;
-
+#include "../Functions/Verification_Inputs.h"
 
 using namespace std;
 extern const  vector<string> nearby_Porto;

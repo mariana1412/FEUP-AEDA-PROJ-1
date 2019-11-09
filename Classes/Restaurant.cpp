@@ -38,11 +38,11 @@ void Restaurant::setName(string name) {
     this->name = name;
 }
 
-void Restaurant::setName(string name, const Base &b){
-    vector<Restaurant> restaurants = b.getRestaurants();
-    vector<Restaurant>::const_iterator it = restaurants.begin();
+void Restaurant::setName(string name, const vector<Restaurant> &v){
 
-    while(it != restaurants.end()){
+    vector<Restaurant>::const_iterator it = v.begin();
+
+    while(it != v.end()){
         if (name == (*it).getName()){
             throw RestaurantAlreadyExists(name);
         }

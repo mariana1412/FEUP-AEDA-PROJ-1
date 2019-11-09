@@ -5,17 +5,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "../Functions/Exceptions.h"
-#include "../Functions/utils.h"
 #include "Location.h"
 #include "Person.h"
-#include "Restaurant.h"
-#include "Order.h"
-class Location;
-class Client;
-class Employee;
-class Restaurant;
-class Delivery;
+
 
 using namespace std;
 

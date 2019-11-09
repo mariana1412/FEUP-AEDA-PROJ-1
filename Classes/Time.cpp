@@ -71,13 +71,6 @@ bool Time::isBefore(const Time& date) {// verifica se a data é antes da outra
     return (!isAfter(date) && !isEqualTo(date));
 }
 
-ostream &operator <<(ostream &os,const Time t){
-    os<<setw(2)<<to_string(t.getDay())<<"/"<<to_string(t.getMonth())<<"/"<<setw(4)<<to_string(t.getYear());
-    return os;
-}
-
-
-
 //--------------------------------------------------------------------------------------------------------------------------------
 
 bool leap_year(int year) { // verifica se é um ano bissexto ou nao

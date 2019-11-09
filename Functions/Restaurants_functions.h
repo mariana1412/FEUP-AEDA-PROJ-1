@@ -5,11 +5,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Exceptions.h"
-#include "../Classes/Restaurant.h"
 #include "../Classes/Base.h"
-#include "utils.h"
-#include "Verification_Inputs.h"
+#include "../Functions/Verification_Inputs.h"
 
 
 int create_restaurant(Base &Porto, Base &Lisboa, Base &Faro);
