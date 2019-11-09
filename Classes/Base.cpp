@@ -34,7 +34,7 @@ void Base::setManager(string manager){
     this->manager = manager;
 }
 
-void Base::setClients(vector<Client>){
+void Base::setClients(vector<Client>clients){
     this->clients = clients;
 }
 
