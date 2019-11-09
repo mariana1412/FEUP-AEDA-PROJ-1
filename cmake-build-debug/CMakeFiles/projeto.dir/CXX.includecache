@@ -6,19 +6,31 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Base.cpp
+Base.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Base.h
+
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Base.h
 iostream
 -
 string
 -
 vector
 -
+../Functions/Exceptions.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Exceptions.h
+../Functions/utils.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/utils.h
 Location.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Location.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Location.h
 Person.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Person.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Person.h
+Restaurant.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Restaurant.h
+Order.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Order.h
 
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Location.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Location.h
 iostream
 -
 string
@@ -26,33 +38,65 @@ string
 vector
 -
 
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Order.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Order.cpp
+Order.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Order.h
+
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Order.h
 iostream
 -
 Restaurant.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Restaurant.h
-Vehicle.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Vehicle.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Restaurant.h
+Time.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Time.h
+Product.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Product.h
+Person.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Person.h
 
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Person.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Person.cpp
+Person.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Person.h
+
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Person.h
 iostream
 -
 vector
 -
 fstream
 -
+Product.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Product.h
+Time.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Time.h
+Vehicle.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Vehicle.h
 Order.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Order.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Order.h
+Base.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Base.h
 
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Product.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Product.cpp
+Product.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Product.h
+
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Product.h
 string
 -
 vector
 -
 iostream
 -
+Person.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Person.h
+../Functions/utils.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/utils.h
 
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Restaurant.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Restaurant.cpp
+Restaurant.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Restaurant.h
+
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Restaurant.h
 iostream
 -
 string
@@ -60,21 +104,27 @@ string
 vector
 -
 Product.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Product.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Product.h
 ../Functions/utils.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/utils.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/utils.h
 
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Time.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Time.h
 iostream
 -
+iomanip
+-
 
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Vehicle.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Vehicle.h
 Time.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Time.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Time.h
 iostream
 -
 
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Clients_functions.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Clients_functions.cpp
+Clients_functions.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Clients_functions.h
+
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Clients_functions.h
 iostream
 -
 string
@@ -82,15 +132,19 @@ string
 vector
 -
 ../Classes/Base.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Base.h
 ../Functions/Verification_Inputs.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Verification_Inputs.h
 
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Exceptions.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Exceptions.h
 string
 -
 
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Menus.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Menus.cpp
+Menus.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Menus.h
+
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Menus.h
 iostream
 -
 iomanip
@@ -98,9 +152,15 @@ iomanip
 string
 -
 Verification_Inputs.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Verification_Inputs.h
 
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/ReadingFiles.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/ReadingFiles.cpp
+ReadingFiles.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/ReadingFiles.h
+../Functions/StringConverters.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/StringConverters.h
+
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/ReadingFiles.h
 fstream
 -
 iostream
@@ -110,9 +170,13 @@ string
 vector
 -
 ../Classes/Base.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Base.h
 
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Restaurants_functions.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Restaurants_functions.cpp
+Restaurants_functions.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Restaurants_functions.h
+
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Restaurants_functions.h
 iostream
 -
 string
@@ -120,11 +184,27 @@ string
 vector
 -
 ../Classes/Base.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Base.h
 ../Functions/Verification_Inputs.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Verification_Inputs.h
 
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/StringConverters.cpp
+StringConverters.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/StringConverters.h
+
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/StringConverters.h
+string
+-
+vector
+-
+../Classes/Base.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Base.h
+
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Verification_Inputs.cpp
+Verification_Inputs.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Verification_Inputs.h
+
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Verification_Inputs.h
 iostream
 -
 string
@@ -132,13 +212,13 @@ string
 algorithm
 -
 utils.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/utils.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/utils.h
 
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/WriteToFile.cpp
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/WriteToFile.cpp
 WriteToFile.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/WriteToFile.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/WriteToFile.h
 
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/WriteToFile.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/WriteToFile.h
 fstream
 -
 iostream
@@ -150,9 +230,13 @@ vector
 iomanip
 -
 ../Classes/Base.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Base.h
 
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/utils.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/utils.cpp
+utils.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/utils.h
+
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/utils.h
 iostream
 -
 string
@@ -161,24 +245,34 @@ vector
 -
 algorithm
 -
-../Functions/Exceptions.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Exceptions.h
+../Classes/Location.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Location.h
+../Classes/Person.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Person.h
+../Classes/Restaurant.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Restaurant.h
+../Classes/Order.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Order.h
+../Classes/Base.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Classes/Base.h
+Exceptions.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Exceptions.h
 
-C:/Users/Diogo Almeida/Desktop/UghEats/main.cpp
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/main.cpp
 iostream
 -
 Windows.h
 -
 Functions/ReadingFiles.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/ReadingFiles.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/ReadingFiles.h
 Functions/WriteToFile.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/WriteToFile.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/WriteToFile.h
 Functions/Verification_Inputs.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Verification_Inputs.h
 Functions/Menus.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Menus.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Menus.h
 Functions/Clients_functions.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Clients_functions.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Clients_functions.h
 Functions/Restaurants_functions.h
-C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Restaurants_functions.h
+C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Restaurants_functions.h
 

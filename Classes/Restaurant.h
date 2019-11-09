@@ -33,6 +33,7 @@ public:
     vector<Product> getProducts() const;
     float getRevenue() const;
     void setName(string name);
+    void setName(string name, const vector<Restaurant> &v);
     void setCounty(string county);
     void setCounty(string county, string base);
     void setAddress(string address);
