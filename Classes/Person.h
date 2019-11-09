@@ -5,15 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
-#include "Product.h"
-#include "Time.h"
-#include "Vehicle.h"
 #include "Order.h"
-#include "Base.h"
-
-class Time;
-class Delivery;
-class Vehicle;
 
 using namespace std;
 
@@ -89,5 +81,10 @@ public:
     void setBackground(vector<Delivery> background);
 
 };
+
+int int_sequential_search(const vector<Client> &v, int x);
+int string_sequential_search(const vector<Client> &v, string x);
+
+
 
 #endif //UGH_EATS_PERSON_H

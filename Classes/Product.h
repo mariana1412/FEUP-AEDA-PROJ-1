@@ -5,8 +5,6 @@
 #include <string>
 #include <vector>
 #include <iostream>
-#include "Person.h"
-#include "..\Functions\utils.h"
 
 using namespace std;
 

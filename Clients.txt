@@ -26,7 +26,7 @@ Lisboa
 André Daniel Gomes
 210874562
 Rua 25 de Abril 96, Lisboa
-false
+true
 ::::::::
 Lisboa
 Ana Rita Matos

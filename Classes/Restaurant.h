@@ -5,15 +5,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Base.h"
-#include "Location.h"
-#include "Order.h"
-#include "Person.h"
 #include "Product.h"
-#include "Time.h"
 #include "../Functions/utils.h"
-class Product;
-class Base;
 
 using namespace std;
 
@@ -40,7 +33,6 @@ public:
     vector<Product> getProducts() const;
     float getRevenue() const;
     void setName(string name);
-    void setName(string name, const Base &b);
     void setCounty(string county);
     void setCounty(string county, string base);
     void setAddress(string address);

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <Windows.h>
-#include "Classes/Person.h"
 #include "Functions/ReadingFiles.h"
+#include "Functions/WriteToFile.h"
 #include "Functions/Verification_Inputs.h"
 #include "Functions/Menus.h"
 #include "Functions/Clients_functions.h"
@@ -188,6 +188,10 @@ int main() {
 
     cout << endl;
     cout << endl << "Thank you! We hope you've enjoyed your experience with Ugh Eats!" << endl;
-
+    write_Clients(Porto, Lisboa, Faro);
+    write_Restaurants(Porto, Lisboa, Faro);
+    write_Deliveries(Porto, Lisboa, Faro);
+    write_Employees(Porto, Lisboa, Faro);
+    write_Bases(Porto, Lisboa, Faro);
     return 0;
 }

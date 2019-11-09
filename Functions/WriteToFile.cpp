@@ -163,7 +163,7 @@ void write_Restaurants(Base& baseP, Base& baseL, Base& baseF){
             restaurantfile << endl;
             restaurantfile << it->getRevenue();
             if (count1 != restaurantes_faro.size())
-                restaurantfile << endl << "::::::::";
+                restaurantfile << endl << "::::::::" << endl;
         }
     }
     else

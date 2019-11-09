@@ -4,12 +4,7 @@
 #pragma once
 #include <iostream>
 #include "Restaurant.h"
-#include "Time.h"
-#include "Product.h"
-#include "Person.h"
-class Time;
-class Product;
-class Restaurant;
+#include "Vehicle.h"
 
 using namespace std;
 

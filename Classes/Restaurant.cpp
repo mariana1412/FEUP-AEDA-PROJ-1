@@ -38,19 +38,6 @@ void Restaurant::setName(string name) {
     this->name = name;
 }
 
-void Restaurant::setName(string name, const Base &b){
-    vector<Restaurant> restaurants = b.getRestaurants();
-    vector<Restaurant>::const_iterator it = restaurants.begin();
-
-    while(it != restaurants.end()){
-        if (name == (*it).getName()){
-            throw RestaurantAlreadyExists(name);
-        }
-        advance(it, 1);
-    }
-    this->name = name;
-}
-
 void Restaurant::setCounty(string county) {
     this->county = county;
 }

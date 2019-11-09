@@ -38,7 +38,7 @@ int create_restaurant(Base &Porto, Base &Lisboa, Base &Faro){
 
     do{
         try {
-            new_restaurant.setName(aux, base);
+            //new_restaurant.setName(aux, base);
             isValid = true;
         }
         catch (RestaurantAlreadyExists &msg){
