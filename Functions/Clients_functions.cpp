@@ -89,6 +89,7 @@ int create_client(Base &Porto, Base &Lisboa, Base &Faro) {
         cout << "Invalid character. Please insert a valid input: ";
         getline(cin, aux);
     }
+    new_client.setCounty(aux);
     verification_all_letters(aux);
 
     cout<<new_client;//para confirmar  a informaçao
@@ -116,15 +117,15 @@ int create_client(Base &Porto, Base &Lisboa, Base &Faro) {
         }
 
         if (new_client.getBase() == "Porto") {
-            Porto.getClients().push_back(new_client);
+            Porto.addClient(new_client);
             cout << "Client was successfully created!" << endl << endl;
         }
         else if (new_client.getBase() == "Lisboa") {
-            Lisboa.getClients().push_back(new_client);
+            Lisboa.addClient(new_client);
             cout << "Client was successfully created!" << endl << endl;
         }
         else if(new_client.getBase() == "Faro"){
-            Faro.getClients().push_back(new_client);
+            Faro.addClient(new_client);
             cout << "Client was successfully created!" << endl << endl;
         }
     }
@@ -540,17 +541,17 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
 bool black_list(Base base, int nif) {
     vector<Client> black_list = base.getBlackList();
     if (int_sequential_search_c(black_list, nif) == -1) {
-        throw (BlackList());
+        return true;
     }
+    throw (BlackList());
 
-    return true;
 }
 
 bool out_of_area(vector<Client> v,string county) {
     if (string_sequential_search_c(v, county) == -1) {
-        throw(OutOfArea());
+        return true;
     }
-    return true;
+    throw(OutOfArea());
 }
 
 
