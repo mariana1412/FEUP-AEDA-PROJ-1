@@ -419,6 +419,33 @@ Functions/ReadingFiles.cpp.s:
 	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.s
 .PHONY : Functions/ReadingFiles.cpp.s
 
+Functions/Restaurants_functions.obj: Functions/Restaurants_functions.cpp.obj
+
+.PHONY : Functions/Restaurants_functions.obj
+
+# target to build an object file
+Functions/Restaurants_functions.cpp.obj:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj
+.PHONY : Functions/Restaurants_functions.cpp.obj
+
+Functions/Restaurants_functions.i: Functions/Restaurants_functions.cpp.i
+
+.PHONY : Functions/Restaurants_functions.i
+
+# target to preprocess a source file
+Functions/Restaurants_functions.cpp.i:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.i
+.PHONY : Functions/Restaurants_functions.cpp.i
+
+Functions/Restaurants_functions.s: Functions/Restaurants_functions.cpp.s
+
+.PHONY : Functions/Restaurants_functions.s
+
+# target to generate assembly for a file
+Functions/Restaurants_functions.cpp.s:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.s
+.PHONY : Functions/Restaurants_functions.cpp.s
+
 Functions/Verification_Inputs.obj: Functions/Verification_Inputs.cpp.obj
 
 .PHONY : Functions/Verification_Inputs.obj
@@ -445,6 +472,33 @@ Functions/Verification_Inputs.s: Functions/Verification_Inputs.cpp.s
 Functions/Verification_Inputs.cpp.s:
 	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.s
 .PHONY : Functions/Verification_Inputs.cpp.s
+
+Functions/WritingToFiles.obj: Functions/WritingToFiles.cpp.obj
+
+.PHONY : Functions/WritingToFiles.obj
+
+# target to build an object file
+Functions/WritingToFiles.cpp.obj:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.obj
+.PHONY : Functions/WritingToFiles.cpp.obj
+
+Functions/WritingToFiles.i: Functions/WritingToFiles.cpp.i
+
+.PHONY : Functions/WritingToFiles.i
+
+# target to preprocess a source file
+Functions/WritingToFiles.cpp.i:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.i
+.PHONY : Functions/WritingToFiles.cpp.i
+
+Functions/WritingToFiles.s: Functions/WritingToFiles.cpp.s
+
+.PHONY : Functions/WritingToFiles.s
+
+# target to generate assembly for a file
+Functions/WritingToFiles.cpp.s:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.s
+.PHONY : Functions/WritingToFiles.cpp.s
 
 Functions/utils.obj: Functions/utils.cpp.obj
 
@@ -542,9 +596,15 @@ help:
 	@echo ... Functions/ReadingFiles.obj
 	@echo ... Functions/ReadingFiles.i
 	@echo ... Functions/ReadingFiles.s
+	@echo ... Functions/Restaurants_functions.obj
+	@echo ... Functions/Restaurants_functions.i
+	@echo ... Functions/Restaurants_functions.s
 	@echo ... Functions/Verification_Inputs.obj
 	@echo ... Functions/Verification_Inputs.i
 	@echo ... Functions/Verification_Inputs.s
+	@echo ... Functions/WritingToFiles.obj
+	@echo ... Functions/WritingToFiles.i
+	@echo ... Functions/WritingToFiles.s
 	@echo ... Functions/utils.obj
 	@echo ... Functions/utils.i
 	@echo ... Functions/utils.s

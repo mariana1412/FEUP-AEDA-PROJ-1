@@ -138,6 +138,20 @@ CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Functions/ReadingFiles
 CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Functions/ReadingFiles.h
 CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Functions/utils.h
 
+CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Classes/Base.h
+CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Classes/Location.h
+CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Classes/Order.h
+CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Classes/Person.h
+CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Classes/Product.h
+CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Classes/Restaurant.h
+CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Classes/Time.h
+CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Functions/Exceptions.h
+CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Functions/Restaurants_functions.cpp
+CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Functions/Restaurants_functions.h
+CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Functions/Verification_Inputs.h
+CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Functions/utils.h
+
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Classes/Base.h
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Classes/Location.h
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Classes/Order.h
@@ -150,6 +164,19 @@ CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/Excep
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/Verification_Inputs.cpp
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/Verification_Inputs.h
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/utils.h
+
+CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.obj: ../Classes/Base.h
+CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.obj: ../Classes/Location.h
+CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.obj: ../Classes/Order.h
+CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.obj: ../Classes/Person.h
+CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.obj: ../Classes/Product.h
+CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.obj: ../Classes/Restaurant.h
+CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.obj: ../Classes/Time.h
+CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.obj: ../Functions/Exceptions.h
+CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.obj: ../Functions/WritingToFiles.cpp
+CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.obj: ../Functions/WritingToFiles.h
+CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.obj: ../Functions/utils.h
 
 CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Classes/Base.h
 CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Classes/Location.h

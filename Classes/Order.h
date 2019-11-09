@@ -48,6 +48,8 @@ public:
     bool getSuccess() const;
     string getReason_insuccess() const;
     Time getDeliver_time() const;
+    float getTax() const;
+    float getFinalPrice() const;
     float getPrice() const;
     void setSuccess(bool success);
     void setReason_insuccess(string reason_insucess);

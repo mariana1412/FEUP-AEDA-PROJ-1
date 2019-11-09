@@ -64,6 +64,15 @@ float Delivery::getPrice() const{
     return price;
 }
 
+float Delivery::getTax() const {
+    return tax;
+}
+
+float Delivery::getFinalPrice() const {
+    return final_price;
+}
+
+
 void Delivery::setSuccess(bool success){
     this->success = success;
 }

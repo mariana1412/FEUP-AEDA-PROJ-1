@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "../Functions/Exceptions.h"
 #include "Location.h"
 #include "Person.h"
 #include "Restaurant.h"
@@ -46,7 +47,9 @@ public:
     void addRestaurant(Restaurant restaurant);
     void addEmployee(Employee* employee);
     void addDelivery(Delivery delivery);
-
+    bool removeRestaurant(string name);
+    Restaurant searchRestaurant(string name);
+    int getIndexrestaurant(Restaurant restaurant);
 };
 
 

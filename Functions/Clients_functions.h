@@ -6,7 +6,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-//#include "Exceptions.h"
 #include "../Classes/Person.h"
 #include "../Classes/Base.h"
 #include "utils.h"
@@ -23,7 +22,6 @@ extern const vector<string> nearby_Faro;
 int create_client(Base &Porto, Base &Lisboa, Base &Faro);
 int modify_client(Base &Porto, Base &Lisboa, Base &Faro);
 int remove_client(Base &Porto, Base &Lisboa, Base &Faro);
-
 
 bool black_list(Base base, int nif);
 bool out_of_area(vector<Client> v,string county);

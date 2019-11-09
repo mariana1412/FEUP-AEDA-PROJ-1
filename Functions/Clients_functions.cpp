@@ -34,7 +34,7 @@ int create_client(Base &Porto, Base &Lisboa, Base &Faro) {
     }
     else if(aux == "Faro"){
         v = Faro.getClients();
-    base = Faro;
+        base = Faro;
     }
 
     cout << "Name:";
