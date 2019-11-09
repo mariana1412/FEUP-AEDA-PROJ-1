@@ -18,6 +18,7 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro);
 int modify_employee(Base &Porto, Base &Lisboa, Base &Faro);
 int remove_employee(Base &Porto, Base &Lisboa, Base &Faro);
 
+bool employee_already_exists(string nif, Base &b);
 
 
 

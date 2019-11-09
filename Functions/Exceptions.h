@@ -72,6 +72,14 @@ public:
     ClientAlreadyExists(string name){this->nif=nif;}
     string getNIF() const{return nif;}
 };
+class EmployeeAlreadyExists{
+private:
+    string nif;
+public:
+    EmployeeAlreadyExists(string name){this->nif=nif;}
+    string getNIF() const{return nif;}
+};
+
 
 
 #endif //PROJETO_EXCEPTIONS_H
