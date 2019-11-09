@@ -1,22 +1,22 @@
 #ifndef UGH_EATS_ORDER_H
 #define UGH_EATS_ORDER_H
 
+#pragma once
 #include <iostream>
 #include "Restaurant.h"
 #include "Time.h"
 #include "Product.h"
 #include "Person.h"
-class Restaurant;
 class Time;
 class Product;
+class Restaurant;
 
 using namespace std;
 
-
 class Order{
 private:
-    Restaurant* restaurant;
-    Time* time;
+    Restaurant restaurant;
+    Time time;
     vector<Product> products;
 
 protected:
@@ -38,7 +38,7 @@ private:
     int id;
     bool success;
     string reason_insuccess;
-    Time* deliver_time;
+    Time deliver_time;
     float tax;
     float final_price;
 public:
@@ -48,9 +48,9 @@ public:
     bool getSuccess() const;
     string getReason_insuccess() const;
     Time getDeliver_time() const;
-    float getTax() const;
-    float getFinalPrice() const;
     float getPrice() const;
+    float getFinalPrice() const;
+    float getTax() const;
     void setSuccess(bool success);
     void setReason_insuccess(string reason_insucess);
     void setDeliver_time(Time deliver_time);

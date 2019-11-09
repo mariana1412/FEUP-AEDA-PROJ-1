@@ -22,7 +22,6 @@ void Person::setName(string name){
     this->name = name;
 }
 
-
 void Person::setNif(int nif){
     this->nif = nif;
 }
@@ -48,6 +47,7 @@ string Client::getAddress() const{
 string Client::getCounty() const{
     return county;
 }
+
 void Client::setAddress(string address){
     this->address = address;
 }
@@ -60,22 +60,22 @@ void Client::setCounty(string county) {
     this->county = county;
 }
 
-ostream &operator<<(ostream &os,const Client cl){
+ostream &operator<<(ostream &os, const Client cl){
     os<< "Name: "<< cl.getName()<<endl
-    <<"NIF: "<<cl.getNif()<<endl
-    <<"Base: "<<cl.getBase()<<endl
-    << "Address: "<<cl.getAddress()<<endl
-    <<"County: "<<cl.getCounty()<<endl;
+      <<"NIF: "<<cl.getNif()<<endl
+      <<"Base: "<<cl.getBase()<<endl
+      << "Address: "<<cl.getAddress()<<endl
+      <<"County: "<<cl.getCounty()<<endl;
     return os;
 }
 
 Employee::Employee(string base, string name, int nif, Time birthdate, float income) : Person(base, name, nif){
-    this->birthdate = &birthdate;
+    this->birthdate = birthdate;
     this->income = income;
 }
 
 Time Employee::getBirthdate() const{
-    return *birthdate;
+    return birthdate;
 }
 
 float Employee::getIncome() const{
@@ -83,7 +83,7 @@ float Employee::getIncome() const{
 }
 
 void Employee::setBirthdate(Time birthdate){
-    this->birthdate = &birthdate;
+    this->birthdate = birthdate;
 }
 
 void Employee::setIncome(float income){
@@ -103,12 +103,12 @@ void Admin::setTask(string task){
 }
 
 Deliverer::Deliverer(string base, string name, int nif, Time birthdate, float income, Vehicle vehicle, vector<Delivery> background) : Employee(base, name, nif, birthdate, income){
-    this->vehicle = &vehicle;
+    this->vehicle = vehicle;
     this->background = background;
 }
 
 Vehicle Deliverer::getVehicle() const {
-    return *vehicle;
+    return vehicle;
 }
 
 vector<Delivery> Deliverer::getBackground() const {
@@ -116,7 +116,7 @@ vector<Delivery> Deliverer::getBackground() const {
 }
 
 void Deliverer::setVehicle(Vehicle vehicle){
-    this->vehicle = &vehicle;
+    this->vehicle = vehicle;
 }
 
 void Deliverer::setBackground(vector<Delivery> background){

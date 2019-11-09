@@ -1,10 +1,12 @@
 #ifndef UGH_EATS_BASE_H
 #define UGH_EATS_BASE_H
 
+#pragma once
 #include <iostream>
 #include <string>
 #include <vector>
 #include "../Functions/Exceptions.h"
+#include "../Functions/utils.h"
 #include "Location.h"
 #include "Person.h"
 #include "Restaurant.h"
@@ -20,7 +22,7 @@ using namespace std;
 
 class Base {
 private:
-    Location* location;
+    Location location;
     string manager;
     vector<Client> clients;
     vector<Employee*> employees;
@@ -36,7 +38,7 @@ public:
     vector<Client> getClients() const;
     vector<Client> getBlackList() const;
     vector<Restaurant> getRestaurants()const;
-    vector<Employee*> getEmployees()const;
+    vector<Employee*> getEmployees() const;
     vector<Delivery> getDeliveries() const;
     void setLocation(Location location);
     void setManager(string manager);
@@ -45,11 +47,12 @@ public:
     void setRestaurants(vector<Restaurant> restaurants);
     void addClient(Client client);
     void addRestaurant(Restaurant restaurant);
-    void addEmployee(Employee* employee);
+    void addEmployee(Employee* employees);
     void addDelivery(Delivery delivery);
     bool removeRestaurant(string name);
     Restaurant searchRestaurant(string name);
     int getIndexrestaurant(Restaurant restaurant);
+
 };
 
 

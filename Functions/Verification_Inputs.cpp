@@ -64,12 +64,11 @@ void verification_nif(string &aux) {
 
 void verification_all_letters(string &aux) { //verifica se há carateres invalidos numa string, ou seja , so sao aceites letras ou espaços
     string alphabet = "abcdefghijklmnopqrstuvwxyzãáàâçéêíõóôúüÃÁÀÂÇÉÊÍÕÓÔÚÜ";
-    formatting_string(aux);
     bool isValid = false;
 
     while (!isValid || aux == "") {
         if (aux != "") {
-            formatting_string(aux);
+            trim(aux);
             isValid = (aux.find_last_not_of(alphabet) == string::npos);
         }
 
@@ -119,7 +118,7 @@ void verification_base(string &aux){
     while (!isValid || aux == "") {
         if (aux != "") {
             formatting_string(aux);
-            isValid = (aux != "Porto" && aux != "Lisboa" && aux != "Faro");
+            isValid = !(aux != "Porto" && aux != "Lisboa" && aux != "Faro");
         }
         if (!isValid) {
             cout << "Invalid base (Porto, Lisboa, Faro). Please insert a valid one: ";
@@ -140,6 +139,10 @@ void verification_float(string &aux){
             remove_extra_whitespaces(aux);
             if((count(aux.begin(), aux.end(), '.') == 1) || (count(aux.begin(), aux.end(), '.') == 0)){
                 for(int i = 0; i < aux.size(); i++){
+                    if (!isAlgarism(aux[0])) {
+                        isValid = false;
+                        break;
+                    }
                     if(isAlgarism(aux[i]) || aux[i] == '.'){
                         isValid = true;
                     }
@@ -160,5 +163,3 @@ void verification_float(string &aux){
         }
     }
 }
-
-

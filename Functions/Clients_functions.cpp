@@ -1,9 +1,5 @@
 #include "Clients_functions.h"
 
-const vector<string> nearby_Porto = { "Matosinhos", "Vila Nova de Gaia", "Maia", "Gondomar", "Porto" };
-const vector<string> nearby_Lisboa = { "Oeiras", "Loures", "Amadora", "Odivelas","Lisboa" };
-const vector<string> nearby_Faro = { "Loulé","Olhão", "São Brás de Alportel","Faro" };
-
 int create_client(Base &Porto, Base &Lisboa, Base &Faro) {
     string aux;
     vector<Client> v;

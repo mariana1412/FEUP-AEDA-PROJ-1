@@ -1,6 +1,7 @@
 #ifndef PROJETO_EXCEPTIONS_H
 #define PROJETO_EXCEPTIONS_H
 
+#pragma once
 #include <string>
 
 
@@ -71,5 +72,6 @@ public:
     ClientAlreadyExists(string name){this->nif=nif;}
     string getNIF() const{return nif;}
 };
+
 
 #endif //PROJETO_EXCEPTIONS_H

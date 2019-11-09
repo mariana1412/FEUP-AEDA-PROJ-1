@@ -2,19 +2,19 @@ Porto
 Japanese
 Avenida de Matosinhos 23, Matosinhos
 Japonesa, Chinesa
-temaki, Japonesa, 5.50
-5.50
+temaki, Japonesa, 5.5
+5.5
 ::::::::
 Lisboa
 Italian
 Rua da Praia 45, Lisboa
 Italiana
-pizza, Italiana, 8.90 / lasanha, Italiana, 7.60
-8.90
+pizza, Italiana, 8.9 / lasanha, Italiana, 7.6
+16.5
 ::::::::
 Faro
 Mexican
 Rua da Alegria 22, Faro
 Mexicana
-tacos, Mexicana, 4.20 / nachos, Mexicana, 5.25
+tacos, Mexicana, 4.2 / nachos, Mexicana, 5.25
 0

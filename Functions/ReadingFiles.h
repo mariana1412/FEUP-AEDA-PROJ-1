@@ -13,13 +13,7 @@
 #include "../Classes/Order.h"
 #include "../Classes/Location.h"
 #include "../Classes/Time.h"
-
-class Time;
-class Location;
-class Employee;
-class Restaurant;
-class Delivery;
-class Base;
+#include "StringConverters.h"
 
 void extract_Clients(Base& baseP, Base& baseL, Base& baseF);
 void extract_Restaurants(Base& baseP, Base& baseL, Base& baseF);

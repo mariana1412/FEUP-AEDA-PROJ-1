@@ -6,28 +6,6 @@ Product::Product(string name, string type_of_food, float price){
     this-> price=price;
 }
 
-Product::Product(string product){
-    string delimiter = ",";
-    vector<string> data;
-    vector<string> result;
-    size_t pos = 0;
-    string token;
-    while ((pos = product.find(delimiter)) != std::string::npos) {
-        token = product.substr(0, pos);
-        data.push_back(token);
-        product.erase(0, pos + delimiter.length());
-    }
-    data.push_back(product);
-    for (auto & i : data) {
-        trim(i);
-        result.push_back(i);
-    }
-
-    this->name = result[0];
-    this->type_of_food = result[1];
-    this->price = stof(result[2]);
-}
-
 string Product::getName() const{
     return name;
 }
@@ -48,7 +26,7 @@ void Product::setType_of_food(string type_of_food){
     this->type_of_food = type_of_food;
 }
 
-void Product::setprice(float price){
+void Product::setPrice(float price){
     this->price = price;
 }
 
@@ -56,3 +34,4 @@ bool Product::operator==(const Product& prod) const{
     if(prod.getName() == name) return true;
     return false;
 }
+

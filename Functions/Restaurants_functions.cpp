@@ -101,7 +101,7 @@ int create_restaurant(Base &Porto, Base &Lisboa, Base &Faro){
     formatting_string(aux);
     new_restaurant.setAddress(aux);
 
-    int n, i = 0;
+    int n, i = 1;
 
     cout << endl << endl << "How many products does the restaurant have? Please insert an integer number: ";
     cin >> n;
@@ -144,10 +144,10 @@ int create_restaurant(Base &Porto, Base &Lisboa, Base &Faro){
             getline(cin, aux);
         }
         verification_float(aux);
-        product.setprice(stof(aux));
+        product.setPrice(stof(aux));
 
         try{
-            new_restaurant.addProduct(aux);
+            new_restaurant.addProduct(product);
         }
         catch (ProductAlreadyExists &msg){
             cout << endl << endl << "ATENTION: " << msg.getName() << " already exists." << endl;
@@ -361,10 +361,10 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
                         getline(cin, aux);
                     }
                     verification_float(aux);
-                    product.setprice(stof(aux));
+                    product.setPrice(stof(aux));
 
                     try{
-                        restaurant.addProduct(aux);
+                        restaurant.addProduct(product);
                         isValid = true;
                     }
                     catch (ProductAlreadyExists &msg){
@@ -450,7 +450,7 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
                         getline(cin, aux);
                     }
                     verification_float(aux);
-                    product.setprice(stof(aux));
+                    product.setPrice(stof(aux));
                 }
 
                 else if (c == 4){
@@ -484,7 +484,7 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
                         getline(cin, aux);
                     }
                     verification_float(aux);
-                    product.setprice(stof(aux));
+                    product.setPrice(stof(aux));
                 }
 
                 if(confirm_modifications("modify", "product")){
@@ -625,10 +625,10 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
                         getline(cin, aux);
                     }
                     verification_float(aux);
-                    product.setprice(stof(aux));
+                    product.setPrice(stof(aux));
 
                     try{
-                        restaurant.addProduct(aux);
+                        restaurant.addProduct(product);
                         isValid = true;
                     }
                     catch (ProductAlreadyExists &msg){
@@ -714,7 +714,7 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
                         getline(cin, aux);
                     }
                     verification_float(aux);
-                    product.setprice(stof(aux));
+                    product.setPrice(stof(aux));
                 }
 
                 else if (c == 4){
@@ -748,7 +748,7 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
                         getline(cin, aux);
                     }
                     verification_float(aux);
-                    product.setprice(stof(aux));
+                    product.setPrice(stof(aux));
                 }
 
                 if(confirm_modifications("modify", "product")){

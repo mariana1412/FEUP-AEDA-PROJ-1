@@ -1,10 +1,11 @@
 #ifndef UGH_EATS_LOCATION_H
 #define UGH_EATS_LOCATION_H
 
+#pragma once
 #include <iostream>
 #include <string>
 #include <vector>
-#include "../Functions/utils.h"
+
 
 using namespace std;
 
@@ -14,8 +15,7 @@ private:
     string county;
     string gps;
 public:
-    Location(){};
-    Location(string str);
+    Location();
     Location(string address, string county, string gps);
     string getAddress() const;
     string getCounty() const;
