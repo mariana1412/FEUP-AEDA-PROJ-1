@@ -158,10 +158,12 @@ CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Restaurant.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Time.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Vehicle.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/Clients_functions.h
+CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/Employees_functions.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/Menus.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/ReadingFiles.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/Restaurants_functions.h
+CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/StringConverters.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/Verification_Inputs.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/WriteToFile.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/utils.h

@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Base.cpp
+Base.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Base.h
+
 C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Base.h
 iostream
 -
@@ -26,6 +30,10 @@ string
 vector
 -
 
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Order.cpp
+Order.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Order.h
+
 C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Order.h
 iostream
 -
@@ -33,6 +41,10 @@ Restaurant.h
 C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Restaurant.h
 Vehicle.h
 C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Vehicle.h
+
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Person.cpp
+Person.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Person.h
 
 C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Person.h
 iostream
@@ -64,15 +76,41 @@ C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Product.h
 ../Functions/utils.h
 C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/utils.h
 
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Time.cpp
+Time.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Time.h
+
 C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Time.h
 iostream
 -
+iomanip
+-
+
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Vehicle.cpp
+Vehicle.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Vehicle.h
 
 C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Vehicle.h
 Time.h
 C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Time.h
 iostream
 -
+
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/Clients_functions.cpp
+Clients_functions.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/Clients_functions.h
+
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/Clients_functions.h
+iostream
+-
+string
+-
+vector
+-
+../Classes/Base.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Base.h
+../Functions/Verification_Inputs.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/Verification_Inputs.h
 
 C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/Employees_functions.cpp
 Employees_functions.h
@@ -100,6 +138,54 @@ C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/Exceptions.h
 string
 -
 
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/Menus.h
+iostream
+-
+iomanip
+-
+string
+-
+Verification_Inputs.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/Verification_Inputs.h
+
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/ReadingFiles.cpp
+ReadingFiles.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/ReadingFiles.h
+../Functions/StringConverters.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/StringConverters.h
+
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/ReadingFiles.h
+fstream
+-
+iostream
+-
+string
+-
+vector
+-
+../Classes/Base.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Base.h
+
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/Restaurants_functions.cpp
+Restaurants_functions.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/Restaurants_functions.h
+
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/Restaurants_functions.h
+iostream
+-
+string
+-
+vector
+-
+../Classes/Base.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Base.h
+../Functions/Verification_Inputs.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/Verification_Inputs.h
+
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/StringConverters.cpp
+StringConverters.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/StringConverters.h
+
 C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/StringConverters.h
 string
 -
@@ -118,6 +204,24 @@ algorithm
 utils.h
 C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/utils.h
 
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/WriteToFile.cpp
+WriteToFile.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/WriteToFile.h
+
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/WriteToFile.h
+fstream
+-
+iostream
+-
+string
+-
+vector
+-
+iomanip
+-
+../Classes/Base.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Classes/Base.h
+
 C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/utils.h
 iostream
 -
@@ -129,4 +233,24 @@ algorithm
 -
 ../Functions/Exceptions.h
 C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/Exceptions.h
+
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/main.cpp
+iostream
+-
+Windows.h
+-
+Functions/ReadingFiles.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/ReadingFiles.h
+Functions/WriteToFile.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/WriteToFile.h
+Functions/Verification_Inputs.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/Verification_Inputs.h
+Functions/Menus.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/Menus.h
+Functions/Clients_functions.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/Clients_functions.h
+Functions/Employees_functions.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/Employees_functions.h
+Functions/Restaurants_functions.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/UghEats/Functions/Restaurants_functions.h
 
