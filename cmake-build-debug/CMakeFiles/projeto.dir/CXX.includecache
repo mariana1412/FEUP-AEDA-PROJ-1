@@ -6,23 +6,33 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Base.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.cpp
+Base.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
 iostream
 -
 string
 -
 vector
 -
+../Functions/Exceptions.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Exceptions.h
 Location.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Location.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Location.h
 Person.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Person.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Person.h
 Restaurant.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Restaurant.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Restaurant.h
 Order.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Order.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Order.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Location.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Location.cpp
+Location.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Location.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Location.h
 iostream
 -
 string
@@ -30,21 +40,29 @@ string
 vector
 -
 ../Functions/utils.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/utils.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/utils.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Order.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Order.cpp
+Order.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Order.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Order.h
 iostream
 -
 Restaurant.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Restaurant.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Restaurant.h
 Time.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Time.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Time.h
 Product.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Product.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Product.h
 Person.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Person.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Person.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Person.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Person.cpp
+Person.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Person.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Person.h
 iostream
 -
 vector
@@ -52,15 +70,19 @@ vector
 fstream
 -
 Time.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Time.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Time.h
 Vehicle.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Vehicle.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Vehicle.h
 Order.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Order.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Order.h
 Base.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Base.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Product.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Product.cpp
+Product.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Product.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Product.h
 string
 -
 vector
@@ -68,9 +90,13 @@ vector
 iostream
 -
 ../Functions/utils.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/utils.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/utils.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Restaurant.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Restaurant.cpp
+Restaurant.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Restaurant.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Restaurant.h
 iostream
 -
 string
@@ -78,11 +104,15 @@ string
 vector
 -
 Product.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Product.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Product.h
 ../Functions/utils.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/utils.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/utils.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Time.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Time.cpp
+Time.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Time.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Time.h
 iostream
 -
 vector
@@ -90,9 +120,13 @@ vector
 string
 -
 ../Functions/utils.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/utils.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/utils.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Vehicle.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Vehicle.cpp
+Vehicle.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Vehicle.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Vehicle.h
 iostream
 -
 vector
@@ -100,15 +134,15 @@ vector
 string
 -
 Time.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Time.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Time.h
 ../Functions/utils.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/utils.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/utils.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Employees_functions.cpp
-Employees_functions.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Employees_functions.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Clients_functions.cpp
+Clients_functions.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Clients_functions.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Employees_functions.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Clients_functions.h
 iostream
 -
 string
@@ -116,19 +150,85 @@ string
 vector
 -
 ../Classes/Person.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Person.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Person.h
 ../Classes/Base.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Base.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
 utils.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/utils.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/utils.h
 Verification_Inputs.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Verification_Inputs.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Exceptions.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Exceptions.h
 string
 -
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Verification_Inputs.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Menus.cpp
+Menus.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Menus.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Menus.h
+iostream
+-
+iomanip
+-
+string
+-
+Verification_Inputs.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/ReadingFiles.cpp
+ReadingFiles.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/ReadingFiles.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/ReadingFiles.h
+fstream
+-
+iostream
+-
+string
+-
+vector
+-
+../Classes/Person.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Person.h
+../Classes/Restaurant.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Restaurant.h
+../Classes/Base.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
+../Classes/Order.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Order.h
+../Classes/Location.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Location.h
+../Classes/Time.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Time.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Restaurants_functions.cpp
+Restaurants_functions.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Restaurants_functions.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Restaurants_functions.h
+iostream
+-
+string
+-
+vector
+-
+Exceptions.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Exceptions.h
+../Classes/Restaurant.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Restaurant.h
+../Classes/Base.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
+utils.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/utils.h
+Verification_Inputs.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.cpp
+Verification_Inputs.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.h
 iostream
 -
 string
@@ -136,9 +236,39 @@ string
 algorithm
 -
 utils.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/utils.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/utils.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/utils.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/WritingToFiles.cpp
+WritingToFiles.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/WritingToFiles.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/WritingToFiles.h
+fstream
+-
+iostream
+-
+string
+-
+vector
+-
+../Classes/Person.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Person.h
+../Classes/Restaurant.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Restaurant.h
+../Classes/Base.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
+../Classes/Order.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Order.h
+../Classes/Location.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Location.h
+../Classes/Time.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Time.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/utils.cpp
+utils.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/utils.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/utils.h
 iostream
 -
 string
@@ -148,15 +278,31 @@ vector
 algorithm
 -
 ../Classes/Location.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Location.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Location.h
 ../Classes/Person.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Person.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Person.h
 ../Classes/Restaurant.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Restaurant.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Restaurant.h
 ../Classes/Order.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Order.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Order.h
 ../Classes/Base.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Base.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
 Exceptions.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Exceptions.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Exceptions.h
+
+C:/Users/Diogo Almeida/Desktop/UghEats/main.cpp
+iostream
+-
+Windows.h
+-
+Classes/Person.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Person.h
+Functions/ReadingFiles.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/ReadingFiles.h
+Functions/Verification_Inputs.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.h
+Functions/Menus.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Menus.h
+Functions/Clients_functions.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Clients_functions.h
 

@@ -69,3 +69,43 @@ void Base::addEmployee(Employee* employee){
 void Base::addDelivery(Delivery delivery) {
     deliveries.push_back(delivery);
 }
+
+bool Base::removeRestaurant(string name){
+    vector<Restaurant>::iterator it = restaurants.begin();
+
+    while(it != restaurants.end()){
+        if (name == (*it).getName()){
+            break;
+        }
+        advance(it, 1);
+    }
+
+    if(it == restaurants.end()){
+        throw RestaurantNotFound(name);
+    }
+
+    if(confirm_modifications("remove", "restaurant")){
+        restaurants.erase(it);
+        return true;
+    }
+    return false;
+}
+
+Restaurant Base::searchRestaurant(string name){
+    for (vector<Restaurant>::iterator it = restaurants.begin(); it != restaurants.end(); it++){
+        if (name == it->getName())
+            return (*it);
+    }
+    throw RestaurantNotFound(name);
+}
+
+int Base::getIndexrestaurant(Restaurant restaurant){
+
+    for(int i = 0; i<restaurants.size(); i++){
+        if(restaurants[i] == restaurant){
+            return i;
+        }
+    }
+
+    throw RestaurantNotFound(restaurant.getName());
+}

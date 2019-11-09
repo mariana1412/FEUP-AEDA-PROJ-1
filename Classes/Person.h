@@ -55,6 +55,7 @@ private:
     float income;
 public:
     Employee(){};
+    virtual ~Employee(){};
     Employee(string base, string name, int nif, Time birthdate, float income);
     Time getBirthdate() const;
     float getIncome() const;

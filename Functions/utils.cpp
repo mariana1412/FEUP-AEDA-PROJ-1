@@ -88,23 +88,23 @@ int int_sequential_search(const vector<Client> &v, int x) {//retorna o indice do
     return -1; // não encontrou
 }
 
-bool confirm_modifications(string action, string person){
+bool confirm_modifications(string action, string str){
 
     string cancel;
 
     if (action == "create") {
-        cout << endl << endl << "Are you sure you want to create a " << person << " with this information? " << endl
+        cout << endl << endl << "Are you sure you want to create a " << str << " with this information? " << endl
              << "Insert 'yes' to continue. " << endl << "Insert 'no' to cancel. " << endl << "Answer: ";
         cin >> cancel;
     }
 
     else if (action == "modify") {
-        cout << endl << endl << "Are you sure you want to modify this " << person << " with this information? " << endl
+        cout << endl << endl << "Are you sure you want to modify this " << str << " with this information? " << endl
              << "Insert 'yes' to continue. " << endl << "Insert 'no' to cancel. " << endl << "Answer: ";
         cin >> cancel;
     }
     else if (action == "remove") {
-        cout << endl << endl << "Are you sure you want to remove this " << person << "?" << endl
+        cout << endl << endl << "Are you sure you want to remove this " << str << "?" << endl
              << "Insert 'yes' to continue. " << endl << "Insert 'no' to cancel. " << endl << "Answer: ";
         cin >> cancel;
     }

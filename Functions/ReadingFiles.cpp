@@ -55,7 +55,7 @@ void extract_Clients(Base& baseP, Base& baseL, Base& baseF){
 }
 
 void extract_Restaurants(Base& baseP, Base& baseL, Base& baseF){
-    string line, name, location, revenue, types_of_food, products;
+    string line, name, revenue, types_of_food, products;
     ifstream restaurantfile;
     restaurantfile.open("../Restaurants.txt");
     if (restaurantfile.is_open()) {
@@ -63,34 +63,37 @@ void extract_Restaurants(Base& baseP, Base& baseL, Base& baseF){
             getline(restaurantfile, line);
             if (line == "Porto") {
                 getline(restaurantfile, name);
-                getline(restaurantfile, location);
+                getline(restaurantfile, line);
+                Location location(line);
                 getline(restaurantfile, types_of_food);
                 getline(restaurantfile, products);
                 getline(restaurantfile, revenue);
                 getline(restaurantfile, line); //separator
-                baseP.addRestaurant(Restaurant(name, location, types_of_food, products, stof(revenue)));
+                baseP.addRestaurant(Restaurant(name, location.getAddress(), location.getCounty(), types_of_food, products, stof(revenue)));
                 continue;
             }
 
             if (line == "Lisboa") {
                 getline(restaurantfile, name);
-                getline(restaurantfile, location);
+                getline(restaurantfile, line);
+                Location location(line);
                 getline(restaurantfile, types_of_food);
                 getline(restaurantfile, products);
                 getline(restaurantfile, revenue);
                 getline(restaurantfile, line); //separator
-                baseL.addRestaurant(Restaurant(name, location, types_of_food, products, stof(revenue)));
+                baseL.addRestaurant(Restaurant(name, location.getAddress(),location.getCounty(), types_of_food, products, stof(revenue)));
                 continue;
             }
 
             if (line == "Faro") {
                 getline(restaurantfile, name);
-                getline(restaurantfile, location);
+                getline(restaurantfile, line);
+                Location location(line);
                 getline(restaurantfile, types_of_food);
                 getline(restaurantfile, products);
                 getline(restaurantfile, revenue);
                 getline(restaurantfile, line); //separator
-                baseF.addRestaurant(Restaurant(name, location, types_of_food, products, stof(revenue)));
+                baseF.addRestaurant(Restaurant(name, location.getAddress(), location.getCounty(), types_of_food, products, stof(revenue)));
                 continue;
             }
         }
@@ -303,7 +306,6 @@ void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
             getline(basefile, line);
             if (stoi(line) != 0)
                 baseP.setBlacklist(stringToClientVectorSearch(line, baseP));
-
             getline(basefile, line);    //separator
             getline(basefile, line);    //Lisboa
             getline(basefile, line);

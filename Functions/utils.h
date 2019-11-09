@@ -14,6 +14,7 @@
 #include "../Classes/Base.h"
 #include "Exceptions.h"
 
+class Restaurant;
 class Location;
 class Employee;
 class Admin;

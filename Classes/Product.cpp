@@ -51,3 +51,8 @@ void Product::setType_of_food(string type_of_food){
 void Product::setprice(float price){
     this->price = price;
 }
+
+bool Product::operator==(const Product& prod) const{
+    if(prod.getName() == name) return true;
+    return false;
+}

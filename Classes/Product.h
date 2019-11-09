@@ -23,6 +23,7 @@ public:
     void setName(string name);
     void setType_of_food(string type_of_food);
     void setprice(float price);
+    bool operator==(const Product& prod) const;
 };
 
 

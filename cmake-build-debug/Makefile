@@ -38,19 +38,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Users\ritap\Downloads\Software universidade\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Users\ritap\Downloads\Software universidade\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\UghEats"
+CMAKE_SOURCE_DIR = "C:\Users\Diogo Almeida\Desktop\UghEats"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\UghEats\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Users\ritap\Downloads\Software universidade\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,7 +69,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Users\ritap\Downloads\Software universidade\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\UghEats\cmake-build-debug\CMakeFiles" "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\UghEats\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\UghEats\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -446,6 +446,33 @@ Functions/ReadingFiles.cpp.s:
 	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.s
 .PHONY : Functions/ReadingFiles.cpp.s
 
+Functions/Restaurants_functions.obj: Functions/Restaurants_functions.cpp.obj
+
+.PHONY : Functions/Restaurants_functions.obj
+
+# target to build an object file
+Functions/Restaurants_functions.cpp.obj:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj
+.PHONY : Functions/Restaurants_functions.cpp.obj
+
+Functions/Restaurants_functions.i: Functions/Restaurants_functions.cpp.i
+
+.PHONY : Functions/Restaurants_functions.i
+
+# target to preprocess a source file
+Functions/Restaurants_functions.cpp.i:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.i
+.PHONY : Functions/Restaurants_functions.cpp.i
+
+Functions/Restaurants_functions.s: Functions/Restaurants_functions.cpp.s
+
+.PHONY : Functions/Restaurants_functions.s
+
+# target to generate assembly for a file
+Functions/Restaurants_functions.cpp.s:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.s
+.PHONY : Functions/Restaurants_functions.cpp.s
+
 Functions/Verification_Inputs.obj: Functions/Verification_Inputs.cpp.obj
 
 .PHONY : Functions/Verification_Inputs.obj
@@ -472,6 +499,33 @@ Functions/Verification_Inputs.s: Functions/Verification_Inputs.cpp.s
 Functions/Verification_Inputs.cpp.s:
 	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.s
 .PHONY : Functions/Verification_Inputs.cpp.s
+
+Functions/WritingToFiles.obj: Functions/WritingToFiles.cpp.obj
+
+.PHONY : Functions/WritingToFiles.obj
+
+# target to build an object file
+Functions/WritingToFiles.cpp.obj:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.obj
+.PHONY : Functions/WritingToFiles.cpp.obj
+
+Functions/WritingToFiles.i: Functions/WritingToFiles.cpp.i
+
+.PHONY : Functions/WritingToFiles.i
+
+# target to preprocess a source file
+Functions/WritingToFiles.cpp.i:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.i
+.PHONY : Functions/WritingToFiles.cpp.i
+
+Functions/WritingToFiles.s: Functions/WritingToFiles.cpp.s
+
+.PHONY : Functions/WritingToFiles.s
+
+# target to generate assembly for a file
+Functions/WritingToFiles.cpp.s:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/WritingToFiles.cpp.s
+.PHONY : Functions/WritingToFiles.cpp.s
 
 Functions/utils.obj: Functions/utils.cpp.obj
 
@@ -572,9 +626,15 @@ help:
 	@echo ... Functions/ReadingFiles.obj
 	@echo ... Functions/ReadingFiles.i
 	@echo ... Functions/ReadingFiles.s
+	@echo ... Functions/Restaurants_functions.obj
+	@echo ... Functions/Restaurants_functions.i
+	@echo ... Functions/Restaurants_functions.s
 	@echo ... Functions/Verification_Inputs.obj
 	@echo ... Functions/Verification_Inputs.i
 	@echo ... Functions/Verification_Inputs.s
+	@echo ... Functions/WritingToFiles.obj
+	@echo ... Functions/WritingToFiles.i
+	@echo ... Functions/WritingToFiles.s
 	@echo ... Functions/utils.obj
 	@echo ... Functions/utils.i
 	@echo ... Functions/utils.s

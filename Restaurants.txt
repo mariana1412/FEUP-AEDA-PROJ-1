@@ -7,14 +7,14 @@ temaki, Japonesa, 5.50
 ::::::::
 Lisboa
 Italian
-Rua da Praia 45, 4400-787, Lisboa
+Rua da Praia 45, Lisboa
 Italiana
 pizza, Italiana, 8.90 / lasanha, Italiana, 7.60
 8.90
 ::::::::
 Faro
 Mexican
-Rua da Alegria 22, 4400-888, Faro
+Rua da Alegria 22, Faro
 Mexicana
 tacos, Mexicana, 4.20 / nachos, Mexicana, 5.25
 0
