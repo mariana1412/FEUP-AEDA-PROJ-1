@@ -69,7 +69,7 @@ class ClientAlreadyExists{
 private:
     string nif;
 public:
-    ClientAlreadyExists(string name){this->nif=nif;}
+    ClientAlreadyExists(string nif){this->nif=nif;}
     string getNIF() const{return nif;}
 };
 
@@ -77,7 +77,7 @@ class EmployeeAlreadyExists{
 private:
     string nif;
 public:
-    EmployeeAlreadyExists(string name){this->nif=nif;}
+    EmployeeAlreadyExists(string nif){this->nif=nif;}
     string getNIF() const{return nif;}
 };
 
