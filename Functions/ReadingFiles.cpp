@@ -300,8 +300,7 @@ void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
         while (!basefile.eof()) {
             getline(basefile, line);    //Porto
             getline(basefile, line);
-            Location* l = new Location(line);
-            baseP.setLocation(l);
+            baseP.setLocation(Location(line));
             getline(basefile, line);
             baseP.setManager(line);
             getline(basefile, line);
@@ -310,7 +309,7 @@ void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
             getline(basefile, line);    //separator
             getline(basefile, line);    //Lisboa
             getline(basefile, line);
-            baseL.setLocation(l);
+            baseL.setLocation(Location(line));
             getline(basefile, line);
             baseL.setManager(line);
             getline(basefile, line);
@@ -319,7 +318,7 @@ void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
             getline(basefile, line);    //separator
             getline(basefile, line);    //Faro
             getline(basefile, line);
-            baseF.setLocation(l);
+            baseF.setLocation(Location(line));
             getline(basefile, line);
             baseF.setManager(line);
             getline(basefile, line);
