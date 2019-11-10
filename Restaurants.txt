@@ -25,3 +25,10 @@ Rua da Alegria 22, Faro
 Mexicana
 tacos, Mexicana, 4.2 / nachos, Mexicana, 5.25
 0
+::::::::
+Faro
+Alentejano
+Rua Do Sol, 55
+Portuguesa, Italiana
+Alentejana, Portuguesa, 10.5 / Pao De Alho, Italiana, 2
+0

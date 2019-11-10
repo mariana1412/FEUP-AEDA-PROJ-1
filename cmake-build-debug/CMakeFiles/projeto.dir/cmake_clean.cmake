@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj"
   "CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj"
   "CMakeFiles/projeto.dir/Functions/Menus.cpp.obj"
+  "CMakeFiles/projeto.dir/Functions/Order_functions.cpp.obj"
   "CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj"
   "CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj"
   "CMakeFiles/projeto.dir/Functions/StringConverters.cpp.obj"

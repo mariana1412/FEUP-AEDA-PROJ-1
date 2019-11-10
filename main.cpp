@@ -7,6 +7,7 @@
 #include "Functions/Clients_functions.h"
 #include "Functions/Employees_functions.h"
 #include "Functions/Restaurants_functions.h"
+#include "Functions/Order_functions.h"
 
 const vector<string> nearby_Porto = { "Matosinhos", "Vila Nova de Gaia", "Maia", "Gondomar", "Porto" };
 const vector<string> nearby_Lisboa = { "Oeiras", "Loures", "Amadora", "Odivelas","Lisboa" };
@@ -30,6 +31,7 @@ int main() {
     extract_Deliveries(Porto, Lisboa,Faro);
     extract_Employees(Porto, Lisboa, Faro);
     extract_Bases(Porto, Lisboa, Faro);
+
     cout << "What are you?\n";
     cout << "1. Administrator\n";
     cout << "2. Client\n";
@@ -67,13 +69,46 @@ int main() {
 
             } while (choice != 4);
         }
-
         else if (menu == 2) {
-            //To do: ORDER()
             int choice;
-            choice=Order();
-
-
+            do {
+                choice = Order();
+                if (choice == 1) {
+                    if ((create_order(Porto, Lisboa, Faro) == 0) || (create_order(Porto, Lisboa, Faro) == 1)) {
+                        break;
+                    } else {
+                        menu = 4;
+                        break;
+                    }
+                } else if (choice == 2) {
+                    if (is_client){
+                        cout << endl<<"ATENTION: You do not have access to this functionality.\n"<<endl;
+                        choice = 0;
+                        break;
+                    }
+                    if ((modify_order(Porto, Lisboa, Faro) == 0) || (modify_order(Porto, Lisboa, Faro) == 1)) {
+                        break;
+                    } else {
+                        menu = 4;
+                        break;
+                    }
+                } else if (choice == 3) {
+                    if (is_client){
+                        cout << endl<<"ATENTION: You do not have access to this functionality.\n"<<endl;
+                        choice = 0;
+                        break;
+                    }
+                    if ((remove_order(Porto, Lisboa, Faro) == 0) || (remove_order(Porto, Lisboa, Faro) == 1)) {
+                        break;
+                    } else {
+                        menu = 4;
+                        break;
+                    }
+                } else if (choice == 0) {
+                    menu = 0;
+                    break;
+                }
+            } while (choice != 4);
         }
         else if (menu == 3) {
             int choice;

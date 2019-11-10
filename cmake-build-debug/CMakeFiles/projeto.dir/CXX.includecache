@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Base.cpp
-Base.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Base.h
-
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Base.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
 iostream
 -
 string
@@ -18,11 +14,11 @@ string
 vector
 -
 Location.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Location.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Location.h
 Person.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Person.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Person.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Location.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Location.h
 iostream
 -
 string
@@ -30,23 +26,15 @@ string
 vector
 -
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Order.cpp
-Order.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Order.h
-
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Order.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Order.h
 iostream
 -
 Restaurant.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Restaurant.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Restaurant.h
 Vehicle.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Vehicle.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Vehicle.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Person.cpp
-Person.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Person.h
-
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Person.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Person.h
 iostream
 -
 vector
@@ -54,9 +42,9 @@ vector
 fstream
 -
 Order.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Order.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Order.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Product.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Product.h
 string
 -
 vector
@@ -64,11 +52,7 @@ vector
 iostream
 -
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Restaurant.cpp
-Restaurant.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Restaurant.h
-
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Restaurant.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Restaurant.h
 iostream
 -
 string
@@ -76,27 +60,23 @@ string
 vector
 -
 Product.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Product.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Product.h
 ../Functions/utils.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/utils.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/utils.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Time.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Time.h
 iostream
 -
 iomanip
 -
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Vehicle.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Vehicle.h
 Time.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Time.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Time.h
 iostream
 -
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Clients_functions.cpp
-Clients_functions.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Clients_functions.h
-
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Clients_functions.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Clients_functions.h
 iostream
 -
 string
@@ -104,15 +84,11 @@ string
 vector
 -
 ../Classes/Base.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Base.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
 ../Functions/Verification_Inputs.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Verification_Inputs.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Employees_functions.cpp
-Employees_functions.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Employees_functions.h
-
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Employees_functions.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Employees_functions.h
 iostream
 -
 string
@@ -120,17 +96,17 @@ string
 vector
 -
 ../Classes/Base.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Base.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
 Verification_Inputs.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Verification_Inputs.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.h
 StringConverters.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/StringConverters.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/StringConverters.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Exceptions.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Exceptions.h
 string
 -
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Menus.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Menus.h
 iostream
 -
 iomanip
@@ -138,15 +114,21 @@ iomanip
 string
 -
 Verification_Inputs.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Verification_Inputs.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/ReadingFiles.cpp
-ReadingFiles.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/ReadingFiles.h
-../Functions/StringConverters.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/StringConverters.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Order_functions.h
+iostream
+-
+string
+-
+vector
+-
+../Classes/Base.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
+../Functions/Verification_Inputs.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/ReadingFiles.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/ReadingFiles.h
 fstream
 -
 iostream
@@ -156,13 +138,9 @@ string
 vector
 -
 ../Classes/Base.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Base.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Restaurants_functions.cpp
-Restaurants_functions.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Restaurants_functions.h
-
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Restaurants_functions.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Restaurants_functions.h
 iostream
 -
 string
@@ -170,23 +148,19 @@ string
 vector
 -
 ../Classes/Base.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Base.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
 ../Functions/Verification_Inputs.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Verification_Inputs.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/StringConverters.cpp
-StringConverters.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/StringConverters.h
-
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/StringConverters.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/StringConverters.h
 string
 -
 vector
 -
 ../Classes/Base.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Base.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Verification_Inputs.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.h
 iostream
 -
 string
@@ -194,13 +168,9 @@ string
 algorithm
 -
 utils.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/utils.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/utils.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/WriteToFile.cpp
-WriteToFile.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/WriteToFile.h
-
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/WriteToFile.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/WriteToFile.h
 fstream
 -
 iostream
@@ -212,9 +182,9 @@ vector
 iomanip
 -
 ../Classes/Base.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Base.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Classes/Base.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/utils.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/utils.h
 iostream
 -
 string
@@ -224,25 +194,27 @@ vector
 algorithm
 -
 ../Functions/Exceptions.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Exceptions.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Exceptions.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/main.cpp
+C:/Users/Diogo Almeida/Desktop/UghEats/main.cpp
 iostream
 -
 Windows.h
 -
 Functions/ReadingFiles.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/ReadingFiles.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/ReadingFiles.h
 Functions/WriteToFile.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/WriteToFile.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/WriteToFile.h
 Functions/Verification_Inputs.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Verification_Inputs.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Verification_Inputs.h
 Functions/Menus.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Menus.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Menus.h
 Functions/Clients_functions.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Clients_functions.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Clients_functions.h
 Functions/Employees_functions.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Employees_functions.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Employees_functions.h
 Functions/Restaurants_functions.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Restaurants_functions.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Restaurants_functions.h
+Functions/Order_functions.h
+C:/Users/Diogo Almeida/Desktop/UghEats/Functions/Order_functions.h
 

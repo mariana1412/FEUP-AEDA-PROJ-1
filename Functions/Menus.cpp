@@ -5,7 +5,7 @@ int MainMenu(){
 
     cout << "---------------- MENU ----------------" << endl<<endl;
     cout << "1. Clients Management" << endl;
-    cout << "2. Order" << endl;
+    cout << "2. Order Management" << endl;
     cout << "3. Search by" << endl;
     cout << "4. Employees Management (only administrators) " << endl;
     cout << "5. Restaurants Management (only administrators) " << endl;
@@ -81,7 +81,18 @@ int RestaurantsManagement(){
 }
 
 int Order(){
-    return 0;
+    int option;
+    cout << "---------------- Order MANAGEMENT ----------------" << endl<<endl;
+    cout << "1. Create Order " << endl;
+    cout << "2. Modify Order (only administrators)" << endl;
+    cout << "3. Remove Order (only administrators)" << endl;
+    cout << "4. Return to the main menu " << endl;
+    cout << "0. Exit" << endl;
+
+    menu_int_options(option,0,4);
+
+    cin.ignore(1000,'\n');
+    return option;
 }
 
 
