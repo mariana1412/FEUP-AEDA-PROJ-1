@@ -64,7 +64,7 @@ public:
 * @brief Permite obter os produtos do restaurante
  * @return Retorna os produtos do restaurante
 */
-    vector<Product> getProducts() const
+    vector<Product> getProducts() const;
     /**
 * @brief Permite obter o valor retirado pela empresa neste restaurante
  * @return Retorna o alor retirado pela empresa neste restaurante
