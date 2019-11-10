@@ -110,3 +110,9 @@ int Base::getIndexrestaurant(Restaurant restaurant){
 
     throw RestaurantNotFound(restaurant.getName());
 }
+
+void Base::changeRestaurant(Restaurant restaurant, int index){
+    restaurants.erase(restaurants.begin()+index);
+    restaurants.insert(restaurants.begin()+index, restaurant);
+
+}

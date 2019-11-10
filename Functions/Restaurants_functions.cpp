@@ -160,11 +160,11 @@ int create_restaurant(Base &Porto, Base &Lisboa, Base &Faro){
         else if (b == "Lisboa") Lisboa.addRestaurant(new_restaurant);
         else if(b == "Faro") Faro.addRestaurant(new_restaurant);
 
-        cout << "Restaurant was successfully created!" << endl << endl;
+        cout << endl << endl << "Restaurant was successfully created!" << endl << endl;
     }
 
     else {
-        cout << "Operation was canceled!" << endl << endl;
+        cout << endl << endl << "Operation was canceled!" << endl << endl;
     }
 
     cout << "1. Return to Main Menu. " << endl;
@@ -230,12 +230,13 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
 
     int choice = 0;
     int option = 0;
+
     cout << endl << endl << "What do you want to change? "<< endl;
     cout << "1. Address" << endl;
     cout << "2. Products" << endl;
     cout << "3. Everything" << endl;
-
     menu_int_options(option, 1, 3);
+    cin.ignore(1000, '\n');
     string change;
     Product product;
     int c = 0, prod;
@@ -243,33 +244,23 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
     switch(option){
         case 1:
             cout << "The current county is " << restaurant.getCounty() << ". Do you want to change it? ";
-            cout << "Insert 'yes' to change. " << endl << "Insert 'no' to continue. " << endl << "Answer: ";
-            cin >> change;
+            cout << "Insert 'yes' to change it. " << endl << "Insert 'no' to continue. " << endl << "Answer: ";
+            getline(cin, change);
+            isValid = false;
 
-            while (cin.fail()) {
-                if (cin.eof()) {
-                    cin.clear();
-                    cout << "Invalid operation, please insert a valid one: ";
-                    cin >> change;
+            while (!isValid || change == "") {
+                if (change != "") {
+                    formatting_string(change);
+                    isValid = ((change == "Yes") || (change == "No"));
                 }
-            }
-
-            formatting_string(change);
-
-            while (cin.fail() || (change != "Yes" && change != "No")) {
-                cin.clear();
-                cin.ignore(1000, '\n');
-                cout << "Invalid operation, please insert a valid one: ";
-                cin >> change;
-                while (cin.fail()) {
-                    if (cin.eof()) {
+                if (!isValid) {
+                    cout << "Invalid operation. Please insert a valid one: ";
+                    getline(cin, change);
+                    if (cin.fail() && cin.eof()) {
                         cin.clear();
-                        cout << "Invalid operation, please insert a valid one: ";
-                        cin >> change;
+                        continue;
                     }
                 }
-
-                formatting_string(change);
             }
 
 
@@ -285,25 +276,16 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
 
                 verification_all_letters(aux);
 
-                do{
-                    try {
-                        restaurant.setCounty(aux, base);
-                        isValid = true;
-                    }
-                    catch (RestaurantOutOfArea &msg){
-                        cout << endl << endl << "ATENTION: " << msg.getCounty() << "does not belong to the base area." << endl << endl;
-                        isValid = false;
-                        cout << "Try again. County: ";
-                        getline(cin, aux);
-
-                        while(cin.fail() && cin.eof()){
-                            cin.clear();
-                            cout << "Invalid character. Please insert a valid input: ";
-                            getline(cin, aux);
-                        }
-                        verification_all_letters(aux);
-                    }
-                } while(!isValid);
+                try {
+                    restaurant.setCounty(aux, base);
+                }
+                catch (RestaurantOutOfArea &msg){
+                    cout << endl << endl << "ATENTION: " << msg.getCounty() << " does not belong to the base area." << endl << endl;
+                    cout << "1. Return to Main Menu. " << endl;
+                    cout << "2. Return to Restaurants Management. " << endl;
+                    menu_int_options(option, 1, 2);
+                    return option;
+                }
 
             }
 
@@ -327,6 +309,7 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
             cout << "3. Remove a product" << endl;
 
             menu_int_options(choice, 1, 3);
+            cin.ignore(1000, '\n');
 
             if(choice == 1){
                 do{
@@ -487,55 +470,83 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
                 }
 
                 if(confirm_modifications("modify", "product")){
-                    if(c == 2 || c == 4) restaurant.addType_of_food(aux);
-                    restaurant.getProducts()[prod] = product;
+                    if(c == 2 || c == 4) restaurant.updateTypes_of_food();
+                    restaurant.changeProduct(product, prod);
+                    cout << endl << "Product was successfully modified!" << endl << endl;
                 }
                 else {
-                    cout << "Operation was canceled!" << endl << endl;
+                    cout << endl << "Operation was canceled!" << endl << endl;
                     return 0;
                 }
             }
 
             else if(choice == 3){
+                cout << "Insert the name of the product you want to remove: ";
+                getline(cin, aux);
+
+                while(cin.fail() && cin.eof()){
+                    cin.clear();
+                    cout << "Invalid character. Please insert a valid input: ";
+                    getline(cin, aux);
+                }
+                formatting_string(aux);
+
+                do{
+                    try {
+                        product = restaurant.searchProduct(aux);
+                        isValid = true;
+                    }
+                    catch (ProductNotFound &msg){
+                        cout << endl << endl << "ATENTION: Product '" << msg.getName() << "' does not exist." << endl << endl;
+                        isValid = false;
+                        cout << "Try again. Insert the name of the product you want to modify: ";
+                        getline(cin, aux);
+
+                        while(cin.fail() && cin.eof()){
+                            cin.clear();
+                            cout << "Invalid character. Please insert a valid input: ";
+                            getline(cin, aux);
+                        }
+                        formatting_string(aux);
+                    }
+                } while(!isValid);
+
+                prod = restaurant.getIndexProduct(product);
+
                 if (confirm_modifications("remove", "product")){
-                    restaurant.getProducts().erase(restaurant.getProducts().begin() + prod);
+                    restaurant.removeProduct(prod);
+                    cout << endl << "Product was successfully removed!" << endl << endl;
+
                 }
                 else {
-                    cout << "Operation was canceled!" << endl << endl;
-                    return 0;
+                    cout << endl << "Operation was canceled!" << endl << endl;
+                    cout << "1. Return to Main Menu. " << endl;
+                    cout << "2. Return to Restaurants Management. " << endl;
+                    menu_int_options(option, 1, 2);
+                    return option;
                 }
             }
             break;
         case 3:
 
             cout << "The current county is " << restaurant.getCounty() << ". Do you want to change it? ";
-            cout << "Insert 'yes' to change. " << endl << "Insert 'no' to continue. " << endl << "Answer: ";
-            cin >> change;
+            cout << "Insert 'yes' to change it. " << endl << "Insert 'no' to continue. " << endl << "Answer: ";
+            getline(cin, change);
+            isValid = false;
 
-            while (cin.fail()) {
-                if (cin.eof()) {
-                    cin.clear();
-                    cout << "Invalid operation, please insert a valid one: ";
-                    cin >> change;
+            while (!isValid || change == "") {
+                if (change != "") {
+                    formatting_string(change);
+                    isValid = ((change == "Yes") || (change == "No"));
                 }
-            }
-
-            formatting_string(change);
-
-            while (cin.fail() || (change != "Yes" && change != "No")) {
-                cin.clear();
-                cin.ignore(1000, '\n');
-                cout << "Invalid operation, please insert a valid one: ";
-                cin >> change;
-                while (cin.fail()) {
-                    if (cin.eof()) {
+                if (!isValid) {
+                    cout << "Invalid operation. Please insert a valid one: ";
+                    getline(cin, change);
+                    if (cin.fail() && cin.eof()) {
                         cin.clear();
-                        cout << "Invalid operation, please insert a valid one: ";
-                        cin >> change;
+                        continue;
                     }
                 }
-
-                formatting_string(change);
             }
 
 
@@ -551,25 +562,16 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
 
                 verification_all_letters(aux);
 
-                do{
-                    try {
-                        restaurant.setCounty(aux, base);
-                        isValid = true;
-                    }
-                    catch (RestaurantOutOfArea &msg){
-                        cout << endl << endl << "ATENTION: " << msg.getCounty() << "does not belong to the base area." << endl << endl;
-                        isValid = false;
-                        cout << "Try again. County: ";
-                        getline(cin, aux);
-
-                        while(cin.fail() && cin.eof()){
-                            cin.clear();
-                            cout << "Invalid character. Please insert a valid input: ";
-                            getline(cin, aux);
-                        }
-                        verification_all_letters(aux);
-                    }
-                } while(!isValid);
+                try {
+                    restaurant.setCounty(aux, base);
+                }
+                catch (RestaurantOutOfArea &msg){
+                    cout << endl << endl << "ATENTION: " << msg.getCounty() << " does not belong to the base area." << endl << endl;
+                    cout << "1. Return to Main Menu. " << endl;
+                    cout << "2. Return to Restaurants Management. " << endl;
+                    menu_int_options(option, 1, 2);
+                    return option;
+                }
 
             }
 
@@ -591,6 +593,7 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
             cout << "3. Remove a product" << endl;
 
             menu_int_options(choice, 1, 3);
+            cin.ignore(1000, '\n');
 
             if(choice == 1){
                 do{
@@ -751,39 +754,81 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
                 }
 
                 if(confirm_modifications("modify", "product")){
-                    if(c == 2 || c == 4) restaurant.addType_of_food(aux);
-                    restaurant.getProducts()[prod] = product;
+                    if(c == 2 || c == 4) restaurant.updateTypes_of_food();
+                    restaurant.changeProduct(product, prod);
+                    cout << endl << "Product was successfully modified!" << endl << endl;
                 }
                 else {
-                    cout << "Operation was canceled!" << endl << endl;
+                    cout << endl <<  "Operation was canceled!" << endl << endl;
                     return 0;
                 }
             }
 
             else if(choice == 3){
+                cout << "Insert the name of the product you want to remove: ";
+                getline(cin, aux);
+
+                while(cin.fail() && cin.eof()){
+                    cin.clear();
+                    cout << "Invalid character. Please insert a valid input: ";
+                    getline(cin, aux);
+                }
+                formatting_string(aux);
+
+                do{
+                    try {
+                        product = restaurant.searchProduct(aux);
+                        isValid = true;
+                    }
+                    catch (ProductNotFound &msg){
+                        cout << endl << endl << "ATENTION: Product '" << msg.getName() << "' does not exist." << endl << endl;
+                        isValid = false;
+                        cout << "Try again. Insert the name of the product you want to modify: ";
+                        getline(cin, aux);
+
+                        while(cin.fail() && cin.eof()){
+                            cin.clear();
+                            cout << "Invalid character. Please insert a valid input: ";
+                            getline(cin, aux);
+                        }
+                        formatting_string(aux);
+                    }
+                } while(!isValid);
+
+                prod = restaurant.getIndexProduct(product);
+
                 if (confirm_modifications("remove", "product")){
-                    restaurant.getProducts().erase(restaurant.getProducts().begin() + prod);
+                    restaurant.removeProduct(prod);
+                    cout << endl << "Product was successfully removed!" << endl << endl;
+
                 }
                 else {
-                    cout << "Operation was canceled!" << endl << endl;
-                    return 0;
+                    cout << endl << "Operation was canceled!" << endl << endl;
+                    cout << "1. Return to Main Menu. " << endl;
+                    cout << "2. Return to Restaurants Management. " << endl;
+                    menu_int_options(option, 1, 2);
+                    return option;
                 }
             }
             break;
     }
 
     if(confirm_modifications("modify", "restaurant")){
-        if (base == "Porto") Porto.getRestaurants()[res] = restaurant;
-        else if (base == "Lisboa") Lisboa.getRestaurants()[res] = restaurant;
-        else if(base == "Faro") Faro.getRestaurants()[res] = restaurant;
-        cout << "Restaurant was successfully modified!" << endl << endl;
+        if (base == "Porto") Porto.changeRestaurant(restaurant, res);
+        else if (base == "Lisboa") Lisboa.changeRestaurant(restaurant, res);
+        else if(base == "Faro") Faro.changeRestaurant(restaurant, res);
+        cout << endl << "Restaurant was successfully modified!" << endl << endl;
     }
 
     else {
-        cout << "Operation was canceled!" << endl << endl;
+        cout << endl << "Operation was canceled!" << endl << endl;
     }
 
-    return 0;
+
+    cout << "1. Return to Main Menu. " << endl;
+    cout << "2. Return to Restaurants Management. " << endl;
+    menu_int_options(option, 1, 2);
+    return option;
 
 }
 
@@ -792,6 +837,7 @@ int remove_restaurant(Base &Porto, Base &Lisboa, Base &Faro){
     string aux, base;
     vector<Restaurant> restaurants;
     bool isValid, confirm;
+    int option;
 
     cout << endl << endl << "-------------- REMOVE RESTAURANT --------------" << endl << endl;
 
@@ -817,31 +863,27 @@ int remove_restaurant(Base &Porto, Base &Lisboa, Base &Faro){
 
     formatting_string(aux);
 
-    do{
-        try {
-            if (base == "Porto") confirm = Porto.removeRestaurant(aux);
-            else if (base == "Lisboa") confirm  = Lisboa.removeRestaurant(aux);
-            else if(base == "Faro") confirm = Faro.removeRestaurant(aux);
-            isValid = true;
-        }
-        catch (RestaurantNotFound &msg){
-            cout << endl << endl << "ATENTION: Restaurant '" << msg.getName() << "' does not exist." << endl << endl;
-            isValid = false;
-            cout << "Try again. Insert the name of the restaurant you want to remove: ";
-            getline(cin, aux);
+    try {
+        if (base == "Porto") confirm = Porto.removeRestaurant(aux);
+        else if (base == "Lisboa") confirm  = Lisboa.removeRestaurant(aux);
+        else if(base == "Faro") confirm = Faro.removeRestaurant(aux);
+    }
+    catch (RestaurantNotFound &msg){
+        cout << endl << endl << "ATENTION: Restaurant '" << msg.getName() << "' does not exist." << endl << endl;
+        cout << "1. Return to Main Menu. " << endl;
+        cout << "2. Return to Restaurants Management. " << endl;
+        menu_int_options(option, 1, 2);
+        return option;
+    }
 
-            while(cin.fail() && cin.eof()){
-                cin.clear();
-                cout << "Invalid character. Please insert a valid input: ";
-                getline(cin, aux);
-            }
-            formatting_string(aux);
-        }
-    } while(!isValid);
 
     if (confirm) cout << endl << endl << "Restaurant was successfully removed!" << endl << endl;
     else cout << endl << endl << "Operation was canceled!" << endl << endl;
 
-    return 0;
+
+    cout << "1. Return to Main Menu. " << endl;
+    cout << "2. Return to Restaurants Management. " << endl;
+    menu_int_options(option, 1, 2);
+    return option;
 
 }

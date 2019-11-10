@@ -25,10 +25,3 @@ Rua da Alegria 22, Faro
 Mexicana
 tacos, Mexicana, 4.2 / nachos, Mexicana, 5.25
 0
-::::::::
-Faro
-Portuguese
-Rua da Tristeza 21, Faro
-Portuguesa
-francesinha, Portuguesa, 8
-0

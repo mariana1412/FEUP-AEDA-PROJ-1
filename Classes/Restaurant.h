@@ -45,7 +45,10 @@ public:
     bool operator==(const Restaurant& rest) const;
     Product searchProduct(string name);
     int getIndexProduct(Product product);
-    bool removeProduct(string name);
+    void removeProduct(int index);
+    void updateTypes_of_food();
+    void changeProduct(Product product, int index);
+
 };
 
 

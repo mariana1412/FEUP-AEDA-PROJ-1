@@ -28,7 +28,7 @@ class RestaurantOutOfArea {
 private:
     string county;
 public:
-    RestaurantOutOfArea(string c) {this->county = county;}
+    RestaurantOutOfArea(string c) {this->county = c;}
     string getCounty() const {return county;}
 };
 
@@ -36,7 +36,7 @@ class RestaurantNotFound {
 private:
     string name;
 public:
-    RestaurantNotFound(string n) {this->name = name; }
+    RestaurantNotFound(string n) {this->name = n; }
     string getName() const {return name;}
 };
 
@@ -44,7 +44,7 @@ class RestaurantAlreadyExists {
 private:
     string name;
 public:
-    RestaurantAlreadyExists(string n) {this->name = name;}
+    RestaurantAlreadyExists(string n) {this->name = n;}
     string getName() const {return name;}
 };
 

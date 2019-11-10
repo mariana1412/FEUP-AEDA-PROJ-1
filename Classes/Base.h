@@ -134,7 +134,13 @@ public:
 * @return Index do restaurante no vetor de restaurantes da base
 */
     int getIndexrestaurant(Restaurant restaurant);
-
+/**
+ * @brief Permite modificar o restaurante de indice index no vetor de restaurantes da base
+ * @param restaurant - restaurante com as modificações que pretendemos colocar no indice dado
+ * @param index  - Index do restaurante que pretendemos modificar no vetor de restaurantes da base
+ */
+    void changeRestaurant(Restaurant restaurant, int index);
 };
+
 
 #endif //UGH_EATS_BASE_H

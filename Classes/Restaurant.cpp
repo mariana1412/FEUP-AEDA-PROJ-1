@@ -73,14 +73,14 @@ void Restaurant::setCounty(string county, string base){
     }
 
     while(it1 != it2){
-        if (name == (*it1)){
+        if (county == (*it1)){
             this->county = county;
             break;
         }
         advance(it1, 1);
     }
 
-    if(it1 != it2)
+    if(it1 == it2)
         throw RestaurantOutOfArea(county);
 }
 
@@ -151,23 +151,23 @@ int Restaurant::getIndexProduct(Product product){
     throw ProductNotFound(product.getName());
 }
 
-bool Restaurant::removeProduct(string name){
-    vector<Product>::iterator it = products.begin();
+void Restaurant::removeProduct(int index){
+    products.erase(products.begin() + index);
+    updateTypes_of_food();
+}
+
+void Restaurant::updateTypes_of_food(){
+
+    vector<Product>::const_iterator it = products.begin();
+    types_of_food.clear();
 
     while(it != products.end()){
-        if (name == (*it).getName()){
-            break;
-        }
+        addType_of_food((*it).getType_of_food());
         advance(it, 1);
     }
+}
 
-    if(it == products.end()){
-        throw ProductNotFound(name);
-    }
-
-    if(confirm_modifications("remove", "product")){
-        products.erase(it);
-        return true;
-    }
-    return false;
+void Restaurant::changeProduct(Product product, int index){
+    products.erase(products.begin()+index);
+    products.insert(products.begin()+index, product);
 }

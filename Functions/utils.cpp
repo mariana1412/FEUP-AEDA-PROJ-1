@@ -119,7 +119,6 @@ bool confirm_modifications(string action, string str){
         }
 
         formatting_string(cancel);
-
     }
 
 
