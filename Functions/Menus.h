@@ -8,13 +8,40 @@
 #include "Verification_Inputs.h"
 using namespace std;
 
-
+/**
+ * @brief Menu principal do programa
+ * @return valor inteiro para retorno do Menu
+ * **/
 int MainMenu();
+/**
+ * @brief Menu de gerir clientes
+ * @return valor inteiro para retorno do Menu
+ * **/
 int ClientsManagement();
+/**
+ * @brief Menu de gerir funcionários
+ * @return valor inteiro para retorno do Menu
+ * **/
 int EmployeesManagement();
+/**
+ * @brief Menu de gerir restaurantes
+ * @return valor inteiro para retorno do Menu
+ * **/
 int RestaurantsManagement();
+/**
+ * @brief Menu de realizar uma encomenda
+ * @return valor inteiro para retorno do Menu
+ * **/
 int Order();
+/**
+ * @brief Menu de procura por um certo critério
+ * @return valor inteiro para retorno do Menu
+ * **/
 int SearchBy();
+/**
+ * @brief Menu de cálculo de lucro
+ * @return valor inteiro para retorno do Menu
+ * **/
 int ProfitsCalculation();
 
 
