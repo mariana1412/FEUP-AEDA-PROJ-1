@@ -76,11 +76,11 @@ C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritm
 iostream
 -
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Clients_functions.cpp
-Clients_functions.h
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Clients_functions.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Employees_functions.cpp
+Employees_functions.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Employees_functions.h
 
-C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Clients_functions.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Employees_functions.h
 iostream
 -
 string
@@ -89,12 +89,22 @@ vector
 -
 ../Classes/Base.h
 C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Base.h
-../Functions/Verification_Inputs.h
+Verification_Inputs.h
 C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Verification_Inputs.h
+StringConverters.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/StringConverters.h
 
 C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Exceptions.h
 string
 -
+
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/StringConverters.h
+string
+-
+vector
+-
+../Classes/Base.h
+C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Classes/Base.h
 
 C:/Users/ritap/OneDrive/Ambiente de Trabalho/Faculdade/2 Ano/1 Semestre/Algoritmos e Estruturas de Dados/Trabalhos/UghEats/Functions/Verification_Inputs.h
 iostream

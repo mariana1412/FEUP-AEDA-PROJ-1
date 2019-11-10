@@ -146,6 +146,12 @@ public:
  */
 
     void removeClient(int index);
+    /**
+    * @brief Permite remover um funcionário do vetor de clientes
+    * @param index  - Index do funcionário que pretendemos remover do vetor de funcionários da base
+    */
+
+    void removeEmployee(int index);
 };
 
 

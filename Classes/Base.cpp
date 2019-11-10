@@ -120,3 +120,6 @@ void Base::removeClient(int index){
     clients.erase(clients.begin()+index);
     return;
 }
+void Base::removeEmployee(int index) {
+    employees.erase(employees.begin()+index);
+}

@@ -10,12 +10,6 @@ Diogo Henrique Almeida
 Rua dos Bragas 32, Maia
 true
 ::::::::
-Porto
-Ana Rita Matos
-287564236
-Avenida dos Aliados 21, Matosinhos
-false
-::::::::
 Lisboa
 Inês Pinto Silva
 251230654
