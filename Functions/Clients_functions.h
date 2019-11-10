@@ -20,9 +20,9 @@ int create_client(Base &Porto, Base &Lisboa, Base &Faro);
 int modify_client(Base &Porto, Base &Lisboa, Base &Faro);
 int remove_client(Base &Porto, Base &Lisboa, Base &Faro);
 
-bool black_list(Base base, int nif);
-bool out_of_area(vector<Client> v,string county);
-bool client_already_exists(string nif, Base &b);
+void black_list(const Base &base, int nif);
+void out_of_area(const vector<Client> &v,string county,string b);
+void client_already_exists(string nif, const Base &b);
 
 
 int int_sequential_search_c(const vector<Client> &v, int x);

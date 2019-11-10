@@ -116,3 +116,7 @@ void Base::changeRestaurant(Restaurant restaurant, int index){
     restaurants.insert(restaurants.begin()+index, restaurant);
 
 }
+void Base::removeClient(int index){
+    clients.erase(clients.begin()+index);
+    return;
+}

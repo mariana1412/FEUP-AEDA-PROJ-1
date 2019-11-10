@@ -140,6 +140,12 @@ public:
  * @param index  - Index do restaurante que pretendemos modificar no vetor de restaurantes da base
  */
     void changeRestaurant(Restaurant restaurant, int index);
+/**
+ * @brief Permite remover um cliente do vetor de clientes
+ * @param index  - Index do cliente que pretendemos remover do vetor de clientes da base
+ */
+
+    void removeClient(int index);
 };
 
 

@@ -1,7 +1,7 @@
 #include "Clients_functions.h"
 
 int create_client(Base &Porto, Base &Lisboa, Base &Faro) {
-    string aux;
+    string aux,b;
     vector<Client> v;
     Client new_client;
     Base base;
@@ -10,7 +10,7 @@ int create_client(Base &Porto, Base &Lisboa, Base &Faro) {
 
     cout << "-------------- CREATE CLIENT --------------" << endl;
 
-    cout << "Base: ";
+    cout << "Base:";
     getline(cin, aux);
     while(cin.fail() && cin.eof()){
         cin.clear();
@@ -21,17 +21,18 @@ int create_client(Base &Porto, Base &Lisboa, Base &Faro) {
     new_client.setBase(aux);
 
     if (aux == "Porto") {
-        v = Porto.getClients();
         base = Porto;
+        b="Porto";
     }
     else if (aux == "Lisboa") {
-        v = Lisboa.getClients();
         base = Lisboa;
+        b="Lisboa";
     }
     else if(aux == "Faro"){
-        v = Faro.getClients();
         base = Faro;
+        b="Faro";
     }
+    v=base.getClients();
 
     cout << "Name:";
     getline(cin, aux);
@@ -43,7 +44,7 @@ int create_client(Base &Porto, Base &Lisboa, Base &Faro) {
     verification_all_letters(aux);
     new_client.setName(aux);
 
-    cout << "NIF: ";
+    cout << "NIF:";
     getline(cin, aux);
     while(cin.fail() && cin.eof()){
         cin.clear();
@@ -60,7 +61,7 @@ int create_client(Base &Porto, Base &Lisboa, Base &Faro) {
             cout <<endl<< "ATENTION: Client with NIF "<< msg.getNIF()<<" already exists."<<endl;
             is_Valid=false;
             cout << "Try again!"<<endl;
-            cout << "NIF: ";
+            cout << "NIF:";
             getline(cin, aux);
             while(cin.fail() && cin.eof()){
                 cin.clear();
@@ -71,9 +72,10 @@ int create_client(Base &Porto, Base &Lisboa, Base &Faro) {
         }
 
     }while(!is_Valid);
+    new_client.setNif(stoi(aux));
 
 
-    cout << "Address: ";//nao ha verificaçao porque pode ter tanto letras como numeros
+    cout << "Address:";//nao ha verificaçao porque pode ter tanto letras como numeros
     getline(cin, aux);
     while(cin.fail() && cin.eof()){
         cin.clear();
@@ -91,25 +93,29 @@ int create_client(Base &Porto, Base &Lisboa, Base &Faro) {
     }
     new_client.setCounty(aux);
     verification_all_letters(aux);
+    new_client.setBlack(false);
 
+
+
+    cout <<endl<<endl<< "----------------------------------------------"<<endl;
     cout<<new_client;//para confirmar  a informaçao
     if (confirm_modifications("create", "client")) {
-
+        cout<<endl<<endl;
         try {
             black_list(base, new_client.getNif());//se o cliente estiver na black_list é rejeitado
         }
         catch (BlackList &e) {
-            cout << e.getMsg() << endl;
+            cout << e.getMsg() << endl<<endl;
             cout << "1. Return to Main Menu. " << endl;
             cout << "2. Return to Clients Management. " << endl;
             menu_int_options(option,1,2);
             return option;
         }
         try {
-            out_of_area(v, new_client.getCounty());//caso o cliente nao resida no concelho da base ou nos concelhos fronteira tambem é rejeitado
+            out_of_area(v, new_client.getCounty(),b);//caso o cliente nao resida no concelho da base ou nos concelhos fronteira tambem é rejeitado
         }
         catch (OutOfArea &b) {
-            cout << b.getMsg() << endl;
+            cout << b.getMsg() << endl<<endl;
             cout << "1. Return to Main Menu. " << endl;
             cout << "2. Return to Clients Management. " << endl;
             menu_int_options(option,1,2);
@@ -269,6 +275,16 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
                 v = Faro.getClients();
             }
             if (confirm_modifications("modify", "client")) {
+                try {
+                    out_of_area(v, v[i].getCounty(),new_info);//caso o cliente nao resida no concelho da base ou nos concelhos fronteira tambem é rejeitado
+                }
+                catch (OutOfArea &b) {
+                    cout << b.getMsg() << endl;
+                    cout << "1. Return to Main Menu. " << endl;
+                    cout << "2. Return to Clients Management. " << endl;
+                    menu_int_options(option,1,2);
+                    return option;
+                }
                 if (base == "Porto") {
                     Porto.getClients()[i].setBase(new_info);
                 }
@@ -303,11 +319,14 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
             verification_all_letters(new_info2);
             if (confirm_modifications("modify", "client")) {
                 try {
-                    out_of_area(v, new_info2);//caso o cliente nao resida no concelho da base ou nos concelhos fronteira tambem é rejeitado
+                    out_of_area(v, new_info2,base);//caso o cliente nao resida no concelho da base ou nos concelhos fronteira tambem é rejeitado
                 }
                 catch (OutOfArea &b) {
                     cout << b.getMsg() << endl;
-                    return -1;
+                    cout << "1. Return to Main Menu. " << endl;
+                    cout << "2. Return to Clients Management. " << endl;
+                    menu_int_options(option,1,2);
+                    return option;
                 }
                 if (base == "Porto") {
                     Porto.getClients()[i].setAddress(new_info);
@@ -372,7 +391,7 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
             verification_all_letters(new_info3);
             if (confirm_modifications("modify", "client")) {
                 try {
-                    out_of_area(v, new_info3);//caso o cliente nao resida no concelho da base ou nos concelhos fronteira tambem é rejeitado
+                    out_of_area(v, new_info3,base);//caso o cliente nao resida no concelho da base ou nos concelhos fronteira tambem é rejeitado
                 }
                 catch (OutOfArea &b) {
                     cout << b.getMsg() << endl<<endl;
@@ -421,7 +440,7 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
 
     cout << "-------------- REMOVE CLIENT --------------" << endl;
 
-    cout << "Client's Base: ";
+    cout << "Client's Base:";
     getline(cin, base);
     while(cin.fail() && cin.eof()){
         cin.clear();
@@ -448,24 +467,24 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
 
 
     if(number == 1){
-        cout << "Name: ";
+        cout << "Name:";
         cin.ignore('\n',1000);
         getline(cin, auxiliar);
         while(cin.fail() && cin.eof()){
             cin.clear();
-            cout << "Invalid character. Please insert a valid input: ";
+            cout << "Invalid character. Please insert a valid input:";
             getline(cin, auxiliar);
         }
         verification_all_letters(auxiliar);
         i = string_sequential_search_c(v, auxiliar);
     }
     else if(number == 2){
-        cout << "NIF: ";
+        cout << "NIF:";
         cin.ignore('\n',1000);
         getline(cin, auxiliar);
         while(cin.fail() && cin.eof()){
             cin.clear();
-            cout << "Invalid character. Please insert a valid input: ";
+            cout << "Invalid character. Please insert a valid input:";
             getline(cin, auxiliar);
         }
         verification_nif(auxiliar);
@@ -476,7 +495,7 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
     }
 
     if (i == -1) {
-        cout << "The client inserted does not exist. Try again: ";//dar opçao de tentar outra
+        cout << "The client inserted does not exist. Try again:";//dar opçao de tentar outra
         while (i == -1) {
             cout << "What do you know about this client?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do cliente
             cout << "1: Name\n" << "2: NIF\n"<<"0: Return to the main menu\n";
@@ -485,24 +504,24 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
                 case 0:
                     return number;
                 case 1:
-                    cout << "Name: ";
+                    cout << "Name:";
                     cin.ignore('\n',1000);
                     getline(cin, auxiliar);
                     while(cin.fail() && cin.eof()){
                         cin.clear();
-                        cout << "Invalid character. Please insert a valid input: ";
+                        cout << "Invalid character. Please insert a valid input:";
                         getline(cin, auxiliar);
                     }
                     verification_all_letters(auxiliar);
                     i = string_sequential_search_c(v, auxiliar);
                     break;
                 case 2:
-                    cout << "NIF: ";
+                    cout << "NIF:";
                     cin.ignore('\n',1000);
                     getline(cin, auxiliar);
                     while(cin.fail() && cin.eof()){
                         cin.clear();
-                        cout << "Invalid character. Please insert a valid input: ";
+                        cout << "Invalid character. Please insert a valid input:";
                         getline(cin, auxiliar);
                     }
                     verification_nif(auxiliar);
@@ -515,13 +534,13 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
         cout<< v[i];//mostrar o cliente
         if (confirm_modifications("remove", "client")) {
             if (base == "Porto") {
-                Porto.getClients().erase(Porto.getClients().begin() + i);
+                Porto.removeClient(i);
             }
             else if (base == "Lisboa") {
-                Lisboa.getClients().erase(Lisboa.getClients().begin() + i);
+                Lisboa.removeClient(i);
             }
             else if (base == "Faro") {
-                Faro.getClients().erase(Faro.getClients().begin() + i);
+                Faro.removeClient(i);
 
             }
             cout << "Client was successfully removed!" << endl << endl;
@@ -538,24 +557,38 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
 }
 //Funcoes relativas as excecoes
 
-bool black_list(Base base, int nif) {
+void black_list(const Base &base, int nif) {
     vector<Client> black_list = base.getBlackList();
     if (int_sequential_search_c(black_list, nif) == -1) {
-        return true;
+        return ;
     }
     throw (BlackList());
 
 }
 
-bool out_of_area(vector<Client> v,string county) {
-    if (string_sequential_search_c(v, county) == -1) {
-        return true;
+void out_of_area(const vector<Client> &v,string county,string b) {
+    if(b=="Porto"){
+        if(find(nearby_Porto.begin(),nearby_Porto.end(), county) == nearby_Porto.end()){
+            throw(OutOfArea());
+        }
     }
-    throw(OutOfArea());
+    else if (b=="Lisboa"){
+        if (find(nearby_Lisboa.begin(),nearby_Lisboa.end(), county) == nearby_Lisboa.end()) {
+            throw(OutOfArea());
+        }
+    }
+    else if (b=="Faro"){
+        if (find(nearby_Faro.begin(),nearby_Faro.end(), county) == nearby_Faro.end()) {
+            throw(OutOfArea());
+        }
+    }
+    return;
+
+
 }
 
 
-bool client_already_exists(string nif, Base &b){
+void client_already_exists(string nif, const Base &b){
     vector<Client> clients= b.getClients();
     vector<Client>::const_iterator it = clients.begin();
 
@@ -565,7 +598,7 @@ bool client_already_exists(string nif, Base &b){
         }
         advance(it, 1);
     }
-    return true;
+    return ;
 
 }
 
