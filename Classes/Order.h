@@ -69,7 +69,7 @@ public:
 
 class Delivery : public Order {
 private:
-    int id;/**<*/
+    int id;/**id da entrega<*/
     bool success;/**< sucesso ou insucesso da entrega*/
     string reason_insuccess;/**< motivo de insucesso*/
     Time deliver_time;/**< tempo exato da entrega*/
@@ -85,7 +85,7 @@ public:
      * @param restaurant - restaurante a que é feita a encomenda
      * @param time - tempo exato em que é feita a encomenda
      * @param products - produtos encomendados
-     * @param id -
+     * @param id - id da entrega
      * @param success - sucesso ou insucesso (verdadeiro ou falso)
      * @param reason_insuccess - motivo de insucesso
      * @param deliver_time - tempo exato de entrega
