@@ -54,7 +54,7 @@ int create_client(Base &Porto, Base &Lisboa, Base &Faro) {
     verification_nif(aux);
     do{
         try{
-            client_already_exists(aux,base);
+            client_already_exists(aux,Porto,Lisboa,Faro);
             is_Valid=true;
         }
         catch(ClientAlreadyExists &msg){
@@ -571,18 +571,30 @@ void out_of_area(const vector<Client> &v,string county,string b) {
 }
 
 
-void client_already_exists(string nif, const Base &b){
-    vector<Client> clients= b.getClients();
-    vector<Client>::const_iterator it = clients.begin();
-
-    while(it != clients.end()){
-        if (stoi(nif) == (*it).getNif()){
+void client_already_exists(string nif, const Base &p, const Base &l, const Base &f){
+    vector<Client>::const_iterator p_it = p.getClients().begin();
+    vector <Client>::const_iterator l_it = l.getClients().begin();
+    vector <Client>::const_iterator f_it = f.getClients().begin();
+    while(p_it != p.getClients().end()){
+        if (stoi(nif) == (*p_it).getNif()){
             throw ClientAlreadyExists(nif);
         }
-        advance(it, 1);
+        advance(p_it, 1);
     }
-    return ;
+    while(l_it != l.getClients().end()){
+        if (stoi(nif) == (*l_it).getNif()){
+            throw ClientAlreadyExists(nif);
+        }
+        advance(l_it, 1);
+    }
 
+    while(f_it != f.getClients().end()){
+        if (stoi(nif) == (*f_it).getNif()){
+            throw ClientAlreadyExists(nif);
+        }
+        advance(f_it, 1);
+    }
+    return;
 }
 
 int string_sequential_search_c(const vector<Client> &v, string x) {//retorna o indice do vetor onde se encontra x

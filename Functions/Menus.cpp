@@ -34,7 +34,7 @@ int ClientsManagement(){
 }
 int EmployeesManagement(){
     int option;
-    cout << "---------------- Employee MANAGEMENT ----------------" << endl<<endl;
+    cout << "---------------- EMPLOYEE MANAGEMENT ----------------" << endl<<endl;
     cout << "1. Create Employee " << endl;
     cout << "2. Modify Employee" << endl;
     cout << "3. Remove Employee " << endl;
@@ -67,7 +67,7 @@ int SearchBy() {
 
 int RestaurantsManagement(){
     int option;
-    cout << "---------------- Restaurant MANAGEMENT ----------------" << endl<<endl;
+    cout << "---------------- RESTAURANT MANAGEMENT ----------------" << endl<<endl;
     cout << "1. Create Restaurant " << endl;
     cout << "2. Modify Restaurant" << endl;
     cout << "3. Remove Restaurant " << endl;
@@ -82,7 +82,7 @@ int RestaurantsManagement(){
 
 int Order(){
     int option;
-    cout << "---------------- Order MANAGEMENT ----------------" << endl<<endl;
+    cout << "---------------- ORDER MANAGEMENT ----------------" << endl<<endl;
     cout << "1. Create Order " << endl;
     cout << "2. Modify Order (only administrators)" << endl;
     cout << "3. Remove Order (only administrators)" << endl;
@@ -98,7 +98,7 @@ int Order(){
 
 int ProfitsCalculation(){
     int option;
-    cout << "---------------- Profit Calculation by ----------------" << endl<<endl;
+    cout << "---------------- PROFIT CALCULATION BY ----------------" << endl<<endl;
     cout << "1. Base " << endl;
     cout << "2. Provider" << endl;
     cout << "3. Client " << endl;

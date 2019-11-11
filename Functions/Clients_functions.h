@@ -62,7 +62,7 @@ void out_of_area(const vector<Client> &v,string county,string b);
  * @param b - base a que quer pertencer o cliente
  * @param nif - NIF do cliente em questão
  */
-void client_already_exists(string nif, const Base &b);
+void client_already_exists(string nif, const Base &p, const Base &l, const Base &f);
 /**
  * @brief Função que procura um Cliente, através do seu nif (x), num vetor de Clientes
  * @param v - vetor de clientes em que queremos procurar
