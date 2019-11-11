@@ -1,10 +1,4 @@
 Porto
-Mariana Almeida Truta
-280541987
-Rua da Alegria 65, Porto
-false
-::::::::
-Porto
 Diogo Henrique Almeida
 298684789
 Rua dos Bragas 32, Maia
@@ -17,16 +11,16 @@ Travessa da Caldeira 85, Lisboa
 false
 ::::::::
 Lisboa
-André Daniel Gomes
-210874562
-Rua 25 de Abril 96, Lisboa
-true
-::::::::
-Lisboa
 Ana Rita Matos
 193320586
 Avenida da Felicidade 56, Lisboa
 false
+::::::::
+Lisboa
+Andre Daniel Gomes
+210874562
+Rua 25 de Abril 96, Lisboa
+true
 ::::::::
 Faro
 Lara Machado Medicis
