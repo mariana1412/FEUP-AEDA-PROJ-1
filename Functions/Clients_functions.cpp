@@ -413,6 +413,10 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
         menu_int_options(op, 1, 2);
         return op;
     }
+    cout << "1. Return to Main Menu." << endl;
+    cout << "2. Return to Clients Management." << endl;
+    menu_int_options(op, 1, 2);
+    return op;
 }
 
 
