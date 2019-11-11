@@ -22,8 +22,10 @@ void write_Clients(Base& baseP, Base& baseL, Base& baseF){
                 clientfile << "false";
         }
 
-        if (clientes_lisboa.size() != 0 || clientes_faro.size() != 0)
-            clientfile << endl <<"::::::::" << endl;
+        if (clientes_porto.size() != 0) {
+            if (clientes_lisboa.size() != 0 || clientes_faro.size() != 0)
+                clientfile << endl << "::::::::" << endl;
+        }
 
         for (vector<Client>::const_iterator it = clientes_lisboa.begin() ; it != clientes_lisboa.end(); it++)
         {
@@ -39,9 +41,10 @@ void write_Clients(Base& baseP, Base& baseL, Base& baseF){
             else
                 clientfile << "false" ;
         }
-
-        if (clientes_faro.size() != 0)
-            clientfile << endl << "::::::::" << endl;
+        if (clientes_lisboa.size() != 0) {
+            if (clientes_faro.size() != 0)
+                clientfile << endl << "::::::::" << endl;
+        }
 
         for (vector<Client>::const_iterator it = clientes_faro.begin() ; it != clientes_faro.end(); it++)
         {
@@ -100,9 +103,10 @@ void write_Restaurants(Base& baseP, Base& baseL, Base& baseF){
             restaurantfile << endl;
             restaurantfile << it->getRevenue();
         }
-
-        if (restaurantes_lisboa.size() != 0 || restaurantes_faro.size() != 0)
-            restaurantfile << endl << "::::::::" << endl;
+        if (restaurantes_porto.size() != 0) {
+            if (restaurantes_lisboa.size() != 0 || restaurantes_faro.size() != 0)
+                restaurantfile << endl << "::::::::" << endl;
+        }
 
         for (vector<Restaurant>::const_iterator it = restaurantes_lisboa.begin(); it != restaurantes_lisboa.end(); it++) {
             if (it != restaurantes_lisboa.begin())
@@ -133,8 +137,10 @@ void write_Restaurants(Base& baseP, Base& baseL, Base& baseF){
             restaurantfile << it->getRevenue();
         }
 
-        if (restaurantes_faro.size() != 0)
-            restaurantfile << endl << "::::::::" << endl;
+        if (restaurantes_lisboa.size() != 0) {
+            if (restaurantes_faro.size() != 0)
+                restaurantfile << endl << "::::::::" << endl;
+        }
 
         for (vector<Restaurant>::const_iterator it = restaurantes_faro.begin(); it != restaurantes_faro.end(); it++) {
             count1++;
@@ -208,9 +214,10 @@ void write_Deliveries(Base& baseP, Base& baseL, Base& baseF){
             deliveryfile << setw(2) << setfill('0') << it->getDeliver_time().getHour() << ":" <<setw(2) << setfill('0') << it->getDeliver_time().getMinutes() << endl;
             deliveryfile << it->getTax();
         }
-
-        if (deliveries_lisboa.size() != 0 || deliveries_faro.size() != 0)
-            deliveryfile << endl << "::::::::" << endl;
+        if (deliveries_porto.size() != 0) {
+            if (deliveries_lisboa.size() != 0 || deliveries_faro.size() != 0)
+                deliveryfile << endl << "::::::::" << endl;
+        }
 
         for (vector<Delivery>::const_iterator it = deliveries_lisboa.begin(); it != deliveries_lisboa.end(); it++) {
             if (it != deliveries_lisboa.begin())
@@ -239,9 +246,10 @@ void write_Deliveries(Base& baseP, Base& baseL, Base& baseF){
             deliveryfile << setw(2) << setfill('0') << it->getDeliver_time().getHour() << ":" << setw(2) << setfill('0') << it->getDeliver_time().getMinutes() << endl;
             deliveryfile << it->getTax();
         }
-
-        if (deliveries_faro.size() != 0)
-            deliveryfile << endl << "::::::::" << endl;
+        if (deliveries_lisboa.size() != 0) {
+            if (deliveries_faro.size() != 0)
+                deliveryfile << endl << "::::::::" << endl;
+        }
 
         for (vector<Delivery>::const_iterator it = deliveries_faro.begin(); it != deliveries_faro.end(); it++) {
             count1++;
@@ -327,8 +335,10 @@ void write_Employees(Base& baseP, Base& baseL, Base& baseF){
         }
 
         count = 0;
-        if (employees_lisboa.size() != 0 || employees_faro.size() != 0)
-            employeefile << endl << "::::::::" << endl;
+        if (employees_porto.size() != 0) {
+            if (employees_lisboa.size() != 0 || employees_faro.size() != 0)
+                employeefile << endl << "::::::::" << endl;
+        }
 
         for (Employee* e: employees_lisboa){
             count++;
@@ -370,8 +380,11 @@ void write_Employees(Base& baseP, Base& baseL, Base& baseF){
         }
 
         count = 0;
-        if (employees_faro.size() != 0)
-            employeefile << endl << "::::::::" << endl;
+
+        if (employees_lisboa.size() != 0) {
+            if (employees_faro.size() != 0)
+                employeefile << endl << "::::::::" << endl;
+        }
 
         for (Employee* e: employees_faro){
             count++;
