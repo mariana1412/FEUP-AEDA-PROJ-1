@@ -47,6 +47,7 @@ int main() {
 
 
     int menu;
+
     do {
         menu = MainMenu();
         if (menu == 1) {
@@ -162,13 +163,13 @@ int main() {
                         }
                     }
                     else if (choice == 3) {
-                            if((remove_employee(Porto, Lisboa, Faro)==0 )||(remove_employee(Porto, Lisboa, Faro)==1)){
-                                break;
-                            }
-                            else {
-                                menu = 4;
-                                break;
-                            }
+                        if((remove_employee(Porto, Lisboa, Faro)==0 )||(remove_employee(Porto, Lisboa, Faro)==1)){
+                            break;
+                        }
+                        else {
+                            menu = 4;
+                            break;
+                        }
                     }
 
                     else if (choice == 0) {

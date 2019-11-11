@@ -91,9 +91,10 @@ void verification_all_letters(string &aux) { //verifica se há carateres invalid
 
 }
 
-void verification_date(string &aux) {
+Time verification_date(string &aux) {
 
     bool isValid = false;
+    Time date;
 
     while (!isValid || aux == "") {
         if (aux != "") {
@@ -102,11 +103,16 @@ void verification_date(string &aux) {
             if(aux.size() != 10 || count(aux.begin(), aux.end(), '/') != 2 || del1 != 2 && del2 != 5 || !(isNumber(aux.substr(0, 2)) && isNumber(aux.substr(3, 2)) && isNumber(aux.substr(6, 4)))) {
                 isValid = false;
             }
+            else if (stringToDate(aux).isValid()){
+                date = stringToDate(aux);
+                isValid = true;
+            }
+            else if(!stringToDate(aux).isValid()){
+                isValid = false;
+            }
             else {
                 isValid = true;
             }
-
-
         }
         if (!isValid) {
             cout << "Invalid date (format: dd/mm/yyyy). Please insert a valid one: ";
@@ -117,6 +123,8 @@ void verification_date(string &aux) {
             }
         }
     }
+
+    return date;
 }
 
 void verification_base(string &aux){

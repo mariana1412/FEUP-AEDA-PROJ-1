@@ -3,14 +3,12 @@
 int create_employee(Base &Porto, Base &Lisboa, Base &Faro){//the income of admin is set to 2500 in line 64
 
     string name, b, nif,birthdate,task,brand,type,date;
-    vector<Employee*> e;
-    Base base;
     int number,option;
     vector<Delivery> background;
-    float income=0;
+    string income;
     Admin a;
     bool is_Valid=false;
-
+    Employee* f;
 
 
     cout <<endl<< "-------------- CREATE EMPLOYEE --------------" << endl;
@@ -18,6 +16,7 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){//the income of admin
     cout << "What kind of Employee do you wish to create?\n";
     cout << "1: Admin\n" << "2: Deliverer\n";
     menu_int_options(number,1, 2);
+    cin.ignore(1000, '\n');
 
     cout << "Base:";
     getline(cin, b);
@@ -27,20 +26,6 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){//the income of admin
         getline(cin, b);
     }
     verification_base(b);
-
-    if (b == "Porto") {
-        e = Porto.getEmployees();
-        base = Porto;
-    }
-    else if (b == "Lisboa") {
-        e = Lisboa.getEmployees();
-        base = Lisboa;
-    }
-    else if (b == "Faro") {
-        e = Faro.getEmployees();
-        base = Faro;
-    }
-
 
     cout << "Name:";
     getline(cin, name);
@@ -64,7 +49,7 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){//the income of admin
     //check if already exists
     do{
         try{
-            employee_already_exists(nif,base);
+            employee_already_exists(nif, Porto, Lisboa, Faro);
             is_Valid=true;
         }
         catch(EmployeeAlreadyExists &msg){
@@ -91,13 +76,19 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){//the income of admin
         cout << "Invalid character. Please insert a valid input:";
         getline(cin, birthdate);
     }
-    verification_date(birthdate);
-    Time b_date=stringToDate(birthdate);
+    Time b_date = verification_date(birthdate);
 
+    cout << "Income:";
+    getline(cin, income);
+    while(cin.fail() && cin.eof()){
+        cin.clear();
+        cout << "Invalid character. Please insert a valid input:";
+        getline(cin, income);
+    }
+    verification_float(income);
 
     switch (number) {
         case 1:
-        {
             cout << "Task:";
             getline(cin, task);
             while(cin.fail() && cin.eof()){
@@ -106,30 +97,26 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){//the income of admin
                 getline(cin, task);
             }
             verification_all_letters(task);
-            income =2500;
-            Employee* f=new Admin(b, name, stoi(nif),b_date,income,task);
+            f = new Admin(b, name, stoi(nif), b_date, stof(income), task);
 
-            cout<<f;//mostrar o empregado para confirmaçao
-            if (confirm_modifications("create","employee")){
-                e.push_back(f);
-                cout << "Employee was successfully created!" << endl << endl;
+            if (confirm_modifications("create","admin")){
+                if (b == "Porto") Porto.addEmployee(f);
+                else if (b == "Lisboa") Lisboa.addEmployee(f);
+                else if (b == "Faro") Faro.addEmployee(f);
+                cout << endl << "Admin was successfully created!" << endl << endl;
 
             }
             else{    //caso de nao se confirmar a criaçao
-                cout << "Operation was canceled!" << endl << endl;
+                cout << endl << "Operation was canceled!" << endl << endl;
                 //voltar para o menu
                 cout << "1. Return to Main Menu." << endl;
-                cout << "2. Return to Clients Management." << endl;
+                cout << "2. Return to Employees Management." << endl;
                 menu_int_options(option,1,2);
-
                 return option;
             }
-        }
-
-
+            break;
         case 2:
-            {
-            cout << "Vehicle alocated to this Deliver information\n";
+            cout << "Information of the vehicle alocated to this deliverer:\n";
             cout << "Brand:";
             getline(cin, brand);
             while(cin.fail() && cin.eof()){
@@ -153,35 +140,38 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){//the income of admin
                 cout << "Invalid character. Please insert a valid input:";
                 getline(cin, date);
             }
-            verification_date(date);
-            Time v_bdate=stringToDate(date);
+            Time v_bdate = verification_date(date);
             Vehicle v(brand, type, v_bdate);
-            Employee* f=new Deliverer(b,name,stoi(nif),v_bdate,income,v,background);
-            cout<<f;//mostrar o empregado para confirmaçao
-            if (confirm_modifications("create","employee")){
-                e.push_back(f);
-                cout << "Employee was successfully created!" << endl << endl;
+
+            f=new Deliverer(b, name, stoi(nif), v_bdate, 0, v, background);
+
+            if (confirm_modifications("create","deliverer")){
+                if (b == "Porto") Porto.addEmployee(f);
+                else if (b == "Lisboa") Lisboa.addEmployee(f);
+                else if (b == "Faro") Faro.addEmployee(f);
+                cout << endl << "Deliverer was successfully created!" << endl << endl;
 
             }
             else{    //caso de nao se confirmar a criaçao
-                cout << "Operation was canceled! " << endl << endl;
+                cout << endl << "Operation was canceled! " << endl << endl;
             }
-        }
+            break;
     }
     //voltar para o menu
     cout << "1. Return to Main Menu." << endl;
-    cout << "2. Return to Clients Management." << endl;
+    cout << "2. Return to Employees Management." << endl;
     menu_int_options(option,1,2);
 
     return option;
 }
 int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
 
-    string b,auxiliar,aux;
+    string b, auxiliar, aux;
     int number,i;
     vector <Employee*> v;
-    Base base;
-    bool is_valid=false;
+    bool is_valid = false;
+    string income;
+
     cout << endl << endl << "-------------- MODIFY EMPLOYEE --------------" << endl << endl;
     cout << "Base:";
     getline(cin, b);
@@ -195,24 +185,22 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
 
     if (b == "Porto") {
         v = Porto.getEmployees();
-        base = Porto;
     }
     else if (b == "Lisboa") {
         v = Lisboa.getEmployees();
-        base = Lisboa;
     }
     else if (b == "Faro") {
         v = Faro.getEmployees();
-        base = Faro;
     }
 
-    cout << "What do you know about this employee?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do cliente
+    cout << "What do you know about this employee?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do employee
     cout << "1: Name\n"<< "2: NIF\n" <<"0: Return to the main menu\n" ;
     menu_int_options(number,0,2);
+    cin.ignore(1000, '\n');
 
     switch (number) {
         case 0:
-            return number;
+            return 1;
         case 1:
             cout << "Name:";
             cin.ignore('\n',1000);
@@ -242,16 +230,16 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
 
     while(i == -1){
         cout << "The employee inserted does not exist. Try again:";//dar opçao de tentar outra vez
-        cout << "What do you know about this employee?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do cliente
+        cout << "What do you know about this employee?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do employee
         cout << "1: Name\n" << "2: NIF\n"<<"0: Return to the main menu\n";
         menu_int_options(number,1,2);
+        cin.ignore(1000, '\n');
 
         switch(number){
             case 0:
-                return number;
+                return 1;
             case 1:
                 cout << "Name:";
-                cin.ignore('\n',1000);
                 getline(cin, auxiliar);
                 while(cin.fail() && cin.eof()){
                     cin.clear();
@@ -263,7 +251,6 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
                 break;
             case 2:
                 cout << "NIF:";
-                cin.ignore('\n',1000);
                 getline(cin, auxiliar);
                 while(cin.fail() && cin.eof()){
                     cin.clear();
@@ -282,8 +269,9 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
         int op;
         cout << "You can only change the task."<<endl;
         cout<< "What do you wish to do? "<<endl;
-        cout<< "1.Change the task\t 2.Return to the Main Menu"<<endl;
+        cout<< "1. Change the task\t 2.Return to the Main Menu"<<endl;
         menu_int_options(op,1,2);
+        cin.ignore(1000, '\n');
         switch(op){
             case 1:{
                 cout << "Task:";
@@ -294,25 +282,36 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
                     getline(cin, aux);
                 }
                 verification_all_letters(aux);
-                if(confirm_modifications("modify","employee")){
+
+                cout << "Income:";
+                getline(cin, income);
+                while(cin.fail() && cin.eof()){
+                    cin.clear();
+                    cout << "Invalid character. Please insert a valid input:";
+                    getline(cin, income);
+                }
+                verification_float(income);
+
+                if(confirm_modifications("modify","admin")){
                     a->setTask(aux);
-                    cout << "Employee was successfully created!" << endl << endl;
+                    a->setIncome(stof(income));
+                    cout << "Admin was successfully modified!" << endl << endl;
                 }
                 else{
-                    cout << "Operation was canceled!" << endl << endl;
+                    cout << endl << "Operation was canceled!" << endl << endl;
                 }
                 //voltar para o menu
                 int option;
                 cout << "1. Return to Main Menu." << endl;
-                cout << "2. Return to Clients Management." << endl;
+                cout << "2. Return to Employees Management." << endl;
                 menu_int_options(option,1,2);
 
                 return option;
             }
             case 2:
             {
-                cout << "Operation was canceled!" << endl << endl;
-                return 0;
+                cout << endl << "Operation was canceled!" << endl << endl;
+                return 1;
             }
         }
 
@@ -324,10 +323,11 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
         cout<< "What do you wish to do? "<<endl;
         cout<< "1.Change the allocated vehicle\n 2.Return to the Main Menu"<<endl;
         menu_int_options(op,1,2);
+        cin.ignore(1000, '\n');
         switch(op){
             case 1:{
                 string brand, type, date;
-                cout << "Vehicle alocated to this Deliver information\n";
+                cout << "Information of the vehicle alocated to this deliverer:\n";
                 cout << "Brand:";
                 getline(cin, brand);
                 while(cin.fail() && cin.eof()){
@@ -336,6 +336,7 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
                     getline(cin, brand);
                 }
                 verification_all_letters(brand);
+
                 cout << "Type:";
                 getline(cin, type);
                 while(cin.fail() && cin.eof()){
@@ -344,6 +345,7 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
                     getline(cin, type);
                 }
                 verification_all_letters(type);
+
                 cout << "Date:";
                 getline(cin, date);
                 while(cin.fail() && cin.eof()){
@@ -351,8 +353,7 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
                     cout << "Invalid character. Please insert a valid input:";
                     getline(cin, date);
                 }
-                verification_date(date);
-                Time v_bdate=stringToDate(date);
+                Time v_bdate = verification_date(date);
                 Vehicle ve(brand, type, v_bdate);
                 if(confirm_modifications("modify","employee")){
                     d->setVehicle(ve);
@@ -364,7 +365,7 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
                 //voltar para o menu
                 int option;
                 cout << "1. Return to Main Menu." << endl;
-                cout << "2. Return to Clients Management." << endl;
+                cout << "2. Return to Employees Management." << endl;
                 menu_int_options(option,1,2);
 
                 return option;
@@ -372,22 +373,18 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
             case 2:
             {
                 cout << "Operation was canceled!" << endl << endl;
-                return 0;
+                return 1;
             }
-
         }
-
     }
-
-    return 0;
-
+    return 1;
 }
 int remove_employee(Base &Porto, Base &Lisboa, Base &Faro){
     vector<Employee*> v;
     string base, auxiliar;
     int i=0, number,option;
 
-    cout << "-------------- REMOVE CLIENT --------------" << endl;
+    cout << "-------------- REMOVE EMPLOYEE --------------" << endl;
 
     cout << "Employee's Base:";
     getline(cin, base);
@@ -407,16 +404,16 @@ int remove_employee(Base &Porto, Base &Lisboa, Base &Faro){
     else if (base == "Faro") {
         v = Faro.getEmployees();
     }
-    cout << "What do you know about this employee?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do cliente
+    cout << "What do you know about this employee?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do employee
     cout << "1: Name\n"<< "2: NIF\n" <<"0: Return to the main menu\n" ;
     menu_int_options(number,0,2);
+    cin.ignore(1000, '\n');
 
     switch (number) {
         case 0:
             return number;
         case 1:
             cout << "Name:";
-            cin.ignore('\n',1000);
             getline(cin, auxiliar);
             while(cin.fail() && cin.eof()){
                 cin.clear();
@@ -428,7 +425,6 @@ int remove_employee(Base &Porto, Base &Lisboa, Base &Faro){
             break;
         case 2:
             cout << "NIF:";
-            cin.ignore('\n',1000);
             getline(cin, auxiliar);
             while(cin.fail() && cin.eof()){
                 cin.clear();
@@ -442,15 +438,15 @@ int remove_employee(Base &Porto, Base &Lisboa, Base &Faro){
 
     while (i == -1) {
         cout << "The employee inserted does not exist. Try again:";//dar opçao de tentar outra
-        cout << "What do you know about this employee?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do cliente
+        cout << "What do you know about this employee?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do employee
         cout << "1: Name\n" << "2: NIF\n"<<"0: Return to the main menu\n";
         menu_int_options(number,1,2);
+        cin.ignore(1000, '\n');
         switch (number) {
             case 0:
                 return number;
             case 1:
                 cout << "Name:";
-                cin.ignore('\n',1000);
                 getline(cin, auxiliar);
                 while(cin.fail() && cin.eof()){
                     cin.clear();
@@ -462,7 +458,6 @@ int remove_employee(Base &Porto, Base &Lisboa, Base &Faro){
                 break;
             case 2:
                 cout << "NIF:";
-                cin.ignore('\n',1000);
                 getline(cin, auxiliar);
                 while(cin.fail() && cin.eof()){
                     cin.clear();
@@ -475,42 +470,28 @@ int remove_employee(Base &Porto, Base &Lisboa, Base &Faro){
         }
     }
     cout<<endl<<"-------------------------------"<<endl;
-    cout<< v[i];//mostrar o funcionario
+    cout<< v[i]; //mostrar o funcionario
     if (confirm_modifications("remove", "employee")) {
-        if (base == "Porto") {
-            Porto.removeEmployee(i);
-        }
-        else if (base == "Lisboa") {
-            Lisboa.removeEmployee(i);
-        }
-        else if (base == "Faro") {
-            Faro.removeEmployee(i);
+        if (base == "Porto") Porto.removeEmployee(i);
+        else if (base == "Lisboa") Lisboa.removeEmployee(i);
+        else if (base == "Faro") Faro.removeEmployee(i);
 
-        }
-        cout << "Employee was successfully removed!" << endl << endl;
+        cout << endl << "Employee was successfully removed!" << endl << endl;
     }
     else {//caso de nao se confirmar a remoçao
-        cout << "Operation was canceled! " << endl << endl;
+        cout << endl << "Operation was canceled! " << endl << endl;
     }
 
     cout << "1. Return to Main Menu. " << endl;
-    cout << "2. Return to Clients Management. " << endl;
+    cout << "2. Return to Employees Management. " << endl;
     menu_int_options(option,1,2);
     return option;
 }
 
 
-bool employee_already_exists(string nif, Base &b){
-    vector<Employee*> e= b.getEmployees();
-    vector<Employee*>::const_iterator it = b.getEmployees().begin();
-
-    while(it != b.getEmployees().end()){
-        if (stoi(nif) == (*it)->getNif()){
-            throw EmployeeAlreadyExists(nif);
-        }
-        advance(it, 1);
-    }
-    return true;
+bool employee_already_exists(string nif, const Base &p, const Base &l, const Base &f){
+    if((p.getIndexEmployee(nif) == -1) && (l.getIndexEmployee(nif) == -1) && (f.getIndexEmployee(nif) == -1)) return false;
+    throw EmployeeAlreadyExists(nif);
 
 }
 int string_sequential_search_e(const vector<Employee*> &v, string x) {//retorna o indice do vetor onde se encontra x

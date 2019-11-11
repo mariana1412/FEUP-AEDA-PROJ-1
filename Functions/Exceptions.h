@@ -158,7 +158,7 @@ public:
 /**
  * Classe EmployeeAlreadyExists utilizada para tratamento de exceções no decorrer do programa.
  */
-class EmployeeAlreadyExists{
+class EmployeeAlreadyExists {
 private:
     string nif;/**<nome do funcionário que gerou a exceção*/
 public:
@@ -166,12 +166,31 @@ public:
 * @brief Construtor da classe EmployeeAlreadyExists
 * @param nif - nif do funcionário que lançou a exceção
 * **/
-    EmployeeAlreadyExists(string nif){this->nif=nif;}
+    EmployeeAlreadyExists(string nif) { this->nif = nif; }
+
     /**
 * @brief Permite obter a descrição do erro
 * @return Retorna a mensagem de erro
 */
-    string getNIF() const{return nif;}
+    string getNIF() const { return nif; }
+};
+    /**
+ * Classe EmployeeNotFound utilizada para tratamento de exceções no decorrer do programa.
+ */
+    class EmployeeNotFound{
+    private:
+        string nif;/**<nome do funcionário que gerou a exceção*/
+    public:
+        /**
+    * @brief Construtor da classe EmployeeAlreadyExists
+    * @param nif - nif do funcionário que lançou a exceção
+    * **/
+        EmployeeNotFound(string nif){this->nif=nif;}
+        /**
+    * @brief Permite obter a descrição do erro
+    * @return Retorna a mensagem de erro
+    */
+        string getNIF() const{return nif;}
 };
 
 #endif //PROJETO_EXCEPTIONS_H

@@ -152,6 +152,13 @@ public:
     */
 
     void removeEmployee(int index);
+
+    /**
+     * @brief Permite descobrir o indice de um funcionário no vetor de funcionários da base através do nif
+    * @param nif - nif do funcionário cujo index pretendemos encontrar
+    * @return Index do funcionário no vetor de funcionários da base
+     */
+    int getIndexEmployee(string nif) const;
 };
 
 

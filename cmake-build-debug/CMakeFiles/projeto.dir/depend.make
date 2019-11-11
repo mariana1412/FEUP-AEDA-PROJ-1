@@ -62,6 +62,7 @@ CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Classes/Vehicle.h
 CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Functions/Clients_functions.cpp
 CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Functions/Clients_functions.h
 CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Functions/Exceptions.h
+CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Functions/StringConverters.h
 CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Functions/Verification_Inputs.h
 CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Functions/utils.h
 
@@ -80,9 +81,18 @@ CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: ../Functions/Strin
 CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: ../Functions/Verification_Inputs.h
 CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: ../Functions/utils.h
 
+CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: ../Classes/Base.h
+CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: ../Classes/Location.h
+CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: ../Classes/Order.h
+CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: ../Classes/Person.h
+CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: ../Classes/Product.h
+CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: ../Classes/Restaurant.h
+CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: ../Classes/Time.h
+CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: ../Classes/Vehicle.h
 CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: ../Functions/Menus.cpp
 CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: ../Functions/Menus.h
+CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: ../Functions/StringConverters.h
 CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: ../Functions/Verification_Inputs.h
 CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: ../Functions/utils.h
 
@@ -97,6 +107,7 @@ CMakeFiles/projeto.dir/Functions/Order_functions.cpp.obj: ../Classes/Vehicle.h
 CMakeFiles/projeto.dir/Functions/Order_functions.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Functions/Order_functions.cpp.obj: ../Functions/Order_functions.cpp
 CMakeFiles/projeto.dir/Functions/Order_functions.cpp.obj: ../Functions/Order_functions.h
+CMakeFiles/projeto.dir/Functions/Order_functions.cpp.obj: ../Functions/StringConverters.h
 CMakeFiles/projeto.dir/Functions/Order_functions.cpp.obj: ../Functions/Verification_Inputs.h
 CMakeFiles/projeto.dir/Functions/Order_functions.cpp.obj: ../Functions/utils.h
 
@@ -125,6 +136,7 @@ CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Classes/Vehic
 CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Functions/Restaurants_functions.cpp
 CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Functions/Restaurants_functions.h
+CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Functions/StringConverters.h
 CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Functions/Verification_Inputs.h
 CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Functions/utils.h
 
@@ -141,7 +153,16 @@ CMakeFiles/projeto.dir/Functions/StringConverters.cpp.obj: ../Functions/StringCo
 CMakeFiles/projeto.dir/Functions/StringConverters.cpp.obj: ../Functions/StringConverters.h
 CMakeFiles/projeto.dir/Functions/StringConverters.cpp.obj: ../Functions/utils.h
 
+CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Classes/Base.h
+CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Classes/Location.h
+CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Classes/Order.h
+CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Classes/Person.h
+CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Classes/Product.h
+CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Classes/Restaurant.h
+CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Classes/Time.h
+CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Classes/Vehicle.h
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/Exceptions.h
+CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/StringConverters.h
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/Verification_Inputs.cpp
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/Verification_Inputs.h
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/utils.h

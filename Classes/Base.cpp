@@ -123,3 +123,13 @@ void Base::removeClient(int index){
 void Base::removeEmployee(int index) {
     employees.erase(employees.begin()+index);
 }
+
+int Base::getIndexEmployee(string nif) const {
+
+    for(int i = 0; i < employees.size(); i++){
+        if (employees[i]->getNif() == stoi(nif)){
+            return i;
+        }
+    }
+    return -1;
+}
