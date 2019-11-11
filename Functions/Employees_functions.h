@@ -46,7 +46,7 @@ int remove_employee(Base &Porto, Base &Lisboa, Base &Faro);
  * @param b - base a que quer pertencer o funcionário
  * @param nif - NIF do funcionário em questão
  */
-bool employee_already_exists(string nif, Base &b);
+bool employee_already_exists(string nif, const Base &p, const Base &l, const Base &f);
 /**
  * @brief Função que procura um Funcionário, através do seu nif (x), num vetor de funcionários
  * @param v - vetor de funcionários em que queremos procurar

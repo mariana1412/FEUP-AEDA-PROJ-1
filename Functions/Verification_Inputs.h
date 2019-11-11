@@ -7,6 +7,8 @@
 #include <string>
 #include <algorithm>
 #include "utils.h"
+#include "../Classes/Time.h"
+#include "StringConverters.h"
 
 using namespace std;
 /**
@@ -39,8 +41,9 @@ void verification_all_letters(string &aux);
 /**
  * @brief Função que verifica se uma string é uma data válida
  * @parsam aux - string
+ * @return data válida
  */
-void verification_date(string &aux);
+Time verification_date(string &aux);
 /**
  * @brief Função que verifica se uma string é uma base válida
  * @parsam aux - string

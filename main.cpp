@@ -47,6 +47,7 @@ int main() {
 
 
     int menu;
+
     do {
         menu = MainMenu();
         if (menu == 1) {
