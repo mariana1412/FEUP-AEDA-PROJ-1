@@ -52,19 +52,25 @@ Time stringToHour(string str);
  */
 Location stringToLocation(string str);
 /**
- * @brief Função que
-* @param str - nif de um cliente
+ * @brief Função que procura clientes no vetor de clientes através de uma string (nifs dos clientes)
+* @param str - nifs dos clientes
  * @param b - base
  * @return Retorna o vetor de clientes da base b se str for o NIF de um cliente
  */
 vector<Client> stringToClientVectorSearch(string str, const Base& b);
 /**
- * @brief Função que converte uma string num vetor de clientes
-* @param str - nif de um cliente
+ * @brief Função que procura deliveries no vetor de deliveries através de uma string (ids das deliveries)
+* @param str - ids das deliveries
  * @param b - base
- * @return Retorna o vetor de clientes da base b se str for o NIF de um cliente
+ * @return Retorna o vetor das deliveries da base b se str for os ids deliveries
  */
 vector<Delivery> stringToDeliveryVectorSearch(string str, const Base& b);
+/**
+ * @brief Função que procura products no vetor de products através de uma string (nome do produtos)
+* @param str - nome dos produtos
+ * @param b - base
+ * @return Retorna o vetor de produtos da base b se str for o nome dos produtos
+ */
 vector<Product> stringToProductVectorSearch(string str, const Restaurant& r);
 
 #endif //PROJETO_STRINGCONVERTERS_H
