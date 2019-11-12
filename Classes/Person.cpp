@@ -105,6 +105,11 @@ void Admin::setTask(string task){
 Deliverer::Deliverer(string base, string name, int nif, Time birthdate, float income, Vehicle vehicle, vector<Delivery> background) : Employee(base, name, nif, birthdate, income){
     this->vehicle = vehicle;
     this->background = background;
+    float salary = 0;
+    for (vector<Delivery>::const_iterator it = background.begin(); it != background.end(); it++){
+        salary += it->getTax();
+    }
+    this->setIncome(salary);
 }
 
 Vehicle Deliverer::getVehicle() const {

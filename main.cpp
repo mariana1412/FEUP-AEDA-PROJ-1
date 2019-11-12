@@ -28,8 +28,11 @@ int main() {
 
     cout << "Welcome to Ugh Eats! We are going to tranform your lunch/dinner in a unforgetable gastronomical experience!\n"<<endl<<endl;
     extract_Clients(Porto, Lisboa, Faro);
+    cout << "A";
     extract_Restaurants(Porto, Lisboa, Faro);
+    cout << "A";
     extract_Deliveries(Porto, Lisboa,Faro);
+    cout << "A";
     extract_Employees(Porto, Lisboa, Faro);
     extract_Bases(Porto, Lisboa, Faro);
 
