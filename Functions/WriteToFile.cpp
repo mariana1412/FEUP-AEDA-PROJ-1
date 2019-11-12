@@ -1,6 +1,6 @@
 #include "WriteToFile.h"
 
-void write_Clients(Base& baseP, Base& baseL, Base& baseF){
+void write_Clients(const Base& baseP,const Base& baseL,const Base& baseF){
     ofstream clientfile;
     clientfile.open("../Clients.txt");
     int count = 0;
@@ -66,7 +66,7 @@ void write_Clients(Base& baseP, Base& baseL, Base& baseF){
         cerr << "File could not be opened";
     clientfile.close();
 }
-void write_Restaurants(Base& baseP, Base& baseL, Base& baseF){
+void write_Restaurants(const Base& baseP,const Base& baseL,const Base& baseF){
     ofstream restaurantfile;
     restaurantfile.open("../Restaurants.txt");
     int count = 0;
@@ -178,7 +178,7 @@ void write_Restaurants(Base& baseP, Base& baseL, Base& baseF){
 }
 
 
-void write_Deliveries(Base& baseP, Base& baseL, Base& baseF){
+void write_Deliveries(const Base& baseP,const Base& baseL,const Base& baseF){
     ofstream deliveryfile;
     deliveryfile.open("../Orders.txt");
     int count = 0;
@@ -289,7 +289,7 @@ void write_Deliveries(Base& baseP, Base& baseL, Base& baseF){
 }
 
 
-void write_Employees(Base& baseP, Base& baseL, Base& baseF){
+void write_Employees(const Base& baseP,const Base& baseL,const Base& baseF){
     ofstream employeefile;
     employeefile.open("../Employees.txt");
     int count = 0;
@@ -433,7 +433,7 @@ void write_Employees(Base& baseP, Base& baseL, Base& baseF){
     employeefile.close();
 }
 
-void write_Bases(Base& baseP, Base& baseL, Base& baseF){
+void write_Bases(const Base& baseP,const Base& baseL,const Base& baseF){
     ofstream basefile;
     basefile.open("../Base.txt");
     int count = 0;

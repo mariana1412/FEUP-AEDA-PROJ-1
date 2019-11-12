@@ -28,11 +28,8 @@ int main() {
 
     cout << "Welcome to Ugh Eats! We are going to tranform your lunch/dinner in a unforgetable gastronomical experience!\n"<<endl<<endl;
     extract_Clients(Porto, Lisboa, Faro);
-    cout << "A";
     extract_Restaurants(Porto, Lisboa, Faro);
-    cout << "A";
     extract_Deliveries(Porto, Lisboa,Faro);
-    cout << "A";
     extract_Employees(Porto, Lisboa, Faro);
     extract_Bases(Porto, Lisboa, Faro);
 
@@ -109,21 +106,6 @@ int main() {
                             break;
                         }
                         else {
-                            menu = 2;
-                        }
-                    }
-                    else if (choice == 2) {
-                        if ((modify_order(Porto, Lisboa, Faro) == 0) || (modify_order(Porto, Lisboa, Faro) == 1)) {
-                            break;
-                        }
-                        else {
-                            menu = 2;
-                        }
-                    }
-                    else if (choice == 3) {
-                        if ((remove_order(Porto, Lisboa, Faro) == 0) || (remove_order(Porto, Lisboa, Faro) == 1)) {
-                            break;
-                        } else {
                             menu = 2;
                         }
                     }
