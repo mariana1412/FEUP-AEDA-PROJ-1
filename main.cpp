@@ -9,6 +9,7 @@
 #include "Functions/Restaurants_functions.h"
 #include "Functions/Order_functions.h"
 #include "Functions/ProfitsCalculation.h"
+#include "Functions/Visualize_Information.h"
 
 const vector<string> nearby_Porto = { "Matosinhos", "Vila Nova de Gaia", "Maia", "Gondomar", "Porto" };
 const vector<string> nearby_Lisboa = { "Oeiras", "Loures", "Amadora", "Odivelas","Lisboa" };
@@ -314,7 +315,7 @@ int main() {
                 else {
                     choice = VisualizeInformation();
                     if (choice == 1) {
-                        //aux = VisualizeAllClients( Porto,Lisboa,Faro);
+                        aux = visualize_clients( Porto,Lisboa,Faro);
                         if(aux==1){
                             break;
                         }
@@ -324,7 +325,7 @@ int main() {
 
                     }
                     else if (choice == 2) {
-                        //aux = VisualizeBlacklistClients(Porto, Lisboa, Faro);
+                        aux = visualize_blaclist(Porto, Lisboa, Faro);
                         if(aux==1){
                             break;
                         }
@@ -333,7 +334,7 @@ int main() {
                         }
                     }
                     else if (choice == 3) {
-                        //aux=VisualizeAllEmployees(Porto, Lisboa, Faro);
+                        aux = visualize_employees(Porto, Lisboa, Faro);
                         if(aux==1){
                             break;
                         }
@@ -342,7 +343,7 @@ int main() {
                         }
                     }
                     else if (choice == 4) {
-                        //aux=VisualizeAllRestaurants(Porto, Lisboa, Faro);
+                        aux = visualize_restaurants(Porto, Lisboa, Faro);
                         if(aux==1){
                             break;
                         }
@@ -351,7 +352,7 @@ int main() {
                         }
                     }
                     else if (choice == 5) {
-                        //aux=VisualizeAllDeliveries(Porto, Lisboa, Faro);
+                        aux = visualize_deliveries(Porto, Lisboa, Faro);
                         if(aux==1){
                             break;
                         }

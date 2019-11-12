@@ -64,8 +64,8 @@ ostream &operator<<(ostream &os, const Client cl){
     os<<"Base: "<<cl.getBase()<<endl
       << "Name: "<< cl.getName()<<endl
       <<"NIF: "<<cl.getNif()<<endl
-      << "Address: "<<cl.getAddress()<<endl
-      <<"County: "<<cl.getCounty()<<endl;
+      << "Address: "<<cl.getAddress()
+      <<", "<< cl.getCounty()<<endl;
     return os;
 }
 
@@ -123,21 +123,21 @@ void Deliverer::setBackground(vector<Delivery> background){
     this->background = background;
 }
 
-ostream & operator<<(ostream &os, const Admin a) {
-    os << "Base: "<< a.getBase() << endl
-       << "Name: " << a.getName() << endl
-       << "NIF: " << a.getNif() << endl
-       << "Birthdate: " << a.getBirthdate() << endl
-       << "Income: " << a.getIncome() << endl
-       << "Task: " << a.getTask() << endl;
+ostream & operator<<(ostream &os, const Admin *a) {
+    os << "Base: "<< a->getBase() << endl
+       << "Name: " << a->getName() << endl
+       << "NIF: " << a->getNif() << endl
+       << "Birthdate: " << a->getBirthdate() << endl
+       << "Income: " << a->getIncome() << endl
+       << "Task: " << a->getTask() << endl;
     return os;
 }
-ostream & operator<<(ostream &os, const Deliverer d){
-    os << "Base: " << d.getBase() << endl
-      << "Name: " << d.getName() << endl
-      <<"NIF: " << d.getNif() << endl
-      <<"Birthdate: " << d.getBirthdate() << endl
-      <<"Income: " << d.getIncome() << endl
-      <<"Vehicle: " << d.getVehicle() << endl;
+ostream & operator<<(ostream &os, const Deliverer *d){
+    os << "Base: " << d->getBase() << endl
+      << "Name: " << d->getName() << endl
+      <<"NIF: " << d->getNif() << endl
+      <<"Birthdate: " << d->getBirthdate() << endl
+      <<"Income: " << d->getIncome() << endl
+      <<"Vehicle: " << d->getVehicle() << endl;
     return os;
 }

@@ -232,6 +232,7 @@ CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/ReadingFiles.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/Restaurants_functions.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/StringConverters.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/Verification_Inputs.h
+CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/Visualize_Information.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/WriteToFile.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/utils.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../main.cpp

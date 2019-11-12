@@ -56,19 +56,13 @@ bool Time::isValid() {// verifica se a data é valida,ou seja, nao tem um n maio
     }
     return true;
 }
-bool Time::isEqualTo(const Time& date) { // verifica se duas datas sao iguais
+bool Time::operator==(const Time& date) { // verifica se duas datas sao iguais
 
-    return (date.day == day && date.month == month && date.year == year && date.hour == hour && date.minutes == minutes);
-}
-bool Time::isNotEqualTo(const Time& date) {// verifica se duas datas nao sao iguais
-    return (isEqualTo(date));
+    return (date.day == day && date.month == month && date.year == year && date.hour == hour && date.minutes == minutes && date.hour == hour && date.minutes == minutes);
 }
 
-bool Time::isAfter(const Time& date) {// verifica se a data é depois da outra
-    return (date.year < year || (date.year == year && date.month < month) || (date.year == year && date.month == month && date.day < day));
-}
-bool Time::isBefore(const Time& date) {// verifica se a data é antes da outra
-    return (!isAfter(date) && !isEqualTo(date));
+bool Time::operator>(const Time& date) {// verifica se a data é depois da outra
+    return (date.year < year || (date.year == year && date.month < month) || (date.year == year && date.month == month && date.day < day) || (date.year == year && date.month == month && date.day == day && date.hour < hour) || (date.year == year && date.month == month && date.day == day && date.hour == hour && date.minutes < minutes));
 }
 
 ostream &operator <<(ostream &os, const Time t){
