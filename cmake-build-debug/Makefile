@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Diogo Almeida\Desktop\UghEats"
+CMAKE_SOURCE_DIR = "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\UghEats"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\UghEats\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\UghEats\cmake-build-debug\CMakeFiles" "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\UghEats\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\maria\OneDrive\Ambiente de Trabalho\FEUP\2ano 1sem\AEDA\UghEats\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -446,6 +446,33 @@ Functions/Order_functions.cpp.s:
 	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/Order_functions.cpp.s
 .PHONY : Functions/Order_functions.cpp.s
 
+Functions/ProfitsCalculation.obj: Functions/ProfitsCalculation.cpp.obj
+
+.PHONY : Functions/ProfitsCalculation.obj
+
+# target to build an object file
+Functions/ProfitsCalculation.cpp.obj:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj
+.PHONY : Functions/ProfitsCalculation.cpp.obj
+
+Functions/ProfitsCalculation.i: Functions/ProfitsCalculation.cpp.i
+
+.PHONY : Functions/ProfitsCalculation.i
+
+# target to preprocess a source file
+Functions/ProfitsCalculation.cpp.i:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.i
+.PHONY : Functions/ProfitsCalculation.cpp.i
+
+Functions/ProfitsCalculation.s: Functions/ProfitsCalculation.cpp.s
+
+.PHONY : Functions/ProfitsCalculation.s
+
+# target to generate assembly for a file
+Functions/ProfitsCalculation.cpp.s:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.s
+.PHONY : Functions/ProfitsCalculation.cpp.s
+
 Functions/ReadingFiles.obj: Functions/ReadingFiles.cpp.obj
 
 .PHONY : Functions/ReadingFiles.obj
@@ -707,6 +734,9 @@ help:
 	@echo ... Functions/Order_functions.obj
 	@echo ... Functions/Order_functions.i
 	@echo ... Functions/Order_functions.s
+	@echo ... Functions/ProfitsCalculation.obj
+	@echo ... Functions/ProfitsCalculation.i
+	@echo ... Functions/ProfitsCalculation.s
 	@echo ... Functions/ReadingFiles.obj
 	@echo ... Functions/ReadingFiles.i
 	@echo ... Functions/ReadingFiles.s

@@ -89,28 +89,18 @@ public:
     bool isValid();
     /**
 * @brief Permite saber se um tempo é igual a outro
-     * @param date - um outro tempo para comparar ao tempo em questão
+* @param date - um outro tempo para comparar ao tempo em questão
 * @return Retorna verdadeiro se forem iguais, caso contrário retorna falso
 */
-    bool isEqualTo(const Time& date);
+    bool operator==(const Time& date);
+
     /**
-* @brief Permite saber se um tempo não é igual a outro
-     * @param date - um outro tempo para comparar ao tempo em questão
-* @return Retorna verdadeiro se não forem iguais, caso contrário retorna falso
-*/
-    bool isNotEqualTo(const Time& date);
-    /**
-* @brief Permite saber se uma tempo é depois a outra
-     * @param date - um outro tempo para comparar ao tempo em questão
-* @return Retorna verdadeiro se  for depois, caso contrário retorna falso
-*/
-    bool isAfter(const Time& date);
-    /**
-* @brief Permite saber se uma tempo é antes a outra
+*    @brief Permite saber se um tempo é depois do outro
  * @param date - um outro tempo para comparar ao tempo em questão
-* @return Retorna verdadeiro se  for antes, caso contrário retorna falso
+*   @return Retorna verdadeiro se  for depois, caso contrário retorna falso
 */
-    bool isBefore(const Time& date);
+    bool operator>(const Time& date);
+
     /**
 * @brief Permite mostrar a data no ecrã no formato dd/mm/yyyy
  * @param os - ostream para onde é enviada a mensagem formatada

@@ -205,7 +205,7 @@ public:
 * @param os - ostream para onde é enviada a mensagem formatada
 * @param a - administrador que pretendemos mostrar no ecrã
 */
-    friend ostream & operator<<(ostream &os,const Admin a);
+    friend ostream & operator<<(ostream &os, const Admin *a);
 };
 /**
  * Entregador
@@ -255,7 +255,7 @@ public:
 * @param os - ostream para onde é enviada a mensagem formatada
 * @param d - entregador que pretendemos mostrar no ecrã
 */
-    friend ostream & operator<<(ostream &os,const Deliverer d);
+    friend ostream & operator<<(ostream &os, const Deliverer *d);
 
 };
 
