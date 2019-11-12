@@ -7,6 +7,7 @@
 #include<iomanip>
 #include "../Classes/Base.h"
 #include "../Functions/Verification_Inputs.h"
+
 using namespace std;
 /**
  * Funções de cálculo dos valores que a empresa retira dos seus serviço
@@ -44,4 +45,16 @@ int ProfitByTimeInterval(Base p, Base l , Base f);
  * @return Retorna o índice do vetor de Clientes em que se encontra o respetivo Cliente, -1 se não existir
  */
 int string_sequential_search_aux(const vector<Client> &v, string x);
+/*
+ * @brief Converte uma string em horas adicionando esta informaçao a um objeto do tipo Time
+ * @param d - objeto do tipo Time
+ * @param s - string que pretendemos converter
+ */
+
+void stringToHours(Time &d,string s);
+/*
+ * @brief Verifica se a hora inserida é válida
+ * @param aux - hora no tipo string a ser verificada
+ */
+void verification_hour(string &aux);
 #endif //PROJETO_PROFITSCALCULATION_H

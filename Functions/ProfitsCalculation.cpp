@@ -102,7 +102,7 @@ int ProfitsByClient(Base p, Base l, Base f){
     int op,option,i;
     Base b;
     string aux;
-    float profit;
+    float profit=0;
 
     cout << "From which base is the client you want to know the outlay?"<<endl;
     cout << "\t1.Porto \t 2.Lisboa \t 3.Faro "<<endl;
@@ -160,23 +160,136 @@ int ProfitsByClient(Base p, Base l, Base f){
     return option;
 }
 int ProfitByTimeInterval(Base p, Base l , Base f){
-    int option;
+    int option,op;
+    string s;
+    Time d1,d2;
+    float profit = 0;
 
+    cout << "Inferior limit of the interval.";
+    cout << "Date (in the dd/mm/yyy format):";
+    getline(cin, s),
+    d1=verification_date(s);
+    cout << "Hour (in the hh:mm format ):";
+    getline(cin,s);
+    verification_hour(s);
+    stringToHours(d1,s);
+    cout << "Superior limit of the interval.";
+    cout << "Date (in the dd/mm/yyy format):";
+    getline(cin, s),
+    d2=verification_date(s);
+    cout << "Hour (in the hh:mm format ):";
+    getline(cin,s);
+    verification_hour(s);
+    stringToHours(d2,s);
+    cout << "Hello!"<<endl;
+    while(d1>d2){
+        cout << "This interval is not valid. Please, try again:"<<endl;
+        cout << "Inferior limit of the interval.";
+        cout << "Date (format: dd/mm/yyy):";
+        getline(cin, s),
+                d1=verification_date(s);
+        cout << "Hour (format: hh:mm ):";
+        getline(cin,s);
+        verification_hour(s);
+        stringToHours(d1,s);
+        cout << "Superior limit of the interval.";
+        cout << "Date (format: dd/mm/yyy):";
+        getline(cin, s),
+                d2=verification_date(s);
+        cout << "Hour (format: hh:mm ):";
+        getline(cin,s);
+        verification_hour(s);
+        stringToHours(d2,s);
+    }
+    cout << "From which base do you want to know the profit in this interval?"<<endl;
+    cout << "\t 1.Porto \t 2.Lisboa \t 3.Faro "<<endl;
+    menu_int_options(op, 1,3);
+    switch (op){
+        case 1:
+            for(int i = 0; i < p.getDeliveries().size(); i++){
+                if((d1>p.getDeliveries()[i].getDeliver_time()) &&(p.getDeliveries()[i].getDeliver_time())>d2){
+                    continue;
+                }
+                else{
+                    profit += p.getDeliveries()[i].getFinalPrice();
+                }
 
+            }
+            break;
+        case 2:
+            for(int i = 0; i < l.getDeliveries().size(); i++){
+                if((d1>l.getDeliveries()[i].getDeliver_time()) &&(l.getDeliveries()[i].getDeliver_time())>d2){
+                    continue;
+                }
+                else{
+                    profit += l.getDeliveries()[i].getFinalPrice();
+                }
+            }
+            break;
+        case 3:
+            for(int i = 0; i < f.getDeliveries().size(); i++){
+                if((d1>f.getDeliveries()[i].getDeliver_time()) &&(f.getDeliveries()[i].getDeliver_time())>d2){
+                    continue;
+                }
+                else{
+                    profit += f.getDeliveries()[i].getFinalPrice();
+                }
+            }
+            break;
+    }
 
+    cout << "The profit of this base is "<< profit<<" euros." <<endl;
 
     cout << "1. Return to Main Menu. " << endl;
     cout << "2. Return to  Profit Calculation. " << endl;
     menu_int_options(option,1,2);
     return option;
 }
+void stringToHours(Time &d,string s){
+    string delimiter =":",aux;
+    size_t pos=0;
+    vector<int> hours;
+    while ((pos = s.find(delimiter)) != std::string::npos) {
+        aux = s.substr(0, pos);
+        formatting_string(aux);
+        hours.push_back(stoi(aux));
+        s.erase(0, pos + delimiter.length());
+    }
 
+    d.setHour(hours[0]);
+    d.setMinutes(hours[1]);
+}
+void verification_hour(string &aux){
+    bool isValid = false;
 
+    while (!isValid || aux == "") {
+        if (aux != "") {
+            remove_all_whitespaces(aux);
+            int del1 = aux.find_first_of(':');
+            if(aux.size() !=5  || count(aux.begin(), aux.end(), ':') != 1 || del1 !=2 || !(isNumber(aux.substr(0, 2)) && isNumber(aux.substr(3, 2)) )) {
+                isValid = false;
+            }
+            else if (stoi(aux.substr(0,2))>24 || stoi(aux.substr(0,2))<0||stoi(aux.substr(3,2))>60 ||stoi(aux.substr(0,2))<0){
+                isValid = false;
+            }
+            else {
+                isValid = true;
+            }
+        }
+        if (!isValid) {
+            cout << "Invalid hour (format: hh:mm). Please insert a valid one: ";
+            getline(cin, aux);
+            if (cin.fail() && cin.eof()) {
+                cin.clear();
+                continue;
+            }
+        }
+    }
 
-
+}
 
 int string_sequential_search_aux(const vector<Client> &v, string x) {//retorna o indice do vetor onde se encontra x
-    for (unsigned int i = 0; i < v.size(); i++)
+    for ( unsigned int i = 0; i < v.size(); i++)
         if (v[i].getName() == x)
             return i; // encontrou
     return -1; // não encontrou
