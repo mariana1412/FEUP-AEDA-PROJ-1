@@ -84,6 +84,8 @@ bool Base::removeRestaurant(string name){
     if(it == restaurants.end()){
         throw RestaurantNotFound(name);
     }
+    Restaurant rest = *it;
+    cout << endl << rest << endl;
 
     if(confirm_modifications("remove", "restaurant")){
         restaurants.erase(it);

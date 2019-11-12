@@ -159,6 +159,8 @@ public:
     * @return Index do funcionário no vetor de funcionários da base
      */
     int getIndexEmployee(string nif) const;
+
+
 };
 
 

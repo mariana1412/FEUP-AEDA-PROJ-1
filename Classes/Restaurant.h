@@ -157,6 +157,27 @@ public:
  */
     void changeProduct(Product product, int index);
 
+    /**
+* @brief Permite mostrar no ecrã os tipos de comida de forma formatada
+* @param os - ostream para onde é enviada a mensagem formatada
+* @param types_of_food - vetor de string que pretendemos mostrar no ecrã
+ */
+    friend ostream& operator<<(ostream& os, const vector<string>& types_of_food);
+
+    /**
+* @brief Permite mostrar no ecrã os produtos de forma formatada
+* @param os - ostream para onde é enviada a mensagem formatada
+* @param products - vetor de produtos que pretendemos mostrar no ecrã
+*/
+    friend ostream& operator<<(ostream& os, const vector<Product>& products);
+
+/**
+* @brief Permite mostrar no ecrã o restaurante de forma formatada
+* @param os - ostream para onde é enviada a mensagem formatada
+* @param rest - restaurante que pretendemos mostrar no ecrã
+ */
+    friend ostream& operator<<(ostream& os, const Restaurant& rest);
+
 };
 
 

@@ -87,4 +87,25 @@ float Delivery::getTax() const {
     return tax;
 }
 
+ostream & operator<<(ostream &os, const Delivery &d){
+    os << "--> Deliver " << d.getId() << endl;
+    os << "Restaurant: " << d.getRestaurant().getName() << endl
+    << "Current ime: " << d.getTime() << endl;
+
+    for(int i=0; i<d.getProducts().size(); i++){
+        os << "Product " << i+1 << ": " << d.getProducts()[i] << endl;
+    }
+
+    os << "Price: " << d.getPrice() << " euros" << endl;
+
+    if(d.getSuccess()) os << "Succeeded" << endl;
+    else os << "Not Succeeded. Reason: " << d.getReason_insuccess() << endl;
+
+    os << "Deliver time: " << d.getDeliver_time() << endl;
+    os << "Tax: " << d.getTax() << " euros" << endl;
+    os << "Final price: " << d.getFinalPrice() << " euros" << endl;
+
+    return os;
+}
+
 

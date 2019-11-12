@@ -15,6 +15,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj"
   "CMakeFiles/projeto.dir/Functions/StringConverters.cpp.obj"
   "CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj"
+  "CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj"
   "CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.obj"
   "CMakeFiles/projeto.dir/Functions/utils.cpp.obj"
   "CMakeFiles/projeto.dir/main.cpp.obj"

@@ -2,7 +2,6 @@ Porto
 1
 Japanese
 25/10/2019, 15:38
-temaki
 Success
 Nothing to show
 15:50
@@ -12,7 +11,6 @@ Porto
 2
 Japanese
 25/11/2019, 14:23
-temaki
 Success
 Nothing to show
 14:33
@@ -22,7 +20,6 @@ Lisboa
 2
 Frenchalian
 09/11/2019, 14:53
-lasanha, baguette
 Success
 Nothing to show
 15:03
@@ -32,7 +29,6 @@ Lisboa
 1
 Italian
 06/11/2019, 17:06
-pizza, lasanha
 Insuccess
 Didn't show up
 17:16
@@ -42,7 +38,6 @@ Faro
 1
 Mexican
 25/10/2019, 15:38
-tacos
 Success
 Nothing to show
 15:50

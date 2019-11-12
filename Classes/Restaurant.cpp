@@ -171,3 +171,40 @@ void Restaurant::changeProduct(Product product, int index){
     products.erase(products.begin()+index);
     products.insert(products.begin()+index, product);
 }
+
+ostream& operator<<(ostream& os, const vector<string>& types_of_food){
+    int size = types_of_food.size();
+
+    for(int i = 0; i< size; i++){
+        if(i != (size-1)) os << types_of_food[i] << ", ";
+        else os <<types_of_food[i] << endl;
+    }
+
+    return os;
+}
+
+ostream& operator<<(ostream& os, const vector<Product>& products){
+    int size = products.size();
+
+    for(int i = 0; i< size; i++){
+        if(i != (size-1)) os << products[i] << " / ";
+        else os << products[i] << endl;
+    }
+    return os;
+}
+
+ostream& operator<<(ostream& os, const Restaurant& rest){
+    os << "Name: " << rest.getName() << endl
+    << "Address: " << rest.getAddress() << ", " << rest.getCounty() << endl
+    << "Types of food: " << rest.getTypes_of_food();
+
+    int size = rest.getProducts().size();
+
+    for(int i = 0; i< size; i++){
+        os << "Product " << i+1 << ": " << rest.getProducts()[i];
+    }
+
+    os << "Revenue: " << rest.getRevenue() << " euros";
+
+    return os;
+}

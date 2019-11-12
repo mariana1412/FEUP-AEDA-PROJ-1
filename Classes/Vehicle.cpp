@@ -32,4 +32,9 @@ void Vehicle::setDate(Time date){
     this->date = date;
 }
 
+ostream& operator<<(ostream& os, const Vehicle& v){
+    os << v.getBrand() << ", " << v.getType() << ", " << v.getDate();
+    return os;
+}
+
 

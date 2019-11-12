@@ -78,14 +78,6 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){//the income of admin
     }
     Time b_date = verification_date(birthdate);
 
-    cout << "Income:";
-    getline(cin, income);
-    while(cin.fail() && cin.eof()){
-        cin.clear();
-        cout << "Invalid character. Please insert a valid input:";
-        getline(cin, income);
-    }
-    verification_float(income);
 
     switch (number) {
         case 1:
@@ -97,6 +89,17 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){//the income of admin
                 getline(cin, task);
             }
             verification_all_letters(task);
+
+            cout << "Income:";
+            getline(cin, income);
+            while(cin.fail() && cin.eof()){
+                cin.clear();
+                cout << "Invalid character. Please insert a valid input:";
+                getline(cin, income);
+            }
+            verification_float(income);
+
+
             f = new Admin(b, name, stoi(nif), b_date, stof(income), task);
 
             if (confirm_modifications("create","admin")){
@@ -384,6 +387,7 @@ int remove_employee(Base &Porto, Base &Lisboa, Base &Faro){
     string base, auxiliar;
     int i=0, number,option;
 
+
     cout << "-------------- REMOVE EMPLOYEE --------------" << endl;
 
     cout << "Employee's Base:";
@@ -469,8 +473,8 @@ int remove_employee(Base &Porto, Base &Lisboa, Base &Faro){
                 break;
         }
     }
-    cout<<endl<<"-------------------------------"<<endl;
-    cout<< v[i]; //mostrar o funcionario
+
+
     if (confirm_modifications("remove", "employee")) {
         if (base == "Porto") Porto.removeEmployee(i);
         else if (base == "Lisboa") Lisboa.removeEmployee(i);

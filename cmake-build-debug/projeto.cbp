@@ -179,6 +179,12 @@
 		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Verification_Inputs.h">
 			<Option target="projeto"/>
 		</Unit>
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Visualize_Information.cpp">
+			<Option target="projeto"/>
+		</Unit>
+		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/Visualize_Information.h">
+			<Option target="projeto"/>
+		</Unit>
 		<Unit filename="C:/Users/maria/OneDrive/Ambiente de Trabalho/FEUP/2ano 1sem/AEDA/UghEats/Functions/WriteToFile.cpp">
 			<Option target="projeto"/>
 		</Unit>

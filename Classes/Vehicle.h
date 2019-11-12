@@ -60,6 +60,13 @@ public:
 */
     void setDate(Time date);
 
+/**
+* @brief Permite mostrar no ecrã o veiculo de forma formatada
+* @param os - ostream para onde é enviada a mensagem formatada
+* @param v - veiculo que pretendemos mostrar no ecrã
+ */
+    friend ostream& operator<<(ostream& os, const Vehicle& v);
+
 };
 
 
