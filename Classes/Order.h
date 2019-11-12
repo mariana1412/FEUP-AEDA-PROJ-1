@@ -148,6 +148,8 @@ public:
 * @param price - preço da entrega
 */
     void setPrice(float price);
+
+    friend ostream & operator<<(ostream &os, const Delivery &d);
 };
 
 

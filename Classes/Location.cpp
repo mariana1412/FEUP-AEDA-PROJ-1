@@ -31,3 +31,8 @@ void Location::setCounty(string county){
 void Location::setGps(string gps){
     this->gps = gps;
 }
+
+ostream& operator<<(ostream& os, const Location& l){
+    os << l.getAddress() << ", " << l.getCounty() << ", [" << l.getGps() << "]";
+    return os;
+}

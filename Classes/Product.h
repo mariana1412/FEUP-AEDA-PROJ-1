@@ -65,6 +65,14 @@ public:
 	 * @return Retorna true caso o produto em questão seja igual ao produto a comparar, false caso contrário.
 */
     bool operator==(const Product& prod) const;
+
+/**
+ * @brief Permite mostrar no ecrã o produto de forma formatada
+* @param os - ostream para onde é enviada a mensagem formatada
+* @param prod - produto que pretendemos mostrar no ecrã
+ */
+
+    friend ostream& operator<<(ostream& os, const Product& prod);
 };
 
 

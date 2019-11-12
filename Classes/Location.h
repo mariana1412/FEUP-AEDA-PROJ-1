@@ -59,6 +59,13 @@ public:
  * @param gps - coordenadas gps da localização no formato [latitude;longitude]
 */
     void setGps(string gps);
+
+    /**
+* @brief Permite mostrar no ecrã a localização de forma formatada
+* @param os - ostream para onde é enviada a mensagem formatada
+* @param l - localização que pretendemos mostrar no ecrã
+ */
+    friend ostream& operator<<(ostream& os, const Location& l);
 };
 
 
