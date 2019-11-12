@@ -289,6 +289,7 @@ int main() {
                 }
             } while (choice != 5);
         }
+
         else if(menu == 7){
             int choice,aux;
             do {

@@ -11,7 +11,7 @@ Deliverer
 Antonio Freitas
 124456789
 11/11/1970
-5
+0
 Range Rover, SUV, 19/12/2015
 0
 ::::::::
@@ -20,9 +20,9 @@ Deliverer
 Antonio Truta
 123456789
 11/09/1970
-3
+0
 Range Rover Evoque, Jeep, 19/12/19
-2
+0
 ::::::::
 Faro
 Admin

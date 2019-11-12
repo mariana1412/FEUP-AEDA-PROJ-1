@@ -50,7 +50,6 @@ int string_sequential_search_aux(const vector<Client> &v, string x);
  * @param d - objeto do tipo Time
  * @param s - string que pretendemos converter
  */
-
 void stringToHours(Time &d,string s);
 /*
  * @brief Verifica se a hora inserida é válida

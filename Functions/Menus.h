@@ -14,7 +14,6 @@ using namespace std;
  */
 
 
-
 /**
  * @brief Menu principal do programa
  * @return valor inteiro para retorno do Menu
