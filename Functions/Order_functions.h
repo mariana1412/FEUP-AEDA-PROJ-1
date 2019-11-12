@@ -23,22 +23,15 @@ using namespace std;
  */
 
 int create_order(Base &Porto, Base &Lisboa, Base &Faro);
+
 /**
- * @brief Função que modifica uma encomenda
+ * @brief Função que procura por vários parametros
  * @param Porto - toda a informação da base do Porto
  * @param Lisboa - toda a informação da base de Lisboa
  * @param Faro - toda a informação da base de Faro
- * @return valor inteiro para retorno do Menu
+ * @param option - opção de procura
+ * @return valor indice ; se -1, não quer en   UMA PARA CADA UMAAAAA OPÇAO
  */
-int modify_order(Base &Porto, Base &Lisboa, Base &Faro);
-/**
- * @brief Função que elimina uma encomenda
- * @param Porto - toda a informação da base do Porto
- * @param Lisboa - toda a informação da base de Lisboa
- * @param Faro - toda a informação da base de Faro
- * @return valor inteiro para retorno do Menu
- */
-int remove_order(Base &Porto, Base &Lisboa, Base &Faro);
 
-
+void searchBy(Base &Porto, Base &Lisboa, Base &Faro, int option);
 #endif //PROJETO_ORDER_FUNCTIONS_H
