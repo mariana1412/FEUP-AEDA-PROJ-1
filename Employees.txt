@@ -13,7 +13,7 @@ Antonio Freitas
 11/11/1970
 2600
 Range Rover, SUV, 19/12/2015
-1, 2
+1
 ::::::::
 Lisboa
 Deliverer
@@ -22,7 +22,7 @@ Antonio Truta
 11/09/1970
 2600
 Range Rover Evoque, Jeep, 19/12/19
-1
+0
 ::::::::
 Lisboa
 Admin
@@ -47,4 +47,4 @@ Diogo Pereira
 12/8/1999
 2700
 Honda, Car, 20/11/2018
-1
+0

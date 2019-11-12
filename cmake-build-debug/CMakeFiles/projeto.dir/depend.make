@@ -167,6 +167,21 @@ CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/Verif
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/Verification_Inputs.h
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/utils.h
 
+CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj: ../Classes/Base.h
+CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj: ../Classes/Location.h
+CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj: ../Classes/Order.h
+CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj: ../Classes/Person.h
+CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj: ../Classes/Product.h
+CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj: ../Classes/Restaurant.h
+CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj: ../Classes/Time.h
+CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj: ../Functions/Exceptions.h
+CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj: ../Functions/StringConverters.h
+CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj: ../Functions/Verification_Inputs.h
+CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj: ../Functions/Visualize_Information.cpp
+CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj: ../Functions/Visualize_Information.h
+CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj: ../Functions/utils.h
+
 CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.obj: ../Classes/Base.h
 CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.obj: ../Classes/Location.h
 CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.obj: ../Classes/Order.h
