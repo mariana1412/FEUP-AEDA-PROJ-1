@@ -8,6 +8,13 @@
 #include "Verification_Inputs.h"
 using namespace std;
 
+
+/**
+ * Funções dos Menus
+ */
+
+
+
 /**
  * @brief Menu principal do programa
  * @return valor inteiro para retorno do Menu
@@ -43,7 +50,11 @@ int SearchBy();
  * @return valor inteiro para retorno do Menu
  * **/
 int ProfitsCalculation();
+/**
+ * @brief Menu de Visualização de informação
+ * @return valor inteiro para retorno do Menu
+ */
 
-
+int VisualizeInformation();
 
 #endif //PROJETO_MENUS_H
