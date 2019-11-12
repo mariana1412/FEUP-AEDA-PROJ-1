@@ -111,6 +111,21 @@ CMakeFiles/projeto.dir/Functions/Order_functions.cpp.obj: ../Functions/StringCon
 CMakeFiles/projeto.dir/Functions/Order_functions.cpp.obj: ../Functions/Verification_Inputs.h
 CMakeFiles/projeto.dir/Functions/Order_functions.cpp.obj: ../Functions/utils.h
 
+CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj: ../Classes/Base.h
+CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj: ../Classes/Location.h
+CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj: ../Classes/Order.h
+CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj: ../Classes/Person.h
+CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj: ../Classes/Product.h
+CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj: ../Classes/Restaurant.h
+CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj: ../Classes/Time.h
+CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj: ../Functions/Exceptions.h
+CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj: ../Functions/ProfitsCalculation.cpp
+CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj: ../Functions/ProfitsCalculation.h
+CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj: ../Functions/StringConverters.h
+CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj: ../Functions/Verification_Inputs.h
+CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj: ../Functions/utils.h
+
 CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Classes/Base.h
 CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Classes/Location.h
 CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Classes/Order.h
@@ -212,6 +227,7 @@ CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/Employees_functions.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/Menus.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/Order_functions.h
+CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/ProfitsCalculation.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/ReadingFiles.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/Restaurants_functions.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Functions/StringConverters.h

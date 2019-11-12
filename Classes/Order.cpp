@@ -1,10 +1,12 @@
 #include"Order.h"
 
 
-Order::Order(Restaurant restaurant, Time time , vector<Product>products){
+Order::Order(Restaurant restaurant, Time time , vector<Product>products, int nif){
     this->time = time;
     this->restaurant = restaurant;
     this->products = products;
+    this->nif = nif;
+    this->price = 0;
     for (vector<Product>::const_iterator it = products.begin(); it != products.end(); it++){
         this->price += it->getPrice();
     }
@@ -22,7 +24,9 @@ vector<Product> Order::getProducts()const{
     return products;
 }
 
-
+int Order::getNif()const{
+    return nif;
+}
 void Order::setRestaurant(Restaurant restaurant){
     this->restaurant = restaurant;
 }
@@ -34,9 +38,12 @@ void Order::setTime(Time time){
 void Order::setProducts(vector<Product> products){
     this->products = products;
 }
+void Order::setNif(int nif) {
+    this-> nif = nif;
+}
 
 
-Delivery::Delivery(Restaurant restaurant, Time time , vector<Product> products, int id, bool success, string reason_insuccess, Time deliver_time, float tax): Order(restaurant, time , products){
+Delivery::Delivery(Restaurant restaurant, Time time , vector<Product> products, int nif, int id, bool success, string reason_insuccess, Time deliver_time, float tax): Order(restaurant, time , products, nif){
     this->id = id;
     this->success = success;
     this->reason_insuccess = reason_insuccess;

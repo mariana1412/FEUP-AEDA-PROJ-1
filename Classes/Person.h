@@ -103,6 +103,7 @@ public:
 * @brief Permite definir a morda do cliente
  * @param address - morada do cliente
 */
+
     void setAddress(string address);
     /**
 * @brief Permite definir se pertence ou não à blacklist da empresa

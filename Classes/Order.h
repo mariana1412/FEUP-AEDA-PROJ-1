@@ -15,6 +15,7 @@ private:
     Restaurant restaurant;/**< restaurante a que é feita a encomenda*/
     Time time;/**< Tempo exato da encomenda*/
     vector<Product> products;/**< Produtos encomendados*/
+    int nif; /**< nif do cliente que faz a encomenda*/
 
 protected:
     float price;/**<preço da encomenda*/
@@ -29,8 +30,9 @@ public:
      * @param restaurant - restaurante a que é feita a encomenda
      * @param time - tempo exato da encomenda
      * @param products - produtos encomendados
+     * @param nif - nif do cliente que encomendou
 */
-    Order(Restaurant restaurant, Time time , vector<Product>products);
+    Order(Restaurant restaurant, Time time , vector<Product>products, int nif);
     /**
 * @brief Permite obter o restaurante a que é feita a encomenda
      * @return Retorna o restaurante a que é feita a encomenda
@@ -47,6 +49,11 @@ public:
 */
     vector<Product> getProducts()const;
     /**
+* @brief Permite obter o nif do cliente que faz a encomenda
+* @return Retorna o nif do cliente que faz a encomenda
+*/
+    int getNif()const;
+    /**
 * @brief Permite definir o restaurante a que é feita a encomenda
      * @param restaurant - restaurante a que é feita a encomenda
 */
@@ -61,6 +68,11 @@ public:
 * @param products - produtos encomendados
 */
     void setProducts(vector<Product> products);
+    /**
+* @brief Permite definir o nif do cliente que faz a encomenda
+* @param nif - nif do cliente que faz a encomenda
+*/
+    void setNif(int nif);
 };
 
 /**
@@ -85,13 +97,14 @@ public:
      * @param restaurant - restaurante a que é feita a encomenda
      * @param time - tempo exato em que é feita a encomenda
      * @param products - produtos encomendados
+     * @param nif - nif do cliente que faz a encomenda
      * @param id - id da entrega
      * @param success - sucesso ou insucesso (verdadeiro ou falso)
      * @param reason_insuccess - motivo de insucesso
      * @param deliver_time - tempo exato de entrega
      * @param tax - taxa de entrega
 */
-    Delivery(Restaurant restaurant, Time time , vector<Product> products, int id, bool success, string reason_insuccess, Time deliver_time, float tax);
+    Delivery(Restaurant restaurant, Time time , vector<Product> products,int nif, int id, bool success, string reason_insuccess, Time deliver_time, float tax);
     /**
 * @brief Permite obter o id da entrega
      * @return Retorna o id da entrega

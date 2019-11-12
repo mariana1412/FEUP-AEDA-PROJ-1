@@ -113,7 +113,7 @@ void extract_Restaurants(Base& baseP, Base& baseL, Base& baseF){
 }
 
 void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
-    string line, reason, id, tax, success;
+    string line, reason, id, tax, success,nif;
     bool made = false;
     Restaurant restaurant;
     Time date;
@@ -126,6 +126,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
             getline(deliveryfile, line);
             if (line == "Porto") {
                 getline(deliveryfile, id);
+                getline(deliveryfile, nif);
                 getline(deliveryfile, line);
                 restaurant = baseP.searchRestaurant(line);
                 getline(deliveryfile, line);
@@ -142,12 +143,13 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                 hour = stringToHour(line);
                 getline(deliveryfile, tax);
                 getline(deliveryfile, line); //separator
-                baseP.addDelivery(Delivery(restaurant, date, products, stoi(id), made, reason, hour, stof(tax)));
+                baseP.addDelivery(Delivery(restaurant, date, products, stoi(id),stoi(nif), made, reason, hour, stof(tax)));
                 continue;
             }
 
             if (line == "Lisboa") {
                 getline(deliveryfile, id);
+                getline(deliveryfile, nif);
                 getline(deliveryfile, line);
                 restaurant = baseL.searchRestaurant(line);
                 getline(deliveryfile, line);
@@ -164,12 +166,13 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                 hour = stringToHour(line);
                 getline(deliveryfile, tax);
                 getline(deliveryfile, line); //separator
-                baseL.addDelivery(Delivery(restaurant, date, products, stoi(id), made, reason, hour, stof(tax)));
+                baseL.addDelivery(Delivery(restaurant, date, products, stoi(id),stoi(nif), made, reason, hour, stof(tax)));
                 continue;
             }
 
             if (line == "Faro") {
                 getline(deliveryfile, id);
+                getline(deliveryfile, nif);
                 getline(deliveryfile, line);
                 restaurant = baseF.searchRestaurant(line);
                 getline(deliveryfile, line);
@@ -186,7 +189,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                 hour = stringToHour(line);
                 getline(deliveryfile, tax);
                 getline(deliveryfile, line); //separator
-                baseF.addDelivery(Delivery(restaurant, date, products, stoi(id), made, reason, hour, stof(tax)));
+                baseF.addDelivery(Delivery(restaurant, date, products, stoi(id),stoi(nif), made, reason, hour, stof(tax)));
                 continue;
             }
         }

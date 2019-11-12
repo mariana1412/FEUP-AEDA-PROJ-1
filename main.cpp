@@ -259,7 +259,7 @@ int main() {
                 else {
                     choice = ProfitsCalculation();
                     if (choice == 1) {
-                        //aux = ProfitsByBase( Porto,Lisboa,Faro);
+                        aux = ProfitsByBase( Porto,Lisboa,Faro);
                         if(aux==1){
                             break;
                         }
@@ -269,7 +269,7 @@ int main() {
 
                     }
                     else if (choice == 2) {
-                        //aux = ProfitsByRestaurant(Porto, Lisboa, Faro);
+                        aux = ProfitsByRestaurant(Porto, Lisboa, Faro);
                         if(aux==1){
                             break;
                         }
@@ -278,7 +278,7 @@ int main() {
                         }
                     }
                     else if (choice == 3) {
-                        //aux=ProfitsByClient(Porto, Lisboa, Faro);
+                        aux=ProfitsByClient(Porto, Lisboa, Faro);
                         if(aux==1){
                             break;
                         }

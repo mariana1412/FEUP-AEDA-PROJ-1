@@ -4,26 +4,32 @@ int ProfitsByBase(Base p, Base l, Base f){
     float profit=0;
     int option,op;
     Base b;
+    vector<Delivery> v;
     cout << "From which base do you want to know the profit?"<<endl;
     cout << "\t 1.Porto \t 2.Lisboa \t 3.Faro "<<endl;
     menu_int_options(op, 1,3);
     switch (op){
         case 1:
-            b= p;
+            for(int i = 0; i < p.getDeliveries().size(); i++){
+                profit += p.getDeliveries()[i].getFinalPrice();
+            }
+            break;
         case 2:
-            b=l;
+            for(int i = 0; i < l.getDeliveries().size(); i++){
+                profit += l.getDeliveries()[i].getFinalPrice();
+            }
+            break;
         case 3:
-            b=f;
+            for(int i = 0; i < f.getDeliveries().size(); i++){
+                profit += f.getDeliveries()[i].getFinalPrice();
+            }
+            break;
     }
-    vector<Delivery> ::const_iterator it_d = b.getDeliveries().begin();
 
-    for(it_d; it_d!= b.getDeliveries().end();it_d++){
-        profit += (*it_d).getPrice();
-    }
-    cout << "The profit of this base is "<< profit<<" euros"<<endl;
+    cout << "The profit of this base is "<< profit<<" euros." <<endl;
 
-    cout << "1. Return to Main Menu. " << endl;
-    cout << "2. Return to Clients Management. " << endl;
+    cout << endl << "1. Return to Main Menu. " << endl;
+    cout << "2. Return to  Profit Calculation. " << endl;
     menu_int_options(option,1,2);
     return option;
 }
@@ -36,19 +42,20 @@ int ProfitsByRestaurant(Base p, Base l , Base f){
     float profit;
     Base b;
 
-    cout << "From which base is the restaurnat you want to know the profit?"<<endl;
+    cout << "From which base is the restaurant you want to know the profit?"<<endl;
     cout << "\t 1.Porto \t 2.Lisboa \t 3.Faro "<<endl;
     menu_int_options(op, 1,3);
-    switch (op){
+    cin.ignore(1000,'\n');
+    switch (op) {
         case 1:
-            b= p;
             base = "Porto";
+            break;
         case 2:
-            b=l;
             base = "Lisboa";
+            break;
         case 3:
-            b=f;
             base = "Faro";
+            break;
     }
 
     cout << "Insert the name of the restaurant you want to modify: ";
@@ -83,11 +90,11 @@ int ProfitsByRestaurant(Base p, Base l , Base f){
     } while(!isValid);
 
     profit = restaurant.getRevenue();
-    cout << "The profit of this base is "<< profit<<" euros"<<endl;
+    cout << "The profit of this base is "<< profit<<" euros."<<endl;
 
 
     cout << "1. Return to Main Menu. " << endl;
-    cout << "2. Return to Clients Management. " << endl;
+    cout << "2. Return to Profit Calculation. " << endl;
     menu_int_options(option,1,2);
     return option;
 }
@@ -95,18 +102,22 @@ int ProfitsByClient(Base p, Base l, Base f){
     int op,option,i;
     Base b;
     string aux;
+    float profit;
 
     cout << "From which base is the client you want to know the outlay?"<<endl;
-    cout << "\t 1.Porto \t 2.Lisboa \t 3.Faro "<<endl;
+    cout << "\t1.Porto \t 2.Lisboa \t 3.Faro "<<endl;
     menu_int_options(op, 1,3);
     cin.ignore (1000, '\n');
     switch (op){
         case 1:
             b= p;
+            break;
         case 2:
             b=l;
+            break;
         case 3:
             b=f;
+            break;
     }
     cout << "What is the name of the client you want to know the outlay? ";
     getline(cin, aux);
@@ -131,20 +142,20 @@ int ProfitsByClient(Base p, Base l, Base f){
             i = string_sequential_search_aux(b.getClients(), aux);
         }
     }
-    string name = b.getClients()[i].getName();
+    int nif = b.getClients()[i].getNif();
     vector<Delivery>:: const_iterator it_d = b.getDeliveries().begin();
     for (it_d; it_d != b.getDeliveries().end(); it_d){
+        if((*it_d).getNif()==nif){
+            profit += (*it_d).getFinalPrice();
+        }
 
     }
 
 
+    cout << "The profit of this base is "<< profit<<" euros."<<endl;
 
-
-
-
-
-    cout << "1. Return to Main Menu. " << endl;
-    cout << "2. Return to Clients Management. " << endl;
+    cout << endl << "1. Return to Main Menu. " << endl;
+    cout << "2. Return to Profit Calculation. " << endl;
     menu_int_options(option,1,2);
     return option;
 }
@@ -155,7 +166,7 @@ int ProfitByTimeInterval(Base p, Base l , Base f){
 
 
     cout << "1. Return to Main Menu. " << endl;
-    cout << "2. Return to Clients Management. " << endl;
+    cout << "2. Return to  Profit Calculation. " << endl;
     menu_int_options(option,1,2);
     return option;
 }

@@ -192,6 +192,7 @@ void write_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                 deliveryfile << endl << "::::::::" << endl;
             deliveryfile << "Porto" << endl;
             deliveryfile << it->getId() << endl;
+            deliveryfile << it->getNif() <<endl;
             deliveryfile << it->getRestaurant().getName()<< endl;
             deliveryfile << setw(2) << setfill('0') << it->getTime().getDay() << "/" << setw(2) << setfill('0') <<  it->getTime().getMonth() << "/" << it->getTime().getYear() << ", " << setw(2) << setfill('0') << it->getTime().getHour() << ":" << setw(2) << setfill('0') << it->getTime().getMinutes() << endl;
             vector<Product> products = it->getProducts();
@@ -224,6 +225,7 @@ void write_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                 deliveryfile << endl << "::::::::" << endl;
             deliveryfile << "Lisboa" << endl;
             deliveryfile << it->getId() << endl;
+            deliveryfile << it->getNif()<<endl;
             deliveryfile << it->getRestaurant().getName()<< endl;
             deliveryfile << setw(2) << setfill('0') << it->getTime().getDay() << "/" << setw(2) << setfill('0') << it->getTime().getMonth() << "/" << it->getTime().getYear() << ", " << setw(2) << setfill('0') << it->getTime().getHour() << ":" <<setw(2) << setfill('0') << it->getTime().getMinutes() << endl;
             vector<Product> products = it->getProducts();
@@ -255,6 +257,7 @@ void write_Deliveries(Base& baseP, Base& baseL, Base& baseF){
             count1++;
             deliveryfile << "Faro" << endl;
             deliveryfile << it->getId() << endl;
+            deliveryfile << it->getNif()<<endl;
             deliveryfile << it->getRestaurant().getName()<< endl;
             deliveryfile << setw(2) << setfill('0') << it->getTime().getDay() << "/" << setw(2) << setfill('0') << it->getTime().getMonth() << "/" << it->getTime().getYear() << ", " << setw(2) << setfill('0') << it->getTime().getHour() << ":" << setw(2) << setfill('0') << it->getTime().getMinutes() << endl;
             vector<Product> products = it->getProducts();
