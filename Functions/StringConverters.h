@@ -72,5 +72,12 @@ vector<Delivery> stringToDeliveryVectorSearch(string str, const Base& b);
  * @return Retorna o vetor de produtos da base b se str for o nome dos produtos
  */
 vector<Product> stringToProductVectorSearch(string str, const Restaurant& r);
+/**
+ * @brief Função que indica se existe um admin com o nif dado
+* @param str - nif do cliente
+ * @param b - base
+ * @return Retorna verdadeiro ou falso consoante o admin com o nif indicado existe
+ */
+bool stringToAdminSearch(string str, const Base& b);
 
 #endif //PROJETO_STRINGCONVERTERS_H

@@ -250,3 +250,18 @@ vector<Delivery> stringToDeliveryVectorSearch(string str, const Base& b){
     }
     return result;
 }
+
+
+bool stringToAdminSearch(string str, const Base& b){
+    vector<Employee*> employees = b.getEmployees();
+    for (vector<Employee*>::const_iterator it = employees.begin(); it != employees.end(); it++) {
+        Admin *na = dynamic_cast<Admin *>((*it));
+        if (na == nullptr)
+            continue;
+        else{
+            if (stoi(str) == na->getNif())
+                return true;
+        }
+    }
+    return false;
+}

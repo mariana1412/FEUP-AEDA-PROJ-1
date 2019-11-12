@@ -24,6 +24,8 @@ int main() {
     Base Porto, Lisboa, Faro;
     bool is_client;
     int op;
+    string verification;
+
 
 
     cout << "Welcome to Ugh Eats! We are going to tranform your lunch/dinner in a unforgetable gastronomical experience!\n"<<endl<<endl;
@@ -32,19 +34,51 @@ int main() {
     extract_Deliveries(Porto, Lisboa,Faro);
     extract_Employees(Porto, Lisboa, Faro);
     extract_Bases(Porto, Lisboa, Faro);
+    Base og_Porto, og_Lisboa, og_Faro;
+    og_Porto = Porto; og_Lisboa = Lisboa; og_Faro = Faro;
 
     cout << "What are you?\n";
     cout << "1. Administrator\n";
     cout << "2. Client\n";
 
     menu_int_options(op, 1, 2);
+    cin.ignore(1000, '\n');
+    if (op == 1){
+        cout << "Please enter your admin NIF (Press 0 to login as a client): ";
+        while (true) {
+            getline(cin, verification);
+            if (verification == "0"){
+                is_client = true;
+                break;
+            }
+            while (cin.fail() && cin.eof()) {
+                cin.clear();
+                cout << "Invalid character. Please insert a valid input: ";
+                getline(cin, verification);
 
-    if (op == 1) {
-        is_client = false;
+            }
+            verification_nif(verification);
+            if (stringToAdminSearch(verification, Porto)){
+                cout << "Logged in as a Porto admin" << endl;
+                is_client = false;
+                break;
+            }
+            if (stringToAdminSearch(verification, Lisboa)){
+                cout << "Logged in as a Lisboa admin" << endl;
+                is_client = false;
+                break;
+            }
+            if (stringToAdminSearch(verification, Faro)){
+                cout << "Logged in as a Faro admin" << endl;
+                is_client = false;
+                break;
+            }
+            cout << "That NIF is not from an admin! Please enter an admin's NIF or enter 0 to login as a client: ";
+        }
     }
-    else if (op == 2) {
+
+    if (op == 2)
         is_client = true;
-    }
 
 
     int menu;
