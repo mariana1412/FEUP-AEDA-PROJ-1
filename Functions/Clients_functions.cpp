@@ -591,7 +591,7 @@ void client_already_exists(string nif, const Base &p, const Base &l, const Base 
         }
         advance(l_it, 1);
     }
-
+-
     while(f_it != f.getClients().end()){
         if (stoi(nif) == (*f_it).getNif()){
             throw ClientAlreadyExists(nif);
