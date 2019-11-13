@@ -123,6 +123,7 @@ int searchByPrice(Base base, float pmax, Restaurant& restaurant){
         return -1;
     }
 
+    cout << endl;
     int size = products.size();
     for(int i = 0; i<size; i++){
         cout << "Product " << i+1 << ": " << products[i].first.getProducts()[products[i].second] << " --> " << products[i].first.getName() << ", " << products[i].first.getCounty() << endl;
@@ -134,8 +135,11 @@ int searchByPrice(Base base, float pmax, Restaurant& restaurant){
     product_menu(option, 0, size);
     cin.ignore(1000, '\n');
 
-    return (option-1);
+    if(option == 0) return -1;
 
+    restaurant = products[option-1].first;
+
+    return products[option-1].second;
 }
 
 int searchByTypeOfFood(Base base, string type_of_food, Restaurant& restaurant){
@@ -156,19 +160,23 @@ int searchByTypeOfFood(Base base, string type_of_food, Restaurant& restaurant){
         return -1;
     }
 
+    cout << endl;
     int size = products.size();
     for(int i = 0; i<size; i++){
         cout << "Product " << i+1 << ": " << products[i].first.getProducts()[products[i].second] << " --> " << products[i].first.getName() << ", " << products[i].first.getCounty() << endl;
     }
 
     int option;
-   // restaurant = products[option-1];
     cout << "0. Return to Main Menu" << endl;
     cout << endl << "Do you want to order a product? Choose the number of the product (insert 0 to return to the main menu): ";
     product_menu(option, 0, size);
     cin.ignore(1000, '\n');
 
-    return (option-1);
+    if(option == 0) return -1;
+
+    restaurant = products[option-1].first;
+
+    return products[option-1].second;
 }
 
 int create_order(Base &Porto, Base &Lisboa, Base &Faro){
@@ -321,6 +329,8 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
             else if (base == "Lisboa") indprod = searchByTypeOfFood(Lisboa, auxiliar, restaurant);
             else if (base == "Faro") indprod = searchByTypeOfFood(Faro, auxiliar, restaurant);
         }
+
+
         cout << endl;
         cout << "1. Return to Main Menu" << endl;
         cout << "2. Add another product to the order" << endl;
