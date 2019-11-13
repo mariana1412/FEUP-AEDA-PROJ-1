@@ -1,6 +1,6 @@
 #include "Clients_functions.h"
 
-int create_client(Base &Porto, Base &Lisboa, Base &Faro) {
+int create_client(Base &Porto, Base &Lisboa, Base &Faro, bool is_Client) {
     string aux,b;
     vector<Client> v;
     Client new_client;
@@ -139,9 +139,16 @@ int create_client(Base &Porto, Base &Lisboa, Base &Faro) {
         cout << "Operation was canceled! " << endl << endl;
     }
     //voltar para o menu
-    cout << "1. Return to Main Menu. " << endl;
-    cout << "2. Return to Clients Management. " << endl;
-    menu_int_options(option,1,2);
+    if(is_Client){
+        cout << "1. Return to Main Menu. " << endl;
+        cout << "2. Return to Account Management. " << endl;
+        menu_int_options(option,1,2);
+    }
+    else{
+        cout << "1. Return to Main Menu. " << endl;
+        cout << "2. Return to Clients Management. " << endl;
+        menu_int_options(option,1,2);
+    }
 
     return option;
 }
@@ -540,6 +547,90 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
     return option;
 
 }
+int modifyAccount(Base &Porto, Base &Lisboa, Base &Faro, bool is_client){
+    int option;
+
+
+    cout << "1. Return to Main Menu. " << endl;
+    cout << "2. Return to Account Management. " << endl;
+    menu_int_options(option,1,2);
+    return option;
+}
+int removeAccount(Base &Porto,Base &Lisboa,Base &Faro){
+    string base, auxiliar;
+    int i,option;
+    vector <Client> v;
+    cout << "-------------- REMOVE CLIENT --------------" << endl;
+
+    cout << "What's your base?";
+    getline(cin, base);
+    while(cin.fail() && cin.eof()){
+        cin.clear();
+        cout << "Invalid character. Please insert a valid input: ";
+        getline(cin, base);
+    }
+    verification_base(base);
+
+    if (base == "Porto") {
+        v = Porto.getClients();
+    }
+    else if (base == "Lisboa") {
+        v = Lisboa.getClients();
+    }
+    else if (base == "Faro") {
+        v = Faro.getClients();
+    }
+
+    cout << "What's your nif?";
+    getline(cin, auxiliar);
+    while(cin.fail() && cin.eof()){
+        cin.clear();
+        cout << "Invalid character. Please insert a valid input:";
+        getline(cin, auxiliar);
+    }
+    verification_nif(auxiliar);
+    i = int_sequential_search_c(v, stoi(auxiliar));
+
+
+    if (i == -1) {
+        cout << "The client inserted does not exist. Try again:"<<endl;//dar opçao de tentar outra
+        while (i == -1) {
+            cout << "What's your nif?";
+            getline(cin, auxiliar);
+            while(cin.fail() && cin.eof()){
+                cin.clear();
+                cout << "Invalid character. Please insert a valid input:";
+                getline(cin, auxiliar);
+            }
+            verification_nif(auxiliar);
+            i = int_sequential_search_c(v, stoi(auxiliar));
+        }
+    }
+    cout << v[i]<<endl;
+    if(confirm_modifications("remove","account")){
+        if (base == "Porto") {
+            Porto.removeClient(i);
+        }
+        else if (base == "Lisboa") {
+            Lisboa.removeClient(i);
+        }
+        else if (base == "Faro") {
+            Faro.removeClient(i);
+
+        }
+        cout << "Client was successfully removed!" << endl << endl;
+    }
+    else {//caso de nao se confirmar a remoçao
+        cout << "Operation was canceled! " << endl << endl;
+    }
+
+    cout << "1. Return to Main Menu. " << endl;
+    cout << "2. Return to Clients Management. " << endl;
+    menu_int_options(option,1,2);
+    return option;
+}
+
+
 //Funcoes relativas as excecoes
 
 void black_list(const Base &base, int nif) {
@@ -598,6 +689,7 @@ void client_already_exists(string nif, const Base &p, const Base &l, const Base 
     }
     return;
 }
+
 
 int string_sequential_search_c(const vector<Client> &v, string x) {//retorna o indice do vetor onde se encontra x
     for (unsigned int i = 0; i < v.size(); i++)

@@ -23,7 +23,7 @@ int main() {
     SetConsoleOutputCP(1254);
     SetConsoleCP(1254);
     Base Porto, Lisboa, Faro;
-    bool is_client;
+    bool is_client=false;
     string boss_name;
     int op, boss_nif, user;
     string verification;
@@ -83,6 +83,9 @@ int main() {
             cout << "That NIF that's not correspond to that kind of user! Please enter an admin's NIF or enter 0 to login as a client: ";
         }
     }
+    if(user ==4){
+        is_client = true;
+    }
 
     int menu;
     if (user == 1) {
@@ -93,7 +96,7 @@ int main() {
                 do {
                     choice = ClientsManagement();
                     if (choice == 1) {
-                        aux = create_client(Porto, Lisboa, Faro);
+                        aux = create_client(Porto, Lisboa, Faro, is_client);
                         if (aux == 1) {
                             break;
                         }
@@ -351,7 +354,7 @@ int main() {
                 do {
                     choice = ClientsManagement();
                     if (choice == 1) {
-                        aux = create_client(Porto, Lisboa, Faro);
+                        aux = create_client(Porto, Lisboa, Faro,is_client);
                         if (aux == 1) {
                             break;
                         }
@@ -601,7 +604,7 @@ int main() {
                     do {
                         choice = ClientsManagement();
                         if (choice == 1) {
-                            aux = create_client(Porto, Lisboa, Faro);
+                            aux = create_client(Porto, Lisboa, Faro,is_client);
                             if (aux == 1) {
                                 break;
                             }
@@ -806,13 +809,31 @@ int main() {
                 do{
                     choice = AccountManagement();
                     if(choice == 1){
-                        //aux= createaccount()
+                        aux= create_client(Porto, Lisboa, Faro,is_client);
+                        if(aux==1){
+                            break;
+                        }
+                        else if(aux ==2){
+                            menu =1;
+                        }
                     }
                     else if(choice == 2){
-                        //aux = modifydata()
+                        //aux = modifyData(Porto, Lisboa, Faro, is_client);
+                        if(aux==1){
+                            break;
+                        }
+                        else if(aux==2){
+                            menu =1;
+                        }
                     }
                     else if(choice ==3){
-                        //aux = removeaccount()
+                        aux = removeAccount(Porto, Lisboa,Faro);
+                        if(aux==1){
+                            break;
+                        }
+                        else if(aux==2){
+                            menu = 1;
+                        }
                     }
                     else if(choice == 0){
                         menu = 0;

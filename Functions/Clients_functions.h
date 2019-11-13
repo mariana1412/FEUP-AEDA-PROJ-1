@@ -27,7 +27,7 @@ extern const vector<string> nearby_Faro;
  * @param Faro - toda a informação da base de Faro
  * @return valor inteiro para retorno do Menu
  */
-int create_client(Base &Porto, Base &Lisboa, Base &Faro);
+int create_client(Base &Porto, Base &Lisboa, Base &Faro,bool is_client);
 /**
  * @brief Função que modifica um cliente existente
  * @param Porto - toda a informação da base do Porto
@@ -44,7 +44,15 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro);
  * @return valor inteiro para retorno do Menu
  */
 int remove_client(Base &Porto, Base &Lisboa, Base &Faro);
-
+int modifyData(Base &Porto, Base &Lisboa, Base &Faro);
+/*
+ * @brief Função que remove um conta de um cliente
+ * @param Porto - toda a informação da base do Porto
+ * @param Lisboa - toda a informação da base de Lisboa
+ * @param Faro - toda a informação da base de Faro
+ * @return valor inteiro para retorno do Menu
+ */
+int removeAccount(Base &Porto,Base &Lisboa,Base &Faro);
 /**
  * @brief Função que lança uma exceção caso o cliente esteja na blacklist da empresa
  * @param base - toda a informação da base a que pertence o cliente com o nif no argumento
