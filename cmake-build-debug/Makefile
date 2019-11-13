@@ -38,19 +38,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Users\ritap\Downloads\Software universidade\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Users\ritap\Downloads\Software universidade\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\Diogo Almeida\Desktop\UghEats"
+CMAKE_SOURCE_DIR = "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\UghEats"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\UghEats\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -58,7 +58,7 @@ CMAKE_BINARY_DIR = "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug"
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Users\ritap\Downloads\Software universidade\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -69,7 +69,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Users\ritap\Downloads\Software universidade\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\UghEats\cmake-build-debug\CMakeFiles" "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\UghEats\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\UghEats\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -148,6 +148,33 @@ Classes/Base.s: Classes/Base.cpp.s
 Classes/Base.cpp.s:
 	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Classes/Base.cpp.s
 .PHONY : Classes/Base.cpp.s
+
+Classes/Company.obj: Classes/Company.cpp.obj
+
+.PHONY : Classes/Company.obj
+
+# target to build an object file
+Classes/Company.cpp.obj:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Classes/Company.cpp.obj
+.PHONY : Classes/Company.cpp.obj
+
+Classes/Company.i: Classes/Company.cpp.i
+
+.PHONY : Classes/Company.i
+
+# target to preprocess a source file
+Classes/Company.cpp.i:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Classes/Company.cpp.i
+.PHONY : Classes/Company.cpp.i
+
+Classes/Company.s: Classes/Company.cpp.s
+
+.PHONY : Classes/Company.s
+
+# target to generate assembly for a file
+Classes/Company.cpp.s:
+	$(MAKE) -f CMakeFiles\projeto.dir\build.make CMakeFiles/projeto.dir/Classes/Company.cpp.s
+.PHONY : Classes/Company.cpp.s
 
 Classes/Location.obj: Classes/Location.cpp.obj
 
@@ -701,6 +728,9 @@ help:
 	@echo ... Classes/Base.obj
 	@echo ... Classes/Base.i
 	@echo ... Classes/Base.s
+	@echo ... Classes/Company.obj
+	@echo ... Classes/Company.i
+	@echo ... Classes/Company.s
 	@echo ... Classes/Location.obj
 	@echo ... Classes/Location.i
 	@echo ... Classes/Location.s

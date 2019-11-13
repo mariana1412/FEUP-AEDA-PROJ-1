@@ -177,7 +177,6 @@ public:
 * @param rest - restaurante que pretendemos mostrar no ecrã
  */
     friend ostream& operator<<(ostream& os, const Restaurant& rest);
-
 };
 
 

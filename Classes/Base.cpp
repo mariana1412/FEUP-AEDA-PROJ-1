@@ -1,8 +1,9 @@
 #include "Base.h"
 
-Base::Base(Location location, string manager, vector<Client>blacklist){
+Base::Base(Location location, string manager,int manager_nif, vector<Client>blacklist){
         this->location = location;
         this->manager=manager;
+        this->manager_nif =manager_nif;
         this->blacklist=blacklist;
 }
 
@@ -12,6 +13,9 @@ Location Base::getLocation() const{
 
 string Base::getManager() const{
     return manager;
+}
+int Base::getManagerNif() const {
+    return manager_nif;
 }
 
 vector<Client> Base::getClients() const{
@@ -32,6 +36,9 @@ void Base::setLocation(Location location){
 
 void Base::setManager(string manager){
     this->manager = manager;
+}
+void Base::setManagerNif(int nif) {
+    this->manager_nif=nif;
 }
 
 void Base::setClients(vector<Client>clients){

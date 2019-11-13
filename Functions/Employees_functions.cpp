@@ -491,6 +491,89 @@ int remove_employee(Base &Porto, Base &Lisboa, Base &Faro){
     menu_int_options(option,1,2);
     return option;
 }
+int changeManager(Base Porto, Base Lisboa, Base Faro){
+    int op1,op2,counter=1,option;
+    Base b;
+    vector<int> index;
+
+    cout << "From which base do you want to change the manager? \n";
+    cout << "1. Porto \t 2. Lisboa \t 3. Faro \t 0. Return to the Main Menu"<<endl;
+    menu_int_options(op1,0,3);
+    switch(op1){
+        case 0:
+            return 1;
+        case 1:
+            cout<< "The actual manager is "<< Porto.getManager()<<endl;
+            if(confirm_modifications("remove","manager")){
+                cout << "These are the current admins. Choose one of them:";
+                vector<Employee*>::const_iterator it=Porto.getEmployees().begin();
+                for( it;it!=Porto.getEmployees().end();it++){
+                    Admin *a= dynamic_cast<Admin *> (*it);
+                    if(a!= NULL){
+                        index.push_back(it - Porto.getEmployees().begin());
+                        cout << counter << ":" <<endl<<a<<endl<<endl;
+                        counter ++;
+                    }
+                }
+                menu_int_options(op2,1,counter);
+                Porto.setManager(Porto.getEmployees()[index[op2]]->getName());
+                Porto.setManagerNif(Porto.getEmployees()[index[op2]]->getNif());
+                cout << "Manager changed successfully!"<<endl;
+            }
+            else{
+                cout << endl << "Operation was canceled! " << endl << endl;
+            }
+            break;
+        case 2:
+            cout<< "The actual manager is "<< Lisboa.getManager()<<endl;
+            if(confirm_modifications("remove","manager")){
+                cout << "These are the current admins. Choose one of them:";
+                vector<Employee*>::const_iterator it=Lisboa.getEmployees().begin();
+                for( it;it!=Lisboa.getEmployees().end();it++){
+                    Admin *a= dynamic_cast<Admin *> (*it);
+                    if(a!= NULL){
+                        index.push_back(it - Lisboa.getEmployees().begin());
+                        cout << counter << ":" <<endl<<a<<endl<<endl;
+                        counter ++;
+                    }
+                }
+                menu_int_options(op2,1,counter);
+                Lisboa.setManager(Lisboa.getEmployees()[index[op2]]->getName());
+                Lisboa.setManagerNif(Lisboa.getEmployees()[index[op2]]->getNif());
+                cout << "Manager changed successfully!"<<endl;
+            }
+            else{
+                cout << endl << "Operation was canceled! " << endl << endl;
+            }
+            break;
+        case 3:
+            cout<< "The actual manager is "<< Faro.getManager()<<endl;
+            if(confirm_modifications("remove","manager")){
+                cout << "These are the current admins. Choose one of them:";
+                vector<Employee*>::const_iterator it=Faro.getEmployees().begin();
+                for( it;it!=Faro.getEmployees().end();it++){
+                    Admin *a= dynamic_cast<Admin *> (*it);
+                    if(a!= NULL){
+                        index.push_back(it - Faro.getEmployees().begin());
+                        cout << counter << ":" <<endl<<a<<endl<<endl;
+                        counter ++;
+                    }
+                }
+                menu_int_options(op2,1,counter);
+                Faro.setManager(Faro.getEmployees()[index[op2]]->getName());
+                Faro.setManagerNif(Faro.getEmployees()[index[op2]]->getNif());
+                cout << "Manager changed successfully!"<<endl;
+            }
+            else{
+                cout << endl << "Operation was canceled! " << endl << endl;
+            }
+            break;
+    }
+
+    cout << "We are going to return to the Main Menu"<<endl;
+    return 1;
+
+}
 
 
 bool employee_already_exists(string nif, const Base &p, const Base &l, const Base &f){

@@ -7,7 +7,7 @@
 #include <string>
 #include <vector>
 #include <iomanip>
-#include "../Classes/Base.h"
+#include "../Classes/Company.h"
 /**
  * Funções de escrita/atualização dos ficheiros
  */
@@ -48,7 +48,7 @@ void write_Employees(const Base& baseP,const Base& baseL,const Base& baseF);
  * @param Lisboa - toda a informação da base de Lisboa
  * @param Faro - toda a informação da base de Faro
  */
-void write_Bases(const Base& baseP,const Base& baseL,const Base& baseF);
+void write_Bases(string boss, int nif, Base& baseP,const Base& baseL,const Base& baseF);
 
 
 #endif //PROJETO_WRITETOFILE_H

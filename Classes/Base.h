@@ -14,10 +14,11 @@ using namespace std;
  * Base da empresa Ugh Eats
  */
 
-class Base {
+class Base{
 private:
     Location location; /**< Localização exata da base*/
     string manager;/**<Gerente da base*/
+    int manager_nif; /**<Nif do gerente da base*/
     vector<Client> clients;/**Clientes da base*/
     vector<Employee*> employees;/**Funcionários da base*/
     vector<Client> blacklist;/**Lista negra da organização*/
@@ -35,7 +36,7 @@ public:
 	 * @param manager - gerente da base
 	 * @param blacklist- lista negra da base
 	 */
-    Base(Location location, string manager, vector<Client>blacklist);
+    Base(Location location, string manager, int manager_nif, vector<Client>blacklist);
     /**
  * @brief Permite obter a localização exata da base
  * @return Retorna a localização exata da base
@@ -46,6 +47,11 @@ public:
 * @return Retorna o gerente da base
 */
     string getManager() const;
+    /*
+     * @brief Permite obter o NIF do gerente
+     * @return Retorna o NIF do gerente da base
+     */
+    int getManagerNif() const;
     /**
 * @brief Permite obter os clientes da base
 * @return Retorna um vetor de clientes da base
@@ -81,6 +87,11 @@ public:
 * @param manager - gerente da base
 */
     void setManager(string manager);
+    /*
+     * @brief Permite definir o nif do gerente da base
+     * @param nif - nif do gerente da base
+     */
+    void setManagerNif(int nif);
     /**
 * @brief Permite definir os clientes da base
 * @param clients - vetor de clientes da base
@@ -159,7 +170,6 @@ public:
     * @return Index do funcionário no vetor de funcionários da base
      */
     int getIndexEmployee(string nif) const;
-
 
 };
 

@@ -313,18 +313,24 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF) {
     }
 }
 
-void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
+void extract_Bases(Base& baseP, Base& baseL, Base& baseF,string &boss, int &boss_nif) {
     string line;
     ifstream basefile;
     basefile.open("../Base.txt");
     if (basefile.is_open()) {
         while (!basefile.eof()) {
+            getline(basefile, boss);//name of the boss
+            getline(basefile, line);
+            boss_nif = stoi(line); //nif of the boss
+            getline(basefile, line);    //separator
             getline(basefile, line);    //Porto
             getline(basefile, line);
             Location location = stringToLocation(line);
             baseP.setLocation(location);
             getline(basefile, line);
             baseP.setManager(line);
+            getline(basefile, line);
+            baseP.setManagerNif(stoi(line));
             getline(basefile, line);
             if (stoi(line) != 0)
                 baseP.setBlacklist(stringToClientVectorSearch(line, baseP));
@@ -337,6 +343,8 @@ void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
             getline(basefile, line);
             baseL.setManager(line);
             getline(basefile, line);
+            baseL.setManagerNif(stoi(line));
+            getline(basefile, line);
             if (stoi(line) != 0)
                 baseL.setBlacklist(stringToClientVectorSearch(line, baseL));
 
@@ -347,6 +355,8 @@ void extract_Bases(Base& baseP, Base& baseL, Base& baseF) {
             baseF.setLocation(location2);
             getline(basefile, line);
             baseF.setManager(line);
+            getline(basefile, line);
+            baseF.setManagerNif(stoi(line));
             getline(basefile, line);
             if (stoi(line) != 0)
                 baseF.setBlacklist(stringToClientVectorSearch(line, baseF));

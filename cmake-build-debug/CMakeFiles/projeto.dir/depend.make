@@ -13,6 +13,19 @@ CMakeFiles/projeto.dir/Classes/Base.cpp.obj: ../Classes/Vehicle.h
 CMakeFiles/projeto.dir/Classes/Base.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Classes/Base.cpp.obj: ../Functions/utils.h
 
+CMakeFiles/projeto.dir/Classes/Company.cpp.obj: ../Classes/Base.h
+CMakeFiles/projeto.dir/Classes/Company.cpp.obj: ../Classes/Company.cpp
+CMakeFiles/projeto.dir/Classes/Company.cpp.obj: ../Classes/Company.h
+CMakeFiles/projeto.dir/Classes/Company.cpp.obj: ../Classes/Location.h
+CMakeFiles/projeto.dir/Classes/Company.cpp.obj: ../Classes/Order.h
+CMakeFiles/projeto.dir/Classes/Company.cpp.obj: ../Classes/Person.h
+CMakeFiles/projeto.dir/Classes/Company.cpp.obj: ../Classes/Product.h
+CMakeFiles/projeto.dir/Classes/Company.cpp.obj: ../Classes/Restaurant.h
+CMakeFiles/projeto.dir/Classes/Company.cpp.obj: ../Classes/Time.h
+CMakeFiles/projeto.dir/Classes/Company.cpp.obj: ../Classes/Vehicle.h
+CMakeFiles/projeto.dir/Classes/Company.cpp.obj: ../Functions/Exceptions.h
+CMakeFiles/projeto.dir/Classes/Company.cpp.obj: ../Functions/utils.h
+
 CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Classes/Location.cpp
 CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Classes/Location.h
 
@@ -198,6 +211,7 @@ CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj: ../Functions/Vis
 CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj: ../Functions/utils.h
 
 CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.obj: ../Classes/Base.h
+CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.obj: ../Classes/Company.h
 CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.obj: ../Classes/Location.h
 CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.obj: ../Classes/Order.h
 CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.obj: ../Classes/Person.h
@@ -215,6 +229,7 @@ CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Functions/utils.cpp
 CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Functions/utils.h
 
 CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Base.h
+CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Company.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Location.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Order.h
 CMakeFiles/projeto.dir/main.cpp.obj: ../Classes/Person.h

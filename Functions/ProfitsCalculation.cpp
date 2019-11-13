@@ -58,7 +58,7 @@ int ProfitsByRestaurant(Base p, Base l , Base f){
             break;
     }
 
-    cout << "Insert the name of the restaurant you want to modify: ";
+    cout << "Insert the name of the restaurant : ";
     getline(cin, aux);
 
     while(cin.fail() && cin.eof()){
@@ -77,7 +77,7 @@ int ProfitsByRestaurant(Base p, Base l , Base f){
         catch (RestaurantNotFound &msg){
             cout << endl << endl << "ATENTION: Restaurant '" << msg.getName() << "' does not exist." << endl << endl;
             isValid = false;
-            cout << "Try again. Insert the name of the restaurant you want to modify: ";
+            cout << "Try again. Insert the name of the restaurant: ";
             getline(cin, aux);
 
             while(cin.fail() && cin.eof()){
@@ -90,7 +90,7 @@ int ProfitsByRestaurant(Base p, Base l , Base f){
     } while(!isValid);
 
     profit = restaurant.getRevenue();
-    cout << "The profit of this base is "<< profit<<" euros."<<endl;
+    cout << "The profit of this restaurant is "<< profit<<" euros."<<endl;
 
 
     cout << "1. Return to Main Menu. " << endl;
@@ -144,7 +144,7 @@ int ProfitsByClient(Base p, Base l, Base f){
     }
     int nif = b.getClients()[i].getNif();
     vector<Delivery>:: const_iterator it_d = b.getDeliveries().begin();
-    for (it_d; it_d != b.getDeliveries().end(); it_d){
+    for (it_d; it_d != b.getDeliveries().end(); it_d++){
         if((*it_d).getNif()==nif){
             profit += (*it_d).getFinalPrice();
         }
@@ -152,7 +152,7 @@ int ProfitsByClient(Base p, Base l, Base f){
     }
 
 
-    cout << "The profit of this base is "<< profit<<" euros."<<endl;
+    cout << "The profit of this client is "<< profit<<" euros."<<endl;
 
     cout << endl << "1. Return to Main Menu. " << endl;
     cout << "2. Return to Profit Calculation. " << endl;
@@ -238,7 +238,7 @@ int ProfitByTimeInterval(Base p, Base l , Base f){
             break;
     }
 
-    cout << "The profit of this base is "<< profit<<" euros." <<endl;
+    cout << "The profit in general in this time interval is "<< profit<<" euros." <<endl;
 
     cout << "1. Return to Main Menu. " << endl;
     cout << "2. Return to  Profit Calculation. " << endl;
@@ -250,7 +250,7 @@ void stringToHours(Time &d,string s){
     size_t pos=0;
     vector<int> hours;
     while ((pos = s.find(delimiter)) != std::string::npos) {
-        aux = s.substr(0, pos);
+        aux =  s.substr(0, pos);
         formatting_string(aux);
         hours.push_back(stoi(aux));
         s.erase(0, pos + delimiter.length());

@@ -13,45 +13,60 @@ using namespace std;
  * Funções dos Menus
  */
 
+/*
+ * @brief Menu de gestão da conta do Cliente
+ * @return Retorna valor inteiro para retorno do Menu
+ */
+int AccountManagement();
+/*
+ * @brief Menu principal visualizado pelo Patrão
+ * @return Retorna valor inteiro para retorno do Menu
+ */
+int Boss_MainMenu();
+/*
+ * @brief Menu principal visualizado pela gerente
+ * @return Retorna valor inteiro para retorno do Menu
+ */
+int Manager_MainMenu();
+/*
+ * @brief Menu principal visualizado pelo administrador
+ * @return Retorna valor inteiro para retorno do Menu
+ */
+int Admin_MainMenu();
+/*
+ * @brief Menu principal visualizado pelo Cliente
+ * @return Retorna valor inteiro para retorno do Menu
+ */
+int Client_MainMenu();
 
 /**
- * @brief Menu principal do programa
- * @return valor inteiro para retorno do Menu
- * **/
-int MainMenu();
-/**
  * @brief Menu de gerir clientes
- * @return valor inteiro para retorno do Menu
+ * @return Retorna valor inteiro para retorno do Menu
  * **/
 int ClientsManagement();
 /**
  * @brief Menu de gerir funcionários
- * @return valor inteiro para retorno do Menu
+ * @return Retorna valor inteiro para retorno do Menu
  * **/
 int EmployeesManagement();
 /**
  * @brief Menu de gerir restaurantes
- * @return valor inteiro para retorno do Menu
+ * @return Retorna valor inteiro para retorno do Menu
  * **/
 int RestaurantsManagement();
 /**
  * @brief Menu de realizar uma encomenda
- * @return valor inteiro para retorno do Menu
+ * @return Retorna valor inteiro para retorno do Menu
  * **/
 int Order();
 /**
- * @brief Menu de procura por um certo critério
- * @return valor inteiro para retorno do Menu
- * **/
-int SearchBy();
-/**
  * @brief Menu de cálculo de lucro
- * @return valor inteiro para retorno do Menu
+ * @return Retorna valor inteiro para retorno do Menu
  * **/
 int ProfitsCalculation();
 /**
  * @brief Menu de Visualização de informação
- * @return valor inteiro para retorno do Menu
+ * @return Retorna valor inteiro para retorno do Menu
  */
 
 int VisualizeInformation();

@@ -1,28 +1,86 @@
 #include "Menus.h"
 
-int MainMenu(){
+int Admin_MainMenu(){//admins can't manage employees, only the boss and the managers can do that
     int option;
     cout << "--------------------------------------"<<endl;
     cout << "---------------- MENU ----------------" << endl<<endl;
     cout << "1. Clients Management" << endl;
-    cout << "2. Order Management" << endl;
-    cout << "3. Search by" << endl;
-    cout << "4. Employees Management (only administrators) " << endl;
-    cout << "5. Restaurants Management (only administrators) " << endl;
-    cout << "6. Profits Calculation (only administrators) " << endl;
-    cout << "7. Visualize Information (only administrators "<<endl;
+    cout << "2. Restaurants Management" << endl;
+    cout << "3. Profits Calculation" << endl;
+    cout << "4. Visualize Information"<<endl;
     cout << "0. Exit" << endl;
     cout << "--------------------------------------"<<endl;
-    menu_int_options(option,0,7);
+    menu_int_options(option,0,4);
+
+    cin.ignore(1000,'\n');
+    return option;
+}
+int Manager_MainMenu(){
+    int option;
+    cout << "--------------------------------------"<<endl;
+    cout << "---------------- MENU ----------------" << endl<<endl;
+    cout << "1. Clients Management" << endl;
+    cout << "2. Employees Management " << endl;
+    cout << "3. Restaurants Management" << endl;
+    cout << "4. Profits Calculation" << endl;
+    cout << "5. Visualize Information"<<endl;
+    cout << "0. Exit" << endl;
+    cout << "--------------------------------------"<<endl;
+    menu_int_options(option,0,5);
 
     cin.ignore(1000,'\n');
     return option;
 }
 
+int Boss_MainMenu(){
+    int option;
+    cout << "--------------------------------------"<<endl;
+    cout << "---------------- MENU ----------------" << endl<<endl;
+    cout << "1. Clients Management" << endl;
+    cout << "2. Employees Management " << endl;
+    cout << "3. Restaurants Management " << endl;
+    cout << "4. Profits Calculation " << endl;
+    cout << "5. Visualize Information "<<endl;
+    cout << "6. Change Manager " <<endl;
+    cout << "0. Exit" << endl;
+    cout << "--------------------------------------"<<endl;
+    menu_int_options(option,0,6);
+
+    cin.ignore(1000,'\n');
+    return option;
+}
+int Client_MainMenu(){
+    int option;
+    cout << "--------------------------------------"<<endl;
+    cout << "---------------- MENU ----------------" << endl<<endl;
+    cout << "1. Account Management" << endl;
+    cout << "2. Order" << endl;
+    cout << "0. Exit" << endl;
+    cout << "--------------------------------------"<<endl;
+    menu_int_options(option,0,2);
+
+    cin.ignore(1000,'\n');
+    return option;
+}
+int AccountManagement(){
+    int option;
+    cout << "--------------------------------------"<<endl;
+    cout << "---------------- MENU ----------------" << endl<<endl;
+    cout << "1. Create Account" << endl;
+    cout << "2. Modify Data" << endl;
+    cout << "3. Remove Account" << endl;
+    cout << "4. Return to the Main Menu" << endl;
+    cout << "0. Exit" << endl;
+    cout << "--------------------------------------"<<endl;
+    menu_int_options(option,0,4);
+
+    cin.ignore(1000,'\n');
+    return option;
+}
 
 int ClientsManagement(){
     int option;
-    cout << "--------------------------------------"<<endl;
+    cout << "----------------------------------------------------"<<endl;
     cout << "---------------- CLIENTS MANAGEMENT ----------------" << endl<<endl;
     cout << "1. Create Client " << endl;
     cout << "2. Modify Client" << endl;
@@ -37,7 +95,7 @@ int ClientsManagement(){
 }
 int EmployeesManagement(){
     int option;
-    cout << "--------------------------------------"<<endl;
+    cout << "----------------------------------------------------"<<endl;
     cout << "---------------- EMPLOYEE MANAGEMENT ----------------" << endl<<endl;
     cout << "1. Create Employee " << endl;
     cout << "2. Modify Employee" << endl;
@@ -49,22 +107,6 @@ int EmployeesManagement(){
     menu_int_options(option,0,4);
 
     cin.ignore(1000,'\n');
-    return option;
-}
-int SearchBy() {
-    int option;
-    cout << "--------------------------------------"<<endl;
-    cout << "---------------- SEARCH BY ----------------" << endl << endl;
-    cout << "1. Restaurant " << endl;
-    cout << "2. Area" << endl;
-    cout << "3. Price " << endl;
-    cout << "4. Type of culinary " << endl;
-    cout << "5. Return to the main menu " << endl;
-    cout << "0. Exit" << endl;
-    cout << "--------------------------------------"<<endl;
-    menu_int_options(option, 0, 5);
-
-    cin.ignore(1000, '\n');
     return option;
 }
 
@@ -83,23 +125,6 @@ int RestaurantsManagement(){
     cin.ignore(1000,'\n');
     return option;
 }
-
-int Order(){
-    int option;
-    cout << "--------------------------------------------------"<<endl;
-    cout << "---------------- ORDER MANAGEMENT ----------------" << endl<<endl;
-    cout << "1. Create Order " << endl;
-    cout << "2. Modify Order (only administrators)" << endl;
-    cout << "3. Remove Order (only administrators)" << endl;
-    cout << "4. Return to the main menu " << endl;
-    cout << "0. Exit" << endl;
-    cout << "--------------------------------------------------"<<endl;
-    menu_int_options(option,0,4);
-
-    cin.ignore(1000,'\n');
-    return option;
-}
-
 
 int ProfitsCalculation(){
     int option;

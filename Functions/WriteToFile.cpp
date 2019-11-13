@@ -433,14 +433,18 @@ void write_Employees(const Base& baseP,const Base& baseL,const Base& baseF){
     employeefile.close();
 }
 
-void write_Bases(const Base& baseP,const Base& baseL,const Base& baseF){
+void write_Bases(string boss, int nif, Base& baseP,const Base& baseL,const Base& baseF){
     ofstream basefile;
     basefile.open("../Base.txt");
     int count = 0;
     if (basefile.is_open()){
+        basefile << boss <<endl;
+        basefile << nif <<endl;
+        basefile << "::::::::" << endl;
         basefile << "Porto" << endl;
         basefile << baseP.getLocation().getAddress() << ", " << baseP.getLocation().getCounty() << ", " << baseP.getLocation().getGps() << endl;
         basefile << baseP.getManager() << endl;
+        basefile << baseP.getManagerNif()<<endl;
         if (baseP.getBlackList().size() != 0) {
             vector<Client> blacklist = baseP.getBlackList();
             for (vector<Client>::const_iterator it = blacklist.begin(); it != blacklist.end(); it++) {
@@ -459,6 +463,7 @@ void write_Bases(const Base& baseP,const Base& baseL,const Base& baseF){
         basefile << "Lisboa" << endl;
         basefile << baseL.getLocation().getAddress() << ", " << baseL.getLocation().getCounty() << ", " << baseL.getLocation().getGps() << endl;
         basefile << baseL.getManager() << endl;
+        basefile << baseL.getManagerNif()<<endl;
         if (baseL.getBlackList().size() != 0) {
             vector<Client> blacklist1 = baseL.getBlackList();
             for (vector<Client>::const_iterator it = blacklist1.begin(); it != blacklist1.end(); it++) {
@@ -477,6 +482,7 @@ void write_Bases(const Base& baseP,const Base& baseL,const Base& baseF){
         basefile << "Faro" << endl;
         basefile << baseF.getLocation().getAddress() << ", " << baseF.getLocation().getCounty() << ", " << baseF.getLocation().getGps() << endl;
         basefile << baseF.getManager() << endl;
+        basefile << baseF.getManagerNif()<<endl;
         if (baseF.getBlackList().size() != 0) {
             vector<Client> blacklist2 = baseF.getBlackList();
             for (vector<Client>::const_iterator it = blacklist2.begin(); it != blacklist2.end(); it++) {

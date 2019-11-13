@@ -49,7 +49,7 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF);
  * @param Lisboa - toda a informação da base de Lisboa
  * @param Faro - toda a informação da base de Faro
  */
-void extract_Bases(Base& baseP, Base& baseL, Base& baseF);
+void extract_Bases(Base& baseP, Base& baseL, Base& baseF, string &boss, int &boss_nif);
 
 
 
