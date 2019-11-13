@@ -31,7 +31,7 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro);
  * @param restaurant - restaurante escolhido
  * @return indice do produto escolhido
  */
-int searchByRestaurant(Base base, string name, Restaurant restaurant);
+int searchByRestaurant(Base base, string name, Restaurant &restaurant);
 
 /**
  * @brief Função que procura pelo restaurante dando como argumento uma string com o concelho do mesmo
@@ -41,7 +41,7 @@ int searchByRestaurant(Base base, string name, Restaurant restaurant);
  * @param restaurant - restaurante escolhido
  * @return indice do produto escolhido
  */
-int searchByArea(Base b, string base, string county, Restaurant restaurant);
+int searchByArea(Base b, string base, string county, Restaurant& restaurant);
 
 /**
  * @brief Função que procura pelo restaurante dando como argumento um float com o valor maximo do preço do produto
@@ -50,7 +50,7 @@ int searchByArea(Base b, string base, string county, Restaurant restaurant);
  * @param restaurant - restaurante escolhido
  * @return indice do produto escolhido
  */
-int searchByPrice(Base base, float pmax, Restaurant restaurant);
+int searchByPrice(Base base, float pmax, Restaurant& restaurant);
 
 /**
  * @brief Função que procura pelo restaurante dando como argumento uma string com o tipo de comida pretendido
@@ -59,7 +59,7 @@ int searchByPrice(Base base, float pmax, Restaurant restaurant);
  * @param restaurant - restaurante escolhido
  * @return indice do produto escolhido
  */
-int searchBtTypeOfFood(Base base, string type_of_food, Restaurant restaurant);
+int searchByTypeOfFood(Base base, string type_of_food, Restaurant& restaurant);
 
 
 #endif //PROJETO_ORDER_FUNCTIONS_H

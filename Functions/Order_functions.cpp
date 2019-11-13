@@ -1,6 +1,6 @@
 #include "Order_functions.h"
 
-int searchByRestaurant(Base base, string name, Restaurant restaurant)  {
+int searchByRestaurant(Base base, string name, Restaurant& restaurant)  {
     bool isValid;
 
     do{
@@ -36,7 +36,7 @@ int searchByRestaurant(Base base, string name, Restaurant restaurant)  {
     return (option-1);
 }
 
-int searchByArea(Base b, string base, string county, Restaurant restaurant){
+int searchByArea(Base b, string base, string county, Restaurant& restaurant){
 
     bool isValid;
     int option;
@@ -104,7 +104,7 @@ int searchByArea(Base b, string base, string county, Restaurant restaurant){
 
 }
 
-int searchByPrice(Base base, float pmax, Restaurant restaurant){
+int searchByPrice(Base base, float pmax, Restaurant& restaurant){
 
     vector<pair<Restaurant, int>> products;
     int size1 = base.getRestaurants().size(), size2;
@@ -138,7 +138,7 @@ int searchByPrice(Base base, float pmax, Restaurant restaurant){
 
 }
 
-int searchBtTypeOfFood(Base base, string type_of_food, Restaurant restaurant){
+int searchByTypeOfFood(Base base, string type_of_food, Restaurant& restaurant){
     vector<pair<Restaurant, int>> products;
     int size1 = base.getRestaurants().size(), size2;
 
@@ -162,6 +162,7 @@ int searchBtTypeOfFood(Base base, string type_of_food, Restaurant restaurant){
     }
 
     int option;
+   // restaurant = products[option-1];
     cout << "0. Return to Main Menu" << endl;
     cout << endl << "Do you want to order a product? Choose the number of the product (insert 0 to return to the main menu): ";
     product_menu(option, 0, size);
@@ -247,101 +248,88 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
             return 1;
         }
     }
+    while (true) {
+        cout << "Which search method do you want?" << endl;
+        cout << "1. Restaurant" << endl;
+        cout << "2. Area" << endl;
+        cout << "3. Price" << endl;
+        cout << "4. Type of culinary" << endl;
+        cout << "0. Return to Main Menu" << endl;
 
-    cout << "Which search method do you want?" << endl;
-    cout << "1. Restaurant" << endl;
-    cout << "2. Area" << endl;
-    cout << "3. Price" << endl;
-    cout << "4. Type of culinary" << endl;
-    cout << "0. Return to Main Menu" << endl;
+        menu_int_options(option, 0, 4);
+        cin.ignore(1000, '\n');
 
-    menu_int_options(option, 0, 4);
-    cin.ignore(1000, '\n');
+        int indprod;
+        Restaurant restaurant;
+        string auxiliar;
 
-    int indprod;
-    Restaurant restaurant;
-    string auxiliar;
-
-    if(option == 0){
-        return 1;
-    }
-
-    else if(option == 1){
-        cout << endl << endl;
-        cout << "Restaurant's name: ";
-        getline(cin, auxiliar);
-        while (cin.fail() && cin.eof()) {
-            cin.clear();
-            cout << "Invalid character. Please insert a valid input:";
+        if (option == 0) {
+            return 1;
+        } else if (option == 1) {
+            cout << endl << endl;
+            cout << "Restaurant's name: ";
             getline(cin, auxiliar);
-        }
-        formatting_string(auxiliar);
-        if(base == "Porto") indprod = searchByRestaurant(Porto, auxiliar, restaurant);
-        else if(base == "Lisboa") indprod = searchByRestaurant(Lisboa, auxiliar, restaurant);
-        else if(base == "Faro") indprod = searchByRestaurant(Faro, auxiliar, restaurant);
-    }
-
-    else if(option == 2){
-        cout << endl << endl << "Restaurant's county: ";
-        getline(cin, auxiliar);
-
-        while(cin.fail() && cin.eof()){
-            cin.clear();
-            cout << "Invalid character. Please insert a valid input: ";
+            while (cin.fail() && cin.eof()) {
+                cin.clear();
+                cout << "Invalid character. Please insert a valid input:";
+                getline(cin, auxiliar);
+            }
+            formatting_string(auxiliar);
+            if (base == "Porto") indprod = searchByRestaurant(Porto, auxiliar, restaurant);
+            else if (base == "Lisboa") indprod = searchByRestaurant(Lisboa, auxiliar, restaurant);
+            else if (base == "Faro") indprod = searchByRestaurant(Faro, auxiliar, restaurant);
+        } else if (option == 2) {
+            cout << endl << endl << "Restaurant's county: ";
             getline(cin, auxiliar);
-        }
-        verification_all_letters(auxiliar);
 
-        if(base == "Porto") indprod = searchByArea(Porto, base, auxiliar, restaurant);
-        else if(base == "Lisboa") indprod = searchByArea(Lisboa, base, auxiliar, restaurant);
-        else if(base == "Faro") indprod = searchByArea(Faro, base, auxiliar, restaurant);
-    }
+            while (cin.fail() && cin.eof()) {
+                cin.clear();
+                cout << "Invalid character. Please insert a valid input: ";
+                getline(cin, auxiliar);
+            }
+            verification_all_letters(auxiliar);
 
-    else if(option == 3){
-        cout << endl << endl << "Maximum price: ";
-        getline(cin, auxiliar);
-
-        while(cin.fail() && cin.eof()){
-            cin.clear();
-            cout << "Invalid character. Please insert a valid input: ";
+            if (base == "Porto") indprod = searchByArea(Porto, base, auxiliar, restaurant);
+            else if (base == "Lisboa") indprod = searchByArea(Lisboa, base, auxiliar, restaurant);
+            else if (base == "Faro") indprod = searchByArea(Faro, base, auxiliar, restaurant);
+        } else if (option == 3) {
+            cout << endl << endl << "Maximum price: ";
             getline(cin, auxiliar);
-        }
-        verification_float(auxiliar);
 
-        if(base == "Porto") indprod = searchByPrice(Porto, stof(auxiliar), restaurant);
-        else if(base == "Lisboa") indprod = searchByPrice(Lisboa, stof(auxiliar), restaurant);
-        else if(base == "Faro") indprod = searchByPrice(Faro, stof(auxiliar), restaurant);
-    }
-    else if(option == 4){
-        cout << endl << endl << "Type of food: ";
-        getline(cin, auxiliar);
+            while (cin.fail() && cin.eof()) {
+                cin.clear();
+                cout << "Invalid character. Please insert a valid input: ";
+                getline(cin, auxiliar);
+            }
+            verification_float(auxiliar);
 
-        while(cin.fail() && cin.eof()){
-            cin.clear();
-            cout << "Invalid character. Please insert a valid input: ";
+            if (base == "Porto") indprod = searchByPrice(Porto, stof(auxiliar), restaurant);
+            else if (base == "Lisboa") indprod = searchByPrice(Lisboa, stof(auxiliar), restaurant);
+            else if (base == "Faro") indprod = searchByPrice(Faro, stof(auxiliar), restaurant);
+        } else if (option == 4) {
+            cout << endl << endl << "Type of food: ";
             getline(cin, auxiliar);
+
+            while (cin.fail() && cin.eof()) {
+                cin.clear();
+                cout << "Invalid character. Please insert a valid input: ";
+                getline(cin, auxiliar);
+            }
+            verification_all_letters(auxiliar);
+
+            if (base == "Porto") indprod = searchByTypeOfFood(Porto, auxiliar, restaurant);
+            else if (base == "Lisboa") indprod = searchByTypeOfFood(Lisboa, auxiliar, restaurant);
+            else if (base == "Faro") indprod = searchByTypeOfFood(Faro, auxiliar, restaurant);
         }
-        verification_all_letters(auxiliar);
-
-        if(base == "Porto") indprod = searchBtTypeOfFood(Porto, auxiliar, restaurant);
-        else if(base == "Lisboa") indprod = searchBtTypeOfFood(Lisboa, auxiliar, restaurant);
-        else if(base == "Faro") indprod = searchBtTypeOfFood(Faro, auxiliar, restaurant);
+        cout << endl;
+        cout << "1. Return to Main Menu" << endl;
+        cout << "2. Add another product to the order" << endl;
+        menu_int_options(option, 1, 2);
+        if (option == 1)
+            return option;
+        else if (option == 2)
+            continue;
     }
-
-
-    //TO DO: order
-
-
-    if(indprod == -1){
-        cout << endl << "Operation was canceled." << endl;
-        return 1;
-    }
-
-    cout << endl;
-    cout << "1. Return to Main Menu" << endl;
-    cout << "2. Do another other" << endl;
-    menu_int_options(option, 1, 2);
-    return option;
 }
 
 

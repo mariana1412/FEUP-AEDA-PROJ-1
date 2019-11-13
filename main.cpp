@@ -844,7 +844,7 @@ int main() {
             }
             else if(menu == 2){
                 aux=0;
-                //aux = Order();
+                create_order(Porto, Lisboa, Faro);
                 if(aux==1){
                     break;
                 }
