@@ -48,16 +48,15 @@ int main() {
         cout << "Please enter your NIF(Press 0 to exit the program):";
         while (true) {
             getline(cin, verification);
-            verification_nif(verification);
-            if (stoi(verification) == 0) {
-                return 0;
-                break;
-            }
             while (cin.fail() && cin.eof()) {
                 cin.clear();
                 cout << "Invalid character. Please insert a valid input: ";
                 getline(cin, verification);
 
+            }
+            if (stoi(verification) == 0) {
+                return 0;
+                break;
             }
             verification_nif(verification);
             if (user == 1) {
