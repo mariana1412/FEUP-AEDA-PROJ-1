@@ -181,7 +181,6 @@ int ProfitByTimeInterval(Base p, Base l , Base f){
     getline(cin,s);
     verification_hour(s);
     stringToHours(d2,s);
-    cout << "Hello!"<<endl;
     while(d1>d2){
         cout << "This interval is not valid. Please, try again:"<<endl;
         cout << "Inferior limit of the interval.";
@@ -207,32 +206,32 @@ int ProfitByTimeInterval(Base p, Base l , Base f){
     switch (op){
         case 1:
             for(int i = 0; i < p.getDeliveries().size(); i++){
-                if((d1>p.getDeliveries()[i].getDeliver_time()) &&(p.getDeliveries()[i].getDeliver_time())>d2){
-                    continue;
+                if((p.getDeliveries()[i].getTime()>d1) &&(d2>p.getDeliveries()[i].getTime())){
+                    profit += p.getDeliveries()[i].getFinalPrice();
                 }
                 else{
-                    profit += p.getDeliveries()[i].getFinalPrice();
+                    continue;
                 }
 
             }
             break;
         case 2:
             for(int i = 0; i < l.getDeliveries().size(); i++){
-                if((d1>l.getDeliveries()[i].getDeliver_time()) &&(l.getDeliveries()[i].getDeliver_time())>d2){
-                    continue;
+                if((l.getDeliveries()[i].getTime()>d1) &&(d2>l.getDeliveries()[i].getTime())){
+                    profit += l.getDeliveries()[i].getFinalPrice();
                 }
                 else{
-                    profit += l.getDeliveries()[i].getFinalPrice();
+                    continue;
                 }
             }
             break;
         case 3:
             for(int i = 0; i < f.getDeliveries().size(); i++){
-                if((d1>f.getDeliveries()[i].getDeliver_time()) &&(f.getDeliveries()[i].getDeliver_time())>d2){
-                    continue;
+                if((f.getDeliveries()[i].getTime()>d1) &&(d2>f.getDeliveries()[i].getTime())){
+                    profit += f.getDeliveries()[i].getFinalPrice();
                 }
                 else{
-                    profit += f.getDeliveries()[i].getFinalPrice();
+                    continue;
                 }
             }
             break;

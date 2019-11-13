@@ -42,7 +42,7 @@ int main() {
     cout << "2. Manager \n";
     cout << "3. Administrator\n";
     cout << "4. Client\n";
-    menu_int_options(user, 1, 2);
+    menu_int_options(user, 1, 4);
     cin.ignore(1000, '\n');
     if (user != 4) {
         cout << "Please enter your NIF(Press 0 to exit the program):";
