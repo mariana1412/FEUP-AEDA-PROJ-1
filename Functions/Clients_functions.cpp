@@ -448,7 +448,6 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
     }
 
 
-
     cout << "What do you know about this client?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do cliente
     cout << "1: Name\n" << "2: NIF\n"<<"0: Return to the main menu\n";
     menu_int_options(number,1,2);

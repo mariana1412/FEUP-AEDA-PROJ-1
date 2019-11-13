@@ -7,7 +7,8 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-#include "../Functions/Exceptions.h"
+#include "Exceptions.h"
+
 
 using namespace std;
 /**
@@ -58,6 +59,8 @@ string remove_extra_whitespaces(string aux);
  * @param str - tipo de objeto a ser alterado
  */
 bool confirm_modifications(string action, string str);
+
+
 
 
 #endif //PROJETO_UTILS_H

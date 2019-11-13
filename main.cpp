@@ -36,10 +36,6 @@ int main() {
     extract_Employees(Porto, Lisboa, Faro);
     extract_Bases(Porto, Lisboa, Faro, boss_name, boss_nif);
     Company comp(boss_name, boss_nif, Porto, Lisboa, Faro);
-    Base og_Porto, og_Lisboa, og_Faro;
-    og_Porto = Porto;
-    og_Lisboa = Lisboa;
-    og_Faro = Faro;
 
     cout << "What are you?\n";
     cout << "1. Boss \n";

@@ -7,7 +7,8 @@
 #include <string>
 #include <vector>
 #include "../Classes/Base.h"
-#include "../Functions/Verification_Inputs.h"
+#include "Verification_Inputs.h"
+#include "utils.h"
 
 
 using namespace std;
@@ -63,6 +64,7 @@ void out_of_area(const vector<Client> &v,string county,string b);
  * @param nif - NIF do cliente em questão
  */
 void client_already_exists(string nif, const Base &p, const Base &l, const Base &f);
+
 /**
  * @brief Função que procura um Cliente, através do seu nif (x), num vetor de Clientes
  * @param v - vetor de clientes em que queremos procurar

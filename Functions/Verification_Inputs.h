@@ -23,6 +23,15 @@ using namespace std;
  */
 
 void menu_int_options(int &option, int omin, int omax);
+
+/**
+ * @brief Função que verifica se a opçao escolhida num menu de produtos é válida ou não
+ * @parsam option - opção do menu
+ * @param omin - valor minimo do menu
+ * @param omax - valor maximo do menu
+ */
+void product_menu(int &option, int omin, int nmax);
+
 /**
  * @brief Função que verifica se uma string é um inteiro válido
  * @parsam aux - string

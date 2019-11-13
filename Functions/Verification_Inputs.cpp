@@ -18,6 +18,23 @@ void menu_int_options(int &option, int omin, int nmax){
     }
 }
 
+void product_menu(int &option, int omin, int nmax){
+    cin >> option;
+    while (cin.fail() || option > nmax || option < omin) {
+        if (cin.eof()) { //caso de ter sido introduzido o 'crtl-z'
+            cin.clear();
+            cout << "Invalid operation, please insert a valid one:";
+            cin >> option;
+        }
+        else { //qualquer outro caso que nao corresponda ao input pretendido
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Invalid operation, please insert a valid one:";
+            cin >> option;
+        }
+    }
+}
+
 void verification_int(string &aux) {
     string numbers = "0123456789";
 
