@@ -127,19 +127,25 @@ bool confirm_modifications(string action, string str){
     return false;
 }
 
-void stringToHours(Time &d,string s){
-    string delimiter =":",aux;
-    size_t pos=0;
-    vector<int> hours;
-    while ((pos = s.find(delimiter)) != std::string::npos) {
-        aux =  s.substr(0, pos);
-        formatting_string(aux);
-        hours.push_back(stoi(aux));
-        s.erase(0, pos + delimiter.length());
+void stringToHours(Time &d, string str){
+    string delimiter = ":";
+    vector<string> data;
+    vector<int> data_clean;
+    Time result;
+    size_t pos = 0;
+    string token;
+    while ((pos = str.find(delimiter)) != std::string::npos) {
+        token = str.substr(0, pos);
+        data.push_back(token);
+        str.erase(0, pos + delimiter.length());
     }
-
-    d.setHour(hours[0]);
-    d.setMinutes(hours[1]);
+    data.push_back(str);
+    for (auto & i : data) {
+        trim(i);
+        data_clean.push_back(stoi(i));
+    }
+    d.setHour(data_clean.at(0));
+    d.setMinutes(data_clean.at(1));
 }
 void verification_hour(string &aux){
     bool isValid = false;

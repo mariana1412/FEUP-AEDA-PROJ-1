@@ -184,3 +184,8 @@ void Base::updateBases() {
         profit = 0;
     }
 }
+
+void Base::addClientToBlacklist(Client client) {
+    blacklist.push_back(client);
+
+}

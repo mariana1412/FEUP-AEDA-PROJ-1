@@ -179,7 +179,11 @@ public:
      * @brief Atualiza informações acerca das bases (revenues, valor de black no cliente)
      */
     void updateBases();
-
+/**
+     * @brief Permite adicionar um cliente à blacklist
+    * @param client - cliente a adicionar à blacklist
+     */
+     void addClientToBlacklist(Client client);
 };
 
 

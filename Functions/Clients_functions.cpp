@@ -91,8 +91,8 @@ int create_client(Base &Porto, Base &Lisboa, Base &Faro, bool is_Client) {
         cout << "Invalid character. Please insert a valid input: ";
         getline(cin, aux);
     }
-    new_client.setCounty(aux);
     verification_all_letters(aux);
+    new_client.setCounty(aux);
     new_client.setBlack(false);
 
 

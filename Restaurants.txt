@@ -3,39 +3,39 @@ Japanese
 Avenida de Matosinhos 23, Matosinhos
 Japonesa
 Temaki, Japonesa, 5.5
-22
+16.5
 ::::::::
 Porto
 Pay The P Rice
 Avenida Dos Aliados 76, Maia
 Portuguesa, Italiana
 Arroz De Marisco, Portuguesa, 20 / Arroz De Cabidela, Portuguesa, 10 / Arroz De Tomate, Italiana, 8
-0
+30
 ::::::::
 Lisboa
 Italian
 Rua da Praia 45, Lisboa
 Italiana
 Pizza, Italiana, 8.9 / Lasanha, Italiana, 7.6
-16.5
+31.7
 ::::::::
 Lisboa
 Frenchalian
 Rua da Telha 45, Lisboa
 Francesa, Italiana
 Baguette, Francesa, 1.1 / Lasanha, Italiana, 7.5
-0
+33.3
 ::::::::
 Faro
 Mexican
 Rua da Alegria 22, Faro
 Mexicana
 Tacos, Mexicana, 4.2 / Nachos, Mexicana, 5.25
-0
+23.1
 ::::::::
 Faro
 Alentejano
 Rua Do Sol 55, Loule
 Portuguesa, Italiana
 Alentejana, Portuguesa, 10.5 / Pao De Alho, Italiana, 2
-0
+12.5

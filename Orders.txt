@@ -6,7 +6,7 @@ Japanese
 Temaki
 Success
 Nothing to show
-15:50
+25/10/2019, 15:50
 5
 ::::::::
 Porto
@@ -17,7 +17,29 @@ Japanese
 Temaki
 Success
 Nothing to show
-15:50
+26/10/2019, 15:50
+5
+::::::::
+Porto
+9
+280541987
+Pay The P Rice
+14/11/2019, 19:46
+Arroz De Marisco, Arroz De Cabidela
+Success
+Nothing to show
+14/11/2019, 19:58
+5
+::::::::
+Porto
+10
+280541987
+Japanese
+14/11/2019, 19:50
+Temaki
+Success
+Nothing to show
+14/11/2019, 20:10
 5
 ::::::::
 Lisboa
@@ -28,5 +50,82 @@ Italian
 Pizza, Lasanha
 Insuccess
 Didn't show up
-17:16
+00/00/0000, 00:00
 3
+::::::::
+Lisboa
+4
+251230654
+Frenchalian
+14/11/2019, 19:09
+Baguette, Lasanha
+Success
+Nothing to show
+14/11/2019, 19:19
+3
+::::::::
+Lisboa
+7
+193320586
+Frenchalian
+14/11/2019, 19:35
+Lasanha, Baguette
+Success
+Nothing to show
+14/11/2019, 19:50
+3
+::::::::
+Lisboa
+8
+193320586
+Italian
+14/11/2019, 19:39
+Lasanha, Lasanha
+Success
+Nothing to show
+14/11/2019, 19:55
+3
+::::::::
+Lisboa
+12
+193320586
+Frenchalian
+14/11/2019, 19:52
+Lasanha, Baguette, Lasanha
+Success
+Nothing to show
+14/11/2019, 19:57
+3
+::::::::
+Faro
+5
+987654321
+Mexican
+14/11/2019, 19:23
+Tacos, Nachos, Tacos
+Success
+Nothing to show
+14/11/2019, 19:35
+3
+::::::::
+Faro
+6
+987654321
+Mexican
+14/11/2019, 19:25
+Tacos, Nachos
+Insuccess
+Wrong address
+00/00/0000, 00:00
+3
+::::::::
+Faro
+11
+987654321
+Alentejano
+14/11/2019, 19:51
+Alentejana, Pao De Alho
+Success
+Nothing to show
+14/11/2019, 20:11
+5

@@ -140,7 +140,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                     made = false;
                 getline(deliveryfile, reason);
                 getline(deliveryfile, line);
-                hour = stringToHour(line);
+                hour = stringToTime(line);
                 getline(deliveryfile, tax);
                 getline(deliveryfile, line); //separator
                 baseP.addDelivery(Delivery(restaurant, date, products, stoi(nif),stoi(id), made, reason, hour, stof(tax)));
@@ -163,7 +163,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                     made = false;
                 getline(deliveryfile, reason);
                 getline(deliveryfile, line);
-                hour = stringToHour(line);
+                hour = stringToTime(line);
                 getline(deliveryfile, tax);
                 getline(deliveryfile, line); //separator
                 baseL.addDelivery(Delivery(restaurant, date, products, stoi(nif),stoi(id), made, reason, hour, stof(tax)));
@@ -186,7 +186,7 @@ void extract_Deliveries(Base& baseP, Base& baseL, Base& baseF){
                     made = false;
                 getline(deliveryfile, reason);
                 getline(deliveryfile, line);
-                hour = stringToHour(line);
+                hour = stringToTime(line);
                 getline(deliveryfile, tax);
                 getline(deliveryfile, line); //separator
                 baseF.addDelivery(Delivery(restaurant, date, products, stoi(nif),stoi(id), made, reason, hour, stof(tax)));

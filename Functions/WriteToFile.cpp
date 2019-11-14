@@ -212,7 +212,7 @@ void write_Deliveries(const Base& baseP,const Base& baseL,const Base& baseF){
                 deliveryfile << "Insuccess" << endl;
                 deliveryfile << it->getReason_insuccess() << endl;
             }
-            deliveryfile << setw(2) << setfill('0') << it->getDeliver_time().getHour() << ":" <<setw(2) << setfill('0') << it->getDeliver_time().getMinutes() << endl;
+            deliveryfile << setw(2) << setfill('0') << it->getDeliver_time().getDay() << "/" << setw(2) << setfill('0') <<  it->getDeliver_time().getMonth() << "/" << setw(4) << setfill('0') << it->getDeliver_time().getYear() << ", " << setw(2) << setfill('0') << it->getDeliver_time().getHour() << ":" << setw(2) << setfill('0') << it->getDeliver_time().getMinutes() << endl;
             deliveryfile << it->getTax();
         }
         if (deliveries_porto.size() != 0) {
@@ -245,7 +245,7 @@ void write_Deliveries(const Base& baseP,const Base& baseL,const Base& baseF){
                 deliveryfile << "Insuccess" << endl;
                 deliveryfile << it->getReason_insuccess() << endl;
             }
-            deliveryfile << setw(2) << setfill('0') << it->getDeliver_time().getHour() << ":" << setw(2) << setfill('0') << it->getDeliver_time().getMinutes() << endl;
+            deliveryfile << setw(2) << setfill('0') << it->getDeliver_time().getDay() << "/" << setw(2) << setfill('0') <<  it->getDeliver_time().getMonth() << "/" << setw(4) << setfill('0') <<  it->getDeliver_time().getYear() << ", " << setw(2) << setfill('0') << it->getDeliver_time().getHour() << ":" << setw(2) << setfill('0') << it->getDeliver_time().getMinutes() << endl;
             deliveryfile << it->getTax();
         }
         if (deliveries_lisboa.size() != 0) {
@@ -277,7 +277,7 @@ void write_Deliveries(const Base& baseP,const Base& baseL,const Base& baseF){
                 deliveryfile << "Insuccess" << endl;
                 deliveryfile << it->getReason_insuccess() << endl;
             }
-            deliveryfile << setw(2) << setfill('0') << it->getDeliver_time().getHour() << ":" << it->getDeliver_time().getMinutes() << endl;
+            deliveryfile << setw(2) << setfill('0') << it->getDeliver_time().getDay() << "/" << setw(2) << setfill('0') <<  it->getDeliver_time().getMonth() << "/" << setw(4) << setfill('0') << it->getDeliver_time().getYear() << ", " << setw(2) << setfill('0') << it->getDeliver_time().getHour() << ":" << setw(2) << setfill('0') << it->getDeliver_time().getMinutes() << endl;
             deliveryfile << it->getTax();
             if (count1 != (deliveries_faro.size()))
                 deliveryfile << endl << "::::::::" << endl;

@@ -65,7 +65,7 @@ bool confirm_modifications(string action, string str);
  * @param d - objeto do tipo Time
  * @param s - string que pretendemos converter
  */
-void stringToHours(Time &d,string s);
+void stringToHours(Time &d,string str);
 /*
  * @brief Verifica se a hora inserida é válida
  * @param aux - hora no tipo string a ser verificada

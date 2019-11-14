@@ -52,8 +52,8 @@ int main() {
                 cin.clear();
                 cout << "Invalid character. Please insert a valid input: ";
                 getline(cin, verification);
-
             }
+            verification_int(verification);
             if (stoi(verification) == 0) {
                 return 0;
                 break;

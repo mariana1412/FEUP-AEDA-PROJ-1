@@ -293,18 +293,21 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
         index = int_sequential_search_c(Porto.getClients(), stoi(aux));
         if(index != -1){
             black = Porto.getClients().at(index).getBlack();
+            cliente = Porto.getClients().at(index);
         }
     }
     else if(base == "Lisboa"){
         index = int_sequential_search_c(Lisboa.getClients(), stoi(aux));
         if(index != -1){
             black = Lisboa.getClients().at(index).getBlack();
+            cliente = Lisboa.getClients().at(index);
         }
     }
     else if(base == "Faro"){
         index = int_sequential_search_c(Faro.getClients(), stoi(aux));
         if(index != -1){
             black = Faro.getClients().at(index).getBlack();
+            cliente = Faro.getClients().at(index);
         }
     }
 
@@ -331,15 +334,25 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
             verification_nif(aux);
             if(base == "Porto"){
                 index = int_sequential_search_c(Porto.getClients(), stoi(aux));
-                cliente = Porto.getClients().at(index);
+                if(index != -1){
+                    black = Porto.getClients().at(index).getBlack();
+                    cliente = Porto.getClients().at(index);
+                }
+
             }
             else if(base == "Lisboa"){
                 index = int_sequential_search_c(Lisboa.getClients(), stoi(aux));
-                cliente = Lisboa.getClients().at(index);
+                if(index != -1){
+                    black = Lisboa.getClients().at(index).getBlack();
+                    cliente = Lisboa.getClients().at(index);
+                }
             }
             else if(base == "Faro"){
                 index = int_sequential_search_c(Faro.getClients(), stoi(aux));
-                cliente = Faro.getClients().at(index);
+                if(index != -1){
+                    black = Faro.getClients().at(index).getBlack();
+                    cliente = Faro.getClients().at(index);
+                }
             }
         }
 
@@ -445,18 +458,6 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
         tax = 3;
     string answer;
     Delivery delivery(restaurant, order_time, products, nif, tax);
-    if (base == "Porto"){
-        Porto.addDelivery(delivery);
-        Porto.addDeliveryToDeliverer(delivery);
-    }
-    else if (base == "Lisboa") {
-        Lisboa.addDelivery(delivery);
-        Lisboa.addDeliveryToDeliverer(delivery);
-    }
-    else if (base == "Faro") {
-        Faro.addDelivery(delivery);
-        Faro.addDeliveryToDeliverer(delivery);
-    }
 
     int a,c,choice;
     vector<string> reasons = {"It did not arrived.", "It was not what I ordered.", "I was not at home at the time of delivery", "Wrong address", "Other"};
@@ -468,6 +469,7 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
     cout << "Was your order successfull? (Choose an integer number)"<<endl;
     cout << "1. Yes\t 2.No"<<endl;
     menu_int_options(a,1,2);
+    cin.ignore(1000, '\n');
     if(a==1){
         success=true;
         delivery.setSuccess(success);
@@ -482,27 +484,41 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
         }
         menu_int_options(choice, 1, 5);
         cin.ignore(1000,'\n');
-        delivery.setReason_insuccess(reasons[choice]);
+        delivery.setReason_insuccess(reasons[choice-1]);
     }
 
+    cout << "How long did it take to get your order? (in minutes) ";
+    getline(cin,s);
+    verification_int(s);
 
-    cout << "At what time did you get your order? (in the format hh:mm, if it wasn't successfull insert 00:00)";
+
+
+    cout << "At what time did you get your order? (in the format hh:mm, if it wasn't successfull, insert 00:00)";
     getline(cin,s);
     verification_hour(s);
     stringToHours(delivery_time,s);
+
+    while(!(delivery_time > order_time)){
+        cout << endl << "Invalid input. You ordered your product at " << order_time.getHour() << ":" << order_time.getMinutes() << ". Try again: ";
+        getline(cin,s);
+        verification_hour(s);
+        stringToHours(delivery_time,s);
+    }
+
     delivery.setDeliver_time(delivery_time);
     cout << "Did you pay your delivery? (Choose an integer option)";
     cout<< " 1.Yes \t 2.No"<<endl;
     menu_int_options(c,1,2);
+    cin.ignore(1000, '\n');
     if(c==2){
         if(base == "Porto"){
-            Porto.getClients()[index].setBlack(true);
+            Porto.addClientToBlacklist(Porto.getClients().at(index));
         }
         else if (base =="Lisboa"){
-            Lisboa.getClients()[index].setBlack(true);
+            Lisboa.addClientToBlacklist(Lisboa.getClients().at(index));
         }
         else if(base == "Faro ") {
-            Faro.getClients()[index].setBlack(true);
+            Faro.addClientToBlacklist(Faro.getClients().at(index));
         }
     }
     if(a==1){
@@ -512,5 +528,17 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
         cout << "We have saved your order's data. We apologize for any inconvenience! "<<endl;
     }
 
+    if (base == "Porto"){
+        Porto.addDelivery(delivery);
+        Porto.addDeliveryToDeliverer(delivery);
+    }
+    else if (base == "Lisboa") {
+        Lisboa.addDelivery(delivery);
+        Lisboa.addDeliveryToDeliverer(delivery);
+    }
+    else if (base == "Faro") {
+        Faro.addDelivery(delivery);
+        Faro.addDeliveryToDeliverer(delivery);
+    }
     return 1;
 }

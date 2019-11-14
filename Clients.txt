@@ -55,5 +55,5 @@ true
 Faro
 Pedro Queiros
 987654321
-Rua do Sol, 32
+Rua do Sol 32, Faro
 false
