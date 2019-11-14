@@ -52,7 +52,7 @@ void Client::setAddress(string address){
     this->address = address;
 }
 
-void Client::setBlack(bool black){
+void Client::setBlack(bool black) {
     this->black = black;
 }
 
@@ -145,4 +145,8 @@ ostream & operator<<(ostream &os, const Deliverer *d){
       <<"Income: " << d->getIncome() << endl
       <<"Vehicle: " << d->getVehicle() << endl;
     return os;
+}
+
+void Deliverer::addDelivery(Delivery delivery) {
+    background.push_back(delivery);
 }

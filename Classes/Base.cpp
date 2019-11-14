@@ -142,3 +142,45 @@ int Base::getIndexEmployee(string nif) const {
     }
     return -1;
 }
+
+void Base::addDeliveryToDeliverer(Delivery delivery) {
+    Deliverer* low_deliverer = new Deliverer;
+    low_deliverer->setBackground({});
+    for (vector<Employee*>::const_iterator it =  employees.begin(); it != employees.end(); it++){
+        Deliverer* nd = dynamic_cast<Deliverer*>(*it);
+        if (nd != nullptr){
+            if (low_deliverer->getBackground().size() == 0 || low_deliverer->getBackground().size() >= nd->getBackground().size())
+                low_deliverer = nd;
+        }
+    }
+    low_deliverer->addDelivery(delivery);
+}
+
+void Base::updateBases() {
+    for (vector<Client>::iterator it = clients.begin(); it != clients.end(); it++){
+        for (vector<Client>::const_iterator it1 = blacklist.begin(); it1 != blacklist.end(); it1++){
+            if (it->getNif() == it1->getNif())
+                (*it).setBlack(true);
+        }
+    }
+    float profit = 0;
+    for (vector<Restaurant>::iterator it = restaurants.begin(); it != restaurants.end(); it++){
+        for(vector<Delivery>::const_iterator it1 = deliveries.begin(); it1 != deliveries.end(); it1++){
+            if (it1->getRestaurant() == (*it))
+                profit += it1->getPrice();
+        }
+        it->setRevenue(profit);
+        profit = 0;
+    }
+    profit = 0;
+    for (vector<Employee*>::iterator it =  employees.begin(); it != employees.end(); it++) {
+        Deliverer *nd = dynamic_cast<Deliverer *>(*it);
+        if (nd != nullptr){
+            for (vector<Delivery>::const_iterator it1 = nd->getBackground().begin(); it1 != nd->getBackground().end(); it1++){
+                profit += it1->getTax();
+            }
+        }
+        (*it)->setIncome(profit);
+        profit = 0;
+    }
+}

@@ -1,5 +1,6 @@
 #include"Order.h"
 
+int Delivery::id_global = 1;
 
 Order::Order(Restaurant restaurant, Time time , vector<Product>products, int nif){
     this->time = time;
@@ -50,6 +51,7 @@ Delivery::Delivery(Restaurant restaurant, Time time , vector<Product> products, 
     this->deliver_time = deliver_time;
     this->tax = tax;
     this->final_price = this->price + this->tax;
+    id_global++;
 }
 
 int Delivery::getId() const {
@@ -113,6 +115,12 @@ ostream & operator<<(ostream &os, const Delivery &d){
     os << "Final price: " << d.getFinalPrice() << " euros" << endl;
 
     return os;
+}
+
+Delivery::Delivery(Restaurant restaurant, Time time, vector<Product> products, int nif, float tax): Order(restaurant, time , products, nif){
+    this->tax = tax;
+    this->id = id_global;
+    id_global++;
 }
 
 

@@ -1,8 +1,9 @@
 #include "Order_functions.h"
+#include <ctime>
 
-int searchByRestaurant(Base base, string name, Restaurant& restaurant)  {
+vector<int> searchByRestaurant(Base base, string name, Restaurant& restaurant)  {
     bool isValid;
-
+    vector<int> result;
     do{
         try {
             restaurant = base.searchRestaurant(name);
@@ -32,14 +33,24 @@ int searchByRestaurant(Base base, string name, Restaurant& restaurant)  {
     cout << endl << "Do you want to order a product? Choose the number of the product (insert 0 to return to the main menu): ";
     product_menu(option, 0, size);
     cin.ignore(1000, '\n');
-
-    return (option-1);
+    if (option == 0)
+        return {};
+    result.push_back(option-1);
+    while (option != 0) {
+        cout << endl << "Do you want to order another product? Insert 0 to complete the order: ";
+        product_menu(option, 0, size);
+        cin.ignore(1000, '\n');
+        if (option != 0)
+            result.push_back(option-1);
+    }
+    return result;
 }
 
-int searchByArea(Base b, string base, string county, Restaurant& restaurant){
+vector<int> searchByArea(Base b, string base, string county, Restaurant& restaurant){
 
     bool isValid;
     int option;
+    vector<int> result;
 
     do{
         try {
@@ -77,14 +88,14 @@ int searchByArea(Base b, string base, string county, Restaurant& restaurant){
 
     if(counter == 0){
         cout << endl << "There are no restaurants in this county!" << endl;
-        return -1;
+        return {};
     }
 
     cout << "0. Return to Main Menu" << endl;
     cout << "Now choose the restaurant: " ;
     product_menu(option, 0, counter);
 
-    if(option == 0) return -1;
+    if(option == 0) return {};
 
     restaurant = b.getRestaurants()[index[option]];
     size = restaurant.getProducts().size();
@@ -99,15 +110,25 @@ int searchByArea(Base b, string base, string county, Restaurant& restaurant){
     cout << endl << "Do you want to order a product? Choose the number of the product (insert 0 to return to the main menu): ";
     product_menu(option, 0, size);
     cin.ignore(1000, '\n');
-
-    return (option-1);
+    if (option == 0)
+        return {};
+    result.push_back(option-1);
+    while (option != 0) {
+        cout << endl << "Do you want to order another product? Insert 0 to complete the order: ";
+        product_menu(option, 0, size);
+        cin.ignore(1000, '\n');
+        if (option != 0)
+            result.push_back(option-1);
+    }
+    return result;
 
 }
 
-int searchByPrice(Base base, float pmax, Restaurant& restaurant){
+vector<int> searchByPrice(Base base, float pmax, Restaurant& restaurant){
 
     vector<pair<Restaurant, int>> products;
     int size1 = base.getRestaurants().size(), size2;
+    vector<int> result;
 
     for(int i = 0; i < size1; i++){
         size2 = base.getRestaurants()[i].getProducts().size();
@@ -120,7 +141,7 @@ int searchByPrice(Base base, float pmax, Restaurant& restaurant){
 
     if(products.empty()){
         cout << endl << "There are no products in this price range." << endl;
-        return -1;
+        return {};
     }
 
     cout << endl;
@@ -130,21 +151,26 @@ int searchByPrice(Base base, float pmax, Restaurant& restaurant){
     }
 
     int option;
-    cout << "0. Return to Main Menu" << endl;
     cout << endl << "Do you want to order a product? Choose the number of the product (insert 0 to return to the main menu): ";
     product_menu(option, 0, size);
     cin.ignore(1000, '\n');
-
-    if(option == 0) return -1;
-
-    restaurant = products[option-1].first;
-
-    return products[option-1].second;
+    if (option == 0)
+        return {};
+    result.push_back(products[option-1].second);
+    while (option != 0) {
+        cout << endl << "Do you want to order another product? Insert 0 to complete the order: ";
+        product_menu(option, 0, size);
+        cin.ignore(1000, '\n');
+        if (option != 0)
+            result.push_back(products[option-1].second);
+    }
+    return result;
 }
 
-int searchByTypeOfFood(Base base, string type_of_food, Restaurant& restaurant){
+vector<int> searchByTypeOfFood(Base base, string type_of_food, Restaurant& restaurant){
     vector<pair<Restaurant, int>> products;
     int size1 = base.getRestaurants().size(), size2;
+    vector<int> result;
 
     for(int i = 0; i < size1; i++){
         size2 = base.getRestaurants()[i].getProducts().size();
@@ -157,7 +183,7 @@ int searchByTypeOfFood(Base base, string type_of_food, Restaurant& restaurant){
 
     if(products.empty()){
         cout << endl << "There are no products with this type of food." << endl;
-        return -1;
+        return {};
     }
 
     cout << endl;
@@ -167,20 +193,24 @@ int searchByTypeOfFood(Base base, string type_of_food, Restaurant& restaurant){
     }
 
     int option;
-    cout << "0. Return to Main Menu" << endl;
     cout << endl << "Do you want to order a product? Choose the number of the product (insert 0 to return to the main menu): ";
     product_menu(option, 0, size);
     cin.ignore(1000, '\n');
-
-    if(option == 0) return -1;
-
-    restaurant = products[option-1].first;
-
-    return products[option-1].second;
+    if (option == 0)
+        return {};
+    result.push_back(products[option-1].second);
+    while (option != 0) {
+        cout << endl << "Do you want to order another product? Insert 0 to complete the order: ";
+        product_menu(option, 0, size);
+        cin.ignore(1000, '\n');
+        if (option != 0)
+            result.push_back(products[option-1].second);
+    }
+    return result;
 }
 
 int create_order(Base &Porto, Base &Lisboa, Base &Faro){
-
+    Client cliente;
     string base;
     int option;
     cout << endl << endl << "-------------- CREATE ORDER --------------" << endl << endl;
@@ -232,8 +262,8 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
     }
 
     while(index == -1){
-        cout << "The client inserted does not exist. You have to create an account to order a product." << endl
-        << "Do you want to: " << endl << "1. Try again" << endl << "2. Return to Main Menu" << endl;
+        cout << "The inserted client does not exist. You have to create an account to order a product." << endl
+             << "Do you want to: " << endl << "1. Try again" << endl << "2. Return to Main Menu" << endl;
 
         menu_int_options(option, 1, 2);
         cin.ignore(1000, '\n');
@@ -247,100 +277,135 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
                 getline(cin, aux);
             }
             verification_nif(aux);
-            if(base == "Porto") index = int_sequential_search_c(Porto.getClients(), stoi(aux));
-            else if(base == "Lisboa") index = int_sequential_search_c(Lisboa.getClients(), stoi(aux));
-            else if(base == "Faro") index = int_sequential_search_c(Faro.getClients(), stoi(aux));
+            if(base == "Porto"){
+                index = int_sequential_search_c(Porto.getClients(), stoi(aux));
+                cliente = Porto.getClients().at(index);
+            }
+            else if(base == "Lisboa"){
+                index = int_sequential_search_c(Lisboa.getClients(), stoi(aux));
+                cliente = Lisboa.getClients().at(index);
+            }
+            else if(base == "Faro"){
+                index = int_sequential_search_c(Faro.getClients(), stoi(aux));
+                cliente = Faro.getClients().at(index);
+            }
         }
 
         else {
             return 1;
         }
     }
-    while (true) {
-        cout << "Which search method do you want?" << endl;
-        cout << "1. Restaurant" << endl;
-        cout << "2. Area" << endl;
-        cout << "3. Price" << endl;
-        cout << "4. Type of culinary" << endl;
-        cout << "0. Return to Main Menu" << endl;
+    int nif = stoi(aux);
+    cout << "Which search method do you want?" << endl;
+    cout << "1. Restaurant" << endl;
+    cout << "2. Area" << endl;
+    cout << "3. Price" << endl;
+    cout << "4. Type of culinary" << endl;
+    cout << "0. Return to Main Menu" << endl;
 
-        menu_int_options(option, 0, 4);
-        cin.ignore(1000, '\n');
+    menu_int_options(option, 0, 4);
+    cin.ignore(1000, '\n');
 
-        int indprod;
-        Restaurant restaurant;
-        string auxiliar;
+    vector<int> indprod;
+    Restaurant restaurant;
+    string auxiliar;
 
-        if (option == 0) {
-            return 1;
-        } else if (option == 1) {
-            cout << endl << endl;
-            cout << "Restaurant's name: ";
-            getline(cin, auxiliar);
-            while (cin.fail() && cin.eof()) {
-                cin.clear();
-                cout << "Invalid character. Please insert a valid input:";
-                getline(cin, auxiliar);
-            }
-            formatting_string(auxiliar);
-            if (base == "Porto") indprod = searchByRestaurant(Porto, auxiliar, restaurant);
-            else if (base == "Lisboa") indprod = searchByRestaurant(Lisboa, auxiliar, restaurant);
-            else if (base == "Faro") indprod = searchByRestaurant(Faro, auxiliar, restaurant);
-        } else if (option == 2) {
-            cout << endl << endl << "Restaurant's county: ";
-            getline(cin, auxiliar);
-
-            while (cin.fail() && cin.eof()) {
-                cin.clear();
-                cout << "Invalid character. Please insert a valid input: ";
-                getline(cin, auxiliar);
-            }
-            verification_all_letters(auxiliar);
-
-            if (base == "Porto") indprod = searchByArea(Porto, base, auxiliar, restaurant);
-            else if (base == "Lisboa") indprod = searchByArea(Lisboa, base, auxiliar, restaurant);
-            else if (base == "Faro") indprod = searchByArea(Faro, base, auxiliar, restaurant);
-        } else if (option == 3) {
-            cout << endl << endl << "Maximum price: ";
-            getline(cin, auxiliar);
-
-            while (cin.fail() && cin.eof()) {
-                cin.clear();
-                cout << "Invalid character. Please insert a valid input: ";
-                getline(cin, auxiliar);
-            }
-            verification_float(auxiliar);
-
-            if (base == "Porto") indprod = searchByPrice(Porto, stof(auxiliar), restaurant);
-            else if (base == "Lisboa") indprod = searchByPrice(Lisboa, stof(auxiliar), restaurant);
-            else if (base == "Faro") indprod = searchByPrice(Faro, stof(auxiliar), restaurant);
-        } else if (option == 4) {
-            cout << endl << endl << "Type of food: ";
-            getline(cin, auxiliar);
-
-            while (cin.fail() && cin.eof()) {
-                cin.clear();
-                cout << "Invalid character. Please insert a valid input: ";
-                getline(cin, auxiliar);
-            }
-            verification_all_letters(auxiliar);
-
-            if (base == "Porto") indprod = searchByTypeOfFood(Porto, auxiliar, restaurant);
-            else if (base == "Lisboa") indprod = searchByTypeOfFood(Lisboa, auxiliar, restaurant);
-            else if (base == "Faro") indprod = searchByTypeOfFood(Faro, auxiliar, restaurant);
-        }
-
-
-        cout << endl;
-        cout << "1. Return to Main Menu" << endl;
-        cout << "2. Add another product to the order" << endl;
-        menu_int_options(option, 1, 2);
-        if (option == 1)
-            return option;
-        else if (option == 2)
-            continue;
+    if(option == 0){
+        return 1;
     }
+
+    else if(option == 1){
+        cout << endl << endl;
+        cout << "Restaurant's name: ";
+        getline(cin, auxiliar);
+        while (cin.fail() && cin.eof()) {
+            cin.clear();
+            cout << "Invalid character. Please insert a valid input:";
+            getline(cin, auxiliar);
+        }
+        formatting_string(auxiliar);
+        if(base == "Porto") indprod = searchByRestaurant(Porto, auxiliar, restaurant);
+        else if(base == "Lisboa") indprod = searchByRestaurant(Lisboa, auxiliar, restaurant);
+        else if(base == "Faro") indprod = searchByRestaurant(Faro, auxiliar, restaurant);
+    }
+
+    else if(option == 2){
+        cout << endl << endl << "Restaurant's county: ";
+        getline(cin, auxiliar);
+
+        while(cin.fail() && cin.eof()){
+            cin.clear();
+            cout << "Invalid character. Please insert a valid input: ";
+            getline(cin, auxiliar);
+        }
+        verification_all_letters(auxiliar);
+
+        if(base == "Porto") indprod = searchByArea(Porto, base, auxiliar, restaurant);
+        else if(base == "Lisboa") indprod = searchByArea(Lisboa, base, auxiliar, restaurant);
+        else if(base == "Faro") indprod = searchByArea(Faro, base, auxiliar, restaurant);
+    }
+
+    else if(option == 3){
+        cout << endl << endl << "Maximum price: ";
+        getline(cin, auxiliar);
+
+        while(cin.fail() && cin.eof()){
+            cin.clear();
+            cout << "Invalid character. Please insert a valid input: ";
+            getline(cin, auxiliar);
+        }
+        verification_float(auxiliar);
+
+        if(base == "Porto") indprod = searchByPrice(Porto, stof(auxiliar), restaurant);
+        else if(base == "Lisboa") indprod = searchByPrice(Lisboa, stof(auxiliar), restaurant);
+        else if(base == "Faro") indprod = searchByPrice(Faro, stof(auxiliar), restaurant);
+    }
+    else if(option == 4){
+        cout << endl << endl << "Type of food: ";
+        getline(cin, auxiliar);
+
+        while(cin.fail() && cin.eof()){
+            cin.clear();
+            cout << "Invalid character. Please insert a valid input: ";
+            getline(cin, auxiliar);
+        }
+        verification_all_letters(auxiliar);
+
+        if(base == "Porto") indprod = searchByTypeOfFood(Porto, auxiliar, restaurant);
+        else if(base == "Lisboa") indprod = searchByTypeOfFood(Lisboa, auxiliar, restaurant);
+        else if(base == "Faro") indprod = searchByTypeOfFood(Faro, auxiliar, restaurant);
+    }
+    if(indprod.size() == 0){
+        cout << endl << "Operation was canceled." << endl;
+        return 1;
+    }
+    time_t now = time(0);
+    tm* gmtm = gmtime(&now);
+    Time order_time((*gmtm).tm_hour,(*gmtm).tm_min,(*gmtm).tm_mday,(*gmtm).tm_mon,(*gmtm).tm_year);
+    vector<Product> products;
+    for (int i = 0; i < indprod.size(); i++){
+        products.push_back(restaurant.getProducts().at(i));
+    }
+    float tax;
+    if (cliente.getCounty() != restaurant.getCounty())
+        tax = 5;
+    else
+        tax = 3;
+    string answer;
+    Delivery delivery(restaurant, order_time, products, nif, tax);
+    if (base == "Porto"){
+        Porto.addDelivery(delivery);
+        Porto.addDeliveryToDeliverer(delivery);
+    }
+    else if (base == "Lisboa") {
+        Lisboa.addDelivery(delivery);
+        Lisboa.addDeliveryToDeliverer(delivery);
+    }
+    else if (base == "Faro") {
+        Faro.addDelivery(delivery);
+        Faro.addDeliveryToDeliverer(delivery);
+    }
+    return 1;
+
+    //AINDA ESTÁ POR TERMINAR
 }
-
-
-

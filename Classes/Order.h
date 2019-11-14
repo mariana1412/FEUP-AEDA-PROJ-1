@@ -81,6 +81,7 @@ public:
 
 class Delivery : public Order {
 private:
+    static int id_global; /**id global para saber a próxima entrega<*/
     int id;/**id da entrega<*/
     bool success;/**< sucesso ou insucesso da entrega*/
     string reason_insuccess;/**< motivo de insucesso*/
@@ -105,6 +106,16 @@ public:
      * @param tax - taxa de entrega
 */
     Delivery(Restaurant restaurant, Time time , vector<Product> products,int nif, int id, bool success, string reason_insuccess, Time deliver_time, float tax);
+    /**
+   * @brief Construtor da classe Delivery
+        * @param restaurant - restaurante a que é feita a encomenda
+        * @param time - tempo exato em que é feita a encomenda
+        * @param products - produtos encomendados
+        * @param nif - nif do cliente que faz a encomenda
+        * @param tax - taxa de entrega
+   */
+
+    Delivery(Restaurant restaurant, Time time , vector<Product> products,int nif, float tax);
     /**
 * @brief Permite obter o id da entrega
      * @return Retorna o id da entrega

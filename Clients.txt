@@ -26,7 +26,7 @@ Lisboa
 André Daniel Gomes
 210874562
 Rua 25 de Abril 96, Lisboa
-false
+true
 ::::::::
 Lisboa
 Ana Rita Matos
@@ -44,10 +44,10 @@ Faro
 Diogo Henrique Almeida
 287600789
 Rua de Estudante 78, Faro
-false
+true
 ::::::::
 Faro
 Ana Luisa Matos
 287561236
 Rua de Carreira Cova 21, Faro
-false
+true

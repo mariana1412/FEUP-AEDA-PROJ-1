@@ -257,6 +257,11 @@ public:
 * @param d - entregador que pretendemos mostrar no ecrã
 */
     friend ostream & operator<<(ostream &os, const Deliverer *d);
+/**
+     * @brief Permite adicionar uma encomenda a um deliverer
+    * @param delivery - encomenda a adicionar
+     */
+    void addDelivery(Delivery delivery);
 
 };
 

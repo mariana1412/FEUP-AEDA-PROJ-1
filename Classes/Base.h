@@ -170,6 +170,15 @@ public:
     * @return Index do funcionário no vetor de funcionários da base
      */
     int getIndexEmployee(string nif) const;
+/**
+     * @brief Permite distribuir uma encomenda pelo deliverer com menos encomendas
+    * @param delivery - encomenda a distribuir
+     */
+    void addDeliveryToDeliverer(Delivery delivery);
+/**
+     * @brief Atualiza informações acerca das bases (revenues, valor de black no cliente)
+     */
+    void updateBases();
 
 };
 
