@@ -29,7 +29,7 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro);
  * @param base - informação da base
  * @param name - nome do restaurante a procurar
  * @param restaurant - restaurante escolhido
- * @return indice do produto escolhido
+ * @return vetor dos indices dos produtos escolhidos do restaurant
  */
 vector<int> searchByRestaurant(Base base, string name, Restaurant &restaurant);
 
@@ -39,7 +39,7 @@ vector<int> searchByRestaurant(Base base, string name, Restaurant &restaurant);
  * @param base - nome da base
  * @param county - concelho do restaurante a procurar
  * @param restaurant - restaurante escolhido
- * @return indice do produto escolhido
+ * @return vetor dos indices dos produtos escolhidos do restaurant
  */
 vector<int> searchByArea(Base b, string base, string county, Restaurant& restaurant);
 
@@ -48,7 +48,7 @@ vector<int> searchByArea(Base b, string base, string county, Restaurant& restaur
  * @param base - informação da base
  * @param pmax - preço máximo do produto
  * @param restaurant - restaurante escolhido
- * @return indice do produto escolhido
+ * @return vetor dos indices dos produtos escolhidos do restaurant
  */
 vector<int> searchByPrice(Base base, float pmax, Restaurant& restaurant);
 
@@ -57,7 +57,7 @@ vector<int> searchByPrice(Base base, float pmax, Restaurant& restaurant);
  * @param base - informação da base
  * @param type_of_food - tipo de comida do produto
  * @param restaurant - restaurante escolhido
- * @return indice do produto escolhido
+ * @return vetor dos indices dos produtos escolhidos do restaurant
  */
 vector<int> searchByTypeOfFood(Base base, string type_of_food, Restaurant& restaurant);
 

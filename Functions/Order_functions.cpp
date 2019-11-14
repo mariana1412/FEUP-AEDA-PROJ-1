@@ -36,7 +36,13 @@ vector<int> searchByRestaurant(Base base, string name, Restaurant& restaurant)  
     if (option == 0)
         return {};
     result.push_back(option-1);
+
+    cout << endl;
     while (option != 0) {
+        cout << " --> " << restaurant.getName() << ", " << restaurant.getCounty() << endl;
+        for(int i = 0; i < size; i++){
+            cout << "Product " << i+1 <<  ": " << restaurant.getProducts()[i] << endl;
+        }
         cout << endl << "Do you want to order another product? Insert 0 to complete the order: ";
         product_menu(option, 0, size);
         cin.ignore(1000, '\n');
@@ -112,9 +118,16 @@ vector<int> searchByArea(Base b, string base, string county, Restaurant& restaur
     cin.ignore(1000, '\n');
     if (option == 0)
         return {};
+
     result.push_back(option-1);
+
+    cout << endl;
     while (option != 0) {
-        cout << endl << "Do you want to order another product? Insert 0 to complete the order: ";
+        cout << " --> " << restaurant.getName() << ", " << restaurant.getCounty() << endl;
+        for(int i = 0; i < size; i++){
+            cout << "Product " << i+1 <<  ": " << restaurant.getProducts()[i] << endl;
+        }
+        cout << endl << "Do you want to order another product from the same restaurant? Insert 0 to complete the order: ";
         product_menu(option, 0, size);
         cin.ignore(1000, '\n');
         if (option != 0)
@@ -154,15 +167,31 @@ vector<int> searchByPrice(Base base, float pmax, Restaurant& restaurant){
     cout << endl << "Do you want to order a product? Choose the number of the product (insert 0 to return to the main menu): ";
     product_menu(option, 0, size);
     cin.ignore(1000, '\n');
+
     if (option == 0)
         return {};
+
     result.push_back(products[option-1].second);
+    restaurant = products[option-1].first;
+
+    vector<int> index;
+
+    cout << endl;
     while (option != 0) {
-        cout << endl << "Do you want to order another product? Insert 0 to complete the order: ";
-        product_menu(option, 0, size);
+        size = products.size();
+        cout << " --> " << restaurant.getName() << ", " << restaurant.getCounty() << endl;
+        for(int i = 0; i<size; i++){
+            if(products[i].first == restaurant){
+                index.push_back(products[i].second);
+                cout << "Product " << index.size() << ": " << restaurant.getProducts()[products[i].second]  << endl;
+            }
+        }
+        cout << endl << "Do you want to order another product from the same restaurant? Insert 0 to complete the order: ";
+        product_menu(option, 0, index.size());
         cin.ignore(1000, '\n');
         if (option != 0)
-            result.push_back(products[option-1].second);
+            result.push_back(index[option - 1]);
+
     }
     return result;
 }
@@ -196,16 +225,33 @@ vector<int> searchByTypeOfFood(Base base, string type_of_food, Restaurant& resta
     cout << endl << "Do you want to order a product? Choose the number of the product (insert 0 to return to the main menu): ";
     product_menu(option, 0, size);
     cin.ignore(1000, '\n');
+
     if (option == 0)
         return {};
+
     result.push_back(products[option-1].second);
+    restaurant = products[option-1].first;
+
+    vector<int> index;
+
+    cout << endl;
     while (option != 0) {
-        cout << endl << "Do you want to order another product? Insert 0 to complete the order: ";
-        product_menu(option, 0, size);
+        size = products.size();
+        cout << " --> " << restaurant.getName() << ", " << restaurant.getCounty() << endl;
+        for(int i = 0; i<size; i++){
+            if(products[i].first == restaurant){
+                index.push_back(products[i].second);
+                cout << "Product " << index.size() << ": " << restaurant.getProducts()[products[i].second]  << endl;
+            }
+        }
+        cout << endl << "Do you want to order another product from the same restaurant? Insert 0 to complete the order: ";
+        product_menu(option, 0, index.size());
         cin.ignore(1000, '\n');
         if (option != 0)
-            result.push_back(products[option-1].second);
+            result.push_back(index[option - 1]);
+
     }
+
     return result;
 }
 
