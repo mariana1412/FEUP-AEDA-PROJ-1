@@ -196,3 +196,40 @@ void verification_float(string &aux){
         }
     }
 }
+
+Time verification_time(string &aux) {
+
+    bool isValid = false;
+    Time date;
+
+    while (!isValid || aux == "") {
+        if (aux != "") {
+            remove_extra_whitespaces(aux);
+            int del1 = aux.find_first_of('/'), del2 = aux.find_last_of('/'), del3 = aux.find_last_of(','), del4 = aux.find_last_of(':');
+
+            if(aux.size() != 17 || (count(aux.begin(), aux.end(), '/') != 2 && count(aux.begin(), aux.end(), '/') != 1 && count(aux.begin(), aux.end(), '/') != 1)|| (del1 != 2 && del2 != 5 && del3 != 10 && del4 != 14) || !(isNumber(aux.substr(0, 2)) && isNumber(aux.substr(3, 2)) && isNumber(aux.substr(6, 4)) && isNumber(aux.substr(12, 2)) && isNumber(aux.substr(15, 2)) && aux.at(11) == ' ')) {
+                isValid = false;
+            }
+            else if (stringToTime(aux).isValid()){
+                date = stringToDate(aux);
+                isValid = true;
+            }
+            else if(!stringToTime(aux).isValid()){
+                isValid = false;
+            }
+            else {
+                isValid = true;
+            }
+        }
+        if (!isValid) {
+            cout << "Invalid time (format: dd/mm/yyyy, hh:mm). Please insert a valid one: ";
+            getline(cin, aux);
+            if (cin.fail() && cin.eof()) {
+                cin.clear();
+                continue;
+            }
+        }
+    }
+
+    return date;
+}

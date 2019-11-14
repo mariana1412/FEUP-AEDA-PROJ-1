@@ -64,5 +64,12 @@ void verification_base(string &aux);
  */
 void verification_float(string &aux);
 
+/**
+ * @brief Função que verifica se uma string é uma data válida, formato: dd/mm/yyyy, hh:mm
+ * @parsam aux - string
+ * @return data válida
+ */
+Time verification_time(string &aux);
+
 #endif //PROJETO_VERIFICATIONS_INPUTS_H
 

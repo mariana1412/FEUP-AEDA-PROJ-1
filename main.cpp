@@ -28,6 +28,7 @@ int main() {
     int op, boss_nif, user;
     string verification;
 
+    system("cls");
 
     cout<< "Welcome to Ugh Eats! We are going to tranform your lunch/dinner in a unforgetable gastronomical experience!\n"<< endl << endl;
     extract_Clients(Porto, Lisboa, Faro);
@@ -61,6 +62,7 @@ int main() {
             verification_nif(verification);
             if (user == 1) {
                 if (comp.getBossNif() == stoi(verification)) {
+                    system("cls");
                     cout << "Logged in as Boss" << endl;
                     break;
                 }
@@ -68,6 +70,7 @@ int main() {
             else if (user == 2) {
                 if (Porto.getManagerNif() == stoi(verification) || Lisboa.getManagerNif() == stoi(verification) ||
                     Faro.getManagerNif() == stoi(verification)) {
+                    system("cls");
                     cout << "Logged in as Manager" << endl;
                     break;
                 }
@@ -75,6 +78,7 @@ int main() {
             else if (user == 3) {
                 if (stringToAdminSearch(verification, Porto) || stringToAdminSearch(verification, Lisboa) ||
                     stringToAdminSearch(verification, Faro)) {
+                    system("cls");
                     cout << "Logged in as an admin" << endl;
                     break;
                 }
@@ -84,6 +88,7 @@ int main() {
     }
     if(user ==4){
         is_client = true;
+        system("cls");
     }
 
     int menu;

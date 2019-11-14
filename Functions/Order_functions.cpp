@@ -281,7 +281,7 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
     int index;
     bool black;
 
-    cout << "What's your nif?" << endl;
+    cout << "What's your nif?";
     getline(cin, aux);
     while (cin.fail() && cin.eof()) {
         cin.clear();
@@ -487,25 +487,30 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
         delivery.setReason_insuccess(reasons[choice-1]);
     }
 
-    cout << "How long did it take to get your order? (in minutes) ";
-    getline(cin,s);
-    verification_int(s);
-
-
-
-    cout << "At what time did you get your order? (in the format hh:mm, if it wasn't successfull, insert 00:00)";
-    getline(cin,s);
-    verification_hour(s);
-    stringToHours(delivery_time,s);
-
-    while(!(delivery_time > order_time)){
-        cout << endl << "Invalid input. You ordered your product at " << order_time.getHour() << ":" << order_time.getMinutes() << ". Try again: ";
+    if(success){
+        cout << "At what time did you get your order? (in the format 'dd/mm/yyyy, hh:mm')";
         getline(cin,s);
-        verification_hour(s);
-        stringToHours(delivery_time,s);
+        while (cin.fail() && cin.eof()) {
+            cin.clear();
+            cout << "Invalid character. Please insert a valid input: ";
+            getline(cin, s);
+        }
+        verification_time(s);
+        delivery_time = stringToTime(s);
+        while(!(delivery_time > order_time)){
+            cout << endl << "Invalid input. You ordered your product at " << order_time << ", " << setw(2) << setfill('0') << order_time.getHour() <<  ":" << setw(2) << setfill('0') << order_time.getMinutes() << ". Try again: ";
+            getline(cin,s);
+            if (cin.fail() && cin.eof()) {
+                cin.clear();
+                continue;
+            }
+            verification_time(s);
+            delivery_time = stringToTime(s);
+        }
+
+        delivery.setDeliver_time(delivery_time);
     }
 
-    delivery.setDeliver_time(delivery_time);
     cout << "Did you pay your delivery? (Choose an integer option)";
     cout<< " 1.Yes \t 2.No"<<endl;
     menu_int_options(c,1,2);
