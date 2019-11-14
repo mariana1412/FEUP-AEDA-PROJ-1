@@ -54,6 +54,7 @@ CMakeFiles/projeto.dir/Classes/Product.cpp.obj: ../Classes/Product.h
 CMakeFiles/projeto.dir/Classes/Restaurant.cpp.obj: ../Classes/Product.h
 CMakeFiles/projeto.dir/Classes/Restaurant.cpp.obj: ../Classes/Restaurant.cpp
 CMakeFiles/projeto.dir/Classes/Restaurant.cpp.obj: ../Classes/Restaurant.h
+CMakeFiles/projeto.dir/Classes/Restaurant.cpp.obj: ../Classes/Time.h
 CMakeFiles/projeto.dir/Classes/Restaurant.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Classes/Restaurant.cpp.obj: ../Functions/utils.h
 
@@ -225,6 +226,7 @@ CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.obj: ../Functions/WriteToFile.c
 CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.obj: ../Functions/WriteToFile.h
 CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.obj: ../Functions/utils.h
 
+CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Classes/Time.h
 CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Functions/Exceptions.h
 CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Functions/utils.cpp
 CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Functions/utils.h

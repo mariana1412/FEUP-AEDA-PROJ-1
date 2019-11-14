@@ -14,7 +14,7 @@
 
 const vector<string> nearby_Porto = { "Matosinhos", "Vila Nova de Gaia", "Maia", "Gondomar", "Porto" };
 const vector<string> nearby_Lisboa = { "Oeiras", "Loures", "Amadora", "Odivelas","Lisboa" };
-const vector<string> nearby_Faro = { "Loulé","Olhão", "São Brás de Alportel","Faro" };
+const vector<string> nearby_Faro = { "Loule","Olhao", "Sao Bras de Alportel","Faro" };
 
 using namespace std;
 
@@ -842,13 +842,9 @@ int main() {
 
             }
             else if(menu == 2){
-                aux=0;
-                create_order(Porto, Lisboa, Faro);
+                aux=create_order(Porto, Lisboa, Faro);
                 if(aux==1){
-                    break;
-                }
-                else if (aux == 2){
-                    menu = 2;
+                    continue;
                 }
                 else if(aux==0){
                     menu = 0;

@@ -244,48 +244,6 @@ int ProfitByTimeInterval(Base p, Base l , Base f){
     menu_int_options(option,1,2);
     return option;
 }
-void stringToHours(Time &d,string s){
-    string delimiter =":",aux;
-    size_t pos=0;
-    vector<int> hours;
-    while ((pos = s.find(delimiter)) != std::string::npos) {
-        aux =  s.substr(0, pos);
-        formatting_string(aux);
-        hours.push_back(stoi(aux));
-        s.erase(0, pos + delimiter.length());
-    }
-
-    d.setHour(hours[0]);
-    d.setMinutes(hours[1]);
-}
-void verification_hour(string &aux){
-    bool isValid = false;
-
-    while (!isValid || aux == "") {
-        if (aux != "") {
-            remove_all_whitespaces(aux);
-            int del1 = aux.find_first_of(':');
-            if(aux.size() !=5  || count(aux.begin(), aux.end(), ':') != 1 || del1 !=2 || !(isNumber(aux.substr(0, 2)) && isNumber(aux.substr(3, 2)) )) {
-                isValid = false;
-            }
-            else if (stoi(aux.substr(0,2))>24 || stoi(aux.substr(0,2))<0||stoi(aux.substr(3,2))>60 ||stoi(aux.substr(0,2))<0){
-                isValid = false;
-            }
-            else {
-                isValid = true;
-            }
-        }
-        if (!isValid) {
-            cout << "Invalid hour (format: hh:mm). Please insert a valid one: ";
-            getline(cin, aux);
-            if (cin.fail() && cin.eof()) {
-                cin.clear();
-                continue;
-            }
-        }
-    }
-
-}
 
 int string_sequential_search_aux(const vector<Client> &v, string x) {//retorna o indice do vetor onde se encontra x
     for ( unsigned int i = 0; i < v.size(); i++)

@@ -3,7 +3,7 @@ Japanese
 Avenida de Matosinhos 23, Matosinhos
 Japonesa
 Temaki, Japonesa, 5.5
-11
+22
 ::::::::
 Porto
 Pay The P Rice
@@ -35,7 +35,7 @@ Tacos, Mexicana, 4.2 / Nachos, Mexicana, 5.25
 ::::::::
 Faro
 Alentejano
-Rua Do Sol, 55
+Rua Do Sol 55, Loule
 Portuguesa, Italiana
 Alentejana, Portuguesa, 10.5 / Pao De Alho, Italiana, 2
 0
