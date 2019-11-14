@@ -46,7 +46,7 @@ int main() {
     menu_int_options(user, 1, 4);
     cin.ignore(1000, '\n');
     if (user != 4) {
-        cout << "Please enter your NIF(Press 0 to exit the program):";
+        cout << "Please enter your NIF (insert 0 to exit the program):";
         while (true) {
             getline(cin, verification);
             while (cin.fail() && cin.eof()) {
@@ -822,7 +822,7 @@ int main() {
                         }
                     }
                     else if(choice == 2){
-                        //aux = modifyData(Porto, Lisboa, Faro, is_client);
+                        aux = modifyData(Porto, Lisboa, Faro);
                         if(aux==1){
                             break;
                         }
