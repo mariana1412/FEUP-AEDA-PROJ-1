@@ -1,6 +1,11 @@
 #include "Order_functions.h"
 #include <ctime>
 
+bool comparePrice(const pair<Restaurant, int> &p1, const pair<Restaurant, int> &p2){
+    if(p1.first.getProducts()[p1.second].getPrice() < p2.first.getProducts()[p2.second].getPrice()) return true;
+    return false;
+}
+
 vector<int> searchByRestaurant(Base base, string name, Restaurant& restaurant)  {
     bool isValid;
     vector<int> result;
@@ -157,6 +162,7 @@ vector<int> searchByPrice(Base base, float pmax, Restaurant& restaurant){
         return {};
     }
 
+    sort(products.begin(), products.end(), comparePrice);
     cout << endl;
     int size = products.size();
     for(int i = 0; i<size; i++){
@@ -427,7 +433,7 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
     }
     time_t now = time(0);
     tm* gmtm = gmtime(&now);
-    Time order_time((*gmtm).tm_hour,(*gmtm).tm_min,(*gmtm).tm_mday,(*gmtm).tm_mon,(*gmtm).tm_year);
+    Time order_time((*gmtm).tm_hour,(*gmtm).tm_min,(*gmtm).tm_mday,(*gmtm).tm_mon+1,(*gmtm).tm_year+1900);
     vector<Product> products;
     for (int i = 0; i < indprod.size(); i++){
         products.push_back(restaurant.getProducts().at(i));

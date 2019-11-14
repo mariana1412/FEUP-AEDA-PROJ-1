@@ -61,5 +61,13 @@ vector<int> searchByPrice(Base base, float pmax, Restaurant& restaurant);
  */
 vector<int> searchByTypeOfFood(Base base, string type_of_food, Restaurant& restaurant);
 
+/**
+ * @brief Função que compara dois pairs usando como parametro de comparação o preço do produto
+ * @param p1 - primeiro pair a comparar
+ * @param p2 - segundo pair a comparar
+ * @return true se o preço do produto dado por p1 é menor que o preço do produto dado por p2
+ */
+bool comparePrice(const pair<Restaurant, int> &p1, const pair<Restaurant, int> &p2);
+
 
 #endif //PROJETO_ORDER_FUNCTIONS_H

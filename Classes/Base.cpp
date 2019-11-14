@@ -166,7 +166,7 @@ void Base::updateBases() {
     float profit = 0;
     for (vector<Restaurant>::iterator it = restaurants.begin(); it != restaurants.end(); it++){
         for(vector<Delivery>::const_iterator it1 = deliveries.begin(); it1 != deliveries.end(); it1++){
-            if (it1->getRestaurant() == (*it))
+            if (it1->getRestaurant().getName() == (*it).getName())
                 profit += it1->getPrice();
         }
         it->setRevenue(profit);
