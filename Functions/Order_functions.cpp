@@ -435,7 +435,7 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
     tm* gmtm = gmtime(&now);
     Time order_time((*gmtm).tm_hour,(*gmtm).tm_min,(*gmtm).tm_mday,(*gmtm).tm_mon+1,(*gmtm).tm_year+1900);
     vector<Product> products;
-    for (int i = 0; i < indprod.size(); i++){
+    for (int i: indprod){
         products.push_back(restaurant.getProducts().at(i));
     }
     float tax;
@@ -457,7 +457,9 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
         Faro.addDelivery(delivery);
         Faro.addDeliveryToDeliverer(delivery);
     }
-    return 1;
 
-    //AINDA ESTÁ POR TERMINAR
+    cout << "==================== Delivery Form ====================" << endl;
+
+
+    return 1;
 }
