@@ -16,6 +16,12 @@ Ana Rita Matos
 Avenida dos Aliados 21, Matosinhos
 false
 ::::::::
+Porto
+Rui Teixeira
+122387698
+Rua Manuel Das Cruzes, Vila Nova De Gaia
+false
+::::::::
 Lisboa
 Ines Pinto Silva
 251230654

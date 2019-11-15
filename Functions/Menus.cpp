@@ -2,6 +2,7 @@
 
 int Admin_MainMenu(){//admins can't manage employees, only the boss and the managers can do that
     int option;
+    system("cls");
     cout << "--------------------------------------"<<endl;
     cout << "---------------- MENU ----------------" << endl<<endl;
     cout << "1. Clients Management" << endl;
@@ -15,8 +16,10 @@ int Admin_MainMenu(){//admins can't manage employees, only the boss and the mana
     cin.ignore(1000,'\n');
     return option;
 }
+
 int Manager_MainMenu(){
     int option;
+    system("cls");
     cout << "--------------------------------------"<<endl;
     cout << "---------------- MENU ----------------" << endl<<endl;
     cout << "1. Clients Management" << endl;
@@ -34,6 +37,7 @@ int Manager_MainMenu(){
 
 int Boss_MainMenu(){
     int option;
+    system("cls");
     cout << "--------------------------------------"<<endl;
     cout << "---------------- MENU ----------------" << endl<<endl;
     cout << "1. Clients Management" << endl;
@@ -49,8 +53,10 @@ int Boss_MainMenu(){
     cin.ignore(1000,'\n');
     return option;
 }
+
 int Client_MainMenu(){
     int option;
+    system("cls");
     cout << "--------------------------------------"<<endl;
     cout << "---------------- MENU ----------------" << endl<<endl;
     cout << "1. Account Management" << endl;
@@ -62,8 +68,10 @@ int Client_MainMenu(){
     cin.ignore(1000,'\n');
     return option;
 }
+
 int AccountManagement(){
     int option;
+    system("cls");
     cout << "--------------------------------------"<<endl;
     cout << "---------------- MENU ----------------" << endl<<endl;
     cout << "1. Create Account" << endl;
@@ -80,6 +88,7 @@ int AccountManagement(){
 
 int ClientsManagement(){
     int option;
+    system("cls");
     cout << "----------------------------------------------------"<<endl;
     cout << "---------------- CLIENTS MANAGEMENT ----------------" << endl<<endl;
     cout << "1. Create Client " << endl;
@@ -93,8 +102,10 @@ int ClientsManagement(){
     cin.ignore(1000,'\n');
     return option;
 }
+
 int EmployeesManagement(){
     int option;
+    system("cls");
     cout << "----------------------------------------------------"<<endl;
     cout << "---------------- EMPLOYEE MANAGEMENT ----------------" << endl<<endl;
     cout << "1. Create Employee " << endl;
@@ -112,6 +123,7 @@ int EmployeesManagement(){
 
 int RestaurantsManagement(){
     int option;
+    system("cls");
     cout << "-------------------------------------------------------"<<endl;
     cout << "---------------- RESTAURANT MANAGEMENT ----------------" << endl<<endl;
     cout << "1. Create Restaurant " << endl;
@@ -128,6 +140,7 @@ int RestaurantsManagement(){
 
 int ProfitsCalculation(){
     int option;
+    system("cls");
     cout << "-------------------------------------------------------"<<endl;
     cout << "---------------- PROFIT CALCULATION BY ----------------" << endl<<endl;
     cout << "1. Base " << endl;
@@ -142,8 +155,10 @@ int ProfitsCalculation(){
     cin.ignore(1000,'\n');
     return option;
 }
+
 int VisualizeInformation(){
     int option;
+    system("cls");
     cout << "-------------------------------------------------------"<<endl;
     cout << "---------------- VISUALIZE INFORMATION ----------------" << endl<<endl;
     cout << "1. View all clients " << endl;
