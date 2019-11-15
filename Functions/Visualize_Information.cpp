@@ -262,7 +262,7 @@ int visualize_restaurants(const Base &Porto, const Base &Lisboa, const Base &Far
         if(size != 0){
             for(int i =0; i< size; i++){
                 cout << "--> Restaurant " << i+1 << endl;
-                cout << Porto.getRestaurants()[i] << endl;
+                cout << Porto.getRestaurants()[i] << endl << endl;
             }
         }
         else {
@@ -278,7 +278,7 @@ int visualize_restaurants(const Base &Porto, const Base &Lisboa, const Base &Far
         if(size != 0){
             for(int i =0; i< size; i++){
                 cout << "--> Restaurant " << i+1 << endl;
-                cout << Lisboa.getRestaurants()[i] << endl;
+                cout << Lisboa.getRestaurants()[i] << endl << endl;
             }
         }
         else {
@@ -293,7 +293,7 @@ int visualize_restaurants(const Base &Porto, const Base &Lisboa, const Base &Far
         if(size != 0){
             for(int i =0; i< size; i++){
                 cout << "--> Restaurant " << i+1 << endl;
-                cout << Faro.getRestaurants()[i] << endl;
+                cout << Faro.getRestaurants()[i] << endl << endl;
             }
         }
         else {
