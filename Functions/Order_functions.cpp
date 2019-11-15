@@ -131,7 +131,7 @@ vector<int> searchByArea(Base b, string base, string county, Restaurant& restaur
     if(counter == 0){
         system("cls");
         cout << endl << "There are no restaurants in this county!" << endl;
-        Sleep(800);
+        Sleep(900);
         return {};
     }
 
@@ -193,7 +193,7 @@ vector<int> searchByPrice(Base base, float pmax, Restaurant& restaurant){
 
     if(products.empty()){
         cout << endl << "There are no products in this price range." << endl;
-        Sleep(1000);
+        Sleep(1500);
         return {};
     }
 
@@ -260,7 +260,7 @@ vector<int> searchByTypeOfFood(Base base, string type_of_food, Restaurant& resta
 
     if(products.empty()){
         cout << endl << "There are no products with this type of food." << endl;
-        Sleep(1000);
+        Sleep(1500);
         return {};
     }
 
@@ -361,7 +361,7 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
 
     if(black){
         cout << "You are in the blacklist! Blacklisted clients cannot order!" << endl;
-        Sleep(1000);
+        Sleep(1500);
         return 1;
     }
 
@@ -558,7 +558,7 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
     if(indprod.size() == 0){
         system("cls");
         cout << "Operation was canceled." << endl;
-        Sleep(600);
+        Sleep(900);
         return 1;
     }
     time_t now = time(0);
@@ -649,12 +649,12 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
     if(a==1){
         system("cls");
         cout << "We have saved your order's data. Hope you're satisfied!"<<endl;
-        Sleep(1000);
+        Sleep(1500);
     }
     else if (a==2){
         system("cls");
         cout << "We have saved your order's data. We apologize for any inconvenience! "<<endl;
-        Sleep(1000);
+        Sleep(1500);
     }
 
     if (base == "Porto"){
