@@ -15,7 +15,7 @@ class Vehicle{
 private:
     string brand;/**< marca do veículo*/
     string type;/**< tipo de veículo*/
-    Time date;/**<data de aquisicao do veículo*/
+    Time date;/**<data de aquisição do veículo*/
 public:
     /**
  * @brief Construtor por default da classe Veículo

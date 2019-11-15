@@ -39,4 +39,3 @@ ostream& operator<<(ostream& os, const Product& prod){
     os << prod.getName() << ", " << prod.getType_of_food() << ", " << prod.getPrice() << endl;
     return os;
 }
-

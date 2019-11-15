@@ -15,7 +15,9 @@ void Company::setBoss(string boss){
 string Company::getBoss()const{
     return boss;
 }
-
+void Company ::setBossNif(int nif) {
+    this->boss_nif=nif;
+}
 int Company::getBossNif() const {
     return boss_nif;
 }

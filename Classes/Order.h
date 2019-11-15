@@ -15,7 +15,7 @@ private:
     Restaurant restaurant;/**< restaurante a que é feita a encomenda*/
     Time time;/**< Tempo exato da encomenda*/
     vector<Product> products;/**< Produtos encomendados*/
-    int nif; /**< nif do cliente que faz a encomenda*/
+    int nif; /**< NIF do cliente que faz a encomenda*/
 
 protected:
     float price;/**<preço da encomenda*/
@@ -30,7 +30,7 @@ public:
      * @param restaurant - restaurante a que é feita a encomenda
      * @param time - tempo exato da encomenda
      * @param products - produtos encomendados
-     * @param nif - nif do cliente que encomendou
+     * @param nif - NIF do cliente que encomendou
 */
     Order(Restaurant restaurant, Time time , vector<Product>products, int nif);
     /**
@@ -49,8 +49,8 @@ public:
 */
     vector<Product> getProducts()const;
     /**
-* @brief Permite obter o nif do cliente que faz a encomenda
-* @return Retorna o nif do cliente que faz a encomenda
+* @brief Permite obter o NIF do cliente que faz a encomenda
+* @return Retorna o NIF do cliente que faz a encomenda
 */
     int getNif()const;
     /**
@@ -69,8 +69,8 @@ public:
 */
     void setProducts(vector<Product> products);
     /**
-* @brief Permite definir o nif do cliente que faz a encomenda
-* @param nif - nif do cliente que faz a encomenda
+* @brief Permite definir o NIF do cliente que faz a encomenda
+* @param nif - NIF do cliente que faz a encomenda
 */
     void setNif(int nif);
 };
@@ -98,7 +98,7 @@ public:
      * @param restaurant - restaurante a que é feita a encomenda
      * @param time - tempo exato em que é feita a encomenda
      * @param products - produtos encomendados
-     * @param nif - nif do cliente que faz a encomenda
+     * @param nif - NIF do cliente que faz a encomenda
      * @param id - id da entrega
      * @param success - sucesso ou insucesso (verdadeiro ou falso)
      * @param reason_insuccess - motivo de insucesso
@@ -111,7 +111,7 @@ public:
         * @param restaurant - restaurante a que é feita a encomenda
         * @param time - tempo exato em que é feita a encomenda
         * @param products - produtos encomendados
-        * @param nif - nif do cliente que faz a encomenda
+        * @param nif - NIF do cliente que faz a encomenda
         * @param tax - taxa de entrega
    */
 

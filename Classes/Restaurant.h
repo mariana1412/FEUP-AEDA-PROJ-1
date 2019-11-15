@@ -67,7 +67,7 @@ public:
     vector<Product> getProducts() const;
     /**
 * @brief Permite obter o valor retirado pela empresa neste restaurante
- * @return Retorna o alor retirado pela empresa neste restaurante
+ * @return Retorna o Valor retirado pela empresa neste restaurante
 */
     float getRevenue() const;
     /**
@@ -78,7 +78,7 @@ public:
     /**
 * @brief Permite definir o nome do restaurante verificando se já existe
 * @param name - nome do restaurante
-     * @param v-vetor de restaurantes da base
+     * @param v - vetor de restaurantes da base
 */
     void setName(string name, const vector<Restaurant> &v);
     /**

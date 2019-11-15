@@ -18,7 +18,7 @@ class Base{
 private:
     Location location; /**< Localização exata da base*/
     string manager;/**<Gerente da base*/
-    int manager_nif; /**<Nif do gerente da base*/
+    int manager_nif; /**<NIF do gerente da base*/
     vector<Client> clients;/**Clientes da base*/
     vector<Employee*> employees;/**Funcionários da base*/
     vector<Client> blacklist;/**Lista negra da organização*/
@@ -48,7 +48,7 @@ public:
 */
     string getManager() const;
     /*
-     * @brief Permite obter o NIF do gerente
+     * @brief Permite obter o NIF do gerente da base
      * @return Retorna o NIF do gerente da base
      */
     int getManagerNif() const;
@@ -59,7 +59,7 @@ public:
     vector<Client> getClients() const;
     /**
 * @brief Permite obter os clientes na blacklist da base
-* @return Retorna um vetor de clientes que se encontra na blacklist da base
+* @return Retorna um vetor de clientes que se encontram na blacklist da base
 */
     vector<Client> getBlackList() const;
     /**
@@ -88,8 +88,8 @@ public:
 */
     void setManager(string manager);
     /*
-     * @brief Permite definir o nif do gerente da base
-     * @param nif - nif do gerente da base
+     * @brief Permite definir o NIF do gerente da base
+     * @param nif - NIF do gerente da base
      */
     void setManagerNif(int nif);
     /**
@@ -109,22 +109,22 @@ public:
     void setRestaurants(vector<Restaurant> restaurants);
     /**
 * @brief Permite adicionar um cliente a base
-* @param client - cliente que pretendemos adicionar a base
+* @param client - cliente que pretendemos adicionar à base
 */
     void addClient(Client client);
     /**
-* @brief Permite adicionar um restaurante a base
-* @param restaurant - restaurante que pretendemos adicionar a base
+* @brief Permite adicionar um restaurante à base
+* @param restaurant - restaurante que pretendemos adicionar à base
 */
     void addRestaurant(Restaurant restaurant);
     /**
-* @brief Permite adicionar um funcionário a base
-* @param Employee* employees - funcionário que pretendemos adicionar a base
+* @brief Permite adicionar um funcionário à base
+* @param Employee* employees - funcionário que pretendemos adicionar à base
 */
     void addEmployee(Employee* employees);
     /**
-* @brief Permite adicionar uma encomenda a base
-* @param delivery - encomenda que pretendemos adicionar a base
+* @brief Permite adicionar uma encomenda à base
+* @param delivery - encomenda que pretendemos adicionar à base
 */
     void addDelivery(Delivery delivery);
     /**
@@ -146,7 +146,7 @@ public:
 */
     int getIndexrestaurant(Restaurant restaurant);
 /**
- * @brief Permite modificar o restaurante de indice index no vetor de restaurantes da base
+ * @brief Permite modificar o restaurante de índice index no vetor de restaurantes da base
  * @param restaurant - restaurante com as modificações que pretendemos colocar no indice dado
  * @param index  - Index do restaurante que pretendemos modificar no vetor de restaurantes da base
  */
@@ -165,7 +165,7 @@ public:
     void removeEmployee(int index);
 
     /**
-     * @brief Permite descobrir o indice de um funcionário no vetor de funcionários da base através do nif
+     * @brief Permite descobrir o indice de um funcionário no vetor de funcionários da base através do NIF
     * @param nif - nif do funcionário cujo index pretendemos encontrar
     * @return Index do funcionário no vetor de funcionários da base
      */

@@ -122,5 +122,3 @@ Delivery::Delivery(Restaurant restaurant, Time time, vector<Product> products, i
     this->id = id_global;
     id_global++;
 }
-
-
