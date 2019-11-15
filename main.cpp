@@ -30,7 +30,7 @@ int main() {
 
     system("cls");
 
-    cout<< "Welcome to Ugh Eats! We are going to tranform your lunch/dinner in a unforgetable gastronomical experience!\n"<< endl << endl;
+    cout << endl << endl << "Welcome to Ugh Eats! We are going to tranform your lunch/dinner in a unforgetable gastronomical experience!\n"<< endl << endl;
     extract_Clients(Porto, Lisboa, Faro);
     extract_Restaurants(Porto, Lisboa, Faro);
     extract_Deliveries(Porto, Lisboa, Faro);
@@ -63,7 +63,7 @@ int main() {
             if (user == 1) {
                 if (comp.getBossNif() == stoi(verification)) {
                     cout << endl << endl << "Logged in as Boss!" << endl;
-                    Sleep(800);
+                    Sleep(900);
                     break;
                 }
             }
@@ -71,7 +71,7 @@ int main() {
                 if (Porto.getManagerNif() == stoi(verification) || Lisboa.getManagerNif() == stoi(verification) ||
                     Faro.getManagerNif() == stoi(verification)) {
                     cout << endl << endl << "Logged in as Manager! " << endl;
-                    Sleep(800);
+                    Sleep(900);
                     break;
                 }
             }
@@ -79,7 +79,7 @@ int main() {
                 if (stringToAdminSearch(verification, Porto) || stringToAdminSearch(verification, Lisboa) ||
                     stringToAdminSearch(verification, Faro)) {
                     cout << endl << endl << "Logged in as an admin! " << endl;
-                    Sleep(800);
+                    Sleep(900);
                     break;
                 }
             }
