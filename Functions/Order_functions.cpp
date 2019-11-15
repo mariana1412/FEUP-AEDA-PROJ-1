@@ -660,7 +660,7 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
     cout << "Total product price: " << delivery.getPrice() << "$" << endl;
     cout << "Total order price: " << delivery.getFinalPrice() << "$" << endl << endl;
     cout << "Deliverer " << deliverer.getName() << " will arrive shortly in a " << deliverer.getVehicle().getBrand() << " " << deliverer.getVehicle().getType() << " with your order" << endl << endl;
-    cout << "Press any key to proceed to the Delivery Form" << endl;
+    cout << "Press ENTER to proceed to the Delivery Form" << endl;
     cin.ignore();
 
     system("cls");
