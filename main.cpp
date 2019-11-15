@@ -344,7 +344,6 @@ int main() {
             }
             else if (menu == 6) {
                 changeManager(Porto, Lisboa, Faro);
-                break;
             }
 
         } while (menu != 0);

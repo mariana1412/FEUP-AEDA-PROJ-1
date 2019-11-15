@@ -214,21 +214,21 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
     cout << "1. Name\n"<< "2. NIF\n" <<"0. Return to the main menu\n" ;
     menu_int_options(number,0,2);
     cin.ignore(1000, '\n');
+    string name;
 
     switch (number) {
         case 0:
             return 1;
         case 1:
             cout << "Name: ";
-            cin.ignore('\n',1000);
-            getline(cin, auxiliar);
+            getline(cin, name);
             while(cin.fail() && cin.eof()){
                 cin.clear();
                 cout << "Invalid character. Please insert a valid input: ";
-                getline(cin, auxiliar);
+                getline(cin, name);
             }
-            verification_all_letters(auxiliar);
-            i = string_sequential_search_e(v, auxiliar);
+            verification_all_letters(name);
+            i = string_sequential_search_e(v, name);
             break;
         case 2:
             cout << "NIF: ";
@@ -246,10 +246,10 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
 
 
     while(i == -1){
-        cout << "The employee inserted does not exist. Try again:";//dar opçao de tentar outra vez
+        cout << "The employee inserted does not exist. Try again:" << endl;//dar opçao de tentar outra vez
         cout << "What do you know about this employee?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do employee
         cout << "1. Name\n" << "2. NIF\n"<<"0. Return to the main menu\n";
-        menu_int_options(number,1,2);
+        menu_int_options(number,0,2);
         cin.ignore(1000, '\n');
 
         switch(number){
@@ -257,14 +257,14 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
                 return 1;
             case 1:
                 cout << "Name: ";
-                getline(cin, auxiliar);
+                getline(cin, name);
                 while(cin.fail() && cin.eof()){
                     cin.clear();
                     cout << "Invalid character. Please insert a valid input: ";
-                    getline(cin, auxiliar);
+                    getline(cin, name);
                 }
-                verification_all_letters(auxiliar);
-                i = string_sequential_search_e(v, auxiliar);
+                verification_all_letters(name);
+                i = string_sequential_search_e(v, name);
                 break;
             case 2:
                 cout << "NIF: ";
