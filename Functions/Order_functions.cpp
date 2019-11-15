@@ -60,11 +60,20 @@ vector<int> searchByRestaurant(Base base, string name, Restaurant& restaurant)  
 
     cout << endl;
     while (option != 0) {
+        system("cls");
         cout << " --> " << restaurant.getName() << ", " << restaurant.getCounty() << endl;
         for(int i = 0; i < size; i++){
             cout << "Product " << i+1 <<  ": " << restaurant.getProducts().at(i) << endl;
         }
-        cout << endl << "Do you want to order another product? Insert 0 to complete the order: ";
+
+        cout << endl << "Product added to the cart! You currenty have " << result.size() << " products: " << endl;
+        float total = 0;
+        for (int x: result){
+            cout << restaurant.getProducts().at(x).getName() << " - " << restaurant.getProducts().at(x).getPrice() << "$" << endl;
+            total += restaurant.getProducts().at(x).getPrice();
+        }
+        cout << endl << "Total price (w/o tax): " << total << endl;
+        cout << endl << "Do you want to order another product? Choose the number of the product (insert 0 to finish the order): ";
         product_menu(option, 0, size);
         cin.ignore(1000, '\n');
         if (option != 0)
@@ -162,11 +171,20 @@ vector<int> searchByArea(Base b, string base, string county, Restaurant& restaur
 
     cout << endl;
     while (option != 0) {
+        system("cls");
         cout << " --> " << restaurant.getName() << ", " << restaurant.getCounty() << endl;
         for(int i = 0; i < size; i++){
             cout << "Product " << i+1 <<  ": " << restaurant.getProducts().at(i) << endl;
         }
-        cout << endl << "Do you want to order another product from the same restaurant? Insert 0 to complete the order: ";
+
+        cout << endl << "Product added to the cart! You currenty have " << result.size() << " products: " << endl;
+        float total = 0;
+        for (int x: result){
+            cout << restaurant.getProducts().at(x).getName() << " - " << restaurant.getProducts().at(x).getPrice() << "$" << endl;
+            total += restaurant.getProducts().at(x).getPrice();
+        }
+        cout << endl << "Total price (w/o tax): " << total << endl;
+        cout << endl << "Do you want to order another product? Choose the number of the product (insert 0 to finish the order): ";
         product_menu(option, 0, size);
         cin.ignore(1000, '\n');
         if (option != 0)
@@ -226,15 +244,26 @@ vector<int> searchByPrice(Base base, float pmax, Restaurant& restaurant){
     cout  << endl << "---------------- SEARCH BY PRICE ----------------" << endl << endl;
 
     while (option != 0) {
+        int count = 1;
+        system("cls");
         size = products.size();
         cout << " --> " << restaurant.getName() << ", " << restaurant.getCounty() << endl << endl;
         for(int i = 0; i<size; i++){
             if(products.at(i).first == restaurant){
                 index.push_back(products.at(i).second);
-                cout << "Product " << index.size() << ": " << restaurant.getProducts().at(products.at(i).second)  << endl;
+                cout << "Product " << count << ": " << restaurant.getProducts().at(products.at(i).second)  << endl;
+                count++;
             }
         }
-        cout << endl << "Do you want to order another product from the same restaurant? Insert 0 to complete the order: ";
+
+        cout << endl << "Product added to the cart! You currenty have " << result.size() << " products: " << endl;
+        float total = 0;
+        for (int x: result){
+            cout << restaurant.getProducts().at(x).getName() << " - " << restaurant.getProducts().at(x).getPrice() << "$" << endl;
+            total += restaurant.getProducts().at(x).getPrice();
+        }
+        cout << endl << "Total price (w/o tax): " << total << endl;
+        cout << endl << "Do you want to order another product? Choose the number of the product (insert 0 to finish the order): ";
         product_menu(option, 0, index.size());
         cin.ignore(1000, '\n');
         if (option != 0)
@@ -285,19 +314,29 @@ vector<int> searchByTypeOfFood(Base base, string type_of_food, Restaurant& resta
     restaurant = products.at(option-1).first;
 
     vector<int> index;
-
     system("cls");
     cout  << endl << "---------------- SEARCH BY TYPE OF FOOD ----------------" << endl << endl;
     while (option != 0) {
+        int count = 1;
+        system("cls");
         size = products.size();
         cout << " --> " << restaurant.getName() << ", " << restaurant.getCounty() << endl << endl;
         for(int i = 0; i<size; i++){
             if(products.at(i).first == restaurant){
                 index.push_back(products.at(i).second);
-                cout << "Product " << index.size() << ": " << restaurant.getProducts().at(products.at(i).second)  << endl;
+                cout << "Product " << count << ": " << restaurant.getProducts().at(products.at(i).second)  << endl;
+                count++;
             }
         }
-        cout << endl << "Do you want to order another product from the same restaurant? Insert 0 to complete the order: ";
+
+        cout << endl << "Product added to the cart! You currenty have " << result.size() << " products: " << endl;
+        float total = 0;
+        for (int x: result){
+            cout << restaurant.getProducts().at(x).getName() << " - " << restaurant.getProducts().at(x).getPrice() << "$" << endl;
+            total += restaurant.getProducts().at(x).getPrice();
+        }
+        cout << endl << "Total price (w/o tax): " << total << endl;
+        cout << endl << "Do you want to order another product? Choose the number of the product (insert 0 to finish the order): ";
         product_menu(option, 0, index.size());
         cin.ignore(1000, '\n');
         if (option != 0)
@@ -575,16 +614,59 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
         tax = 3;
     string answer;
     Delivery delivery(restaurant, order_time, products, nif, tax);
-
     int a,c,choice;
     vector<string> reasons = {"It did not arrived.", "It was not what I ordered.", "I was not at home at the time of delivery", "Wrong address", "Other"};
     bool success;
     string s;
     Time delivery_time;
+    vector<Employee*> employees;
+    if (base == "Porto"){
+        employees = Porto.getEmployees();
+    }
+    else if (base == "Lisboa") {
+        employees = Lisboa.getEmployees();
+    }
+    else if (base == "Faro") {
+        employees = Faro.getEmployees();
+    }
+    Deliverer* low_deliverer = new Deliverer;
+    low_deliverer->setBackground({});
+    for (vector<Employee*>::const_iterator it =  employees.begin(); it != employees.end(); it++){
+        Deliverer* nd = dynamic_cast<Deliverer*>(*it);
+        if (nd != nullptr){
+            if (low_deliverer->getBackground().size() == 0 || low_deliverer->getBackground().size() >= nd->getBackground().size())
+                low_deliverer = nd;
+        }
+    }
+    Deliverer deliverer = *low_deliverer;
 
     system("cls");
+    int go = 1;
+    cout << "==============================" << endl;
+    cout << "Order no " << delivery.getId() << " ordered successfully!" << endl;
+    cout << "==============================" << endl;
+    cout << "Restaurant: " << delivery.getRestaurant().getName() << endl;
+    cout << "Order Time: " << delivery.getTime().getHour() << ":" << delivery.getTime().getMinutes() << endl;
+    cout << "Products ordered: " << endl;
+    vector<Product> productsl = delivery.getProducts();
+    for (size_t i = 0; i < productsl.size(); i++){
+        cout << i+1 << ": " << productsl.at(i).getName() << " - " << productsl.at(i).getPrice() << "$" << endl;
+    }
+    cout << endl << "==============================" << endl;
+    cout << "Billing details" << endl;
+    cout << "==============================" << endl;
+    cout << "Client NIF: " << delivery.getNif() << endl;
+    cout << "Delivery Tax: " << delivery.getTax() << "$ - From " << restaurant.getCounty() << " to " << cliente.getCounty() << endl;
+    cout << "Total product price: " << delivery.getPrice() << "$" << endl;
+    cout << "Total order price: " << delivery.getFinalPrice() << "$" << endl << endl;
+    cout << "Deliverer " << deliverer.getName() << " will arrive shortly in a " << deliverer.getVehicle().getBrand() << " " << deliverer.getVehicle().getType() << " with your order" << endl << endl;
+    cout << "Press any key to proceed to the Delivery Form" << endl;
+    cin.ignore();
+
+    system("cls");
+
     cout << "==================== Delivery Form ====================" << endl;
-    cout << endl <<  "Was your order successfull? (Choose an integer number)" << endl;
+    cout << endl <<  "Was your delivery successfull? (Choose an integer number)" << endl;
     cout << "1. Yes\t 2. No"<<endl;
     menu_int_options(a,1,2);
     cin.ignore(1000, '\n');
@@ -669,5 +751,6 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
         Faro.addDelivery(delivery);
         Faro.addDeliveryToDeliverer(delivery);
     }
+
     return 1;
 }

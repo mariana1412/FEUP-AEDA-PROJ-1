@@ -42,6 +42,72 @@ Nothing to show
 14/11/2019, 20:10
 5
 ::::::::
+Porto
+13
+287564236
+British Gentleman
+15/11/2019, 20:23
+Fish And Chips, Yorkshire Pudding, English Breakfast
+Success
+Nothing to show
+15/11/2019, 21:00
+5
+::::::::
+Porto
+14
+287564236
+Japanese
+15/11/2019, 20:25
+Temaki, Temaki
+Success
+Nothing to show
+15/11/2019, 20:50
+3
+::::::::
+Porto
+15
+287564236
+British Gentleman
+15/11/2019, 23:20
+Fish And Chips, English Breakfast, Yorkshire Pudding, Scotch Egg
+Success
+Nothing to show
+15/11/2019, 23:40
+5
+::::::::
+Porto
+18
+280541987
+Japanese
+15/11/2019, 23:37
+Temaki, Temaki
+Success
+Nothing to show
+15/11/2019, 23:50
+5
+::::::::
+Porto
+19
+280541987
+Pay The P Rice
+15/11/2019, 23:39
+Arroz De Tomate, Arroz De Cabidela
+Success
+Nothing to show
+15/11/2019, 23:58
+5
+::::::::
+Porto
+20
+122387698
+British Gentleman
+15/11/2019, 23:45
+Fish And Chips, Yorkshire Pudding, Scotch Egg, English Breakfast, Fish And Chips
+Insuccess
+It did not arrived.
+00/00/0000, 00:00
+5
+::::::::
 Lisboa
 2
 251230654
@@ -96,6 +162,28 @@ Success
 Nothing to show
 14/11/2019, 19:57
 3
+::::::::
+Lisboa
+16
+251230654
+Italian
+15/11/2019, 23:24
+Pizza, Pizza
+Insuccess
+Wrong address
+00/00/0000, 00:00
+3
+::::::::
+Lisboa
+17
+876234098
+Greek God
+15/11/2019, 23:32
+Greek Salad, Gyros, Pasteli
+Success
+Nothing to show
+16/11/2019, 00:01
+5
 ::::::::
 Faro
 5

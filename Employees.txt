@@ -1,19 +1,28 @@
 Porto
-Admin
-Jose Augusto Almeida
-196523321
-22/10/1974
-2000
-Contabilista
-::::::::
-Porto
 Deliverer
 Antonio Freitas
 124456789
 11/11/1970
-20
+25
 Range Rover, SUV, 19/12/2015
-1, 3, 9, 10
+1, 3, 9, 10, 20
+::::::::
+Porto
+Admin
+Joao Barros
+123445566
+12/06/1998
+3000
+Secretario
+::::::::
+Porto
+Deliverer
+Luis Pereira
+984736212
+20/10/2016
+23
+Yamaha, Motorcycle, 20/10/2016
+13, 14, 15, 18, 19
 ::::::::
 Lisboa
 Deliverer
@@ -21,8 +30,25 @@ Antonio Truta
 123456788
 11/09/1970
 15
-Range Rover Evoque, SUV, 19/12/19
+Range Rover Evoque, Suv, 19/12/19
 2, 4, 7, 8, 12
+::::::::
+Lisboa
+Admin
+Fernando Rocha
+185746387
+30/07/1999
+2000
+Gestor
+::::::::
+Lisboa
+Deliverer
+Hugo Pinto
+874829100
+20/07/2018
+8
+Honda, Motorcycle, 20/07/20
+16, 17
 ::::::::
 Faro
 Admin
@@ -40,3 +66,12 @@ Diogo Pereira
 11
 Honda, Car, 20/11/2018
 5, 6, 11
+::::::::
+Faro
+Deliverer
+Pedro Silva
+997546325
+17/3/2009
+0
+Suzuki, Motorcycle, 17/03/2009
+0
