@@ -47,6 +47,8 @@ void write_Employees(const Base& baseP,const Base& baseL,const Base& baseF);
  * @param Porto - toda a informação da base do Porto
  * @param Lisboa - toda a informação da base de Lisboa
  * @param Faro - toda a informação da base de Faro
+ * @param nif - NIF do patrão
+ * @param boss - nome do patrão
  */
 void write_Bases(string boss, int nif, Base& baseP,const Base& baseL,const Base& baseF);
 

@@ -61,11 +61,11 @@ int int_sequential_search_e(const vector<Employee*> &v, int x);
  * @return Retorna o índice do vetor de funcionários em que se encontra o respetivo funcionário, -1 se não existir
  */
 int string_sequential_search_e(const vector<Employee*> &v, string x);
-/*
+/**
  * @brief Permite mudar o gerente de quaisquer base
  * @param Porto - base do porto
  * @param Lisboa - base de Lisboa
- * @param Faro - base de Porto
+ * @param Faro - base de Faro
  * @return Retorna valor inteiro para retorno de Menu
  */
 int changeManager(Base Porto, Base Lisboa, Base Faro);

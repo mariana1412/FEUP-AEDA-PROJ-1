@@ -60,13 +60,13 @@ string remove_extra_whitespaces(string aux);
  * @param str - tipo de objeto a ser alterado
  */
 bool confirm_modifications(string action, string str);
-/*
+/**
  * @brief Converte uma string em horas adicionando esta informaçao a um objeto do tipo Time
  * @param d - objeto do tipo Time
  * @param s - string que pretendemos converter
  */
 void stringToHours(Time &d,string str);
-/*
+/**
  * @brief Verifica se a hora inserida é válida
  * @param aux - hora no tipo string a ser verificada
  */

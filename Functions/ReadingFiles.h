@@ -48,6 +48,8 @@ void extract_Employees(Base& baseP, Base& baseL, Base& baseF);
  * @param Porto - toda a informação da base do Porto
  * @param Lisboa - toda a informação da base de Lisboa
  * @param Faro - toda a informação da base de Faro
+ * @param boss_nif - NIF do patrão
+ * @param boss - nome do patrão
  */
 void extract_Bases(Base& baseP, Base& baseL, Base& baseF, string &boss, int &boss_nif);
 

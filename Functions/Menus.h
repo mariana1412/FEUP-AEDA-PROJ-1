@@ -13,27 +13,27 @@ using namespace std;
  * Funções dos Menus
  */
 
-/*
+/**
  * @brief Menu de gestão da conta do Cliente
  * @return Retorna valor inteiro para retorno do Menu
  */
 int AccountManagement();
-/*
+/**
  * @brief Menu principal visualizado pelo Patrão
  * @return Retorna valor inteiro para retorno do Menu
  */
 int Boss_MainMenu();
-/*
+/**
  * @brief Menu principal visualizado pela gerente
  * @return Retorna valor inteiro para retorno do Menu
  */
 int Manager_MainMenu();
-/*
+/**
  * @brief Menu principal visualizado pelo administrador
  * @return Retorna valor inteiro para retorno do Menu
  */
 int Admin_MainMenu();
-/*
+/**
  * @brief Menu principal visualizado pelo Cliente
  * @return Retorna valor inteiro para retorno do Menu
  */
