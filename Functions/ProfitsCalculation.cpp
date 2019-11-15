@@ -201,36 +201,36 @@ int ProfitByTimeInterval(Base p, Base l , Base f){
     cout << endl << "---------------- PROFIT CALCULATION BY TIME INTERVAL ----------------" << endl << endl;
 
     cout << "Inferior limit of the interval.";
-    cout << "Date (in the dd/mm/yyy format):";
+    cout << "Date (in the dd/mm/yyy format): ";
     getline(cin, s),
     d1=verification_date(s);
-    cout << "Hour (in the hh:mm format ):";
+    cout << "Hour (in the hh:mm format ): ";
     getline(cin,s);
     verification_hour(s);
     stringToHours(d1,s);
     cout << "Superior limit of the interval.";
-    cout << "Date (in the dd/mm/yyy format):";
+    cout << "Date (in the dd/mm/yyy format): ";
     getline(cin, s),
     d2=verification_date(s);
-    cout << "Hour (in the hh:mm format ):";
+    cout << "Hour (in the hh:mm format ): ";
     getline(cin,s);
     verification_hour(s);
     stringToHours(d2,s);
     while(d1>d2){
         cout << "This interval is not valid. Please, try again:"<<endl;
         cout << "Inferior limit of the interval.";
-        cout << "Date (format: dd/mm/yyy):";
+        cout << "Date (format: dd/mm/yyy): ";
         getline(cin, s),
                 d1=verification_date(s);
-        cout << "Hour (format: hh:mm ):";
+        cout << "Hour (format: hh:mm ): ";
         getline(cin,s);
         verification_hour(s);
         stringToHours(d1,s);
         cout << "Superior limit of the interval.";
-        cout << "Date (format: dd/mm/yyy):";
+        cout << "Date (format: dd/mm/yyy): ";
         getline(cin, s),
                 d2=verification_date(s);
-        cout << "Hour (format: hh:mm ):";
+        cout << "Hour (format: hh:mm ): ";
         getline(cin,s);
         verification_hour(s);
         stringToHours(d2,s);
