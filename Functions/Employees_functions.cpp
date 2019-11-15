@@ -537,11 +537,10 @@ int remove_employee(Base &Porto, Base &Lisboa, Base &Faro){
     return option;
 }
 
-int changeManager(Base Porto, Base Lisboa, Base Faro){
+int changeManager(Base& Porto, Base& Lisboa, Base& Faro){
     int op1,op2,counter=1,option;
     Base b;
-    vector<int> index;
-
+    vector<Admin*> admins = {};
     system("cls");
     cout << endl << "---------------- CHANGE MANAGER ----------------" << endl;
 
@@ -558,18 +557,20 @@ int changeManager(Base Porto, Base Lisboa, Base Faro){
             if(confirm_modifications("remove","manager")){
                 cout << endl << endl << "-----------------------------------------------" << endl;
                 cout << "These are the current admins. Choose one of them: ";
-                vector<Employee*>::const_iterator it=Porto.getEmployees().begin();
-                for( it;it!=Porto.getEmployees().end();it++){
+                vector<Employee*> employees = Porto.getEmployees();
+                for( vector<Employee*>::const_iterator it = employees.begin(); it!= employees.end(); it++){
                     Admin *a= dynamic_cast<Admin *> (*it);
-                    if(a!= NULL){
-                        index.push_back(it - Porto.getEmployees().begin());
-                        cout << counter << ":" <<endl<<a<<endl<<endl;
-                        counter ++;
+                    if(a!= nullptr) {
+                        admins.push_back(a);
+                        cout << counter << ":" << endl << a << endl << endl;
+                        counter++;
                     }
                 }
                 menu_int_options(op2,1,counter);
-                Porto.setManager(Porto.getEmployees()[index[op2]]->getName());
-                Porto.setManagerNif(Porto.getEmployees()[index[op2]]->getNif());
+                Porto.setManager(admins.at(op2-1)->getName());
+                Porto.setManagerNif(admins.at(op2-1)->getNif());
+                int i = int_sequential_search_e(employees, admins.at(op2-1)->getNif());
+                Porto.removeEmployee(i);
                 system("cls");
                 cout << "Manager was changed successfully!" << endl;
             }
@@ -585,18 +586,20 @@ int changeManager(Base Porto, Base Lisboa, Base Faro){
             if(confirm_modifications("remove","manager")){
                 cout << endl << endl << "-----------------------------------------------" << endl;
                 cout << "These are the current admins. Choose one of them:";
-                vector<Employee*>::const_iterator it=Lisboa.getEmployees().begin();
-                for( it;it!=Lisboa.getEmployees().end();it++){
+                vector<Employee*> employees = Lisboa.getEmployees();
+                for( vector<Employee*>::const_iterator it = employees.begin(); it!= employees.end(); it++){
                     Admin *a= dynamic_cast<Admin *> (*it);
-                    if(a!= NULL){
-                        index.push_back(it - Lisboa.getEmployees().begin());
+                    if(a!= nullptr){
+                        admins.push_back(a);
                         cout << counter << ":" <<endl<<a<<endl<<endl;
                         counter ++;
                     }
                 }
                 menu_int_options(op2,1,counter);
-                Lisboa.setManager(Lisboa.getEmployees()[index[op2]]->getName());
-                Lisboa.setManagerNif(Lisboa.getEmployees()[index[op2]]->getNif());
+                Lisboa.setManager(admins.at(op2-1)->getName());
+                Lisboa.setManagerNif(admins.at(op2-1)->getNif());
+                int i = int_sequential_search_e(employees, admins.at(op2-1)->getNif());
+                Lisboa.removeEmployee(i);
                 system("cls");
                 cout << "Manager was changed successfully!"<< endl;
             }
@@ -612,18 +615,20 @@ int changeManager(Base Porto, Base Lisboa, Base Faro){
             if(confirm_modifications("remove","manager")){
                 cout << endl << endl << "-----------------------------------------------" << endl;
                 cout << "These are the current admins. Choose one of them:";
-                vector<Employee*>::const_iterator it=Faro.getEmployees().begin();
-                for( it;it!=Faro.getEmployees().end();it++){
+                vector<Employee*> employees = Faro.getEmployees();
+                for( vector<Employee*>::const_iterator it = employees.begin(); it!= employees.end(); it++){
                     Admin *a= dynamic_cast<Admin *> (*it);
-                    if(a!= NULL){
-                        index.push_back(it - Faro.getEmployees().begin());
-                        cout << counter << ":" <<endl<<a<<endl<<endl;
-                        counter ++;
+                    if(a!= nullptr) {
+                        admins.push_back(a);
+                        cout << counter << ":" << endl << a << endl << endl;
+                        counter++;
                     }
                 }
                 menu_int_options(op2,1,counter);
-                Faro.setManager(Faro.getEmployees()[index[op2]]->getName());
-                Faro.setManagerNif(Faro.getEmployees()[index[op2]]->getNif());
+                Faro.setManager(admins.at(op2-1)->getName());
+                Faro.setManagerNif(admins.at(op2-1)->getNif());
+                int i = int_sequential_search_e(employees, admins.at(op2-1)->getNif());
+                Faro.removeEmployee(i);
                 system("cls");
                 cout << "Manager was changed successfully!" << endl;
             }

@@ -68,6 +68,6 @@ int string_sequential_search_e(const vector<Employee*> &v, string x);
  * @param Faro - base de Faro
  * @return Retorna valor inteiro para retorno de Menu
  */
-int changeManager(Base Porto, Base Lisboa, Base Faro);
+int changeManager(Base& Porto, Base& Lisboa, Base& Faro);
 
 #endif //PROJETO_EMPLOYEES_FUNCTIONS_H
