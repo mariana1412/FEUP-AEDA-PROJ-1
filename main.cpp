@@ -12,9 +12,9 @@
 #include "Functions/Visualize_Information.h"
 #include "Classes/Company.h"
 
-const vector<string> nearby_Porto = { "Matosinhos", "Vila Nova de Gaia", "Maia", "Gondomar", "Porto" };
+const vector<string> nearby_Porto = { "Matosinhos", "Vila Nova De Gaia", "Maia", "Gondomar", "Porto" };
 const vector<string> nearby_Lisboa = { "Oeiras", "Loures", "Amadora", "Odivelas","Lisboa" };
-const vector<string> nearby_Faro = { "Loule","Olhao", "Sao Bras de Alportel","Faro" };
+const vector<string> nearby_Faro = { "Loule","Olhao", "Sao Bras De Alportel","Faro" };
 
 using namespace std;
 
