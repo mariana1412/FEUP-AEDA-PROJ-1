@@ -951,8 +951,6 @@ void out_of_area(const vector<Client> &v,string county,string b) {
         }
     }
     return;
-
-
 }
 
 void client_already_exists(string nif, const Base &p, const Base &l, const Base &f){
