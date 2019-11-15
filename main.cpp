@@ -46,7 +46,7 @@ int main() {
     menu_int_options(user, 1, 4);
     cin.ignore(1000, '\n');
     if (user != 4) {
-        cout << "Please enter your NIF (insert 0 to exit the program):";
+        cout << "Please enter your NIF (insert 0 to exit the program): ";
         while (true) {
             getline(cin, verification);
             while (cin.fail() && cin.eof()) {
@@ -62,24 +62,24 @@ int main() {
             verification_nif(verification);
             if (user == 1) {
                 if (comp.getBossNif() == stoi(verification)) {
-                    system("cls");
-                    cout << "Logged in as Boss" << endl;
+                    cout << endl << endl << "Logged in as Boss!" << endl;
+                    Sleep(800);
                     break;
                 }
             }
             else if (user == 2) {
                 if (Porto.getManagerNif() == stoi(verification) || Lisboa.getManagerNif() == stoi(verification) ||
                     Faro.getManagerNif() == stoi(verification)) {
-                    system("cls");
-                    cout << "Logged in as Manager" << endl;
+                    cout << endl << endl << "Logged in as Manager! " << endl;
+                    Sleep(800);
                     break;
                 }
             }
             else if (user == 3) {
                 if (stringToAdminSearch(verification, Porto) || stringToAdminSearch(verification, Lisboa) ||
                     stringToAdminSearch(verification, Faro)) {
-                    system("cls");
-                    cout << "Logged in as an admin" << endl;
+                    cout << endl << endl << "Logged in as an admin! " << endl;
+                    Sleep(800);
                     break;
                 }
             }
@@ -300,7 +300,7 @@ int main() {
 
                         }
                         else if (choice == 2) {
-                            aux = visualize_blaclist(Porto, Lisboa, Faro);
+                            aux = visualize_blacklist(Porto, Lisboa, Faro);
                             if (aux == 1) {
                                 break;
                             }
@@ -554,7 +554,7 @@ int main() {
 
                         }
                         else if (choice == 2) {
-                            aux = visualize_blaclist(Porto, Lisboa, Faro);
+                            aux = visualize_blacklist(Porto, Lisboa, Faro);
                             if (aux == 1) {
                                 break;
                             }
@@ -759,7 +759,7 @@ int main() {
                                 }
                             }
                             else if (choice == 2) {
-                                aux = visualize_blaclist(Porto, Lisboa, Faro);
+                                aux = visualize_blacklist(Porto, Lisboa, Faro);
                                 if (aux == 1) {
                                     break;
                                 }
@@ -848,7 +848,7 @@ int main() {
             }
             else if(menu == 2){
                 aux=create_order(Porto, Lisboa, Faro);
-                if(aux==1){
+                if (aux == 1) {
                     continue;
                 }
                 else if(aux==0){
@@ -859,6 +859,7 @@ int main() {
         }while(menu !=0);
     }
     cout << endl;
+    system("cls");
     cout << endl << "Thank you! We hope you've enjoyed your experience with Ugh Eats!" << endl;
     Porto.updateBases();
     Lisboa.updateBases();

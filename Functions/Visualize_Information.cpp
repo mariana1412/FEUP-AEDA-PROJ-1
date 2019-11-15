@@ -4,9 +4,11 @@ int visualize_clients(const Base &Porto, const Base &Lisboa, const Base &Faro){
 
     string b;
     int size;
-    cout << endl << endl << "-------------- VISUALIZE CLIENTS --------------" << endl << endl;
 
-    cout << "Base:";
+    system("cls");
+    cout << endl << "---------------- VISUALIZE CLIENTS ---------------- "<< endl << endl;
+
+    cout << "Base: ";
     getline(cin, b);
     while(cin.fail() && cin.eof()){
         cin.clear();
@@ -16,6 +18,9 @@ int visualize_clients(const Base &Porto, const Base &Lisboa, const Base &Faro){
 
     verification_base(b);
     if (b == "Porto"){
+        system ("cls");
+        cout << endl << "---------------- VISUALIZE CLIENTS ---------------- "<< endl << endl;
+        cout << "Base: Porto" << endl << endl;
         size = Porto.getClients().size();
         if(size != 0){
             for(int i =0; i < size; i++){
@@ -29,10 +34,13 @@ int visualize_clients(const Base &Porto, const Base &Lisboa, const Base &Faro){
 
     }
     else if (b == "Lisboa"){
+        system ("cls");
+        cout << endl << "---------------- VISUALIZE CLIENTS ---------------- "<< endl << endl;
+        cout << "Base: Lisboa" << endl << endl;
         size = Lisboa.getClients().size();
         if(size != 0){
             for(int i =0; i < size; i++){
-                cout << "--> Client " << i+1 <<endl;
+                cout << "--> Client " << i+1 << endl;
                 cout << Lisboa.getClients()[i] << endl;
             }
         }
@@ -41,6 +49,9 @@ int visualize_clients(const Base &Porto, const Base &Lisboa, const Base &Faro){
         }
     }
     if (b == "Faro"){
+        system ("cls");
+        cout << endl << "---------------- VISUALIZE CLIENTS ---------------- "<< endl << endl;
+        cout << "Base: Faro" << endl << endl;
         size = Faro.getClients().size();
         if(size != 0){
             for(int i =0; i < size; i++){
@@ -55,19 +66,21 @@ int visualize_clients(const Base &Porto, const Base &Lisboa, const Base &Faro){
 
 
     int option;
+    cout << endl << endl << "--------------------------------------------------- "<< endl;
     cout << endl << "1. Return to Main Menu. " << endl;
     cout << "2. Return to Visualize Information. " << endl;
     menu_int_options(option, 1, 2);
     return option;
 }
 
-
-int visualize_blaclist(const Base &Porto, const Base &Lisboa, const Base &Faro){
+int visualize_blacklist(const Base &Porto, const Base &Lisboa, const Base &Faro){
     string b;
     int size;
-    cout << endl << endl << "-------------- VISUALIZE BLACKLIST --------------" << endl << endl;
+    system("cls");
+    cout << endl << "---------------- VISUALIZE BLACKLIST ---------------- "<< endl << endl;
 
-    cout << "Base:";
+
+    cout << "Base: ";
     getline(cin, b);
     while(cin.fail() && cin.eof()){
         cin.clear();
@@ -77,6 +90,9 @@ int visualize_blaclist(const Base &Porto, const Base &Lisboa, const Base &Faro){
 
     verification_base(b);
     if (b == "Porto"){
+        system ("cls");
+        cout << endl << "---------------- VISUALIZE BLACKLIST ---------------- "<< endl << endl;
+        cout << "Base: Porto" << endl << endl;
         size = Porto.getBlackList().size();
         if(size!=0){
             for(int i =0; i<size; i++){
@@ -90,6 +106,9 @@ int visualize_blaclist(const Base &Porto, const Base &Lisboa, const Base &Faro){
 
     }
     else if (b == "Lisboa"){
+        system ("cls");
+        cout << endl << "---------------- VISUALIZE BLACKLIST ---------------- "<< endl << endl;
+        cout << "Base: Lisboa" << endl << endl;
         size = Lisboa.getBlackList().size();
         if(size!=0){
             for(int i =0; i<size; i++){
@@ -102,6 +121,9 @@ int visualize_blaclist(const Base &Porto, const Base &Lisboa, const Base &Faro){
         }
     }
     if (b == "Faro"){
+        system ("cls");
+        cout << endl << "---------------- VISUALIZE BLACKLIST ---------------- "<< endl << endl;
+        cout << "Base: Faro" << endl << endl;
         size = Faro.getBlackList().size();
         if(size!=0){
             for(int i =0; i<size; i++){
@@ -115,6 +137,7 @@ int visualize_blaclist(const Base &Porto, const Base &Lisboa, const Base &Faro){
     }
 
     int option;
+    cout << endl << endl << "--------------------------------------------------- "<< endl;
     cout << endl << "1. Return to Main Menu. " << endl;
     cout << "2. Return to Visualize Information. " << endl;
     menu_int_options(option, 1, 2);
@@ -124,9 +147,11 @@ int visualize_blaclist(const Base &Porto, const Base &Lisboa, const Base &Faro){
 int visualize_employees(const Base &Porto, const Base &Lisboa, const Base &Faro) {
     string b;
     int size;
-    cout << endl << endl << "-------------- VISUALIZE EMPLOYEES --------------" << endl << endl;
 
-    cout << "Base:";
+    system("cls");
+    cout << endl << "---------------- VISUALIZE EMPLOYEES ---------------- "<< endl << endl;
+
+    cout << "Base: ";
     getline(cin, b);
     while(cin.fail() && cin.eof()){
         cin.clear();
@@ -136,8 +161,10 @@ int visualize_employees(const Base &Porto, const Base &Lisboa, const Base &Faro)
 
     verification_base(b);
 
-
     if (b == "Porto"){
+        system ("cls");
+        cout << endl << "---------------- VISUALIZE EMPLOYEES ---------------- "<< endl << endl;
+        cout << "Base: Porto" << endl << endl;
         size = Porto.getEmployees().size();
         if(size != 0){
             for(int i =0; i< size; i++){
@@ -158,6 +185,9 @@ int visualize_employees(const Base &Porto, const Base &Lisboa, const Base &Faro)
         }
     }
     else if (b == "Lisboa"){
+        system ("cls");
+        cout << endl << "---------------- VISUALIZE EMPLOYEES ---------------- "<< endl << endl;
+        cout << "Base: Lisboa" << endl << endl;
         size = Lisboa.getEmployees().size();
         if(size != 0){
             for(int i =0; i< size; i++){
@@ -178,6 +208,9 @@ int visualize_employees(const Base &Porto, const Base &Lisboa, const Base &Faro)
         }
     }
     if (b == "Faro"){
+        system ("cls");
+        cout << endl << "---------------- VISUALIZE EMPLOYEES ---------------- "<< endl << endl;
+        cout << "Base: Faro" << endl << endl;
         size = Faro.getEmployees().size();
         if(size != 0){
             for(int i =0; i< size; i++){
@@ -198,6 +231,7 @@ int visualize_employees(const Base &Porto, const Base &Lisboa, const Base &Faro)
         }
     }
     int option;
+    cout << endl << endl << "----------------------------------------------------- " << endl;
     cout << endl << "1. Return to Main Menu. " << endl;
     cout << "2. Return to Visualize Information. " << endl;
     menu_int_options(option, 1, 2);
@@ -206,18 +240,24 @@ int visualize_employees(const Base &Porto, const Base &Lisboa, const Base &Faro)
 
 int visualize_restaurants(const Base &Porto, const Base &Lisboa, const Base &Faro){
     string b;
-    cout << endl << endl << "-------------- VISUALIZE RESTAURANTS --------------" << endl << endl;
+
+    system("cls");
+    cout << endl << "---------------- VISUALIZE RESTAURANTS ---------------- "<< endl << endl;
+
     int size;
-    cout << "Base:";
+    cout << "Base: ";
     getline(cin, b);
     while(cin.fail() && cin.eof()){
         cin.clear();
         cout <<  "Invalid base. Please insert a valid input: ";
         getline(cin, b);
     }
-
     verification_base(b);
+
     if (b == "Porto"){
+        system ("cls");
+        cout << endl << "---------------- VISUALIZE RESTAURANTS ---------------- "<< endl << endl;
+        cout << "Base: Porto" << endl << endl;
         size = Porto.getRestaurants().size();
         if(size != 0){
             for(int i =0; i< size; i++){
@@ -231,6 +271,9 @@ int visualize_restaurants(const Base &Porto, const Base &Lisboa, const Base &Far
 
     }
     else if (b == "Lisboa"){
+        system ("cls");
+        cout << endl << "---------------- VISUALIZE RESTAURANTS ---------------- "<< endl << endl;
+        cout << "Base: Lisboa" << endl << endl;
         size = Lisboa.getRestaurants().size();
         if(size != 0){
             for(int i =0; i< size; i++){
@@ -243,6 +286,9 @@ int visualize_restaurants(const Base &Porto, const Base &Lisboa, const Base &Far
         }
     }
     if (b == "Faro"){
+        system ("cls");
+        cout << endl << "---------------- VISUALIZE RESTAURANTS ---------------- "<< endl << endl;
+        cout << "Base: Faro" << endl << endl;
         size = Faro.getRestaurants().size();
         if(size != 0){
             for(int i =0; i< size; i++){
@@ -256,19 +302,22 @@ int visualize_restaurants(const Base &Porto, const Base &Lisboa, const Base &Far
     }
 
     int option;
+    cout << endl << endl << "------------------------------------------------------- "<< endl;
     cout << endl << "1. Return to Main Menu. " << endl;
     cout << "2. Return to Visualize Information. " << endl;
     menu_int_options(option, 1, 2);
     return option;
 }
 
-
 int visualize_deliveries(const Base &Porto, const Base &Lisboa, const Base &Faro){
     string b;
     int size;
-    cout << endl << endl << "-------------- VISUALIZE DELIVERIES --------------" << endl << endl;
 
-    cout << "Base:";
+    system ("cls");
+    cout << endl << "---------------- VISUALIZE DELIVERIES ---------------- "<< endl << endl;
+
+
+    cout << "Base: ";
     getline(cin, b);
     while(cin.fail() && cin.eof()){
         cin.clear();
@@ -278,6 +327,9 @@ int visualize_deliveries(const Base &Porto, const Base &Lisboa, const Base &Faro
 
     verification_base(b);
     if (b == "Porto"){
+        system ("cls");
+        cout << endl << "---------------- VISUALIZE DELIVERIES ---------------- "<< endl << endl;
+        cout << "Base: Porto" << endl << endl;
         size = Porto.getDeliveries().size();
         if(size != 0){
             for(int i =0; i< size; i++){
@@ -290,6 +342,9 @@ int visualize_deliveries(const Base &Porto, const Base &Lisboa, const Base &Faro
         }
     }
     else if (b == "Lisboa"){
+        system ("cls");
+        cout << endl << "---------------- VISUALIZE DELIVERIES ---------------- "<< endl << endl;
+        cout << "Base: Lisboa" << endl << endl;
         size = Lisboa.getDeliveries().size();
         if(size != 0){
             for(int i =0; i< size; i++){
@@ -302,6 +357,9 @@ int visualize_deliveries(const Base &Porto, const Base &Lisboa, const Base &Faro
         }
     }
     if (b == "Faro"){
+        system ("cls");
+        cout << endl << "---------------- VISUALIZE DELIVERIES ---------------- "<< endl << endl;
+        cout << "Base: Faro" << endl << endl;
         size = Faro.getDeliveries().size();
         if(size != 0){
             for(int i =0; i< size; i++){
@@ -315,6 +373,8 @@ int visualize_deliveries(const Base &Porto, const Base &Lisboa, const Base &Faro
     }
 
     int option;
+
+    cout << endl << endl << "------------------------------------------------------ "<< endl;
     cout << endl << "1. Return to Main Menu. " << endl;
     cout << "2. Return to Visualize Information. " << endl;
     menu_int_options(option, 1, 2);

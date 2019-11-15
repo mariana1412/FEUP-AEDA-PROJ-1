@@ -9,7 +9,7 @@ int create_client(Base &Porto, Base &Lisboa, Base &Faro, bool is_Client) {
     int option;
 
     system("cls");
-    cout << "---------------- CREATE CLIENT ----------------" << endl;
+    cout << endl << "---------------- CREATE CLIENT ----------------" << endl;
 
     cout << "Base: ";
     getline(cin, aux);
@@ -190,7 +190,7 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
     Client cl;
 
     system("cls");
-    cout << "---------------- MODIFY CLIENT ----------------" << endl;
+    cout << endl << "---------------- MODIFY CLIENT ----------------" << endl;
 
     cout << "Client's Base: ";
     getline(cin, base);
@@ -212,7 +212,7 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
 
     cout << "What do you know about this client?\n"
          << endl; //so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do cliente
-    cout << "1: Name\n" << "2: NIF\n" << "0: Return to the main menu\n";
+    cout << "1. Name\n" << "2. NIF\n" << "0. Return to the main menu\n";
     menu_int_options(number, 0, 2);
     cin.ignore(1000, '\n');
 
@@ -479,7 +479,7 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
     int i=0, number,option;
 
     system("cls");
-    cout << "----------------  REMOVE CLIENT ----------------" << endl;
+    cout << endl << "----------------  REMOVE CLIENT ----------------" << endl;
 
     cout << "Client's Base: ";
     getline(cin, base);
@@ -537,7 +537,7 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
         cout << "The client inserted does not exist. Try again:"<<endl;//dar opçao de tentar outra
         while (i == -1) {
             cout << "What do you know about this client?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do cliente
-            cout << "1: Name\n" << "2: NIF\n"<<"0: Return to the main menu\n";
+            cout << "1. Name\n" << "2. NIF\n"<<"0. Return to the main menu\n";
             menu_int_options(number,1,2);
             cin.ignore(1000, '\n');
             switch (number) {
@@ -607,7 +607,7 @@ int modifyData(Base &Porto, Base &Lisboa, Base &Faro){
     Client cl;
 
     system("cls");
-    cout << "---------------- MODIFY DATA ----------------" << endl;
+    cout << endl << "---------------- MODIFY DATA ----------------" << endl;
 
     cout << "What is your base? ";
     getline(cin, base);

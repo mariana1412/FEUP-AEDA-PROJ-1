@@ -92,7 +92,11 @@ bool Base::removeRestaurant(string name){
         throw RestaurantNotFound(name);
     }
     Restaurant rest = *it;
+
+    system("cls");
+    cout << endl << "---------------- REMOVE RESTAURANT ----------------" << endl << endl;
     cout << endl << rest << endl;
+    cout << endl << endl << "---------------------------------------------------" << endl;
 
     if(confirm_modifications("remove", "restaurant")){
         restaurants.erase(it);

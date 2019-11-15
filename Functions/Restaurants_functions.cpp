@@ -8,7 +8,8 @@ int create_restaurant(Base &Porto, Base &Lisboa, Base &Faro){
     vector<Restaurant> restaurants;
     bool isValid;
 
-    cout << endl << endl << "-------------- CREATE RESTAURANT --------------" << endl << endl;
+    system("cls");
+    cout << endl << "---------------- CREATE RESTAURANT ----------------" << endl << endl;
 
     cout << "Base: ";
     getline(cin, b);
@@ -73,13 +74,13 @@ int create_restaurant(Base &Porto, Base &Lisboa, Base &Faro){
         new_restaurant.setCounty(aux, b);
     }
     catch (RestaurantOutOfArea &msg){
+        system("cls");
         cout << endl << endl << "ATENTION: " << msg.getCounty() << " does not belong to the base area." << endl << endl;
         cout << "1. Return to Main Menu. " << endl;
         cout << "2. Return to Restaurants Management. " << endl;
         menu_int_options(option, 1, 2);
         return option;
     }
-
 
 
     cout << endl << "Address: ";
@@ -155,15 +156,27 @@ int create_restaurant(Base &Porto, Base &Lisboa, Base &Faro){
     }
 
     new_restaurant.setRevenue(0.0);
+
+    system("cls");
+
+    cout << endl << "---------------- CREATE RESTAURANT ----------------" << endl << endl;
+
+    cout  << new_restaurant << endl;
+
+    cout << endl << endl << "---------------------------------------------------" <<  endl;
+
+
     if(confirm_modifications("create", "restaurant")){
         if (b == "Porto") Porto.addRestaurant(new_restaurant);
         else if (b == "Lisboa") Lisboa.addRestaurant(new_restaurant);
         else if(b == "Faro") Faro.addRestaurant(new_restaurant);
 
+        system("cls");
         cout << endl << endl << "Restaurant was successfully created!" << endl << endl;
     }
 
     else {
+        system("cls");
         cout << endl << endl << "Operation was canceled!" << endl << endl;
     }
 
@@ -180,7 +193,9 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
     int res;
     Restaurant restaurant;
 
-    cout << endl << endl << "-------------- MODIFY RESTAURANT --------------" << endl << endl;
+    system("cls");
+    cout << endl << "---------------- MODIFY RESTAURANT ----------------" << endl << endl;
+
 
     cout << "Base: ";
     getline(cin, base);
@@ -224,9 +239,15 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
         }
     } while(!isValid);
 
+
     if (base == "Porto") res = Porto.getIndexrestaurant(restaurant);
     else if (base == "Lisboa") res = Lisboa.getIndexrestaurant(restaurant);
     else if(base == "Faro") res = Faro.getIndexrestaurant(restaurant);
+
+    system("cls");
+    cout << endl << "---------------- MODIFY RESTAURANT ----------------" << endl << endl;
+    cout  << restaurant << endl;
+    cout << endl << endl << "---------------------------------------------------" <<  endl;
 
     int choice = 0;
     int option = 0;
@@ -240,6 +261,11 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
     string change;
     Product product;
     int c = 0, prod;
+
+    system("cls");
+    cout << endl << "---------------- MODIFY RESTAURANT ----------------" << endl << endl;
+    cout  << restaurant << endl;
+    cout << endl << endl << "---------------------------------------------------" <<  endl;
 
     switch(option){
         case 1:
@@ -263,7 +289,6 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
                 }
             }
 
-
             if(change == "Yes"){
                 cout << endl << endl << "County: ";
                 getline(cin, aux);
@@ -280,6 +305,7 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
                     restaurant.setCounty(aux, base);
                 }
                 catch (RestaurantOutOfArea &msg){
+                    system("cls");
                     cout << endl << endl << "ATENTION: " << msg.getCounty() << " does not belong to the base area." << endl << endl;
                     cout << "1. Return to Main Menu. " << endl;
                     cout << "2. Return to Restaurants Management. " << endl;
@@ -313,6 +339,9 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
 
             if(choice == 1){
                 do{
+                    system("cls");
+                    cout << endl << "---------------- CREATE PRODUCT ----------------" << endl << endl;
+
                     cout << endl << "Product name: ";
                     getline(cin, aux);
 
@@ -391,12 +420,20 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
 
                 prod = restaurant.getIndexProduct(product);
 
+                system("cls");
+                cout << endl << "---------------- MODIFY PRODUCT ----------------" << endl << endl;
+                cout << "Name: " << product.getName() << endl;
+                cout << "Type of food: " << product.getType_of_food() << endl;
+                cout << "Price: " << product.getPrice() << " euros" << endl;
+                cout << endl << "---------------------------------------------------" << endl;
+
                 cout << endl << endl << endl << "What do you want to modify: "<< endl;
                 cout << "1. Name" << endl;
                 cout << "2. Type of food" << endl;
                 cout << "3. Price" << endl;
                 cout << "4. Everything" << endl;
                 menu_int_options(c, 1, 4);
+                cin.ignore(1000, '\n');
 
                 if(c == 1){
                     cout << endl << "Product name: ";
@@ -472,11 +509,20 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
                 if(confirm_modifications("modify", "product")){
                     if(c == 2 || c == 4) restaurant.updateTypes_of_food();
                     restaurant.changeProduct(product, prod);
+                    system("cls");
                     cout << endl << "Product was successfully modified!" << endl << endl;
+                    cout << "1. Return to Main Menu. " << endl;
+                    cout << "2. Return to Restaurants Management. " << endl;
+                    menu_int_options(option, 1, 2);
+                    return option;
                 }
                 else {
+                    system("cls");
                     cout << endl << "Operation was canceled!" << endl << endl;
-                    return 0;
+                    cout << "1. Return to Main Menu. " << endl;
+                    cout << "2. Return to Restaurants Management. " << endl;
+                    menu_int_options(option, 1, 2);
+                    return option;
                 }
             }
 
@@ -511,14 +557,27 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
                     }
                 } while(!isValid);
 
+                system("cls");
+                cout << endl << "---------------- REMOVE PRODUCT ----------------" << endl << endl;
+                cout << "Name: " << product.getName() << endl;
+                cout << "Type of food: " << product.getType_of_food() << endl;
+                cout << "Price: " << product.getPrice() << " euros" << endl;
+                cout << endl << "---------------------------------------------------" << endl;
+
                 prod = restaurant.getIndexProduct(product);
 
                 if (confirm_modifications("remove", "product")){
                     restaurant.removeProduct(prod);
+                    system("cls");
                     cout << endl << "Product was successfully removed!" << endl << endl;
+                    cout << "1. Return to Main Menu. " << endl;
+                    cout << "2. Return to Restaurants Management. " << endl;
+                    menu_int_options(option, 1, 2);
+                    return option;
 
                 }
                 else {
+                    system("cls");
                     cout << endl << "Operation was canceled!" << endl << endl;
                     cout << "1. Return to Main Menu. " << endl;
                     cout << "2. Return to Restaurants Management. " << endl;
@@ -549,7 +608,6 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
                 }
             }
 
-
             if(change == "Yes"){
                 cout << endl << endl << "County: ";
                 getline(cin, aux);
@@ -566,6 +624,7 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
                     restaurant.setCounty(aux, base);
                 }
                 catch (RestaurantOutOfArea &msg){
+                    system("cls");
                     cout << endl << endl << "ATENTION: " << msg.getCounty() << " does not belong to the base area." << endl << endl;
                     cout << "1. Return to Main Menu. " << endl;
                     cout << "2. Return to Restaurants Management. " << endl;
@@ -642,7 +701,6 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
             }
 
             else if(choice == 2){
-
                 cout << "Insert the name of the product you want to modify: ";
                 getline(cin, aux);
 
@@ -681,6 +739,7 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
                 cout << "3. Price" << endl;
                 cout << "4. Everything" << endl;
                 menu_int_options(c, 1, 4);
+                cin.ignore(1000, '\n');
 
                 if(c == 1){
                     cout << endl << "Product name: ";
@@ -759,8 +818,13 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
                     cout << endl << "Product was successfully modified!" << endl << endl;
                 }
                 else {
+                    system("cls");
                     cout << endl <<  "Operation was canceled!" << endl << endl;
-                    return 0;
+                    cout << endl << endl << "---------------------------------------------------" <<  endl;
+                    cout << "1. Return to Main Menu. " << endl;
+                    cout << "2. Return to Restaurants Management. " << endl;
+                    menu_int_options(option, 1, 2);
+                    return option;
                 }
             }
 
@@ -803,7 +867,9 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
 
                 }
                 else {
+                    system("cls");
                     cout << endl << "Operation was canceled!" << endl << endl;
+                    cout << endl << endl << "---------------------------------------------------" <<  endl;
                     cout << "1. Return to Main Menu. " << endl;
                     cout << "2. Return to Restaurants Management. " << endl;
                     menu_int_options(option, 1, 2);
@@ -813,18 +879,26 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
             break;
     }
 
+    system("cls");
+    cout << endl << "---------------- MODIFY RESTAURANT ----------------" << endl << endl;
+    cout  << restaurant << endl;
+    cout << endl << endl << "---------------------------------------------------" <<  endl;
+
     if(confirm_modifications("modify", "restaurant")){
         if (base == "Porto") Porto.changeRestaurant(restaurant, res);
         else if (base == "Lisboa") Lisboa.changeRestaurant(restaurant, res);
         else if(base == "Faro") Faro.changeRestaurant(restaurant, res);
+        system("cls");
         cout << endl << "Restaurant was successfully modified!" << endl << endl;
     }
 
     else {
+        system("cls");
         cout << endl << "Operation was canceled!" << endl << endl;
     }
 
 
+    cout << endl << endl << "---------------------------------------------------" <<  endl;
     cout << "1. Return to Main Menu. " << endl;
     cout << "2. Return to Restaurants Management. " << endl;
     menu_int_options(option, 1, 2);
@@ -839,7 +913,9 @@ int remove_restaurant(Base &Porto, Base &Lisboa, Base &Faro){
     bool isValid, confirm;
     int option;
 
-    cout << endl << endl << "-------------- REMOVE RESTAURANT --------------" << endl << endl;
+    system("cls");
+    cout << endl << "---------------- REMOVE RESTAURANT ----------------" << endl << endl;
+
 
     cout << "Base: ";
     getline(cin, base);
@@ -876,11 +952,11 @@ int remove_restaurant(Base &Porto, Base &Lisboa, Base &Faro){
         return option;
     }
 
-
+    system("cls");
     if (confirm) cout << endl << endl << "Restaurant was successfully removed!" << endl << endl;
     else cout << endl << endl << "Operation was canceled!" << endl << endl;
 
-
+    cout << endl << endl << "---------------------------------------------------" << endl;
     cout << "1. Return to Main Menu. " << endl;
     cout << "2. Return to Restaurants Management. " << endl;
     menu_int_options(option, 1, 2);
