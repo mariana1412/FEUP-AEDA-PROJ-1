@@ -102,7 +102,7 @@ ostream & operator<<(ostream &os, const Delivery &d){
     << "Current ime: " << d.getTime() << endl;
 
     for(int i=0; i<d.getProducts().size(); i++){
-        os << "Product " << i+1 << ": " << d.getProducts()[i] << endl;
+        os << "Product " << i+1 << ": " << d.getProducts()[i];
     }
 
     os << "Price: " << d.getPrice() << " euros" << endl;

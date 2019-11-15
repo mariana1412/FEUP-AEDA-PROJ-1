@@ -333,7 +333,6 @@ int visualize_deliveries(const Base &Porto, const Base &Lisboa, const Base &Faro
         size = Porto.getDeliveries().size();
         if(size != 0){
             for(int i =0; i< size; i++){
-                cout << "--> Delivery " << i+1 << endl;
                 cout << Porto.getDeliveries()[i] << endl;
             }
         }
@@ -348,7 +347,6 @@ int visualize_deliveries(const Base &Porto, const Base &Lisboa, const Base &Faro
         size = Lisboa.getDeliveries().size();
         if(size != 0){
             for(int i =0; i< size; i++){
-                cout << "--> Delivery " << i+1 << endl;
                 cout << Lisboa.getDeliveries()[i] << endl;
             }
         }
@@ -363,7 +361,6 @@ int visualize_deliveries(const Base &Porto, const Base &Lisboa, const Base &Faro
         size = Faro.getDeliveries().size();
         if(size != 0){
             for(int i =0; i< size; i++){
-                cout << "--> Delivery " << i+1 << endl;
                 cout << Faro.getDeliveries()[i] << endl;
             }
         }
