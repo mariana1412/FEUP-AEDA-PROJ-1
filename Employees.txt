@@ -3,7 +3,7 @@ Admin
 Jose Augusto Almeida
 196523321
 22/10/1974
-0
+2000
 Contabilista
 ::::::::
 Porto
@@ -29,7 +29,7 @@ Admin
 Fernando Almeida
 922654321
 12/10/1997
-0
+3000
 Contabilista
 ::::::::
 Faro

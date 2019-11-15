@@ -183,8 +183,9 @@ void Base::updateBases() {
             for (vector<Delivery>::const_iterator it1 = nd->getBackground().begin(); it1 != nd->getBackground().end(); it1++){
                 profit += it1->getTax();
             }
+            (*it)->setIncome(profit);
         }
-        (*it)->setIncome(profit);
+
         profit = 0;
     }
 }
