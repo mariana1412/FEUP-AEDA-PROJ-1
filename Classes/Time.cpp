@@ -66,7 +66,7 @@ bool Time::operator>(const Time& date) {// verifica se a data é depois da outra
 }
 
 ostream &operator <<(ostream &os, const Time t){
-    os<<setw(2)<<to_string(t.getDay())<<"/"<<to_string(t.getMonth())<<"/"<<setw(4)<<to_string(t.getYear());
+    os << setw(2) << setfill('0') << to_string(t.getDay()) << "/" << setw(2) << setfill('0') << to_string(t.getMonth()) << "/" << setw(4) << setfill('0') << to_string(t.getYear());
     return os;
 }
 
