@@ -157,12 +157,12 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){
             g = new Deliverer(b, name, stoi(nif), v_bdate, 0, v, background);
 
             system("cls");
-            cout << f;
+            cout << g;
             cout << endl << "-----------------------------------------------" << endl;
             if (confirm_modifications("create","deliverer")){
-                if (b == "Porto") Porto.addEmployee(f);
-                else if (b == "Lisboa") Lisboa.addEmployee(f);
-                else if (b == "Faro") Faro.addEmployee(f);
+                if (b == "Porto") Porto.addEmployee(g);
+                else if (b == "Lisboa") Lisboa.addEmployee(g);
+                else if (b == "Faro") Faro.addEmployee(g);
                 system("cls");
                 cout << endl << "Deliverer was successfully created!" << endl << endl;
 
