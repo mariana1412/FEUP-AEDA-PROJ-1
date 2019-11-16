@@ -128,7 +128,7 @@ void Deliverer::setBackground(vector<Delivery> background){
     this->background = background;
 }
 
-ostream & operator<<(ostream &os, const Admin *a) {
+ostream &operator<<(ostream &os, const Admin *a) {
     os << "Base: "<< a->getBase() << endl
        << "Name: " << a->getName() << endl
        << "NIF: " << a->getNif() << endl
@@ -137,7 +137,7 @@ ostream & operator<<(ostream &os, const Admin *a) {
        << "Task: " << a->getTask() << endl;
     return os;
 }
-ostream & operator<<(ostream &os, const Deliverer *d){
+ostream &operator<<(ostream &os, const Deliverer *d){
     os << "Base: " << d->getBase() << endl
       << "Name: " << d->getName() << endl
       <<"NIF: " << d->getNif() << endl
