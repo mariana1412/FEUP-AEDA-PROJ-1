@@ -860,6 +860,7 @@ int main() {
     cout << endl;
     system("cls");
     cout << endl << "Thank you! We hope you've enjoyed your experience with Ugh Eats!" << endl;
+    Sleep(10000);
     Porto.updateBases();
     Lisboa.updateBases();
     Faro.updateBases();
