@@ -727,7 +727,7 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
         else if (base =="Lisboa"){
             Lisboa.addClientToBlacklist(Lisboa.getClients().at(index));
         }
-        else if(base == "Faro ") {
+        else if(base == "Faro") {
             Faro.addClientToBlacklist(Faro.getClients().at(index));
         }
     }

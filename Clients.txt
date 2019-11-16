@@ -20,13 +20,13 @@ Porto
 Rita Antunes
 178293456
 Avenida Do Fogo, Maia
-false
+true
 ::::::::
 Porto
 Maria Dolores
 123234345
 Rua Dom Afonso Henriques, Gondomar
-false
+true
 ::::::::
 Porto
 Mariana Almeida Truta
@@ -64,6 +64,18 @@ Magda Pinto
 Avenida Da Liberdade, Oeiras
 false
 ::::::::
+Lisboa
+Rute Teixeira
+987425910
+Travessa Da Cidade, Loures
+false
+::::::::
+Lisboa
+Pedro Antonio
+114455667
+Rua Futebol Clube Do Porto, Odivelas
+true
+::::::::
 Faro
 Lara Machado Medicis
 265541987
@@ -99,3 +111,9 @@ Ana Marques
 999658231
 Travessa De Montenegro, Olhao
 false
+::::::::
+Faro
+Jose Pinto
+123344556
+Rua De Paralelo 23, Sao Bras De Alportel
+true
