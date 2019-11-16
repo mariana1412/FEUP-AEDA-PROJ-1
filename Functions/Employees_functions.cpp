@@ -8,7 +8,8 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){
     string income;
     Admin a;
     bool is_Valid=false;
-    Employee* f;
+    Admin* f;
+    Deliverer* g;
 
     system("cls");
     cout << endl << "---------------- CREATE EMPLOYEE ----------------" << endl;
@@ -153,7 +154,7 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){
 
             Vehicle v(brand, type, v_bdate);
 
-            f = new Deliverer(b, name, stoi(nif), v_bdate, 0, v, background);
+            g = new Deliverer(b, name, stoi(nif), v_bdate, 0, v, background);
 
             system("cls");
             cout << f;
@@ -232,7 +233,6 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
             break;
         case 2:
             cout << "NIF: ";
-            cin.ignore('\n',1000);
             getline(cin, auxiliar);
             while(cin.fail() && cin.eof()){
                 cin.clear();
