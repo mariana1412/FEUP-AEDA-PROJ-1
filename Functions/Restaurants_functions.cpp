@@ -509,12 +509,10 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
                 if(confirm_modifications("modify", "product")){
                     if(c == 2 || c == 4) restaurant.updateTypes_of_food();
                     restaurant.changeProduct(product, prod);
+
                     system("cls");
                     cout << endl << "Product was successfully modified!" << endl << endl;
-                    cout << "1. Return to Main Menu. " << endl;
-                    cout << "2. Return to Restaurants Management. " << endl;
-                    menu_int_options(option, 1, 2);
-                    return option;
+
                 }
                 else {
                     system("cls");
@@ -570,10 +568,6 @@ int modify_restaurant(Base &Porto, Base &Lisboa, Base &Faro) {
                     restaurant.removeProduct(prod);
                     system("cls");
                     cout << endl << "Product was successfully removed!" << endl << endl;
-                    cout << "1. Return to Main Menu. " << endl;
-                    cout << "2. Return to Restaurants Management. " << endl;
-                    menu_int_options(option, 1, 2);
-                    return option;
 
                 }
                 else {

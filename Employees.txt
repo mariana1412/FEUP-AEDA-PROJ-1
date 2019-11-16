@@ -30,7 +30,7 @@ Antonio Truta
 123456788
 11/09/1970
 15
-Range Rover Evoque, Suv, 19/12/0019
+Range Rover Evoque, Suv, 19/12/2016
 2, 4, 7, 8, 12
 ::::::::
 Lisboa
@@ -47,7 +47,7 @@ Hugo Pinto
 874829100
 20/07/2018
 8
-Honda, Motorcycle, 20/07/0020
+Honda, Motorcycle, 20/07/2019
 16, 17
 ::::::::
 Lisboa
