@@ -150,11 +150,14 @@ int Base::getIndexEmployee(string nif) const {
 void Base::addDeliveryToDeliverer(Delivery delivery) {
     Deliverer* low_deliverer = new Deliverer;
     low_deliverer->setBackground({});
+    bool low = false;
     for (vector<Employee*>::const_iterator it =  employees.begin(); it != employees.end(); it++){
         Deliverer* nd = dynamic_cast<Deliverer*>(*it);
         if (nd != nullptr){
-            if (low_deliverer->getBackground().size() == 0 || low_deliverer->getBackground().size() >= nd->getBackground().size())
+            if (!low || low_deliverer->getBackground().size() > nd->getBackground().size()) {
                 low_deliverer = nd;
+                low = true;
+            }
         }
     }
     low_deliverer->addDelivery(delivery);

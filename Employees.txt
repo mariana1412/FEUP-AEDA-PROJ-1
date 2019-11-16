@@ -3,9 +3,9 @@ Deliverer
 Antonio Freitas
 124456789
 11/11/1970
-25
+30
 Range Rover, SUV, 19/12/2015
-1, 3, 9, 10, 20
+1, 3, 9, 10, 20, 22
 ::::::::
 Porto
 Admin
@@ -80,9 +80,9 @@ Deliverer
 Pedro Silva
 997546325
 17/3/2009
-0
+5
 Suzuki, Motorcycle, 17/03/2009
-0
+25
 ::::::::
 Faro
 Deliverer
@@ -98,9 +98,9 @@ Deliverer
 Eduardo Costa
 111000222
 18/10/2018
-0
+10
 Seat, Van, 18/10/2018
-0
+23, 24
 ::::::::
 Faro
 Admin

@@ -1,10 +1,4 @@
 Porto
-Mariana Almeida Truta
-280541987
-Rua da Alegria 65, Porto
-false
-::::::::
-Porto
 Diogo Henrique Almeida
 298684789
 Rua dos Bragas 32, Maia
@@ -33,6 +27,12 @@ Maria Dolores
 123234345
 Rua Dom Afonso Henriques, Gondomar
 false
+::::::::
+Porto
+Mariana Almeida Truta
+280541987
+Rua da Alegria 65, Porto
+true
 ::::::::
 Lisboa
 Ines Pinto Silva

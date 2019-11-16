@@ -119,6 +119,17 @@ Nothing to show
 16/11/2019, 14:20
 5
 ::::::::
+Porto
+22
+123234345
+Japanese
+16/11/2019, 17:58
+Temaki, Temaki, Temaki
+Success
+Nothing to show
+16/11/2019, 18:00
+5
+::::::::
 Lisboa
 2
 251230654
@@ -227,4 +238,37 @@ Alentejana, Pao De Alho
 Success
 Nothing to show
 14/11/2019, 20:11
+5
+::::::::
+Faro
+23
+777412589
+Mexican
+16/11/2019, 18:05
+Tacos, Tacos, Tacos
+Success
+Nothing to show
+16/11/2019, 18:30
+5
+::::::::
+Faro
+24
+999658231
+Grelhador Da Tia Dulce
+16/11/2019, 19:32
+Feijoada, Brigadeiro, Romeu E Julieta, Farofa
+Success
+Nothing to show
+16/11/2019, 19:50
+5
+::::::::
+Faro
+25
+999658231
+Mexican
+16/11/2019, 19:43
+Nachos, Tacos
+Insuccess
+I was not at home at the time of delivery
+00/00/0000, 00:00
 5
