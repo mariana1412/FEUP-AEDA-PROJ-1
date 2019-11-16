@@ -631,11 +631,14 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
     }
     Deliverer* low_deliverer = new Deliverer;
     low_deliverer->setBackground({});
+    bool low = false;
     for (vector<Employee*>::const_iterator it =  employees.begin(); it != employees.end(); it++){
         Deliverer* nd = dynamic_cast<Deliverer*>(*it);
         if (nd != nullptr){
-            if (low_deliverer->getBackground().size() == 0 || low_deliverer->getBackground().size() >= nd->getBackground().size())
+            if (!low || low_deliverer->getBackground().size() > nd->getBackground().size()) {
                 low_deliverer = nd;
+                low = true;
+            }
         }
     }
     Deliverer deliverer = *low_deliverer;
@@ -724,7 +727,7 @@ int create_order(Base &Porto, Base &Lisboa, Base &Faro){
         else if (base =="Lisboa"){
             Lisboa.addClientToBlacklist(Lisboa.getClients().at(index));
         }
-        else if(base == "Faro ") {
+        else if(base == "Faro") {
             Faro.addClientToBlacklist(Faro.getClients().at(index));
         }
     }

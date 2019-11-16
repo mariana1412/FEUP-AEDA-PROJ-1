@@ -3,9 +3,9 @@ Deliverer
 Antonio Freitas
 124456789
 11/11/1970
-25
+43
 Range Rover, SUV, 19/12/2015
-1, 3, 9, 10, 20
+1, 3, 9, 10, 20, 22, 31, 33, 37
 ::::::::
 Porto
 Admin
@@ -20,18 +20,18 @@ Deliverer
 Luis Pereira
 984736212
 20/10/2016
-28
+39
 Yamaha, Motorcycle, 20/10/2016
-13, 14, 15, 18, 19, 21
+13, 14, 15, 18, 19, 21, 32, 34, 39
 ::::::::
 Lisboa
 Deliverer
 Antonio Truta
 123456788
 11/09/1970
-15
+20
 Range Rover Evoque, Suv, 19/12/2016
-2, 4, 7, 8, 12
+2, 4, 7, 8, 12, 38
 ::::::::
 Lisboa
 Admin
@@ -46,9 +46,9 @@ Deliverer
 Hugo Pinto
 874829100
 20/07/2018
-8
+26
 Honda, Motorcycle, 20/07/2019
-16, 17
+16, 17, 28, 29, 30, 42
 ::::::::
 Lisboa
 Admin
@@ -80,27 +80,27 @@ Deliverer
 Pedro Silva
 997546325
 17/3/2009
-0
+15
 Suzuki, Motorcycle, 17/03/2009
-0
+25, 27, 36
 ::::::::
 Faro
 Deliverer
 Joaquim Alberto
 145214521
 18/10/2017
-0
+13
 Ford, Car, 18/10/2017
-0
+26, 35, 40
 ::::::::
 Faro
 Deliverer
 Eduardo Costa
 111000222
 18/10/2018
-0
+15
 Seat, Van, 18/10/2018
-0
+23, 24, 41
 ::::::::
 Faro
 Admin

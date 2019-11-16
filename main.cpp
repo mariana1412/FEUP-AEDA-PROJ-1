@@ -602,36 +602,194 @@ int main() {
         do {
             menu = Admin_MainMenu();
             if (menu == 1) {
-                if (menu == 1) {
-                    int choice, aux;
-                    do {
-                        choice = ClientsManagement();
+                int choice, aux;
+                do {
+                    choice = ClientsManagement();
+                    if (choice == 1) {
+                        aux = create_client(Porto, Lisboa, Faro,is_client);
+                        if (aux == 1) {
+                            break;
+                        }
+                        else if (aux == 2) {
+                            menu = 1;
+                        }
+
+                    }
+                    else if (choice == 2) {
+                        aux = modify_client(Porto, Lisboa, Faro);
+                        if (aux == 1) {
+                            break;
+                        }
+                        else if (aux == 2) {
+                            menu = 1;
+                        }
+                    }
+                    else if (choice == 3) {
+                        aux = remove_client(Porto, Lisboa, Faro);
+                        if (aux == 1) {
+                            break;
+                        }
+                        else if (aux == 2) {
+                            menu = 1;
+                        }
+                    }
+                    else if (choice == 0) {
+                        menu = 0;
+                        break;
+                    }
+
+                } while (choice != 4);
+            }
+            else if (menu == 2) {
+                int choice, aux;
+                do {
+                    if (is_client) {
+                        cout << endl << "ATENTION: You do not have access to this functionality.\n" << endl;
+                        choice = 0;
+                        break;
+                    }
+                    else {
+                        choice = RestaurantsManagement();
                         if (choice == 1) {
-                            aux = create_client(Porto, Lisboa, Faro,is_client);
+                            aux = create_restaurant(Porto, Lisboa, Faro);
                             if (aux == 1) {
                                 break;
                             }
                             else if (aux == 2) {
-                                menu = 1;
+                                menu = 2;
                             }
-
                         }
                         else if (choice == 2) {
-                            aux = modify_client(Porto, Lisboa, Faro);
+                            aux = modify_restaurant(Porto, Lisboa, Faro);
                             if (aux == 1) {
                                 break;
                             }
                             else if (aux == 2) {
-                                menu = 1;
+                                menu = 2;
                             }
                         }
                         else if (choice == 3) {
-                            aux = remove_client(Porto, Lisboa, Faro);
+                            aux = remove_restaurant(Porto, Lisboa, Faro);
                             if (aux == 1) {
                                 break;
                             }
                             else if (aux == 2) {
-                                menu = 1;
+                                menu = 2;
+                            }
+                        }
+                        else if (choice == 0) {
+                            menu = 0;
+                            break;
+                        }
+                    }
+                } while (choice != 4);
+            }
+            else if (menu == 3) {
+                int choice, aux;
+                do {
+                    if (is_client) {
+                        cout << endl << "ATENTION: You do not have access to this functionality.\n" << endl;
+                        choice = 0;
+                        break;
+                    }
+                    else {
+                        choice = ProfitsCalculation();
+                        if (choice == 1) {
+                            aux = ProfitsByBase(Porto, Lisboa, Faro);
+                            if (aux == 1) {
+                                break;
+                            }
+                            else if (aux == 2) {
+                                menu = 3;
+                            }
+                        }
+                        else if (choice == 2) {
+                            aux = ProfitsByRestaurant(Porto, Lisboa, Faro);
+                            if (aux == 1) {
+                                break;
+                            }
+                            else if (aux == 2) {
+                                menu = 3;
+                            }
+                        }
+                        else if (choice == 3) {
+                            aux = ProfitsByClient(Porto, Lisboa, Faro);
+                            if (aux == 1) {
+                                break;
+                            }
+                            else if (aux == 2) {
+                                menu = 4;
+                            }
+                        }
+                        else if (choice == 4) {
+                            aux = ProfitByTimeInterval(Porto, Lisboa, Faro);
+                            if (aux == 1) {
+                                break;
+                            }
+                            else if (aux == 2) {
+                                menu = 3;
+                            }
+                        }
+                        else if (choice == 0) {
+                            menu = 0;
+                            break;
+                        }
+                    }
+                } while (choice != 5);
+            }
+            else if (menu == 4) {
+                int choice, aux;
+                do {
+                    if (is_client) {
+                        cout << endl << "ATENTION: You do not have access to this functionality.\n" << endl;
+                        choice = 0;
+                        break;
+                    }
+                    else {
+                        choice = VisualizeInformation();
+                        if (choice == 1) {
+                            aux = visualize_clients(Porto, Lisboa, Faro);
+                            if (aux == 1) {
+                                break;
+                            }
+                            else if (aux == 2) {
+                                menu = 4;
+                            }
+                        }
+                        else if (choice == 2) {
+                            aux = visualize_blacklist(Porto, Lisboa, Faro);
+                            if (aux == 1) {
+                                break;
+                            }
+                            else if (aux == 2) {
+                                menu = 4;
+                            }
+                        }
+                        else if (choice == 3) {
+                            aux = visualize_employees(Porto, Lisboa, Faro);
+                            if (aux == 1) {
+                                break;
+                            }
+                            else if (aux == 2) {
+                                menu = 4;
+                            }
+                        }
+                        else if (choice == 4) {
+                            aux = visualize_restaurants(Porto, Lisboa, Faro);
+                            if (aux == 1) {
+                                break;
+                            }
+                            else if (aux == 2) {
+                                menu = 4;
+                            }
+                        }
+                        else if (choice == 5) {
+                            aux = visualize_deliveries(Porto, Lisboa, Faro);
+                            if (aux == 1) {
+                                break;
+                            }
+                            else if (aux == 2) {
+                                menu = 4;
                             }
                         }
                         else if (choice == 0) {
@@ -639,168 +797,8 @@ int main() {
                             break;
                         }
 
-                    } while (choice != 4);
-                }
-                else if (menu == 2) {
-                    int choice, aux;
-                    do {
-                        if (is_client) {
-                            cout << endl << "ATENTION: You do not have access to this functionality.\n" << endl;
-                            choice = 0;
-                            break;
-                        }
-                        else {
-                            choice = EmployeesManagement();
-                            if (choice == 1) {
-                                aux = create_employee(Porto, Lisboa, Faro);
-                                if (aux == 1) {
-                                    break;
-                                }
-                                else if (aux == 2) {
-                                    menu = 2;
-                                }
-                            }
-                            else if (choice == 2) {
-                                aux = modify_employee(Porto, Lisboa, Faro);
-                                if (aux == 1) {
-                                    break;
-                                }
-                                else if (aux == 2) {
-                                    menu = 2;
-                                }
-                            }
-                            else if (choice == 3) {
-                                aux = remove_employee(Porto, Lisboa, Faro);
-                                if (aux == 1) {
-                                    break;
-                                }
-                                else if (aux == 2) {
-                                    menu = 2;
-                                }
-                            }
-                            else if (choice == 0) {
-                                menu = 0;
-                                break;
-                            }
-                        }
-                    } while (choice != 4);
-                }
-                else if (menu == 3) {
-                    int choice, aux;
-                    do {
-                        if (is_client) {
-                            cout << endl << "ATENTION: You do not have access to this functionality.\n" << endl;
-                            choice = 0;
-                            break;
-                        }
-                        else {
-                            choice = ProfitsCalculation();
-                            if (choice == 1) {
-                                aux = ProfitsByBase(Porto, Lisboa, Faro);
-                                if (aux == 1) {
-                                    break;
-                                }
-                                else if (aux == 2) {
-                                    menu = 3;
-                                }
-                            }
-                            else if (choice == 2) {
-                                aux = ProfitsByRestaurant(Porto, Lisboa, Faro);
-                                if (aux == 1) {
-                                    break;
-                                }
-                                else if (aux == 2) {
-                                    menu = 3;
-                                }
-                            }
-                            else if (choice == 3) {
-                                aux = ProfitsByClient(Porto, Lisboa, Faro);
-                                if (aux == 1) {
-                                    break;
-                                }
-                                else if (aux == 2) {
-                                    menu = 4;
-                                }
-                            }
-                            else if (choice == 4) {
-                                aux = ProfitByTimeInterval(Porto, Lisboa, Faro);
-                                if (aux == 1) {
-                                    break;
-                                }
-                                else if (aux == 2) {
-                                    menu = 3;
-                                }
-                            }
-                            else if (choice == 0) {
-                                menu = 0;
-                                break;
-                            }
-                        }
-                    } while (choice != 5);
-                }
-                else if (menu == 4) {
-                    int choice, aux;
-                    do {
-                        if (is_client) {
-                            cout << endl << "ATENTION: You do not have access to this functionality.\n" << endl;
-                            choice = 0;
-                            break;
-                        }
-                        else {
-                            choice = VisualizeInformation();
-                            if (choice == 1) {
-                                aux = visualize_clients(Porto, Lisboa, Faro);
-                                if (aux == 1) {
-                                    break;
-                                }
-                                else if (aux == 2) {
-                                    menu = 4;
-                                }
-                            }
-                            else if (choice == 2) {
-                                aux = visualize_blacklist(Porto, Lisboa, Faro);
-                                if (aux == 1) {
-                                    break;
-                                }
-                                else if (aux == 2) {
-                                    menu = 4;
-                                }
-                            }
-                            else if (choice == 3) {
-                                aux = visualize_employees(Porto, Lisboa, Faro);
-                                if (aux == 1) {
-                                    break;
-                                }
-                                else if (aux == 2) {
-                                    menu = 4;
-                                }
-                            }
-                            else if (choice == 4) {
-                                aux = visualize_restaurants(Porto, Lisboa, Faro);
-                                if (aux == 1) {
-                                    break;
-                                }
-                                else if (aux == 2) {
-                                    menu = 4;
-                                }
-                            }
-                            else if (choice == 5) {
-                                aux = visualize_deliveries(Porto, Lisboa, Faro);
-                                if (aux == 1) {
-                                    break;
-                                }
-                                else if (aux == 2) {
-                                    menu = 4;
-                                }
-                            }
-                            else if (choice == 0) {
-                                menu = 0;
-                                break;
-                            }
-
-                        }
-                    } while (choice != 6);
-                }
+                    }
+                } while (choice != 6);
             }
         } while (menu != 0);
     }

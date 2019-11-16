@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Users\ritap\Downloads\Software universidade\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Users\ritap\Downloads\Software universidade\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2019.2.2\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo"
+CMAKE_SOURCE_DIR = "C:\Users\Diogo Almeida\Desktop\UghEats"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/projeto.dir/depend.make
@@ -58,289 +58,289 @@ include CMakeFiles/projeto.dir/flags.make
 
 CMakeFiles/projeto.dir/main.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/projeto.dir/main.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\main.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/projeto.dir/main.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\main.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\main.cpp"
 
 CMakeFiles/projeto.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/main.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\main.cpp" > CMakeFiles\projeto.dir\main.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\main.cpp" > CMakeFiles\projeto.dir\main.cpp.i
 
 CMakeFiles/projeto.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/main.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\main.cpp" -o CMakeFiles\projeto.dir\main.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\main.cpp" -o CMakeFiles\projeto.dir\main.cpp.s
 
 CMakeFiles/projeto.dir/Classes/Base.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Classes/Base.cpp.obj: ../Classes/Base.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/projeto.dir/Classes/Base.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Classes\Base.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Base.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/projeto.dir/Classes/Base.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Classes\Base.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Base.cpp"
 
 CMakeFiles/projeto.dir/Classes/Base.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Classes/Base.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Base.cpp" > CMakeFiles\projeto.dir\Classes\Base.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Base.cpp" > CMakeFiles\projeto.dir\Classes\Base.cpp.i
 
 CMakeFiles/projeto.dir/Classes/Base.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Classes/Base.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Base.cpp" -o CMakeFiles\projeto.dir\Classes\Base.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Base.cpp" -o CMakeFiles\projeto.dir\Classes\Base.cpp.s
 
 CMakeFiles/projeto.dir/Classes/Location.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Classes/Location.cpp.obj: ../Classes/Location.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/projeto.dir/Classes/Location.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Classes\Location.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Location.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/projeto.dir/Classes/Location.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Classes\Location.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Location.cpp"
 
 CMakeFiles/projeto.dir/Classes/Location.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Classes/Location.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Location.cpp" > CMakeFiles\projeto.dir\Classes\Location.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Location.cpp" > CMakeFiles\projeto.dir\Classes\Location.cpp.i
 
 CMakeFiles/projeto.dir/Classes/Location.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Classes/Location.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Location.cpp" -o CMakeFiles\projeto.dir\Classes\Location.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Location.cpp" -o CMakeFiles\projeto.dir\Classes\Location.cpp.s
 
 CMakeFiles/projeto.dir/Classes/Order.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Classes/Order.cpp.obj: ../Classes/Order.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/projeto.dir/Classes/Order.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Classes\Order.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Order.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/projeto.dir/Classes/Order.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Classes\Order.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Order.cpp"
 
 CMakeFiles/projeto.dir/Classes/Order.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Classes/Order.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Order.cpp" > CMakeFiles\projeto.dir\Classes\Order.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Order.cpp" > CMakeFiles\projeto.dir\Classes\Order.cpp.i
 
 CMakeFiles/projeto.dir/Classes/Order.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Classes/Order.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Order.cpp" -o CMakeFiles\projeto.dir\Classes\Order.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Order.cpp" -o CMakeFiles\projeto.dir\Classes\Order.cpp.s
 
 CMakeFiles/projeto.dir/Classes/Person.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Classes/Person.cpp.obj: ../Classes/Person.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/projeto.dir/Classes/Person.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Classes\Person.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Person.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/projeto.dir/Classes/Person.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Classes\Person.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Person.cpp"
 
 CMakeFiles/projeto.dir/Classes/Person.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Classes/Person.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Person.cpp" > CMakeFiles\projeto.dir\Classes\Person.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Person.cpp" > CMakeFiles\projeto.dir\Classes\Person.cpp.i
 
 CMakeFiles/projeto.dir/Classes/Person.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Classes/Person.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Person.cpp" -o CMakeFiles\projeto.dir\Classes\Person.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Person.cpp" -o CMakeFiles\projeto.dir\Classes\Person.cpp.s
 
 CMakeFiles/projeto.dir/Classes/Product.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Classes/Product.cpp.obj: ../Classes/Product.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/projeto.dir/Classes/Product.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Classes\Product.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Product.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/projeto.dir/Classes/Product.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Classes\Product.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Product.cpp"
 
 CMakeFiles/projeto.dir/Classes/Product.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Classes/Product.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Product.cpp" > CMakeFiles\projeto.dir\Classes\Product.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Product.cpp" > CMakeFiles\projeto.dir\Classes\Product.cpp.i
 
 CMakeFiles/projeto.dir/Classes/Product.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Classes/Product.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Product.cpp" -o CMakeFiles\projeto.dir\Classes\Product.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Product.cpp" -o CMakeFiles\projeto.dir\Classes\Product.cpp.s
 
 CMakeFiles/projeto.dir/Classes/Restaurant.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Classes/Restaurant.cpp.obj: ../Classes/Restaurant.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/projeto.dir/Classes/Restaurant.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Classes\Restaurant.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Restaurant.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/projeto.dir/Classes/Restaurant.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Classes\Restaurant.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Restaurant.cpp"
 
 CMakeFiles/projeto.dir/Classes/Restaurant.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Classes/Restaurant.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Restaurant.cpp" > CMakeFiles\projeto.dir\Classes\Restaurant.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Restaurant.cpp" > CMakeFiles\projeto.dir\Classes\Restaurant.cpp.i
 
 CMakeFiles/projeto.dir/Classes/Restaurant.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Classes/Restaurant.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Restaurant.cpp" -o CMakeFiles\projeto.dir\Classes\Restaurant.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Restaurant.cpp" -o CMakeFiles\projeto.dir\Classes\Restaurant.cpp.s
 
 CMakeFiles/projeto.dir/Classes/Time.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Classes/Time.cpp.obj: ../Classes/Time.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/projeto.dir/Classes/Time.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Classes\Time.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Time.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/projeto.dir/Classes/Time.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Classes\Time.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Time.cpp"
 
 CMakeFiles/projeto.dir/Classes/Time.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Classes/Time.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Time.cpp" > CMakeFiles\projeto.dir\Classes\Time.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Time.cpp" > CMakeFiles\projeto.dir\Classes\Time.cpp.i
 
 CMakeFiles/projeto.dir/Classes/Time.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Classes/Time.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Time.cpp" -o CMakeFiles\projeto.dir\Classes\Time.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Time.cpp" -o CMakeFiles\projeto.dir\Classes\Time.cpp.s
 
 CMakeFiles/projeto.dir/Classes/Vehicle.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Classes/Vehicle.cpp.obj: ../Classes/Vehicle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/projeto.dir/Classes/Vehicle.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Classes\Vehicle.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Vehicle.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/projeto.dir/Classes/Vehicle.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Classes\Vehicle.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Vehicle.cpp"
 
 CMakeFiles/projeto.dir/Classes/Vehicle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Classes/Vehicle.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Vehicle.cpp" > CMakeFiles\projeto.dir\Classes\Vehicle.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Vehicle.cpp" > CMakeFiles\projeto.dir\Classes\Vehicle.cpp.i
 
 CMakeFiles/projeto.dir/Classes/Vehicle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Classes/Vehicle.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Vehicle.cpp" -o CMakeFiles\projeto.dir\Classes\Vehicle.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Vehicle.cpp" -o CMakeFiles\projeto.dir\Classes\Vehicle.cpp.s
 
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj: ../Functions/Verification_Inputs.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\Verification_Inputs.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Verification_Inputs.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\Verification_Inputs.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Verification_Inputs.cpp"
 
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Verification_Inputs.cpp" > CMakeFiles\projeto.dir\Functions\Verification_Inputs.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Verification_Inputs.cpp" > CMakeFiles\projeto.dir\Functions\Verification_Inputs.cpp.i
 
 CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Functions/Verification_Inputs.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Verification_Inputs.cpp" -o CMakeFiles\projeto.dir\Functions\Verification_Inputs.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Verification_Inputs.cpp" -o CMakeFiles\projeto.dir\Functions\Verification_Inputs.cpp.s
 
 CMakeFiles/projeto.dir/Functions/utils.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Functions/utils.cpp.obj: ../Functions/utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/projeto.dir/Functions/utils.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\utils.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\utils.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/projeto.dir/Functions/utils.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\utils.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\utils.cpp"
 
 CMakeFiles/projeto.dir/Functions/utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Functions/utils.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\utils.cpp" > CMakeFiles\projeto.dir\Functions\utils.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\utils.cpp" > CMakeFiles\projeto.dir\Functions\utils.cpp.i
 
 CMakeFiles/projeto.dir/Functions/utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Functions/utils.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\utils.cpp" -o CMakeFiles\projeto.dir\Functions\utils.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\utils.cpp" -o CMakeFiles\projeto.dir\Functions\utils.cpp.s
 
 CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj: ../Functions/ReadingFiles.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\ReadingFiles.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\ReadingFiles.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\ReadingFiles.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\ReadingFiles.cpp"
 
 CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\ReadingFiles.cpp" > CMakeFiles\projeto.dir\Functions\ReadingFiles.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\ReadingFiles.cpp" > CMakeFiles\projeto.dir\Functions\ReadingFiles.cpp.i
 
 CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Functions/ReadingFiles.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\ReadingFiles.cpp" -o CMakeFiles\projeto.dir\Functions\ReadingFiles.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\ReadingFiles.cpp" -o CMakeFiles\projeto.dir\Functions\ReadingFiles.cpp.s
 
 CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj: ../Functions/Clients_functions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\Clients_functions.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Clients_functions.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\Clients_functions.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Clients_functions.cpp"
 
 CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Clients_functions.cpp" > CMakeFiles\projeto.dir\Functions\Clients_functions.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Clients_functions.cpp" > CMakeFiles\projeto.dir\Functions\Clients_functions.cpp.i
 
 CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Functions/Clients_functions.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Clients_functions.cpp" -o CMakeFiles\projeto.dir\Functions\Clients_functions.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Clients_functions.cpp" -o CMakeFiles\projeto.dir\Functions\Clients_functions.cpp.s
 
 CMakeFiles/projeto.dir/Functions/StringConverters.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Functions/StringConverters.cpp.obj: ../Functions/StringConverters.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/projeto.dir/Functions/StringConverters.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\StringConverters.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\StringConverters.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/projeto.dir/Functions/StringConverters.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\StringConverters.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\StringConverters.cpp"
 
 CMakeFiles/projeto.dir/Functions/StringConverters.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Functions/StringConverters.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\StringConverters.cpp" > CMakeFiles\projeto.dir\Functions\StringConverters.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\StringConverters.cpp" > CMakeFiles\projeto.dir\Functions\StringConverters.cpp.i
 
 CMakeFiles/projeto.dir/Functions/StringConverters.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Functions/StringConverters.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\StringConverters.cpp" -o CMakeFiles\projeto.dir\Functions\StringConverters.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\StringConverters.cpp" -o CMakeFiles\projeto.dir\Functions\StringConverters.cpp.s
 
 CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.obj: ../Functions/WriteToFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\WriteToFile.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\WriteToFile.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\WriteToFile.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\WriteToFile.cpp"
 
 CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\WriteToFile.cpp" > CMakeFiles\projeto.dir\Functions\WriteToFile.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\WriteToFile.cpp" > CMakeFiles\projeto.dir\Functions\WriteToFile.cpp.i
 
 CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Functions/WriteToFile.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\WriteToFile.cpp" -o CMakeFiles\projeto.dir\Functions\WriteToFile.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\WriteToFile.cpp" -o CMakeFiles\projeto.dir\Functions\WriteToFile.cpp.s
 
 CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Functions/Menus.cpp.obj: ../Functions/Menus.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/projeto.dir/Functions/Menus.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\Menus.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Menus.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/projeto.dir/Functions/Menus.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\Menus.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Menus.cpp"
 
 CMakeFiles/projeto.dir/Functions/Menus.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Functions/Menus.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Menus.cpp" > CMakeFiles\projeto.dir\Functions\Menus.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Menus.cpp" > CMakeFiles\projeto.dir\Functions\Menus.cpp.i
 
 CMakeFiles/projeto.dir/Functions/Menus.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Functions/Menus.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Menus.cpp" -o CMakeFiles\projeto.dir\Functions\Menus.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Menus.cpp" -o CMakeFiles\projeto.dir\Functions\Menus.cpp.s
 
 CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj: ../Functions/Restaurants_functions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\Restaurants_functions.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Restaurants_functions.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\Restaurants_functions.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Restaurants_functions.cpp"
 
 CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Restaurants_functions.cpp" > CMakeFiles\projeto.dir\Functions\Restaurants_functions.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Restaurants_functions.cpp" > CMakeFiles\projeto.dir\Functions\Restaurants_functions.cpp.i
 
 CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Functions/Restaurants_functions.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Restaurants_functions.cpp" -o CMakeFiles\projeto.dir\Functions\Restaurants_functions.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Restaurants_functions.cpp" -o CMakeFiles\projeto.dir\Functions\Restaurants_functions.cpp.s
 
 CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj: ../Functions/Employees_functions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\Employees_functions.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Employees_functions.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\Employees_functions.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Employees_functions.cpp"
 
 CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Employees_functions.cpp" > CMakeFiles\projeto.dir\Functions\Employees_functions.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Employees_functions.cpp" > CMakeFiles\projeto.dir\Functions\Employees_functions.cpp.i
 
 CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Functions/Employees_functions.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Employees_functions.cpp" -o CMakeFiles\projeto.dir\Functions\Employees_functions.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Employees_functions.cpp" -o CMakeFiles\projeto.dir\Functions\Employees_functions.cpp.s
 
 CMakeFiles/projeto.dir/Functions/Order_functions.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Functions/Order_functions.cpp.obj: ../Functions/Order_functions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/projeto.dir/Functions/Order_functions.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\Order_functions.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Order_functions.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/projeto.dir/Functions/Order_functions.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\Order_functions.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Order_functions.cpp"
 
 CMakeFiles/projeto.dir/Functions/Order_functions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Functions/Order_functions.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Order_functions.cpp" > CMakeFiles\projeto.dir\Functions\Order_functions.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Order_functions.cpp" > CMakeFiles\projeto.dir\Functions\Order_functions.cpp.i
 
 CMakeFiles/projeto.dir/Functions/Order_functions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Functions/Order_functions.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Order_functions.cpp" -o CMakeFiles\projeto.dir\Functions\Order_functions.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Order_functions.cpp" -o CMakeFiles\projeto.dir\Functions\Order_functions.cpp.s
 
 CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj: ../Functions/Visualize_Information.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\Visualize_Information.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Visualize_Information.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\Visualize_Information.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Visualize_Information.cpp"
 
 CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Visualize_Information.cpp" > CMakeFiles\projeto.dir\Functions\Visualize_Information.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Visualize_Information.cpp" > CMakeFiles\projeto.dir\Functions\Visualize_Information.cpp.i
 
 CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Functions/Visualize_Information.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\Visualize_Information.cpp" -o CMakeFiles\projeto.dir\Functions\Visualize_Information.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\Visualize_Information.cpp" -o CMakeFiles\projeto.dir\Functions\Visualize_Information.cpp.s
 
 CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj: ../Functions/ProfitsCalculation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\ProfitsCalculation.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\ProfitsCalculation.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Functions\ProfitsCalculation.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\ProfitsCalculation.cpp"
 
 CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\ProfitsCalculation.cpp" > CMakeFiles\projeto.dir\Functions\ProfitsCalculation.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\ProfitsCalculation.cpp" > CMakeFiles\projeto.dir\Functions\ProfitsCalculation.cpp.i
 
 CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Functions/ProfitsCalculation.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Functions\ProfitsCalculation.cpp" -o CMakeFiles\projeto.dir\Functions\ProfitsCalculation.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Functions\ProfitsCalculation.cpp" -o CMakeFiles\projeto.dir\Functions\ProfitsCalculation.cpp.s
 
 CMakeFiles/projeto.dir/Classes/Company.cpp.obj: CMakeFiles/projeto.dir/flags.make
 CMakeFiles/projeto.dir/Classes/Company.cpp.obj: ../Classes/Company.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/projeto.dir/Classes/Company.cpp.obj"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Classes\Company.cpp.obj -c "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Company.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/projeto.dir/Classes/Company.cpp.obj"
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projeto.dir\Classes\Company.cpp.obj -c "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Company.cpp"
 
 CMakeFiles/projeto.dir/Classes/Company.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projeto.dir/Classes/Company.cpp.i"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Company.cpp" > CMakeFiles\projeto.dir\Classes\Company.cpp.i
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Company.cpp" > CMakeFiles\projeto.dir\Classes\Company.cpp.i
 
 CMakeFiles/projeto.dir/Classes/Company.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projeto.dir/Classes/Company.cpp.s"
-	C:\Users\ritap\DOWNLO~1\SOFTWA~1\mingw64\mingw32\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\Classes\Company.cpp" -o CMakeFiles\projeto.dir\Classes\Company.cpp.s
+	C:\PROGRA~2\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Diogo Almeida\Desktop\UghEats\Classes\Company.cpp" -o CMakeFiles\projeto.dir\Classes\Company.cpp.s
 
 # Object files for target projeto
 projeto_OBJECTS = \
@@ -396,7 +396,7 @@ projeto.exe: CMakeFiles/projeto.dir/build.make
 projeto.exe: CMakeFiles/projeto.dir/linklibs.rsp
 projeto.exe: CMakeFiles/projeto.dir/objects1.rsp
 projeto.exe: CMakeFiles/projeto.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable projeto.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable projeto.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\projeto.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -409,6 +409,6 @@ CMakeFiles/projeto.dir/clean:
 .PHONY : CMakeFiles/projeto.dir/clean
 
 CMakeFiles/projeto.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo" "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo" "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug" "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug" "C:\Users\ritap\OneDrive\Ambiente de Trabalho\Faculdade\2 Ano\1 Semestre\Algoritmos e Estruturas de Dados\Trabalhos\codigo\cmake-build-debug\CMakeFiles\projeto.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Diogo Almeida\Desktop\UghEats" "C:\Users\Diogo Almeida\Desktop\UghEats" "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug" "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug" "C:\Users\Diogo Almeida\Desktop\UghEats\cmake-build-debug\CMakeFiles\projeto.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/projeto.dir/depend
 
