@@ -83,7 +83,7 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){
         case 1:
             cout << "Task: ";
             getline(cin, task);
-            while(cin.fail() && cin.eof()){
+            while (cin.fail() && cin.eof()) {
                 cin.clear();
                 cout << "Invalid character. Please insert a valid input: ";
                 getline(cin, task);
@@ -92,7 +92,7 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){
 
             cout << "Income: ";
             getline(cin, income);
-            while(cin.fail() && cin.eof()){
+            while (cin.fail() && cin.eof()) {
                 cin.clear();
                 cout << "Invalid character. Please insert a valid input: ";
                 getline(cin, income);
@@ -105,7 +105,7 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){
             system("cls");
             cout << f;
             cout << endl << "-----------------------------------------------" << endl;
-            if (confirm_modifications("create","admin")){
+            if (confirm_modifications("create", "admin")) {
                 if (b == "Porto") Porto.addEmployee(f);
                 else if (b == "Lisboa") Lisboa.addEmployee(f);
                 else if (b == "Faro") Faro.addEmployee(f);
@@ -113,13 +113,13 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){
                 cout << endl << "Admin was successfully created!" << endl << endl;
 
             }
-            else{    //caso de nao se confirmar a criaçao
+            else {    //caso de nao se confirmar a criaçao
                 system("cls");
                 cout << endl << "Operation was canceled!" << endl << endl;
                 //voltar para o menu
                 cout << "1. Return to Main Menu." << endl;
                 cout << "2. Return to Employees Management." << endl;
-                menu_int_options(option,1,2);
+                menu_int_options(option, 1, 2);
                 return option;
             }
             break;
@@ -127,7 +127,7 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){
             cout << "Information of the vehicle alocated to this deliverer:\n";
             cout << "Brand: ";
             getline(cin, brand);
-            while(cin.fail() && cin.eof()){
+            while (cin.fail() && cin.eof()) {
                 cin.clear();
                 cout << "Invalid character. Please insert a valid input: ";
                 getline(cin, brand);
@@ -136,7 +136,7 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){
 
             cout << "Type: ";
             getline(cin, type);
-            while(cin.fail() && cin.eof()){
+            while (cin.fail() && cin.eof()) {
                 cin.clear();
                 cout << "Invalid character. Please insert a valid input: ";
                 getline(cin, type);
@@ -145,17 +145,14 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){
 
             cout << "Date: ";
             getline(cin, date);
-            while(cin.fail() && cin.eof()){
+            while (cin.fail() && cin.eof()) {
                 cin.clear();
                 cout << "Invalid character. Please insert a valid input: ";
                 getline(cin, date);
             }
             Time v_bdate = verification_date(date);
-
             Vehicle v(brand, type, v_bdate);
-
             g = new Deliverer(b, name, stoi(nif), v_bdate, 0, v, background);
-
             system("cls");
             cout << g;
             cout << endl << "-----------------------------------------------" << endl;
@@ -171,6 +168,7 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){
                 system("cls");
                 cout << endl << "Operation was canceled! " << endl << endl;
             }
+
             break;
     }
     //voltar para o menu

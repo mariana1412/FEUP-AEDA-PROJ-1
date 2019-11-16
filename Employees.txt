@@ -24,6 +24,15 @@ Luis Pereira
 Yamaha, Motorcycle, 20/10/2016
 13, 14, 15, 18, 19, 21, 32, 34, 39
 ::::::::
+Porto
+Deliverer
+Henrique Alves
+563287412
+18/10/2019
+0
+Mercedes, Car, 18/10/2019
+0
+::::::::
 Lisboa
 Deliverer
 Antonio Truta
@@ -109,3 +118,11 @@ Beatriz Santos
 20/08/1996
 3200
 Marketing
+::::::::
+Faro
+Admin
+Alexandra Costa
+200300200
+17/05/1994
+780
+Secretaria

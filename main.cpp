@@ -394,11 +394,6 @@ int main() {
             else if (menu == 2) {
                 int choice, aux;
                 do {
-                    if (is_client) {
-                        cout << endl << "ATENTION: You do not have access to this functionality.\n" << endl;
-                        choice = 0;
-                        break;
-                    } else {
                         choice = EmployeesManagement();
                         if (choice == 1) {
                             aux = create_employee(Porto, Lisboa, Faro);
@@ -431,7 +426,6 @@ int main() {
                             menu = 0;
                             break;
                         }
-                    }
                 } while (choice != 4);
             }
             else if (menu == 3) {
