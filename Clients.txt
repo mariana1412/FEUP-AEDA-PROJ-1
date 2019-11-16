@@ -22,6 +22,18 @@ Rui Teixeira
 Rua Manuel Das Cruzes, Vila Nova De Gaia
 false
 ::::::::
+Porto
+Rita Antunes
+178293456
+Avenida Do Fogo, Maia
+false
+::::::::
+Porto
+Maria Dolores
+123234345
+Rua Dom Afonso Henriques, Gondomar
+false
+::::::::
 Lisboa
 Ines Pinto Silva
 251230654
@@ -46,6 +58,12 @@ Miguel Oliveira
 Rua Das Motas 9, Amadora
 false
 ::::::::
+Lisboa
+Magda Pinto
+444123321
+Avenida Da Liberdade, Oeiras
+false
+::::::::
 Faro
 Lara Machado Medicis
 265541987
@@ -68,4 +86,16 @@ Faro
 Pedro Queiros
 987654321
 Rua do Sol 32, Faro
+false
+::::::::
+Faro
+Judite Silva
+777412589
+Avenida Do Pinhal, Loule
+false
+::::::::
+Faro
+Ana Marques
+999658231
+Travessa De Montenegro, Olhao
 false

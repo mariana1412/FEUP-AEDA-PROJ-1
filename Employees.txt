@@ -20,9 +20,9 @@ Deliverer
 Luis Pereira
 984736212
 20/10/2016
-23
+28
 Yamaha, Motorcycle, 20/10/2016
-13, 14, 15, 18, 19
+13, 14, 15, 18, 19, 21
 ::::::::
 Lisboa
 Deliverer
@@ -30,7 +30,7 @@ Antonio Truta
 123456788
 11/09/1970
 15
-Range Rover Evoque, Suv, 19/12/19
+Range Rover Evoque, Suv, 19/12/0019
 2, 4, 7, 8, 12
 ::::::::
 Lisboa
@@ -47,8 +47,16 @@ Hugo Pinto
 874829100
 20/07/2018
 8
-Honda, Motorcycle, 20/07/20
+Honda, Motorcycle, 20/07/0020
 16, 17
+::::::::
+Lisboa
+Admin
+Maria Cerqueira
+965478123
+08/07/1993
+1200
+Rp
 ::::::::
 Faro
 Admin
@@ -75,3 +83,29 @@ Pedro Silva
 0
 Suzuki, Motorcycle, 17/03/2009
 0
+::::::::
+Faro
+Deliverer
+Joaquim Alberto
+145214521
+18/10/2017
+0
+Ford, Car, 18/10/2017
+0
+::::::::
+Faro
+Deliverer
+Eduardo Costa
+111000222
+18/10/2018
+0
+Seat, Van, 18/10/2018
+0
+::::::::
+Faro
+Admin
+Beatriz Santos
+777854632
+20/08/1996
+3200
+Marketing

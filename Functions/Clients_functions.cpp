@@ -9,7 +9,7 @@ int create_client(Base &Porto, Base &Lisboa, Base &Faro, bool is_Client) {
     int option;
 
     system("cls");
-    cout << endl << "---------------- CREATE CLIENT ----------------" << endl;
+    cout << endl << "---------------- CREATE CLIENT ----------------" << endl << endl;
 
     cout << "Base: ";
     getline(cin, aux);
@@ -190,7 +190,7 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
     Client cl;
 
     system("cls");
-    cout << endl << "---------------- MODIFY CLIENT ----------------" << endl;
+    cout << endl << "---------------- MODIFY CLIENT ----------------" << endl << endl;
 
     cout << "Client's Base: ";
     getline(cin, base);
@@ -210,7 +210,7 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
     }
 
 
-    cout << "What do you know about this client?\n"
+    cout << endl << "What do you know about this client?\n"
          << endl; //so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do cliente
     cout << "1. Name\n" << "2. NIF\n" << "0. Return to the main menu\n";
     menu_int_options(number, 0, 2);
@@ -218,7 +218,7 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
 
     switch (number) {
         case 0:
-            return number;
+            return 1;
         case 1:
             cout << "Name: ";
             getline(cin, auxiliar);
@@ -244,17 +244,17 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
     }
 
     if (i == -1) {
-        cout << "The client inserted does not exist. Try again:" << endl; //dar opçao de tentar outra vez
+        cout << endl << endl << "The client inserted does not exist. Try again:" << endl; //dar opçao de tentar outra vez
         while (i == -1) {
             cout << "What do you know about this client?\n"
                  << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do cliente
             cout << "1. Name\n" << "2. NIF\n" << "0. Return to the main menu\n";
-            menu_int_options(number, 1, 2);
+            menu_int_options(number, 0, 2);
             cin.ignore(1000, '\n');
 
             switch (number) {
                 case 0:
-                    return number;
+                    return 1;
                 case 1:
                     cout << "Name: ";
                     getline(cin, auxiliar);
@@ -282,7 +282,7 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
 
         }
     }
-    else {
+    if(i != -1) {
         system("cls");
         string new_info, new_info2, new_info3;
         name = v[i].getName();
@@ -290,10 +290,14 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
         cout << v[i];        //mostrar o cliente para saber o que quer mudar
         cout << endl << "-----------------------------------------------" << endl;
         cout << "What do you want to change?\n";
-        cout << "1. Base\n" << "2. Address\n";
-        menu_int_options(option, 1, 2);
+        cout << "1. Base\n" << "2. Address\n" << "0. Return to the main menu" << endl;
+        menu_int_options(option, 0, 2);
         cin.ignore(1000, '\n');
-        if (option == 1) {
+
+        if(option == 0){
+            return 1;
+        }
+        else if (option == 1) {
             cout << "Base: ";
             getline(cin, new_info);
             while (cin.fail() && cin.eof()) {
@@ -467,9 +471,7 @@ int modify_client(Base &Porto, Base &Lisboa, Base &Faro) {
         menu_int_options(op, 1, 2);
         return op;
     }
-    cout << "1. Return to Main Menu." << endl;
-    cout << "2. Return to Clients Management." << endl;
-    menu_int_options(op, 1, 2);
+
     return op;
 }
 
@@ -479,7 +481,7 @@ int remove_client(Base &Porto, Base &Lisboa, Base &Faro) {
     int i=0, number,option;
 
     system("cls");
-    cout << endl << "----------------  REMOVE CLIENT ----------------" << endl;
+    cout << endl << "----------------  REMOVE CLIENT ----------------" << endl << endl;
 
     cout << "Client's Base: ";
     getline(cin, base);
@@ -607,7 +609,7 @@ int modifyData(Base &Porto, Base &Lisboa, Base &Faro){
     Client cl;
 
     system("cls");
-    cout << endl << "---------------- MODIFY DATA ----------------" << endl;
+    cout << endl << "---------------- MODIFY DATA ----------------" << endl << endl;
 
     cout << "What is your base? ";
     getline(cin, base);
@@ -651,7 +653,7 @@ int modifyData(Base &Porto, Base &Lisboa, Base &Faro){
             i = int_sequential_search_c(v, stoi(auxiliar));
         }
     }
-    else {
+    if( i != -1) {
         string new_info, new_info2, new_info3;
         name = v[i].getName();
         nif= v[i].getNif();
@@ -659,10 +661,13 @@ int modifyData(Base &Porto, Base &Lisboa, Base &Faro){
         cout << v[i] << endl;        //mostrar o cliente para saber o que quer mudar
         cout << "-----------------------------------------------" << endl;
         cout << "What do you want to change?\n";
-        cout << "1. Base\n" << "2. Address\n";
-        menu_int_options(option, 1, 2);
+        cout << "1. Base\n" << "2. Address\n" << "0. Return to the main menu" << endl;
+        menu_int_options(option, 0, 2);
         cin.ignore(1000, '\n');
-        if (option == 1) {
+        if(option == 0){
+            return 1;
+        }
+        else if (option == 1) {
             cout << "Base: ";
             getline(cin, new_info);
             while (cin.fail() && cin.eof()) {

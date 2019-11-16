@@ -318,9 +318,9 @@ void write_Employees(const Base& baseP,const Base& baseL,const Base& baseF){
                 employeefile << "Deliverer" << endl;
                 employeefile << nd->getName() << endl;
                 employeefile << nd->getNif() << endl;
-                employeefile <<setw(2) << setfill('0') << nd->getBirthdate().getDay() << "/" <<setw(2) << setfill('0') << nd->getBirthdate().getMonth() << "/" << nd->getBirthdate().getYear() << endl;
+                employeefile <<setw(2) << setfill('0') << nd->getBirthdate().getDay() << "/" <<setw(2) << setfill('0') << nd->getBirthdate().getMonth() << "/" << setw(4) << setfill('0') << nd->getBirthdate().getYear() << endl;
                 employeefile << nd->getIncome() << endl;
-                employeefile << nd->getVehicle().getBrand() << ", " << nd->getVehicle().getType() << ", " <<setw(2) << setfill('0') << nd->getVehicle().getDate().getDay() << "/" <<setw(2) << setfill('0') << nd->getVehicle().getDate().getMonth() << "/" << nd->getVehicle().getDate().getYear() << endl;
+                employeefile << nd->getVehicle().getBrand() << ", " << nd->getVehicle().getType() << ", " <<setw(2) << setfill('0') << nd->getVehicle().getDate().getDay() << "/" <<setw(2) << setfill('0') << nd->getVehicle().getDate().getMonth() << "/" << setw(4) << setfill('0') << nd->getVehicle().getDate().getYear() << endl;
                 if (nd->getBackground().size() == 0)
                     employeefile << "0";
                 else {
@@ -354,7 +354,7 @@ void write_Employees(const Base& baseP,const Base& baseL,const Base& baseF){
                 employeefile << "Admin" << endl;
                 employeefile << na->getName() << endl;
                 employeefile << na->getNif() << endl;
-                employeefile << setw(2) << setfill('0') <<na->getBirthdate().getDay() << "/" <<setw(2) << setfill('0') << na->getBirthdate().getMonth() << "/" << na->getBirthdate().getYear() << endl;
+                employeefile << setw(2) << setfill('0') <<na->getBirthdate().getDay() << "/" <<setw(2) << setfill('0') << na->getBirthdate().getMonth() << "/" << setw(4) << setfill('0') << na->getBirthdate().getYear() << endl;
                 employeefile << na->getIncome() << endl;
                 employeefile << na->getTask();
             }
@@ -363,9 +363,9 @@ void write_Employees(const Base& baseP,const Base& baseL,const Base& baseF){
                 employeefile << "Deliverer" << endl;
                 employeefile << nd->getName() << endl;
                 employeefile << nd->getNif() << endl;
-                employeefile <<setw(2) << setfill('0') << nd->getBirthdate().getDay() << "/" <<setw(2) << setfill('0') << nd->getBirthdate().getMonth() << "/" << nd->getBirthdate().getYear() << endl;
+                employeefile <<setw(2) << setfill('0') << nd->getBirthdate().getDay() << "/" <<setw(2) << setfill('0') << nd->getBirthdate().getMonth() << "/" << setw(4) << setfill('0') << nd->getBirthdate().getYear() << endl;
                 employeefile << nd->getIncome() << endl;
-                employeefile << nd->getVehicle().getBrand() << ", " << nd->getVehicle().getType() << ", " << setw(2) << setfill('0') <<nd->getVehicle().getDate().getDay() << "/" <<setw(2) << setfill('0') << nd->getVehicle().getDate().getMonth() << "/" << nd->getVehicle().getDate().getDay() << endl;
+                employeefile << nd->getVehicle().getBrand() << ", " << nd->getVehicle().getType() << ", " << setw(2) << setfill('0') <<nd->getVehicle().getDate().getDay() << "/" <<setw(2) << setfill('0') << nd->getVehicle().getDate().getMonth() << "/" << setw(4) << setfill('0') << nd->getVehicle().getDate().getDay() << endl;
                 if (nd->getBackground().size() == 0)
                     employeefile << "0";
                 else {
@@ -398,7 +398,7 @@ void write_Employees(const Base& baseP,const Base& baseL,const Base& baseF){
                 employeefile << "Admin" << endl;
                 employeefile << na->getName() << endl;
                 employeefile << na->getNif() << endl;
-                employeefile << setw(2) << setfill('0') <<na->getBirthdate().getDay() << "/" <<setw(2) << setfill('0') << na->getBirthdate().getMonth() << "/" << na->getBirthdate().getYear() << endl;
+                employeefile << setw(2) << setfill('0') <<na->getBirthdate().getDay() << "/" <<setw(2) << setfill('0') << na->getBirthdate().getMonth() << "/" << setw(4) << setfill('0') << na->getBirthdate().getYear() << endl;
                 employeefile << na->getIncome() << endl;
                 employeefile << na->getTask();
             }
@@ -407,9 +407,9 @@ void write_Employees(const Base& baseP,const Base& baseL,const Base& baseF){
                 employeefile << "Deliverer" << endl;
                 employeefile << nd->getName() << endl;
                 employeefile << nd->getNif() << endl;
-                employeefile << nd->getBirthdate().getDay() << "/" << nd->getBirthdate().getMonth() << "/" << nd->getBirthdate().getYear() << endl;
+                employeefile << nd->getBirthdate().getDay() << "/" << nd->getBirthdate().getMonth() << "/" << setw(4) << setfill('0') << nd->getBirthdate().getYear() << endl;
                 employeefile << nd->getIncome() << endl;
-                employeefile << nd->getVehicle().getBrand() << ", " << nd->getVehicle().getType() << ", " <<setw(2) << setfill('0') << nd->getVehicle().getDate().getDay() << "/" <<setw(2) << setfill('0') << nd->getVehicle().getDate().getMonth() << "/" << nd->getVehicle().getDate().getYear() << endl;
+                employeefile << nd->getVehicle().getBrand() << ", " << nd->getVehicle().getType() << ", " <<setw(2) << setfill('0') << nd->getVehicle().getDate().getDay() << "/" <<setw(2) << setfill('0') << nd->getVehicle().getDate().getMonth() << "/" << setw(4) << setfill('0') << nd->getVehicle().getDate().getYear() << endl;
                 if (nd->getBackground().size() == 0)
                     employeefile << "0";
                 else {

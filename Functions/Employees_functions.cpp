@@ -8,10 +8,11 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){
     string income;
     Admin a;
     bool is_Valid=false;
-    Employee* f;
+    Admin* f;
+    Deliverer* g;
 
     system("cls");
-    cout << endl << "---------------- CREATE EMPLOYEE ----------------" << endl;
+    cout << endl << "---------------- CREATE EMPLOYEE ----------------" << endl << endl;
 
     cout << "What kind of Employee do you wish to create?\n";
     cout << "1. Admin\n" << "2. Deliverer\n";
@@ -153,7 +154,7 @@ int create_employee(Base &Porto, Base &Lisboa, Base &Faro){
 
             Vehicle v(brand, type, v_bdate);
 
-            f = new Deliverer(b, name, stoi(nif), v_bdate, 0, v, background);
+            g = new Deliverer(b, name, stoi(nif), v_bdate, 0, v, background);
 
             system("cls");
             cout << f;
@@ -189,7 +190,7 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
     string income;
 
     system("cls");
-    cout << endl << "---------------- MODIFY EMPLOYEE ----------------" << endl;
+    cout << endl << "---------------- MODIFY EMPLOYEE ----------------" << endl << endl;
 
     cout << "Base: ";
     getline(cin, b);
@@ -232,7 +233,6 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
             break;
         case 2:
             cout << "NIF: ";
-            cin.ignore('\n',1000);
             getline(cin, auxiliar);
             while(cin.fail() && cin.eof()){
                 cin.clear();
@@ -246,7 +246,7 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
 
 
     while(i == -1){
-        cout << "The employee inserted does not exist. Try again:" << endl;//dar opçao de tentar outra vez
+        cout << endl << "The employee inserted does not exist. Try again:" << endl;//dar opçao de tentar outra vez
         cout << "What do you know about this employee?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do employee
         cout << "1. Name\n" << "2. NIF\n"<<"0. Return to the main menu\n";
         menu_int_options(number,0,2);
@@ -289,7 +289,7 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
         cout << "-----------------------------------------------" << endl;
         cout << "You can only change the task."<<endl;
         cout<< "What do you wish to do? "<<endl;
-        cout<< "1. Change the task\t 2.Return to the Main Menu"<<endl;
+        cout<< "1. Change the task\t 2. Return to the Main Menu"<<endl;
         menu_int_options(op,1,2);
         cin.ignore(1000, '\n');
         switch(op){
@@ -350,7 +350,7 @@ int modify_employee(Base &Porto, Base &Lisboa, Base &Faro){
 
         cout << "You can only change the allocated vehicle."<<endl;
         cout<< "What do you wish to do? "<<endl;
-        cout<< "1.Change the allocated vehicle\n 2.Return to the Main Menu"<<endl;
+        cout<< "1. Change the allocated vehicle\n 2. Return to the Main Menu"<<endl;
         menu_int_options(op,1,2);
         cin.ignore(1000, '\n');
         switch(op){
@@ -421,7 +421,7 @@ int remove_employee(Base &Porto, Base &Lisboa, Base &Faro){
     int i=0, number,option;
 
     system("cls");
-    cout << endl << "---------------- REMOVE EMPLOYEE ----------------" << endl;
+    cout << endl << "---------------- REMOVE EMPLOYEE ----------------" << endl << endl;
 
     cout << "Employee's base: ";
     getline(cin, base);
@@ -441,14 +441,14 @@ int remove_employee(Base &Porto, Base &Lisboa, Base &Faro){
     else if (base == "Faro") {
         v = Faro.getEmployees();
     }
-    cout << "What do you know about this employee?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do employee
+    cout << endl << "What do you know about this employee?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do employee
     cout << "1. Name\n"<< "2. NIF\n" <<"0. Return to the main menu\n" ;
     menu_int_options(number,0,2);
     cin.ignore(1000, '\n');
 
     switch (number) {
         case 0:
-            return number;
+            return 1;
         case 1:
             cout << "Name: ";
             getline(cin, auxiliar);
@@ -474,14 +474,14 @@ int remove_employee(Base &Porto, Base &Lisboa, Base &Faro){
     }
 
     while (i == -1) {
-        cout << "The employee inserted does not exist. Try again:";//dar opçao de tentar outra
+        cout << endl << "The employee inserted does not exist. Try again:";//dar opçao de tentar outra
         cout << "What do you know about this employee?\n" << endl;//so vamos ter estas duas opçoes porque sao os atributos nao mutaveis do employee
         cout << "1. Name\n" << "2. NIF\n"<<"0. Return to the main menu\n";
         menu_int_options(number,1,2);
         cin.ignore(1000, '\n');
         switch (number) {
             case 0:
-                return number;
+                return 1;
             case 1:
                 cout << "Name:";
                 getline(cin, auxiliar);

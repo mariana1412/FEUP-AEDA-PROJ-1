@@ -868,6 +868,7 @@ int main() {
     write_Deliveries(Porto, Lisboa, Faro);
     write_Employees(Porto, Lisboa, Faro);
     write_Bases(boss_name,boss_nif,Porto, Lisboa, Faro);
+    Sleep(10000);
     return 0;
 }
 
