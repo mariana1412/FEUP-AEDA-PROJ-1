@@ -40,6 +40,12 @@ Ana Rita Matos
 Avenida da Felicidade 56, Lisboa
 false
 ::::::::
+Lisboa
+Miguel Oliveira
+876234098
+Rua Das Motas 9, Amadora
+false
+::::::::
 Faro
 Lara Machado Medicis
 265541987

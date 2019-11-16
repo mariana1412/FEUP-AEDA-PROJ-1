@@ -172,7 +172,12 @@ public:
 * @param price - preço da entrega
 */
     void setPrice(float price);
-
+/**
+* @brief Permite imprimir uma encomenda
+* @param os - outstream
+ * @param d - delivery a imprimir
+ * @return Retorna uma ostream com as informações da delivery
+*/
     friend ostream & operator<<(ostream &os, const Delivery &d);
 };
 

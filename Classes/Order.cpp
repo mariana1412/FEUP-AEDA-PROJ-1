@@ -99,7 +99,7 @@ float Delivery::getTax() const {
 ostream & operator<<(ostream &os, const Delivery &d){
     os << "--> Deliver " << d.getId() << endl;
     os << "Restaurant: " << d.getRestaurant().getName() << endl
-    << "Current ime: " << d.getTime() << endl;
+    << "Current time: " << d.getTime() << endl;
 
     for(int i=0; i<d.getProducts().size(); i++){
         os << "Product " << i+1 << ": " << d.getProducts()[i];
@@ -120,5 +120,6 @@ ostream & operator<<(ostream &os, const Delivery &d){
 Delivery::Delivery(Restaurant restaurant, Time time, vector<Product> products, int nif, float tax): Order(restaurant, time , products, nif){
     this->tax = tax;
     this->id = id_global;
+    this->final_price = this->price + this->tax;
     id_global++;
 }
