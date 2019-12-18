@@ -83,7 +83,7 @@ int main() {
                     break;
                 }
             }
-            cout << "That NIF that's not correspond to that kind of user! Please enter an admin's NIF or enter 0 to login as a client: ";
+            cout << "That NIF that's not correspond to that kind of user! Please enter the corresponding NIF or enter 0 to login as a client: ";
         }
     }
     if(user ==4){
